@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import ArrowRight from '../components/icons/ArrowRight.astro';
 
 import BaseHead from '../components/BaseHead.astro';
@@ -20,7 +21,7 @@ import '../styles/index.css';
 		<main>
 			<div class="photo-column">
 				<figure>
-					<img src="/selfie.jpg" alt="Portrait" id="portrait" />
+					<Image width={400} height={400} src="/selfie.jpg" alt="Portrait" id="portrait" />
 					<figcaption>Portrait.</figcaption>
 				</figure>
 			</div>
