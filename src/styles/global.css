@@ -12,8 +12,8 @@
 	--foreground-subtle: oklch(0.710 0.008 121.0);
 	--foreground: oklch(0.898 0.008 121.6);
 	--foreground-surface: oklch(0.950 0.006 121.6);
-	--background: oklch(0.205 0.002 145.5);
-	--background-surface: oklch(0.225 0.002 145.0);
+	--background: oklch(0.160 0.009 255.0);
+	--background-surface: oklch(0.230 0.014 255.0);
 
 	--body-font: "Fanwood Text", serif;
 	--heading-font: "Fanwood Text", sans-serif;

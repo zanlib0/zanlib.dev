@@ -1,50 +1,57 @@
 ---
 import { SITE_TITLE } from '../consts';
+
+import Dot from './Dot.astro';
 ---
 
 <header>
 	<nav>
 		<h4>
 			<a href="/">
-				<span class="dot" />
 				{SITE_TITLE}
+				<Dot />
 			</a>
-
 		</h4>
+		<div class="languages">
+			<a href="/">en</a>
+			/
+			<a href="/pl">pl</a>
+		</div>
 	</nav>
 </header>
+
 <style>
-	header {
-		margin: 0;
-		padding: 2rem;
-		background: var(--background);
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		border-bottom: 1px solid var(--background-surface);
-	}
+header {
+	margin: 0;
+	padding: 2rem;
+	background: var(--background);
+	box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	border-bottom: 1px solid var(--background-surface);
+}
 
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 720px;
-		margin: auto;
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 720px;
+	margin: auto;
+}
 
-	}
+h4 a {
+	text-decoration: none;
+	color: var(--brand-7);
+	font-family: var(--body-font);
+	letter-spacing: 0;
+}
 
-	h4 a {
+.languages {
+	font-variant: small-caps;
+
+	color: var(--background-surface);
+
+	a {
 		text-decoration: none;
-		color: var(--brand-7);
-		font-family: var(--body-font);
-		letter-spacing: 0;
+		color: var(--foreground);
 	}
-
-	.dot {
-		display: inline-block;
-		width: 1ex;
-		height: 1ex;
-		border-radius: 100%;
-		background: var(--brand-7);
-		margin-right: 0.5rem;
-		margin-left: calc(-1ex - 0.5rem);
-	}
+}
 </style>

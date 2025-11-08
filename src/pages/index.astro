@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+import '../styles/index.css';
 ---
 
 <!doctype html>
@@ -30,24 +32,23 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<hr class="brand" />
 
 				<p>
-					Specializing in the development of modern web applications with a focus on
-					elegant, efficient solutions. Over a decade of experience in crafting
-					digital experiences that matter.
+					Crafting web applications that matter. JavaScript, React, and Elixir specialist
+					focused on understanding what people actually need, not just what they want.
 				</p>
 
 				<p>
-					A practitioner of clean architecture, performance optimization, and
-					user-centered design. Currently exploring the intersection of retro
-					aesthetic principles and contemporary web technologies.
+					Building software that honours both human judgment and technical excellence.
+					Writing about product development, remote work, and the craft behind systems
+					that last. Based in Silesia, working globally.
 				</p>
 
 				<div class="services">
 					<h5>Services</h5>
 					<ul>
-						<li>Web Application Development</li>
-						<li>Full-Stack Engineering</li>
-						<li>Performance Optimization</li>
-						<li>Technical Consultation</li>
+						<li>Web application development</li>
+						<li>Business and technical consulting</li>
+						<li>Virtual and in-person trainings</li>
+						<li>Conference speaking</li>
 					</ul>
 				</div>
 
@@ -67,128 +68,3 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<Footer />
 	</body>
 </html>
-
-<style>
-main {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 4rem;
-
-	@media screen and (min-width: 960px) {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-.photo-column {
-	display: flex;
-	flex-direction: column;
-	justify-self: center;
-	max-width: 400px;
-
-	@media screen and (min-width: 960px) {
-		justify-self: flex-end;
-	}
-}
-
-#portrait {
-	border: 2px solid var(--brand-7);
-}
-
-.column {
-	@media screen and (max-width: 960px) {
-		justify-self: center;
-		max-width: 400px;
-	}
-}
-
-figure {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-figcaption {
-	color: var(--foreground-subtle);
-	font-size: 1.1rem;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-}
-
-.subtitle {
-	color: var(--brand-7);
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-}
-
-hr {
-	height: 2px;
-	&.brand { background: var(--brand-7); }
-	&.subtle { background: var(--background-surface); }
-}
-
-p {
-	max-width: 500px;
-}
-
-.services {
-	background: var(--background-surface);
-	padding: 1rem;
-	max-width: 500px;
-	border-left: 2px solid var(--brand-7);
-	margin-bottom: 2rem;
-
-	h5 {
-		font-variant: small-caps;
-		text-transform: lowercase;
-		letter-spacing: 0.1rem;
-		color: var(--brand-7);
-	}
-
-	ul {
-		margin: 0;
-		padding-left: 1rem;
-	}
-}
-
-h6 {
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-}
-
-.email-block {
-	display: flex;
-	flex-direction: column;
-	gap: 0;
-	margin: 2rem 0;
-}
-
-.email {
-	display: inline-block;
-
-	svg {
-		vertical-align: middle;
-		color: var(--brand-7);
-		margin-left: 0.25rem;
-	}
-}
-
-.link {
-	display: inline-block;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-	text-decoration: none;
-	color: var(--brand-7);
-
-	svg {
-		vertical-align: -0.15rem;
-	}
-}
-</style>

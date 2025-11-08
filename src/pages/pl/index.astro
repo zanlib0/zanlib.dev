@@ -1,0 +1,73 @@
+---
+import ArrowRight from '../../components/icons/ArrowRight.astro';
+
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+import '../../styles/index.css';
+---
+
+<!doctype html>
+<html lang="pl">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="photo-column">
+				<figure>
+					<img src="/selfie.jpg" alt="Portrait" id="portrait" />
+					<figcaption>Portret.</figcaption>
+				</figure>
+			</div>
+
+			<div class="column">
+				<h2>Marek Chotoborski</h2>
+				<h5 class="subtitle">Programista & Cyfrowy Rzemieślnik</h5>
+
+				<hr class="brand" />
+
+				<p>
+					Tworzę aplikacje internetowe, które mają znaczenie. Specjalista JS,
+					React i Elixir. Staram się rozumieć, czego ludzie potrzebują, nie tylko
+					czego chcą.
+				</p>
+
+				<p>
+					Buduję oprogramowanie które oddaje szacunek ludzkim decyzjom i technicznym
+					umiejętnościom. Piszę o rozwoju produktów, pracy zdalnej, filozofii i rzemiośle
+					stojącym za systemami, które trwają latami.
+				</p>
+
+				<p>Ze Śląska, pracuję z całym światem.</p>
+
+				<div class="services">
+					<h5>Usługi</h5>
+					<ul>
+						<li>Rozwój aplikacji internetowych</li>
+						<li>Doradztwo biznesowe i technologiczne</li>
+						<li>Szkolenia zdalne i stacjonarne</li>
+						<li>Prelekcje i konferencje</li>
+					</ul>
+				</div>
+
+				<hr class="subtle" />
+
+				<div class="email-block">
+					<h6>Kontakt</h6>
+					<div class="email">
+						<ArrowRight size="0.9rem" />
+						<span>hello@zanlib.dev</span>
+					</div>
+				</div>
+
+				<a href="/pl/blog" class="link">Czytaj dalej <ArrowRight size="0.9rem" /></a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
