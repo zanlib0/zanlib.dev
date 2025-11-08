@@ -14,7 +14,7 @@
 		border-radius: 100%;
 		background: var(--brand-7);
 
-		transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out 1s;
 
 		animation: initial;
 	}
@@ -28,7 +28,8 @@
 
 	&:before, &:after {
 		position: absolute;
-		transition: all 200ms ease-in-out;
+		transition: opacity 200ms ease-in-out;
+		transition-delay: 0s;
 		opacity: 0;
 	}
 
@@ -44,7 +45,8 @@
 }
 
 .dot:hover:before, .dot:hover:after {
-	opacity: 1 !important;
+	opacity: 1;
+	transition-delay: 1s;
 }
 
 @keyframes bob {

@@ -22,6 +22,8 @@
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	scrollbar-gutter: stable both-edges;
 }
 
 @font-face {
@@ -179,7 +181,7 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
-@media (max-width: 720px) {
+@media (max-width: 550px) {
 	body {
 		font-size: 18px;
 	}

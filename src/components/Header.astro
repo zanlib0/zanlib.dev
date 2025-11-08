@@ -1,15 +1,30 @@
 ---
+import Dot from './Dot.astro';
+import HeaderLink from './HeaderLink.astro';
+
 import { SITE_TITLE } from '../consts';
 
-import Dot from './Dot.astro';
+interface	Props {
+	active: 'index' | 'blog' | 'projects' | 'about' | 'cv'; 
+	language: 'en' | 'pl';
+}
+
+const { active, language } = Astro.props;
+const linkPrefix = language === 'pl' ? '/pl' : ''
+
+const links = [
+	{ link: 'blog', name: 'Articles' },
+	{ link: 'projects', name: 'Projects' },
+	{ link: 'about', name: 'About' },
+]
 ---
 
 <header>
-	<nav>
+	<nav class="top">
 		<h4>
 			<a href="/">
 				{SITE_TITLE}
-				<Dot />
+				{active === 'index' && (<Dot />)}
 			</a>
 		</h4>
 		<div class="languages">
@@ -17,6 +32,12 @@ import Dot from './Dot.astro';
 			/
 			<a href="/pl">pl</a>
 		</div>
+	</nav>
+
+	<nav class="bottom">
+		{links.map(({link, name}) => (
+		<HeaderLink prefix={linkPrefix} active={active} link={link} name={name} />
+		))}
 	</nav>
 </header>
 
@@ -35,9 +56,14 @@ nav {
 	justify-content: space-between;
 	max-width: 720px;
 	margin: auto;
+	gap: 0.5rem;
+
+	@media screen and (max-width: 400px) {
+		flex-direction: column;
+	}
 }
 
-h4 a {
+a {
 	text-decoration: none;
 	color: var(--brand-7);
 	font-family: var(--body-font);

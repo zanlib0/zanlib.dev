@@ -1,0 +1,30 @@
+---
+import DotSimple from './DotSimple.astro';
+
+interface Props {
+	prefix: string;
+	active: string;
+	link: string;
+	name: string;
+}
+
+const { prefix, active, link, name } = Astro.props;
+---
+<a href={`${prefix}/${link}`}>{name} <DotSimple hidden={active !== link} /></a>
+
+<style>
+a {
+	display: block;
+	flex: 1;
+	padding: 0.25rem 2rem 0.15rem 2rem;
+	border: 1px solid var(--background-surface);
+	text-decoration: none;
+	transition: all 100ms;
+	text-align: center;
+
+	&:hover {
+		background-color: var(--brand-2);
+		border-color: var(--brand-4);
+	}
+}
+</style>

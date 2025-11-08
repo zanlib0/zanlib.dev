@@ -1,0 +1,24 @@
+---
+interface Props {
+	hidden?: boolean;
+}
+
+const { hidden } = Astro.props;
+---
+<span class:list={['dot', hidden ? 'hidden' : null]} />
+
+<style>
+.dot {
+	display: inline-block;
+	width: 1ex;
+	height: 1ex;
+	margin-right: -1ex;
+	border-radius: 100%;
+	background: var(--brand-7);
+}
+
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+</style>
