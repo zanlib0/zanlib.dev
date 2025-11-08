@@ -6,10 +6,10 @@ import { SITE_TITLE } from '../consts';
 
 interface	Props {
 	active: 'index' | 'blog' | 'projects' | 'about' | 'cv'; 
-	language: 'en' | 'pl';
+	language?: 'en' | 'pl';
 }
 
-const { active, language } = Astro.props;
+const { active, language = 'en' } = Astro.props;
 const linkPrefix = language === 'pl' ? '/pl' : ''
 
 const links = [
@@ -28,9 +28,9 @@ const links = [
 			</a>
 		</h4>
 		<div class="languages">
-			<a href="/">en</a>
+			<a href={`/${active === 'index' ? '' : active}`}>en</a>
 			/
-			<a href="/pl">pl</a>
+			<a href={`/pl/${active === 'index' ? '' : active}`}>pl</a>
 		</div>
 	</nav>
 
