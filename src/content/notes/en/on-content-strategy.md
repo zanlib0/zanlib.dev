@@ -1,6 +1,6 @@
 ---
-title: On content strategy
-pubDate: 11 Sept 2025
+title: On Content Strategy
+pubDate: 9 Nov 2025
 ---
 
 When I was still writing on [Inter Caetera](https://intercaetera.com) I strived to make sure that everything I write is of very high quality, all the published thoughts are polished, edited, typeset... In short that everything has a lot of effort put into it.

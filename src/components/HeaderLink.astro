@@ -7,12 +7,20 @@ interface Props {
 	active: string;
 	link: string;
 	name: string;
+	disabled: boolean;
 }
 
-const { locale, active, link, name } = Astro.props;
+const { locale, active, link, name, disabled } = Astro.props;
 const href = getRelativeLocaleUrl(locale, `/${link}`);
 ---
-<a href={href}>{name} <DotSimple hidden={active !== link} /></a>
+<a
+	href={disabled ? null : href}
+	class:list={[disabled ? 'disabled' : null]}
+>
+	{name}
+	<DotSimple hidden={active !== link} />
+
+</a>
 
 <style>
 a {
@@ -27,6 +35,11 @@ a {
 	&:hover {
 		background-color: var(--brand-2);
 		border-color: var(--brand-4);
+	}
+
+	&.disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
 	}
 }
 </style>

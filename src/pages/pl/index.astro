@@ -1,5 +1,6 @@
 ---
 import HomePage from '../../components/pages/HomePage.astro';
+import { getNavLinks } from '../../i18n/ui';
 import '../../styles/index.css';
 
 const t = {
@@ -19,11 +20,7 @@ const t = {
 	],
 	contactHeading: 'Kontakt',
 	readArticlesLink: 'Czytaj dalej',
-	navLinks: {
-		articles: 'Artykuły',
-		projects: 'Projekty',
-		about: 'O mnie',
-	},
+	navLinks: getNavLinks('pl'),
 };
 ---
 

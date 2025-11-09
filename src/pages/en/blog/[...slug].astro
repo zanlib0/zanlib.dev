@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
 import { collectPosts } from '../../../utils/collectPosts';
+import { getNavLinks } from '../../../i18n/ui';
 import type { Post } from '../../../utils/types';
 
 export async function getStaticPaths() {
@@ -19,12 +20,8 @@ const post = Astro.props;
 const { Content } = await render(post);
 
 const t = {
-	lastUpdatedText: 'Last updated on',
-	navLinks: {
-		articles: 'Articles',
-		projects: 'Projects',
-		about: 'About',
-	},
+	lastUpdatedText: 'upd.',
+	navLinks: getNavLinks('en'),
 };
 ---
 

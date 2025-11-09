@@ -1,17 +1,14 @@
 ---
 import BlogListPage from '../../../components/pages/BlogListPage.astro';
 import { collectPosts } from '../../../utils/collectPosts';
+import { getNavLinks } from '../../../i18n/ui';
 
 const posts = await collectPosts('pl')
 
 const t = {
 	lang: 'pl' as const,
 	readText: 'Czytaj',
-	navLinks: {
-		articles: 'Artykuły',
-		projects: 'Projekty',
-		about: 'O mnie',
-	},
+	navLinks: getNavLinks('pl'),
 };
 ---
 

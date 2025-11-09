@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="877.75635mm"
+   height="141.7122mm"
+   viewBox="0 0 877.75635 141.7122"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="sinusoid.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#FFFFFF0"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.28030345"
+     inkscape:cx="1423.6423"
+     inkscape:cy="664.92179"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="3800"
+     inkscape:window-height="2084"
+     inkscape:window-x="3860"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:object-nodes="true"
+     inkscape:snap-grids="false"
+     inkscape:object-paths="true"
+     inkscape:snap-others="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="false"
+     inkscape:lockguides="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-to-guides="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       originx="-47.165247"
+       originy="-166.92335" />
+    <sodipodi:guide
+       position="63.235415,166.6875"
+       orientation="0,1"
+       id="guide885"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="67.988466,177.27084"
+       orientation="0,1"
+       id="guide887"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-47.16525,11.635571)">
+    <path
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.69989109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 183.09052,59.377095 c 0,36.998831 18.49946,55.498325 36.99891,55.498325 18.49946,0 36.99892,-18.499494 36.99892,-55.498325 0,-36.999054 18.49945,-55.4983858 36.99891,-55.4983858 18.49945,0 36.99891,18.4993318 36.99891,55.4983858"
+       id="path819"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.69989109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 331.08618,59.377095 c 0,36.998831 18.49949,55.498325 36.99893,55.498325 18.49945,0 36.99889,-18.499494 36.99889,-55.498325 0,-36.999054 18.49944,-55.4983858 36.99894,-55.4983858 18.49945,0 36.99889,18.4993318 36.99889,55.4983858"
+       id="path819-3"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path836"
+       d="m 479.08183,59.377095 c 0,36.998831 18.4995,55.498325 36.99894,55.498325 18.49945,0 36.99889,-18.499494 36.99889,-55.498325 0,-36.999054 18.49944,-55.4983858 36.99894,-55.4983858 18.49945,0 36.99889,18.4993318 36.99889,55.4983858"
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.69989109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path838"
+       d="m 627.07749,59.377095 c 0,36.998831 18.4995,55.498325 36.99894,55.498325 18.49944,0 36.99889,-18.499494 36.99889,-55.498325 0,-36.999054 18.49944,-55.4983858 36.99894,-55.4983858 18.49944,0 36.99889,18.4993318 36.99889,55.4983858"
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.69989109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.69989109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 775.07315,59.377095 c 0,36.998831 18.4995,55.498325 36.99888,55.498325 18.4995,0 36.999,-18.499494 36.999,-55.498325 0,-36.999054 18.49933,-55.4983858 36.99883,-55.4983858 18.4995,0 36.99889,18.4993318 36.99889,55.4983858"
+       id="path840"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#FFFFFF;stroke-width:3.7057178;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 146.09161,59.377095 H 923.06875"
+       id="path844"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="50.15374"
+       y="48.869423"
+       id="text867"><tspan
+         sodipodi:role="line"
+         id="tspan865"
+         x="50.15374"
+         y="48.869423"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Rational Times</tspan></text>
+    <text
+       id="text871"
+       y="77.444908"
+       x="45.936886"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="77.444908"
+         x="45.936886"
+         id="tspan869"
+         sodipodi:role="line">Irrational Times</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="187.99117"
+       y="128.28293"
+       id="text875"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         x="187.99117"
+         y="128.28293"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Ancient Egypt</tspan></text>
+    <text
+       id="text879"
+       y="-4.6472163"
+       x="252.73929"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="-4.6472163"
+         x="252.73929"
+         id="tspan877"
+         sodipodi:role="line">Classical Antiquity</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="339.62073"
+       y="128.28293"
+       id="text883"><tspan
+         sodipodi:role="line"
+         id="tspan881"
+         x="339.62073"
+         y="128.28293"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Middle Ages</tspan></text>
+    <text
+       id="text891"
+       y="-3.7858267"
+       x="412.62738"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="-3.7858267"
+         x="412.62738"
+         id="tspan889"
+         sodipodi:role="line">Renaissance</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="496.20535"
+       y="127.93233"
+       id="text895"><tspan
+         sodipodi:role="line"
+         id="tspan893"
+         x="496.20535"
+         y="127.93233"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Baroque</tspan></text>
+    <text
+       id="text899"
+       y="-4.6472163"
+       x="556.32855"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="-4.6472163"
+         x="556.32855"
+         id="tspan897"
+         sodipodi:role="line">Enlightenment</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="636.10754"
+       y="129.14436"
+       id="text903"><tspan
+         sodipodi:role="line"
+         id="tspan901"
+         x="636.10754"
+         y="129.14436"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Romanticism</tspan></text>
+    <text
+       id="text907"
+       y="-3.7858267"
+       x="713.07843"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="-3.7858267"
+         x="713.07843"
+         id="tspan905"
+         sodipodi:role="line">Positivism</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       x="781.62549"
+       y="129.14436"
+       id="text911"><tspan
+         sodipodi:role="line"
+         id="tspan909"
+         x="781.62549"
+         y="129.14436"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109">Fin-de-siècle</tspan></text>
+    <text
+       id="text915"
+       y="-3.9856489"
+       x="858.59637"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.79956436px;line-height:1.25;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';letter-spacing:0px;word-spacing:0px;fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:3.69989109"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.87973881px;font-family:EB Garamond;-inkscape-font-specification:'EB Garamond Bold';fill:#FFFFFF;fill-opacity:1;stroke-width:3.69989109"
+         y="-3.9856489"
+         x="858.59637"
+         id="tspan913"
+         sodipodi:role="line">Interbellum</tspan></text>
+  </g>
+</svg>

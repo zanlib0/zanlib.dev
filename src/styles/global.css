@@ -97,14 +97,17 @@ h6 {
 
 h1 {
 	font-size: 3.0em;
+	letter-spacing: -0.1rem;
 }
 
 h2 {
 	font-size: 2.441em;
+	letter-spacing: -0.07rem;
 }
 
 h3 {
 	font-size: 1.953em;
+	letter-spacing: -0.05rem;
 }
 
 h4 {
@@ -165,6 +168,7 @@ img {
 code, .astro-code {
 	font-family: var(--mono-font);
 	font-size: 1rem;
+	letter-spacing: -0.07rem;
 }
 
 pre {
@@ -219,6 +223,23 @@ kbd {
 mark {
 	background-color: var(--brand-4);
 	color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground-subtle); 
+  border: 2px solid var(--background-surface);
+  border-radius: 10px;
 }
 
 @media (max-width: 550px) {

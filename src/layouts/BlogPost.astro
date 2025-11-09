@@ -35,17 +35,19 @@ const currentLocale = Astro.currentLocale || 'en';
 			<article class={collection}>
 				<div class="prose">
 					<div class="title">
+						<h1>{title}</h1>
 						<div class="date">
-							<FormattedDate date={pubDate} />
+							<h6>
+								<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
-									<div class="last-updated-on">
-										{t.lastUpdatedText} <FormattedDate date={updatedDate} />
-									</div>
+									<span class="last-updated-on">
+								&bull; {t.lastUpdatedText} <FormattedDate date={updatedDate} />
+									</span>
 								)
 							}
+							</h6>
 						</div>
-						<h1>{title}</h1>
 						<hr />
 					</div>
 					<slot />
@@ -67,13 +69,27 @@ article.articles {
 	font-family: var(--body-font);
 }
 
-article.notes, article.notes h1 {
+article.notes {
 	font-family: var(--sans-font);
 	letter-spacing: -0.03rem;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--sans-font);
+	}
 }
 
 article.jots {
 	font-family: var(--mono-font);
+	font-size: 0.8rem;
+	line-height: 1.2;
+
+	h6 {
+		font-size: inherit;
+	}
+
+	code {
+		font-size: 0.8rem;
+	}
 }
 .hero-image {
 	width: 100%;
@@ -98,13 +114,10 @@ article.jots {
 	line-height: 1;
 }
 .title h1 {
-	margin: 0 0 0.5em 0;
+	margin: 0 0 1rem 0;
 }
 .date {
 	margin-bottom: 0.5em;
 	color: rgb(var(--gray));
-}
-.last-updated-on {
-	font-style: italic;
 }
 </style>

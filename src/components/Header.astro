@@ -18,9 +18,9 @@ const { active, navLinks } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
 
 const links = [
-	{ link: 'blog', name: navLinks.articles },
-	{ link: 'projects', name: navLinks.projects },
-	{ link: 'about', name: navLinks.about },
+	{ link: 'blog', name: navLinks.articles, disabled: false },
+	{ link: 'projects', name: navLinks.projects, disabled: true },
+	{ link: 'about', name: navLinks.about, disabled: true, },
 ];
 
 // Generate locale-aware URLs for language switcher
@@ -46,8 +46,14 @@ const homeUrl = getRelativeLocaleUrl(currentLocale, '/');
 	</nav>
 
 	<nav class="bottom">
-		{links.map(({link, name}) => (
-		<HeaderLink locale={currentLocale} active={active} link={link} name={name} />
+		{links.map(({link, name, disabled}) => (
+			<HeaderLink
+				locale={currentLocale}
+				active={active}
+				link={link}
+				name={name}
+				disabled={disabled}
+			/>
 		))}
 	</nav>
 </header>
