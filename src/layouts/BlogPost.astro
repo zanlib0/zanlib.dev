@@ -1,67 +1,38 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = {
+	title?: string,
+	description?: string,
+	pubDate: Date,
+	updatedDate?: Date,
+	collection: 'articles' | 'notes' | 'jots',
+	t: {
+		lastUpdatedText: string;
+		navLinks: {
+			articles: string;
+			projects: string;
+			about: string;
+		};
+	};
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title = null, description, pubDate, updatedDate, collection, t } = Astro.props;
+const currentLocale = Astro.currentLocale || 'en';
 ---
-
-<html lang="en">
+<html lang={currentLocale}>
 	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
+		<BaseHead title={title || SITE_TITLE} description={description} />
 	</head>
 
 	<body>
-		<Header />
+		<Header active="blog" navLinks={t.navLinks} />
 		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
+			<article class={collection}>
 				<div class="prose">
 					<div class="title">
 						<div class="date">
@@ -69,7 +40,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										{t.lastUpdatedText} <FormattedDate date={updatedDate} />
 									</div>
 								)
 							}
@@ -84,3 +55,52 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style>
+main {
+	width: calc(100% - 2em);
+	max-width: 100%;
+	margin: 0;
+}
+
+article.notes, h1 {
+	font-family: var(--sans-font);
+	letter-spacing: -0.03rem;
+}
+
+article.jots {
+	font-family: var(--mono-font);
+}
+.hero-image {
+	width: 100%;
+}
+.hero-image img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 12px;
+	box-shadow: var(--box-shadow);
+}
+.prose {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 1em;
+	color: rgb(var(--gray-dark));
+}
+.title {
+	margin-bottom: 1em;
+	padding: 1em 0;
+	text-align: center;
+	line-height: 1;
+}
+.title h1 {
+	margin: 0 0 0.5em 0;
+}
+.date {
+	margin-bottom: 0.5em;
+	color: rgb(var(--gray));
+}
+.last-updated-on {
+	font-style: italic;
+}
+</style>

@@ -1,13 +1,37 @@
-main {
-	padding: 2rem 0;
+---
+import FormattedDate from '../../FormattedDate.astro';
+import ArrowRight from '../../icons/ArrowRight.astro';
+
+interface Props {
+	lang: 'en' | 'pl',
+	id: string,
+	pubDate: Date,
+	readText: string,
+	title: string,
+	description?: string,
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
+const { lang, id, pubDate, readText, title, description } = Astro.props
+---
+<li>
+	<a href={`/${lang}/blog/${id}/`} class="article-link">
+		<div class="metadata">
+			<FormattedDate date={pubDate} />
 
+			<span class="read">
+				<ArrowRight size="0.9rem" />
+				{readText}
+			</span>
+		</div>
+
+		<div class="title">
+			<h4>{title}</h4>
+			{description && (<span>{description}</span>)}
+		</div>
+	</a>
+</li>
+
+<style>
 .article-link {
 	display: flex;
 	text-decoration: none;
@@ -70,3 +94,4 @@ ul {
 		font-size: 1.1rem;
 	}
 }
+</style>

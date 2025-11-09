@@ -1,0 +1,33 @@
+---
+import BaseHead from '../BaseHead.astro';
+import Footer from '../Footer.astro';
+import Header from '../Header.astro';
+
+interface Props {
+	t: {
+		lang: 'en' | 'pl';
+		content: string;
+		navLinks: {
+			articles: string;
+			projects: string;
+			about: string;
+		};
+	};
+}
+
+const { t } = Astro.props;
+---
+
+<!doctype html>
+<html lang={t.lang}>
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header active="about" navLinks={t.navLinks} />
+		<main>
+			{t.content}
+		</main>
+		<Footer />
+	</body>
+</html>

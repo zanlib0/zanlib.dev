@@ -2,15 +2,15 @@
 import BlogListPage from '../../../components/pages/BlogListPage.astro';
 import { collectPosts } from '../../../utils/collectPosts';
 
-const posts = await collectPosts('pl')
+const posts = await collectPosts('en')
 
 const t = {
-	lang: 'pl' as const,
-	readText: 'Czytaj',
+	lang: 'en' as const,
+	readText: 'Read',
 	navLinks: {
-		articles: 'Artykuły',
-		projects: 'Projekty',
-		about: 'O mnie',
+		articles: 'Articles',
+		projects: 'Projects',
+		about: 'About',
 	},
 };
 ---

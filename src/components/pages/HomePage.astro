@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import ArrowRight from '../icons/ArrowRight.astro';
+import BaseHead from '../BaseHead.astro';
+import Footer from '../Footer.astro';
+import Header from '../Header.astro';
+
+interface Props {
+	t: {
+		lang: 'en' | 'pl';
+		portraitAlt: string;
+		portraitDate: string;
+		subtitle: string;
+		paragraph1: string;
+		paragraph2: string;
+		paragraph3?: string;
+		servicesHeading: string;
+		services: string[];
+		contactHeading: string;
+		readArticlesLink: string;
+		navLinks: {
+			articles: string;
+			projects: string;
+			about: string;
+		};
+	};
+}
+
+const { t } = Astro.props;
+---
+
+<!doctype html>
+<html lang={t.lang}>
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header active="index" navLinks={t.navLinks} />
+		<main>
+			<div class="photo-column">
+				<figure>
+					<Image width={400} height={400} src="/selfie.png" alt={t.portraitAlt} id="portrait" />
+					<figcaption><h6>{t.portraitDate}</h6></figcaption>
+				</figure>
+			</div>
+
+			<div class="column">
+				<h2>Marek Chotoborski</h2>
+				<h5 class="subtitle">{t.subtitle}</h5>
+
+				<hr class="brand" />
+
+				<p>{t.paragraph1}</p>
+
+				<p>{t.paragraph2}</p>
+
+				{t.paragraph3 && <p>{t.paragraph3}</p>}
+
+				<div class="services">
+					<h5>{t.servicesHeading}</h5>
+					<ul>
+						{t.services.map((service) => <li>{service}</li>)}
+					</ul>
+				</div>
+
+				<hr class="subtle" />
+
+				<div class="email-block">
+					<h6>{t.contactHeading}</h6>
+					<div class="email">
+						<ArrowRight size="0.9rem" />
+						<span>hello@zanlib.dev</span>
+					</div>
+				</div>
+
+				<a href={`/${t.lang === 'pl' ? 'pl/' : ''}blog`} class="link"
+					>{t.readArticlesLink} <ArrowRight size="0.9rem" /></a
+				>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

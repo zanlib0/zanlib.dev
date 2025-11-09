@@ -1,0 +1,29 @@
+---
+import HomePage from '../../components/pages/HomePage.astro';
+import '../../styles/index.css';
+
+const t = {
+	lang: 'en' as const,
+	portraitAlt: 'Portrait',
+	portraitDate: 'December 2022',
+	subtitle: 'Product Engineer & Digital Craftsman',
+	paragraph1: 'Crafting web applications that matter. JavaScript, React, and Elixir specialist focused on understanding what people actually need, not just what they want.',
+	paragraph2: 'Building software that honours both human judgment and technical excellence. Writing about product development, remote work, and the craft behind systems that last. Based in Silesia, working globally.',
+	servicesHeading: 'Services',
+	services: [
+		'Web application development',
+		'Business and technical consulting',
+		'Virtual and in-person trainings',
+		'Conference speaking',
+	],
+	contactHeading: 'Get in touch',
+	readArticlesLink: 'Read Articles',
+	navLinks: {
+		articles: 'Articles',
+		projects: 'Projects',
+		about: 'About',
+	},
+};
+---
+
+<HomePage {t} />

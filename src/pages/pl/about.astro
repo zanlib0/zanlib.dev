@@ -1,18 +1,15 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import AboutPage from '../../components/pages/AboutPage.astro';
+
+const t = {
+	lang: 'pl' as const,
+	content: 'Strona about w budowie.',
+	navLinks: {
+		articles: 'Artykuły',
+		projects: 'Projekty',
+		about: 'O mnie',
+	},
+};
 ---
-<!doctype html>
-<html lang="pl">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<body>
-		<Header active="about" language="pl" />
-		<main>
-			Strona about w budowie.
-		</main>
-		<Footer />
-	</body>
-</html>
+
+<AboutPage {t} />

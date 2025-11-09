@@ -1,0 +1,33 @@
+---
+import { render } from 'astro:content';
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { collectPosts } from '../../../utils/collectPosts';
+import type { Post } from '../../../utils/types';
+
+export async function getStaticPaths() {
+	const posts = await collectPosts('pl');
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+
+type Props = Post;
+
+const post = Astro.props;
+const { Content } = await render(post);
+
+const t = {
+	lastUpdatedText: 'Ostatnia aktualizacja',
+	navLinks: {
+		articles: 'Artykuły',
+		projects: 'Projekty',
+		about: 'O mnie',
+	},
+};
+---
+
+<BlogPost collection={post.collection} {...post.data} {t}>
+	<Content />
+</BlogPost>

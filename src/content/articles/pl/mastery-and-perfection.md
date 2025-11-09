@@ -1,7 +1,6 @@
 ---
 title: Mistrzostwo i doskonałość
 pubDate: 20 Aug 2022
-language: pl
 ---
 Często powtarzaną mantrą w zwinnym wytwarzaniu oprogramowania jest stwierdzenie, że „zrobione jest lepsze niż doskonałe". W kontekście biznesowym oprogramowania powierzchowna interpretacja tego aforyzmu jest oczywista i oczywista sama w sobie, ponieważ funkcjonalność, która jest zrobiona, ale słabo działająca, może wciąż przynosić wartość biznesową, w przeciwieństwie do funkcjonalności, która jest nadal w fazie rozwoju i nie znajduje się w produkcji. Jednak chociaż takie jest jego zamierzone znaczenie, nie daje ono żadnej użytecznej wskazówki dotyczącej tego, jak należy podchodzić do wytwarzania, i jako takie ma tendencję do sugerowania, że dozwolone jest pisanie brzydkiego kodu, który działa, i nigdy nie uczenie się niczego o tym, dlaczego jest brzydki lub jak można go poprawić.
 

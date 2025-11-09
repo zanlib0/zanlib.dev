@@ -1,0 +1,60 @@
+---
+import FormattedDate from '../../FormattedDate.astro';
+
+interface Props {
+	lang: 'en' | 'pl',
+	id: string,
+	pubDate: Date,
+	title: string,
+}
+
+const { lang, id, pubDate, title } = Astro.props
+---
+<li>
+	<a href={`/${lang}/blog/${id}/`} class="article-link">
+		<div class="metadata">
+			<FormattedDate date={pubDate} />
+		</div>
+
+		<h5 class="title">{title}</h5>
+	</a>
+</li>
+
+<style>
+.article-link {
+	display: flex;
+	text-decoration: none;
+	align-items: flex-start;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid var(--background-surface);
+	transition: all 100ms;
+
+	@media screen and (max-width: 550px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0.5rem 1rem;
+	}
+
+	&:hover {
+		background-color: var(--brand-2);
+		border-color: var(--brand-4);
+	}
+}
+
+.metadata {
+	min-width: 10rem;
+
+	.date {
+		color: var(--foreground-subtle);
+		font-family: var(--sans-font);
+		font-size: 0.8rem;
+	}
+}
+
+h5.title {
+	font-family: var(--sans-font);
+	letter-spacing: -0.05rem;
+	margin: 0;
+}
+</style>

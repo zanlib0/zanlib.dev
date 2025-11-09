@@ -1,0 +1,15 @@
+---
+import ProjectsPage from '../../components/pages/ProjectsPage.astro';
+
+const t = {
+	lang: 'en' as const,
+	content: 'Projects page: work in progress.',
+	navLinks: {
+		articles: 'Articles',
+		projects: 'Projects',
+		about: 'About',
+	},
+};
+---
+
+<ProjectsPage {t} />

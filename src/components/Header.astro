@@ -1,42 +1,53 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import Dot from './Dot.astro';
 import HeaderLink from './HeaderLink.astro';
 
 import { SITE_TITLE } from '../consts';
 
 interface	Props {
-	active: 'index' | 'blog' | 'projects' | 'about' | 'cv'; 
-	language?: 'en' | 'pl';
+	active: 'index' | 'blog' | 'projects' | 'about';
+	navLinks: {
+		articles: string;
+		projects: string;
+		about: string;
+	};
 }
 
-const { active, language = 'en' } = Astro.props;
-const linkPrefix = language === 'pl' ? '/pl' : ''
+const { active, navLinks } = Astro.props;
+const currentLocale = Astro.currentLocale || 'en';
 
 const links = [
-	{ link: 'blog', name: 'Articles' },
-	{ link: 'projects', name: 'Projects' },
-	{ link: 'about', name: 'About' },
-]
+	{ link: 'blog', name: navLinks.articles },
+	{ link: 'projects', name: navLinks.projects },
+	{ link: 'about', name: navLinks.about },
+];
+
+// Generate locale-aware URLs for language switcher
+const switcherPath = active === 'index' ? '/' : `/${active}`;
+const enUrl = getRelativeLocaleUrl('en', switcherPath);
+const plUrl = getRelativeLocaleUrl('pl', switcherPath);
+const homeUrl = getRelativeLocaleUrl(currentLocale, '/');
 ---
 
 <header>
 	<nav class="top">
 		<h4>
-			<a href="/">
+			<a href={homeUrl}>
 				{SITE_TITLE}
 				{active === 'index' && (<Dot />)}
 			</a>
 		</h4>
 		<div class="languages">
-			<a href={`/${active === 'index' ? '' : active}`}>en</a>
+			<a href={enUrl}>en</a>
 			/
-			<a href={`/pl/${active === 'index' ? '' : active}`}>pl</a>
+			<a href={plUrl}>pl</a>
 		</div>
 	</nav>
 
 	<nav class="bottom">
 		{links.map(({link, name}) => (
-		<HeaderLink prefix={linkPrefix} active={active} link={link} name={name} />
+		<HeaderLink locale={currentLocale} active={active} link={link} name={name} />
 		))}
 	</nav>
 </header>

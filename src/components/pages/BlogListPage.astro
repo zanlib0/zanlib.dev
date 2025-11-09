@@ -1,0 +1,90 @@
+---
+import type { Post } from '../../utils/types';
+import BaseHead from '../BaseHead.astro';
+import Footer from '../Footer.astro';
+import Header from '../Header.astro';
+
+import Article from './post-types/Article.astro';
+import Note from './post-types/Note.astro';
+import Jot from './post-types/Jot.astro';
+
+interface Props {
+	posts: Post[];
+	t: {
+		lang: 'en' | 'pl';
+		readText: string;
+		navLinks: {
+			articles: string;
+			projects: string;
+			about: string;
+		};
+	};
+}
+
+const { posts, t } = Astro.props;
+---
+
+<!doctype html>
+<html lang={t.lang}>
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header active="blog" navLinks={t.navLinks} />
+		<main>
+			<section>
+				<ul>
+					{posts.map((post) => {
+						if (post.collection === 'articles') {
+							return (
+								<Article
+									lang={t.lang}
+									id={post.id}
+									pubDate={post.data.pubDate}
+									readText={t.readText}
+									title={post.data.title}
+									description={post.data.description}
+								/>
+							)
+						}
+
+						if (post.collection === 'notes') {
+							return (
+								<Note
+									lang={t.lang}
+									id={post.id}
+									pubDate={post.data.pubDate}
+									title={post.data.title}
+								/>
+							)
+						}
+
+						if (post.collection === 'jots') {
+							return (
+								<Jot
+									lang={t.lang}
+									id={post.id}
+									pubDate={post.data.pubDate}
+									body={post.body}
+								/>
+							)
+						}
+					})}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+main {
+	padding: 2rem 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+</style>

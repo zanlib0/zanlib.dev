@@ -1,16 +1,18 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import DotSimple from './DotSimple.astro';
 
 interface Props {
-	prefix: string;
+	locale: string;
 	active: string;
 	link: string;
 	name: string;
 }
 
-const { prefix, active, link, name } = Astro.props;
+const { locale, active, link, name } = Astro.props;
+const href = getRelativeLocaleUrl(locale, `/${link}`);
 ---
-<a href={`${prefix}/${link}`}>{name} <DotSimple hidden={active !== link} /></a>
+<a href={href}>{name} <DotSimple hidden={active !== link} /></a>
 
 <style>
 a {

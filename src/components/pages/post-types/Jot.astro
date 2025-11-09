@@ -1,0 +1,92 @@
+---
+import FormattedDate from '../../FormattedDate.astro';
+
+interface Props {
+	lang: 'en' | 'pl',
+	id: string,
+	pubDate: Date,
+	body?: string,
+}
+
+const { lang, id, pubDate, body = '' } = Astro.props
+
+const truncatedTitle = body.substring(0, 100)
+---
+<li>
+	<a href={`/${lang}/blog/${id}/`} class="article-link">
+		<div class="metadata">
+			<FormattedDate date={pubDate} />
+		</div>
+
+		<h5 class="title">{truncatedTitle}</h5>
+	</a>
+</li>
+
+<style>
+@property --gradient-bg {
+	syntax: '<color>';
+	initial-value: var(--background);
+	inherits: false;
+}
+
+.article-link {
+	display: flex;
+	text-decoration: none;
+	align-items: flex-start;
+	gap: 0.25rem;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid var(--background-surface);
+	line-height: 1;
+	transition: all 100ms;
+
+	@media screen and (max-width: 550px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0.5rem 1rem;
+	}
+
+	&:hover {
+		background-color: var(--brand-2);
+		border-color: var(--brand-4);
+
+		h5.title:after {
+			--gradient-bg: var(--brand-2);
+		}
+	}
+}
+
+.metadata {
+	min-width: 10rem;
+
+	.date {
+		color: var(--foreground-subtle);
+		font-family: var(--mono-font);
+		font-size: 0.7rem;
+		display: block;
+	}
+}
+
+h5.title {
+	font-family: var(--mono-font);
+	font-size: 0.7rem;
+	overflow-y: hidden;
+	letter-spacing: -0.05rem;
+	height: 1em;
+	margin: 0;
+	position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		--gradient-bg: var(--background);
+		background-image: linear-gradient(to right, transparent, var(--gradient-bg));
+		transition: --gradient-bg 100ms;
+	}
+}
+</style>
