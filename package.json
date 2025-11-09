@@ -4,16 +4,18 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.5",
     "@astrojs/mdx": "^4.3.10",
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.15.4",
     "lucide-astro": "^0.553.0",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "typescript": "^5.9.3"
   }
 }
