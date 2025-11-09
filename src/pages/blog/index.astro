@@ -7,7 +7,13 @@ import Header from '../../components/Header.astro';
 import ArrowRight from '../../components/icons/ArrowRight.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
+import '../../styles/blog-index.css';
+
+const articles = await getCollection('articles')
+
+const posts = articles
+.filter(post => post.data.language === 'en')
+.sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -36,6 +42,7 @@ const posts = (await getCollection('blog')).sort(
 
 							<div class="title">
 								<h4>{post.data.title}</h4>
+								<span>{post.data.description}</span>
 							</div>
 
 						</a>
@@ -47,51 +54,3 @@ const posts = (await getCollection('blog')).sort(
 		<Footer />
 	</body>
 </html>
-
-<style>
-ul {
-	list-style-type: none;
-}
-
-.article-link {
-	display: flex;
-	text-decoration: none;
-	padding: 1rem 0 0.5rem 0;
-	border-bottom: 2px solid var(--background-surface);
-	transition: all 100ms;
-
-	&:hover {
-		border-color: var(--brand-4);
-
-		h4 {
-			color: var(--brand-7);
-		}
-	}
-}
-
-.metadata {
-	min-width: 10rem;
-	display: flex;
-	flex-direction: column;
-	gap: 0.25rem;
-
-	.date {
-		color: var(--foreground-subtle);
-		font-size: 1rem;
-	}
-
-	.read {
-		color: var(--brand-7);
-		font-variant: small-caps;
-		text-transform: lowercase;
-
-		svg {
-			vertical-align: -0.15rem;
-		}
-	}
-}
-
-.title h4 {
-	transition: all 100ms;
-}
-</style>

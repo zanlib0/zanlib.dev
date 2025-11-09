@@ -41,14 +41,6 @@ figure {
 	gap: 2rem;
 }
 
-figcaption {
-	color: var(--foreground-subtle);
-	font-size: 1.1rem;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-}
-
 .subtitle {
 	color: var(--brand-7);
 	font-variant: small-caps;
@@ -84,12 +76,6 @@ p {
 		margin: 0;
 		padding-left: 1rem;
 	}
-}
-
-h6 {
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
 }
 
 .email-block {

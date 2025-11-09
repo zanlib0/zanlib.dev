@@ -16,7 +16,9 @@
 	--background-surface: oklch(0.230 0.014 255.0);
 
 	--body-font: "Fanwood Text", serif;
-	--heading-font: "Fanwood Text", sans-serif;
+	--heading-font: "Fanwood Text", serif;
+	--sans-font: "League Spartan", sans-serif;
+	--mono-font: "League Mono", monospace;
 
 	font-size: 16px;
 
@@ -43,18 +45,18 @@
 }
 
 @font-face {
-	font-family: "League Gothic";
-	src: url("/fonts/league-gothic.woff") format("woff");
+	font-family: "League Spartan";
+	src: url("/fonts/league-spartan-vf.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "League Gothic";
-	src: url("/fonts/league-gothic-italic.woff") format("woff");
+	font-family: "League Mono";
+	src: url("/fonts/league-mono-vf.woff") format("woff");
 	font-weight: 400;
-	font-style: italic;
+	font-style: normal;
 	font-display: swap;
 }
 
@@ -114,8 +116,12 @@ h5 {
 }
 
 h6 {
-	font-size: 0.9em;
+	font-size: 0.6em;
+	letter-spacing: 0.2em;
 	color: var(--foreground-subtle);
+	font-family: var(--sans-font);
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 strong, b {
@@ -156,13 +162,14 @@ img {
 	height: auto;
 }
 
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+code, .astro-code {
+	font-family: var(--mono-font);
+	font-size: 1rem;
 }
 
 pre {
-	padding: 1.5em;
+	padding: 1rem;
+	line-height: 1.3;
 }
 
 pre > code {
@@ -170,7 +177,7 @@ pre > code {
 }
 
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid var(--brand-7);
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
@@ -178,7 +185,40 @@ blockquote {
 
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+}
+
+abbr {
+	font-variant: all-small-caps;
+}
+
+kbd {
+  --kbd-color-background: var(--background-surface);
+  --kbd-color-border:     var(--foreground-subtle);
+  --kbd-color-text:       var(--foreground);
+
+  background-color: var(--kbd-color-background);
+  color: var(--kbd-color-text);
+  border-radius: 0.25rem;
+  border: 1px solid var(--kbd-color-border);
+  box-shadow: 0 2px 0 1px var(--kbd-color-border);
+  cursor: default;
+  font-family: var(--sans-font);
+  font-size: 0.75em;
+  line-height: 1;
+  min-width: 0.75rem;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 5px 2px 5px;
+  position: relative;
+  &:hover {
+    box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+    top: 1px;
+  }
+}
+
+mark {
+	background-color: var(--brand-4);
+	color: var(--foreground);
 }
 
 @media (max-width: 550px) {

@@ -58,7 +58,7 @@ nav {
 	margin: auto;
 	gap: 0.5rem;
 
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 550px) {
 		flex-direction: column;
 	}
 }
@@ -78,6 +78,11 @@ a {
 	a {
 		text-decoration: none;
 		color: var(--foreground);
+		transition: color 100ms;
+	}
+
+	a:hover {
+		color: var(--brand-7);
 	}
 }
 </style>

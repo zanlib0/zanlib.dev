@@ -1,6 +1,8 @@
 ---
-title: 'Markdown Style Guide'
-pubDate: 'Jun 19 2024'
+title: 'Markdown Typography Specimens'
+description: 'A sample of some basic Markdown syntax to test the typesetting on the page.'
+pubDate: 'Jan 01 1970'
+language: en
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
