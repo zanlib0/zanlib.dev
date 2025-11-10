@@ -94,16 +94,3 @@ p {
 		margin-left: 0.25rem;
 	}
 }
-
-.link {
-	display: inline-block;
-	font-variant: small-caps;
-	text-transform: lowercase;
-	letter-spacing: 0.1rem;
-	text-decoration: none;
-	color: var(--brand-7);
-
-	svg {
-		vertical-align: -0.15rem;
-	}
-}

@@ -17,7 +17,6 @@ interface Props {
 		servicesHeading: string;
 		services: string[];
 		contactHeading: string;
-		readArticlesLink: string;
 		navLinks: {
 			articles: string;
 			projects: string;
@@ -72,10 +71,6 @@ const { t } = Astro.props;
 						<span>hello@zanlib.dev</span>
 					</div>
 				</div>
-
-				<a href={`/${t.lang === 'pl' ? 'pl/' : ''}blog`} class="link"
-					>{t.readArticlesLink} <ArrowRight size="0.9rem" /></a
-				>
 			</div>
 		</main>
 		<Footer />
