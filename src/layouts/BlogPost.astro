@@ -11,6 +11,8 @@ type Props = {
 	pubDate: Date,
 	updatedDate?: Date,
 	collection: 'articles' | 'notes' | 'jots',
+	slug?: string,
+	translationAvailable?: boolean,
 	t: {
 		lastUpdatedText: string;
 		navLinks: {
@@ -21,7 +23,7 @@ type Props = {
 	};
 };
 
-const { title = null, description, pubDate, updatedDate, collection, t } = Astro.props;
+const { title = null, description, pubDate, updatedDate, collection, slug, translationAvailable, t } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
 ---
 <html lang={currentLocale}>
@@ -30,7 +32,7 @@ const currentLocale = Astro.currentLocale || 'en';
 	</head>
 
 	<body>
-		<Header active="blog" navLinks={t.navLinks} />
+		<Header active="blog" navLinks={t.navLinks} {slug} {translationAvailable} />
 		<main>
 			<article class={collection}>
 				<div class="prose">

@@ -20,3 +20,11 @@ export const collectPosts = async (language: Language = 'en'): Promise<Post[]> =
 
 	return posts
 }
+
+export async function postExistsInLanguage(
+	slug: string,
+	language: Language
+): Promise<boolean> {
+	const posts = await collectPosts(language);
+	return posts.some(post => post.id === slug);
+}

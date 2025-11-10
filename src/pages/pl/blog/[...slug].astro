@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
-import { collectPosts } from '../../../utils/collectPosts';
+import { collectPosts, postExistsInLanguage } from '../../../utils/collectPosts';
 import { getNavLinks } from '../../../i18n/ui';
 import type { Post } from '../../../utils/types';
 
@@ -19,12 +19,21 @@ type Props = Post;
 const post = Astro.props;
 const { Content } = await render(post);
 
+// Check if this post has an English translation
+const translationAvailable = await postExistsInLanguage(post.id, 'en');
+
 const t = {
 	lastUpdatedText: 'akt.',
 	navLinks: getNavLinks('pl'),
 };
 ---
 
-<BlogPost collection={post.collection} {...post.data} {t}>
+<BlogPost
+	collection={post.collection}
+	{...post.data}
+	{t}
+	slug={post.id}
+	{translationAvailable}
+>
 	<Content />
 </BlogPost>

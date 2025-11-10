@@ -12,9 +12,11 @@ interface	Props {
 		projects: string;
 		about: string;
 	};
+	slug?: string;
+	translationAvailable?: boolean;
 }
 
-const { active, navLinks } = Astro.props;
+const { active, navLinks, slug, translationAvailable } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
 
 const links = [
@@ -24,10 +26,15 @@ const links = [
 ];
 
 // Generate locale-aware URLs for language switcher
-const switcherPath = active === 'index' ? '/' : `/${active}`;
+// If we have a slug (blog post), use it; otherwise use section
+const switcherPath = slug ? `/blog/${slug}` : (active === 'index' ? '/' : `/${active}`);
 const enUrl = getRelativeLocaleUrl('en', switcherPath);
 const plUrl = getRelativeLocaleUrl('pl', switcherPath);
 const homeUrl = getRelativeLocaleUrl(currentLocale, '/');
+
+// Determine if the other language link should be disabled
+const enDisabled = currentLocale === 'en' ? false : (slug ? !translationAvailable : false);
+const plDisabled = currentLocale === 'pl' ? false : (slug ? !translationAvailable : false);
 ---
 
 <header>
@@ -39,9 +46,17 @@ const homeUrl = getRelativeLocaleUrl(currentLocale, '/');
 			</a>
 		</h4>
 		<div class="languages">
-			<a href={enUrl}>en</a>
+			{enDisabled ? (
+				<span class="disabled">en</span>
+			) : (
+				<a href={enUrl}>en</a>
+			)}
 			/
-			<a href={plUrl}>pl</a>
+			{plDisabled ? (
+				<span class="disabled">pl</span>
+			) : (
+				<a href={plUrl}>pl</a>
+			)}
 		</div>
 	</nav>
 
@@ -90,8 +105,6 @@ a {
 .languages {
 	font-variant: small-caps;
 
-	color: var(--background-surface);
-
 	a {
 		text-decoration: none;
 		color: var(--foreground);
@@ -100,6 +113,11 @@ a {
 
 	a:hover {
 		color: var(--brand-7);
+	}
+
+	.disabled {
+		cursor: not-allowed;
+		opacity: 0.3;
 	}
 }
 </style>
