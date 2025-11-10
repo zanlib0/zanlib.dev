@@ -13,7 +13,7 @@ interface Props {
 
 const { lang, id, pubDate, readText, title, description } = Astro.props
 ---
-<li>
+<li data-collection="articles">
 	<a href={`/${lang}/blog/${id}/`} class="article-link">
 		<div class="metadata">
 			<FormattedDate date={pubDate} />

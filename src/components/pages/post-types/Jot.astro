@@ -12,7 +12,7 @@ const { lang, id, pubDate, body = '' } = Astro.props
 
 const truncatedTitle = body.substring(0, 100)
 ---
-<li>
+<li data-collection="jots">
 	<a href={`/${lang}/blog/${id}/`} class="article-link">
 		<div class="metadata">
 			<FormattedDate date={pubDate} />

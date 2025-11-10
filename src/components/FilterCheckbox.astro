@@ -1,12 +1,13 @@
 ---
 interface Props {
 	label: string;
+	value: string;
 }
 
-const { label } = Astro.props;
+const { label, value } = Astro.props;
 ---
 <label>
-	<input type="checkbox" class="filter-checkbox">
+	<input type="checkbox" class="filter-checkbox" name="post-filter" data-filter-type={value}>
 	<div>{label}</div>
 </label>
 

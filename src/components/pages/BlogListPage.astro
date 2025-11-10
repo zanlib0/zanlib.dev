@@ -37,9 +37,9 @@ const { posts, t } = Astro.props;
 		<Header active="blog" navLinks={t.navLinks} />
 		<main>
 			<div class="filters">
-				<FilterCheckbox label={t.articles} />
-				<FilterCheckbox label={t.notes} />
-				<FilterCheckbox label={t.jots} />
+				<FilterCheckbox label={t.articles} value="articles" />
+				<FilterCheckbox label={t.notes} value="notes" />
+				<FilterCheckbox label={t.jots} value="jots" />
 			</div>
 			<section>
 				<ul>
@@ -85,6 +85,42 @@ const { posts, t } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<script>
+	// Get all filter checkboxes and post items
+	const filterCheckboxes = document.querySelectorAll<HTMLInputElement>('input[name="post-filter"]');
+	const postItems = document.querySelectorAll<HTMLLIElement>('section ul li[data-collection]');
+
+	function applyFilters() {
+		// Get all checked filter types
+		const checkedFilters = Array.from(filterCheckboxes)
+			.filter(checkbox => checkbox.checked)
+			.map(checkbox => checkbox.dataset.filterType);
+
+		// If no filters are checked, show all posts
+		if (checkedFilters.length === 0) {
+			postItems.forEach(post => {
+				post.style.display = '';
+			});
+			return;
+		}
+
+		// Otherwise, show only posts that match checked filters
+		postItems.forEach(post => {
+			const postCollection = post.dataset.collection;
+			if (checkedFilters.includes(postCollection)) {
+				post.style.display = '';
+			} else {
+				post.style.display = 'none';
+			}
+		});
+	}
+
+	// Add event listeners to all checkboxes
+	filterCheckboxes.forEach(checkbox => {
+		checkbox.addEventListener('change', applyFilters);
+	});
+</script>
 
 <style>
 main {
