@@ -239,7 +239,7 @@ mark {
 
 ::-webkit-scrollbar-thumb {
   background: var(--foreground-subtle); 
-  border: 2px solid var(--background-surface);
+  border: 1px solid var(--background-surface);
   border-radius: 10px;
 }
 

@@ -1,0 +1,58 @@
+---
+interface Props {
+	label: string;
+}
+
+const { label } = Astro.props;
+---
+<label>
+	<input type="checkbox" class="filter-checkbox">
+	<div>{label}</div>
+</label>
+
+<style>
+label {
+  font-size: 1rem;
+	line-height: 1;
+  line-height: 1.0;
+  display: flex;
+	align-items: baseline;
+	gap: 0.25rem;
+	padding: 0.25rem;
+	border: 1px solid var(--background-surface);
+	transition: border-color 100ms;
+
+	&:has(input:checked) {
+		background: var(--brand-2);
+		border-color: var(--brand-4);
+	}
+
+	&:hover {
+		border-color: var(--brand-4);
+	}
+
+	&:active {
+		border-color: var(--brand-5);
+	}
+
+	input {
+		appearance: none;
+		height: 1cap;
+		width: 1cap;
+		box-sizing: border-box;
+		border: 1px solid var(--foreground-subtle);
+		transition: all 100ms;
+
+		&:checked {
+			background: var(--brand-4);
+			border-color: var(--brand-5);
+		}
+	}
+
+	div {
+		padding-right: 0.5rem;
+	}
+}
+
+
+</style>

@@ -3,6 +3,7 @@ import type { Post } from '../../utils/types';
 import BaseHead from '../BaseHead.astro';
 import Footer from '../Footer.astro';
 import Header from '../Header.astro';
+import FilterCheckbox from '../FilterCheckbox.astro';
 
 import Article from './post-types/Article.astro';
 import Note from './post-types/Note.astro';
@@ -13,6 +14,9 @@ interface Props {
 	t: {
 		lang: 'en' | 'pl';
 		readText: string;
+		articles: string,
+		notes: string,
+		jots: string,
 		navLinks: {
 			articles: string;
 			projects: string;
@@ -32,6 +36,11 @@ const { posts, t } = Astro.props;
 	<body>
 		<Header active="blog" navLinks={t.navLinks} />
 		<main>
+			<div class="filters">
+				<FilterCheckbox label={t.articles} />
+				<FilterCheckbox label={t.notes} />
+				<FilterCheckbox label={t.jots} />
+			</div>
 			<section>
 				<ul>
 					{posts.map((post) => {
@@ -86,5 +95,11 @@ ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.filters {
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 </style>

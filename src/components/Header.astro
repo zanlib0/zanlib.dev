@@ -25,14 +25,11 @@ const links = [
 	{ link: 'about', name: navLinks.about, disabled: true, },
 ];
 
-// Generate locale-aware URLs for language switcher
-// If we have a slug (blog post), use it; otherwise use section
 const switcherPath = slug ? `/blog/${slug}` : (active === 'index' ? '/' : `/${active}`);
 const enUrl = getRelativeLocaleUrl('en', switcherPath);
 const plUrl = getRelativeLocaleUrl('pl', switcherPath);
 const homeUrl = getRelativeLocaleUrl(currentLocale, '/');
 
-// Determine if the other language link should be disabled
 const enDisabled = currentLocale === 'en' ? false : (slug ? !translationAvailable : false);
 const plDisabled = currentLocale === 'pl' ? false : (slug ? !translationAvailable : false);
 ---
