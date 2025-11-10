@@ -21,7 +21,7 @@ Gumption is essential in any kind of craft—be it woodworking, motorcycle maint
 
 What is a gumption trap then? It's a factor, either external or internal, that causes your gumption to "leak out". It's <mark>when the relationship between the craftsman and the material he is working on breaks</mark>. The result of falling into a gumption trap is the loss of enthusiasm of working on the material and the irresistible desire to put the entire thing away. Since we are talking here primarily about programming, we will be discussing these mostly within that context.
 
-There are, broadly, two groups of gumption traps. External, that is arising from the material (in our case, code) itself, from the system we are working on, from the external parts (libraries) that we use or from something else. Pirsig calls these "<mark>setbacks</mark>". The second type—internal—is caused by our own poor mindset or failures in performing our craft. These are called "<mark>hangups</mark>". Hangups are further divided into three groups — "value traps", "truth traps" and "muscle traps".
+There are, broadly, two groups of gumption traps. External, that is arising from the material (in our case, code) itself, from the system we are working on, from the external parts (libraries) that we use or from something else. Pirsig calls these "<mark>setbacks</mark>". The second type—internal—is caused by our own poor mindset or failures in performing our craft. These are called "<mark>hangups</mark>." Hangups are further divided into three groups — "value traps", "truth traps" and "muscle traps".
 
 ## Setbacks
 

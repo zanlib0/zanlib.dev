@@ -72,6 +72,7 @@ body {
 	color: var(--foreground);
 	font-size: 1.3rem;
 	line-height: 1.8rem;
+	font-variant-numeric: lining-nums;
 }
 
 main {
@@ -93,6 +94,7 @@ h6 {
 	letter-spacing: 0.05rem;
 	line-height: 1.2;
 	font-weight: 400;
+	font-variant-numeric: lining-nums;
 }
 
 h1 {
@@ -250,4 +252,8 @@ mark {
 	main {
 		padding: 1em;
 	}
+}
+
+.sr-only {
+	display: none;
 }

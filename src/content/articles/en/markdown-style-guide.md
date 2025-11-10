@@ -64,15 +64,17 @@ The blockquote element represents content that is quoted from another source, op
 
 ```markdown
 > Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> — <cite>Rob Pike[+robpike]</cite>
+
+[+robpike]: The above quote is excerpted from Rob Pike's talk during Gopherfest, November 18, 2015.
 ```
 
 #### Output
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> — <cite>Rob Pike[+robpike]</cite>
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+[+robpike]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 ## Tables
 
