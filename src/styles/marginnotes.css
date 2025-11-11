@@ -1,3 +1,6 @@
+html {
+  scroll-padding-top: 5rem;
+}
 .marginnote-def {
   float: right;
   clear: right;
@@ -35,7 +38,6 @@
 .marginnote-backref {
   margin-left: 0.5em;
   text-decoration: none;
-  display: none;
 }
 
 .hidden {
@@ -45,16 +47,16 @@
 @media (max-width: 1279px) {
   .marginnote-def {
     display: none;
+    scroll-margin-top: 3rem;
   }
 
-  .marginnote-ref-wrapper:focus-within + .marginnote-def {
+  .marginnote-def:target {
     display: block;
     float: left;
     left: 1rem;
     clear: both;
     width: 95%;
     margin: 1rem 2.5%;
-    vertical-align: baseline;
     position: relative;
   }
 }

@@ -93,7 +93,9 @@ As an aside, I find that the agile model already helps a lot with this, as it en
 
 The gumption trap of ego is dangerous and quite often leads to value rigidity. The difference is while conventional value rigidity often deals with the material (code, clay, the motorcycle), ego is like the value rigidity of self.
 
-> If you have a high evaluation of yourself then your ability to recognize new facts is weakened. Your ego isolates you from the Quality reality. When the facts show that you’ve just goofed, you’re not as likely to admit it. When false information makes you look good, you're likely to believe it.
+> If you have a high evaluation of yourself then your ability to recognize new facts is weakened. Your ego isolates you from the Quality reality. When the facts show that you’ve just goofed, you’re not as likely to admit it. When false information makes you look good, you're likely to believe it.[+q1]
+
+[+q1]: <abbr>*Z&AMM*</abbr>, p. 297
 
 The thing about code is that it has a way of revealing your actual nature. Most programmers I know are usually rather modest and quiet, especially when they're working. Sometimes they are annoyed and tend to mumble or shout expletives, but I find they are less aimed at the code or the machine and more at themselves. The machine is a reflection of your own nature.
 
@@ -115,7 +117,9 @@ It's important to not let that paralyse you.
 
 This one is tricky, because it often goes hand in hand with ego. How often are we bored when working on code? Sometimes a module that is not reusable or an unintended convention of copy-pasting code can lead to a task that in theory should take twenty minutes but actually in a messy codebase will be more like twenty hours.
 
-Robert C. Martin in *The Clean Coder* pointed to a similar concept and he called it "focus-mana". Focus-mana is a substance that affects alertness and attention. Coding consumes it, so do worries and distractions. Oftentimes situations which are not related to our work at all can reduce our focus-mana.
+Robert C. Martin in *The Clean Coder* pointed to a similar concept and he called it "focus-mana".[+focusmana] Focus-mana is a substance that affects alertness and attention. Coding consumes it, so do worries and distractions. Oftentimes situations which are not related to our work at all can reduce our focus-mana.
+
+[+focusmana]: Martin, R. C. _The Clean Coder: A Code of Conduct for Professional Programmers_. Pearson 2011; p. 127
 
 Take a few minutes to recharge. Look out the window. Go for a fifteen-minute walk. Go to the kitchen and make a cup of tea and talk to your colleagues. Sleep properly after work.
 
@@ -193,7 +197,9 @@ If it's not muscle memory for you, you're in a muscle trap. Learn touch typing. 
 
 The final trap that I'd like to talk about is something Pirsig calls the "funeral procession".
 
-> I watch the cars go by for a while on the highway. Something lonely about them. (...) Something about the car drivers too. (...) They all look like they're in a funeral procession. (...) The driving is different too. The cars seem to be moving at a steady maximum speed for in-town driving, as though they want to get somewhere, as though what's here right now is just something to get through. *The drivers seem to be thinking about where they want to be rather than where they are.* (...) Folks, I just forgot the biggest gumption trap of all. The funeral procession! The one everybody's in, this hyped-up, [screw]-you, supermodern, ego style of life that thinks it owns this country.
+> I watch the cars go by for a while on the highway. Something lonely about them. (...) Something about the car drivers too. (...) They all look like they're in a funeral procession. (...) The driving is different too. The cars seem to be moving at a steady maximum speed for in-town driving, as though they want to get somewhere, as though what's here right now is just something to get through. *The drivers seem to be thinking about where they want to be rather than where they are.* (...) Folks, I just forgot the biggest gumption trap of all. The funeral procession! The one everybody's in, this hyped-up, [screw]-you, supermodern, ego style of life that thinks it owns this country.[+q2]
+
+[+q2]: <abbr>*Z&AMM*</abbr>, p. 308
 
 The emphasised sentence is key. There are many names for this feeling. The poetic names for this in the writings of the Catholic sages is "acedia" or "tædium." However, there is little place for poetry in modern corporate environment, so the funeral procession analogy seems to fit much better.
 
