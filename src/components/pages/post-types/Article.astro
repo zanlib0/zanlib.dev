@@ -1,6 +1,7 @@
 ---
 import FormattedDate from '../../FormattedDate.astro';
 import ArrowRight from '../../icons/ArrowRight.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface Props {
 	lang: 'en' | 'pl',
@@ -14,7 +15,7 @@ interface Props {
 const { lang, id, pubDate, readText, title, description } = Astro.props
 ---
 <li data-collection="articles">
-	<a href={`/${lang}/blog/${id}/`} class="article-link">
+	<a href={getRelativeLocaleUrl(lang, `/blog/${id}/`)} class="article-link">
 		<div class="metadata">
 			<FormattedDate date={pubDate} />
 

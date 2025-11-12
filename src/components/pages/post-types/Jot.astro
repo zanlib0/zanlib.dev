@@ -1,5 +1,6 @@
 ---
 import FormattedDate from '../../FormattedDate.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface Props {
 	lang: 'en' | 'pl',
@@ -13,7 +14,7 @@ const { lang, id, pubDate, body = '' } = Astro.props
 const truncatedTitle = body.substring(0, 100)
 ---
 <li data-collection="jots">
-	<a href={`/${lang}/blog/${id}/`} class="article-link">
+	<a href={getRelativeLocaleUrl(lang, `/blog/${id}/`)} class="article-link">
 		<div class="metadata">
 			<FormattedDate date={pubDate} />
 		</div>

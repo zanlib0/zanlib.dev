@@ -1,9 +1,9 @@
 ---
 import { render } from 'astro:content';
-import BlogPost from '../../../layouts/BlogPost.astro';
-import { collectPosts, postExistsInLanguage } from '../../../utils/collectPosts';
-import { getNavLinks } from '../../../i18n/ui';
-import type { Post } from '../../../utils/types';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { collectPosts, postExistsInLanguage } from '../../utils/collectPosts';
+import { getNavLinks } from '../../i18n/ui';
+import type { Post } from '../../utils/types';
 
 export async function getStaticPaths() {
 	const posts = await collectPosts('en');

@@ -22,10 +22,12 @@ export default defineConfig({
 		locales: ["en", "pl"],
 		defaultLocale: "en",
 		routing: {
-			prefixDefaultLocale: true,
+			prefixDefaultLocale: false,
 		}
 	},
 	redirects: {
-		'/': '/en',
+		'/en': '/',
+		'/en/blog': '/blog',
+		'/en/blog/*': '/blog/*',
 	}
 });
