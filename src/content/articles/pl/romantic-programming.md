@@ -7,7 +7,7 @@ description: Dwa różne podejścia do technologii.
 
 Jeśli zdarzyło ci się uczęszczać do polskiego liceum, prawdopodobnie rozpoznajesz poniższy schemat.
 
-<img src="/assets/sinusoid.svg" alt="Krzyżanowski sinusoid" class="invert" />
+<img src="/assets/sinusoid.svg" alt="Sinusoida Krzyżanowskiego" />
 
 To rysunek znany pod nazwą "sinusoidy Krzyżanowskiego", od nazwiska [Juliana Krzyżanowskiego](https://pl.wikipedia.org/wiki/Julian_Krzy%C5%BCanowski). Założenie sinusoidy jest takie, że pokazuje progresję epok historycznych i literackich poprzez ich podejście do szeroko rozumianego rozumu. Epoki nad linią są "jasne", bliższe ziemi, materii, rozumowi i humanizmowi; podczas gdy epoki poniżej linii są "ciemne", bardziej efemeryczne, powiązne z religią, emocjami i dekadencją. Sinusoida ma za zadanie pokazać jak ludzka myśl w skali cywilizacyjnej opiera się na kontraście w sztuce, literaturze i filozofii.
 
@@ -31,18 +31,18 @@ To jest prawdziwy podział między klasycznym a romantycznym umysłem. Klasyk in
 
 Klasycznie zorientowana osoba jest technofilem. Chce zrozumieć maszynę, techniczne szczegóły jej działania, jak wszystkie części do siebie pasują i jak ją naprawić kiedy coś się zepsuje. Myśl klasyczna dała nam logikę, matematykę, racjonalizm i metodę naukową. Jest zbudowana na hierarchii faktów, które same w sobie są zbudowane na podobnej hierarchii, aż do samego dołu, do fundamentalnych aksjomatów wszechświata.
 
-Z rugiej strony, romantycznie zorientowana osoba jest naturalnie technofobem. Jedno z praw Clarke'a mówi, że każda wystarczająco zaawansowana technologia jest nierozróżnialna od magii, a dla romantyka zrozumienie technologii jest okradaniem jej z jej magii, podkopywaniem jej piękna. Co jest uważane za zaletę przez klasyków bywa wadą dla romantyków.
+Z drugiej strony, romantycznie zorientowana osoba jest naturalnie technofobem. Jedno z praw Clarke'a mówi, że każda wystarczająco zaawansowana technologia jest nierozróżnialna od magii, a dla romantyka zrozumienie technologii jest okradaniem jej z jej magii, podkopywaniem jej piękna. Co jest uważane za zaletę przez klasyków bywa wadą dla romantyków.
 
 ## Programiści-romantycy
 
 Skoro programowanie jest nierozerwalnie zestawione z technologią, można by się spodziewać, że romantyczne nastawienie jest zupełnie niekompatybilne z tym powołaniem. Jednakże, wydaje mi się że ze wzrostem popularności wysokoopziomowych języków programowania, ich maszyn wirtualnych które działają niezależnie od sprzętu na jakim są uruchomione, a nawet bardziej w erze dużych modeli językowych używanych do pisania kodu, programowanie stało się o wiele bardziej oddzielone od technologii. Nie stało się do końca sztuką, ale rozumiane wysokopoziomowy nie jest też w zupełności naukowe. Manifest "software craftsmanship" wydaje się to tylko potwierdzać.
 
-Niemniej, jest to trudne pole dla romantyków. Klasycznych programisitów jest tak wielu, że od romantyków oczekuje się zupełnego przyjęcia klasycznych wartości, podczas gdy nie zawsze działa to tak samo w drógą stronę. Tego się od nas oczekuje: klasyczne oprogramowanie ma być kuloodporne i _działać_ bez problemu, bez bugów i bez zająknięć.
+Niemniej, jest to trudna branża dla romantyków. Klasycznych programisitów jest tak wielu, że od romantyków oczekuje się zupełnego przyjęcia klasycznych wartości, podczas gdy nie zawsze działa to tak samo w drógą stronę. Tego się od nas oczekuje: klasyczne oprogramowanie ma być kuloodporne i _działać_ bez problemu, bez bugów i bez zająknięć.
 
 Ze smutkiem natomiast zauważam, że wśród moich kolegów wartość oprogramowania, które jest _odczuwalnie_ przyjemne w użyciu oraz rozwijaniu jest często zupełnie drugorzędna. Kładziemy znacznie mniejszy nacisk na software, którego dobrze się używa.
 
-A przecież jedno nie wyklucza drugiego. Oczywiście, mając do wyboru aplikację która działa, ale nie da się jej używać; lub aplikację której używa się dobrze ale nie działa—żaden to wybór! Obie są nic niewarte. Jednakże, mając już na tapecie aplikację która dobrze działa, ale używanie jej jest toporne, być może więcej wartości będzie miało skupienie się na doświadczeniu zamiast na działaniu. A odpowiedni balans między jednym a drugim oznacza prawdziwą jakość.
+A przecież jedno nie wyklucza drugiego. Oczywiście, mając do wyboru aplikację która działa, ale nie da się jej używać; lub aplikację której używa się dobrze ale nie działa—żaden to wybór! Obie są nic niewarte. Jednakże, mając już na tapecie aplikację która dobrze działa, ale używanie jej jest toporne, być może więcej wartości będzie miało skupienie się na doświadczeniu zamiast inwestować w działanie. A odpowiedni balans między jednym a drugim oznacza prawdziwą jakość.
 
-I co jest ważne, to że nie powinniśmy szukać jakości jedynie w tym, jak oprogramowanie jest używane, ale jak oprogramowanie jest rozwijane—chcemy mieć odporną, przetestowaną i modularną bazę kodu, która działa dobrze, ponieważ jest również przyjemna w rozwoju. I wydaje się, że również rozumiemy, że zbyt sztywne ograniczenia też nie są dobre—zauważamy, że jeśli zmiana jednej linii kodu produkcyjnego wymaga aktualizacji kilkunastu plików z testami, to coś poszło nie tak.
+I co jest ważne, nie powinniśmy szukać jakości jedynie w tym, jak oprogramowanie jest używane, ale jak oprogramowanie jest rozwijane—chcemy mieć odporny, przetestowany i modularny kod, który działa dobrze, ponieważ jest również przyjemny w rozwoju. I wydaje się, że również rozumiemy, że zbyt sztywne ograniczenia też nie są dobre—zauważamy, że jeśli zmiana jednej linii kodu produkcyjnego wymaga aktualizacji kilkunastu plików z testami, to coś poszło nie tak.
 
 Ostatecznie jednak sądzę, że ważne jest, abyśmy mieli tę dychotomię na uwadze przy decydowaniu o składzie zespołu. Czyjaś szczególna skłonność nie powinna być wymówką do pisania złego oprogramowania, czy to byłoby oprogramowanie, które działa słabo lub jest nieprzyjemne w użyciu, ale raczej powinna być wykorzystana do udoskonalania istniejących projektów, aby doprowadzić je do najwyższych poziomów jakości.
