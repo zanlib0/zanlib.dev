@@ -15,7 +15,7 @@ What I think is important about this is that sometimes to discover the obvious, 
 
 - It should check with human nature. You should be pretty certain that your solution will be accepted by anyone, whom you tell about it. Human nature verifies the solution to any problem.
 
-> "If you do not feel pretty certain that your idea will be understood and accepted by your mother, wife, brothers, sisters, cousins, next-door neighbour, the man who works at the next desk or machine, the mechanic who services your automible, your minister, your barber, the manager of your grocery store, the man who shines your shoes, your Aunt Mary, your secretary, your seat-mae on the 5:29 suburban train, your most outspoken friends - if you don't feel comfortable about explaining your obvious idea to these people - it is probably not obvious."
+> "If you do not feel pretty certain that your idea will be understood and accepted by your mother, wife, brothers, sisters, cousins, next-door neighbour, the man who works at the next desk or machine, the mechanic who services your automible, your minister, your barber, the manager of your grocery store, the man who shines your shoes, your Aunt Mary, your secretary, your seat-mate on the 5:29 suburban train, your most outspoken friends - if you don't feel comfortable about explaining your obvious idea to these people - it is probably not obvious."
 
 - You should be able to write it down, in two or three paragraphs and short, two- or three-syllable words. No plan is obvious unless it can be understood by people of average intelligence. Often the attempt to express a plan on paper will outline its flaws or complexities.
 
