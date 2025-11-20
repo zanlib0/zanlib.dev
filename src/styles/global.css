@@ -73,6 +73,7 @@ body {
 	font-size: 1.3rem;
 	line-height: 1.8rem;
 	font-variant-numeric: lining-nums;
+	font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
 }
 
 main {
@@ -95,6 +96,7 @@ h6 {
 	line-height: 1.2;
 	font-weight: 400;
 	font-variant-numeric: lining-nums;
+  font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
 }
 
 h1 {
