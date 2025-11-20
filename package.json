@@ -14,6 +14,7 @@
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.15.4",
+    "katex": "^0.16.25",
     "lucide-astro": "^0.553.0",
     "remark-marginnotes": "^0.1.5",
     "sharp": "^0.34.3",

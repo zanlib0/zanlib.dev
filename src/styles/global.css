@@ -62,7 +62,7 @@
 
 body {
 	font-family: var(--body-font);
-	letter-spacing: -0.02rem;
+	letter-spacing: -0.01rem;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -148,7 +148,7 @@ p {
 }
 
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 textarea {
@@ -258,4 +258,8 @@ mark {
 
 .sr-only {
 	display: none;
+}
+
+.invert {
+	filter: invert(1);
 }

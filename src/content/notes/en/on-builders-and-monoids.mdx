@@ -1,0 +1,88 @@
+---
+pubDate: 10 May 2025
+title: On Builders and Monoids
+---
+import Latex from '../../../components/Latex.astro';
+
+Inspired by a recent X post by Dmitrii Kovanikov I set out to understand how exactly the [Builder pattern is just one use case for monoids](https://x.com/inter_caetera/status/1920588275380568278). This journey started with me being very conflicted at the algebraic and categorical definitions of monoids, and ended in a shift of understanding and learning once again the lesson of not relying too much on the set-theoretic analogies in category theory (while in the shower, where else?).
+
+# Prerequisites
+
+The [Builder pattern](https://refactoring.guru/design-patterns/builder) is one of the creational design patterns that constructs an object step by step. An example from the X thread is this:
+
+```java
+HttpClient client = HttpClient.newBuilder()
+  .version(Version.HTTP_2)
+  .followRedirects(Redirect.NORMAL)
+  .build();
+```
+
+We can reconsider this in functional terms if we regard a method call as a binary function. So, a method call that looks like `a.f(b)` is actually a function `f(a, b)` or `a -> b -> f a b`.
+
+Knowing this, we can redefine the "Builder pattern" as simply a bunch of functions in the form `a -> b -> a` chained together. We can be reasonably sure that the `.version(...)` and `.followRedirects(...)` methods are such functions:
+
+```haskell
+version :: Builder -> Version -> Builder
+followRedirects :: Builder -> Redirect -> Builder
+```
+
+Indeed, it seems like a perfect analogy in a functional language is the way `conn` is constructed in the Phoenix framework in Elixir. Each function takes a conn in the first argument (which is concealed due to the `|>` pipeline operator, which pipes into the first argument of the function on the right) and returns a conn.
+
+```elixir
+conn
+|> put_session(:admin_user_id, current_user.id)
+|> Pow.Plug.delete()
+|> Pow.Plug.create(user)
+|> redirect(to: ~p"/")
+```
+
+A monoid, as we learned [elsewhere](/posts/monoids-in-practice), is a set <Latex formula="S" inline /> equipped with an associative binary function <Latex formula="S \times S \rightarrow S" inline /> called <Latex formula="\bullet" inline /> and an identity element <Latex formula="\varepsilon \in S" inline /> such that for any element <Latex formula="a" inline /> in <Latex formula="S" inline /> the equations <Latex formula="\varepsilon \bullet a = a" inline /> and <Latex formula="a \bullet \varepsilon = a" inline /> hold. In other words, it's a generalisation of operations like concatenation (of lists or strings), addition and multiplication of numbers, and so on.
+
+The above definition is a set-theoretic definition, though — talking about sets and functions. Monoids are also defined in category theory, where we can say that a monoid is the set of all arrows of a single-object category. Since it's a category, by definition it has an identity morphism and the arrows are composable.
+
+<figure style="text-align: center;">
+    <img src="/assets/monoid.svg" class="invert" style="width: 12rem;"/>
+    <figcaption>A categorical diagram of a monoid. The identity arrow is dashed.</figcaption>
+</figure>
+
+Intuitively, this set of arrows can be understood as the set of functions with the first argument already partially applied. If our object is the type `Int` then the set of arrows is the infinite set of functions `+ 1`, `+ 2`, `+ 3` and so on, with the identity being of course `+ 0`.
+
+# The problem
+
+So the question is: is this `Builder` that we defined above actually an example of a monoid?
+
+The initial answer, to me, seemed to be "no." After all, in the algebraic definition we define that the binary operation should be closed under the set, and the `version` and `followRedirects` methods clearly aren't closed, since the second argument to them is not of type `Builder` but something else.
+
+On the other hand, it _clearly_ fits the diagram. After all, in the categorical definition nowhere do we say what the arrows actually are and if they have to correspond to two-argument functions, the arguments being of the same type as the value. Assuming that `Builder` has some kind of identity method that just returns itself, we could just say that every possible method call on that `Builder` type is just another arrow that belongs to the monoid. So it seemed to me that the requirements for monoids in categories are maybe more relaxed than in set theory.
+
+Furthermore, the final `.build()` method, which most likely collapses the `Builder` into a final `HttpClient` value very much resembles the `fold` or `reduce` function that can be defined for any monoid.
+
+# Perspective shift
+
+So we know that a monoid consists of a set, a function and an identity element. In the current perspective:
+
+- The `Builder` type is our set.
+- The method calls, like `builder.version().followRedirects()`, are our binary operations.
+- If `Builder` has some method that returns the builder unchanged, that would be the identity element.
+
+This is obviously incoherent, not just since the method calls are not necessarily binary operations, but primarily because the `Builder` is a type and the identity element is a function.
+
+So this seems like a dead end — what can be done? Well, the clue was, as always, in the definition.
+
+> A monoid is the <u>set</u> of all arrows of a single-object category.
+
+That is, there is a monoid where the central <Latex formula="S" inline /> is not `Builder`, but `Builder -> Builder`. A function with matching types naturally has a binary operation, which is function composition, and there is an identity function that serves as the neutral element to composition.
+
+The last piece of the puzzle is changing the initial assumption around method calls: if we say that the object on which the method is called comes last, and not first, in the argument list, we can partially apply the arguments and the entire thing fits together like a glove:
+
+```haskell
+version :: Version -> Builder -> Builder
+followRedirects :: Redirect -> Builder -> Builder
+
+version HTTP_2 -- :: Builder -> Builder
+followRedirects NORMAL -- :: Builder -> Builder
+```
+
+This perspective aligns with the categorical understanding and also works for the algebraic definition. So, it turns out the builder pattern or the `Builder` type itself isn't a monoid, but the operations in the builder pattern form a monoid of endomorphisms on the `Builder` type.
+
+Moments like this, when things in category theory (or in mathematics in general) just "click" and you manage to string together an explanation from something not very expected is what makes this discipline so appealing to me. It also shows that you can very effectively build practical intuitions for patterns in programming by recognising instances of categorical concepts in code. For seasoned mathematicians this is probably very easy, and nothing to write a blog post about, but for me, it's the same feeling when my first handwritten non-trivial program compiled and worked as expected.

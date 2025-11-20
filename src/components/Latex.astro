@@ -1,0 +1,32 @@
+---
+import katex from 'katex'
+
+interface Props {
+	formula: string,
+	inline?: boolean,
+}
+
+const { formula, inline } = Astro.props
+const html = katex.renderToString(formula, {throwOnError: true})
+---
+{inline ? (
+	<span set:html={html} class="inline" />
+) : (
+	<p class="latex">
+		<span set:html={html} class="" />
+	</p>
+)}
+
+<style>
+	.latex {
+		text-align: center;
+		overflow-y: hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+
+	.inline {
+		max-height: 1.5;
+		vertical-align: bottom;
+	}
+</style>

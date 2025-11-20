@@ -1,0 +1,452 @@
+---
+title: Lisp in JavaScript
+pubDate: 15 March 2025
+description: Turing-completeness inside JavaScript arrays.
+---
+import Latex from '../../../components/Latex.astro';
+
+Lisp is easily one of the most fascinating languages in existence. The second high-level language ever (after Fortran) it looks completely unlike everything you normally see in programming. Having done [a few days of the most recent Advent of Code in Clojure](https://github.com/zanlib0/aoc2024), I became quite interested in Lisp. It was quite difficult to get over the bracket syntax at first, but overall the innate beauty of the language, as well as the [<abbr>SICP</abbr> lectures](https://www.youtube.com/playlist?list=PL8FE88AA54363BC46) on YouTube made me want to try it more and more. Eventually I got to the point where Gerald Jay Sussman introduced the [metacircular evaluator](https://youtu.be/0m6hoOelZH8) (Lisp in Lisp) and wrote it all down on five blackboards, and that inspired me to try something similar in <abbr>JS</abbr>.
+
+## Introduction to Lisp
+
+But before getting to the evaluator, we should first look at the syntax of Lisp. Lisp is an extremely simple language, and we can explain its syntax in a few definitions.
+
+- Lisp syntax consists of _symbolic expressions_ (_s-expressions_ for short) which are either _atoms_ or _lists_.
+- An _atom_ is a primitive value. A number, a string, or a symbol is an atom.
+- A _list_ is an ordered sequence of atoms or other lists.
+
+Lists in Lisp are most commonly singly-linked lists and their underlying structure consists of cons cells. A _cons cell_ is a pair, where the first element is an s-expression and the second element is either empty (_nil_), or another cons cell.
+
+If for any reason the underlying cons-cell structure of the lists is important, the lists are represented using the dotted-pair syntax: `(1 . (2 . (3 . nil)))`. However, this is quite verbose, so list syntax is used more often: `(1 2 3)`.
+
+Traditionally, the first element of a cons cell is called _car_ and the second element is called _cdr_. At some point in history these names used to mean something, but now that meaning is completely lost on most users of Lisp, so alternative names _head_ and _tail_ are used often instead.
+
+Unfortunately <abbr>JS</abbr> does not give us singly-linked lists or cons cells as primitives — the main ordered sequence data structure in <abbr>JS</abbr> is an array. We will implement lists as arrays instead.
+
+## Evaluation
+
+S-expressions can be evaluated. Evaluation rules are also quite simple:
+
+- Non-symbol atoms evaluate to themselves.
+- Symbols evaluate to their value in the _environment_.
+- Lists evaluate to the result of _applying_ the tail of the list to its head. In this case, the head of the list is called the _operator_ and the elements of the tail, _operands_.
+
+An intuitive example can be evaluating a list like `(inc 2)`. In this case the operator `inc` is a function that increments its argument by one. The operand is `2`. The result of applying `inc` to `2` is `3`, and that is indeed what this expression would evaluate to.
+
+There are a few more things that we have to define:
+
+- An _operator_ is either a _function_, a _macro_ or a _special form_.
+- A _function_ is a procedure that takes operands, evaluates each of them, then applies some computation to the evaluated operands to produce a result.
+
+This gives rise to the distinctive, nested bracket syntax of Lisp, and also shows the almost mythical recursive interplay of evaluation and application. For example, evaluating an expression like `(inc (inc 2))` would result in recursively evaluating the nested s-expressions. We want to apply `(inc 2)` to the outer `inc`, but first `(inc 2)` has to be evaluated by applying `2` to `inc`. So `(inc (inc 2))` first evaluates to `(inc 3)` and then the entire expression evaluates to `4`.
+
+- A _special form_ is a built-in operator with its own evaluation rules that differ from regular function application.
+
+Special forms are required to implement certain behaviours that are impossible to express in strictly-evaluated function application. For example, one of the special forms in most dialects of Lisp is `(if cond then else)` . This special form evaluates `cond`, and if the result is `nil`, only `else` is evaluated — otherwise, only `then` is evaluated. If `if` was implemented as a regular procedure call, we would not be able to skip evaluating one of the branches, since by definition function calls evaluate each of their operands before application.
+
+- A _macro_ is an operator that transforms code before it is evaluated.
+
+Unlike functions or special forms, macros modify s-expressions before they are evaluated. This is a good point to mention that Lisp programs are [homoiconic](https://en.wikipedia.org/wiki/Homoiconicity), meaning that Lisp programs are constructed of valid Lisp s-expressions. We will not implement macros in our evaluator, but they serve as an important introduction to the concepts of homoiconicity and metaprogramming.
+
+## Homoiconicity
+
+In most other programming languages, the first step to getting from the source code to some kind of result is parsing the source code (a string of characters) into an unambiguous syntactic structure called an abstract syntax tree (AST). For example, an expression like <Latex formula={`1 + 2 \\times 3`} inline /> is ambiguous: we can either assume standard mathematical rules of arithmetic and say that its value is <Latex inline formula={`1 + 6 = 7`} />, or we could say that actually we are just going to evaluate left to right and thus the value is <Latex inline formula={`3 \\times 3 = 9`} />.
+
+To not be ambiguous, programming languages define rules for this kind of syntax, and parse source code into an abstract syntax tree. We can see this in Elixir:
+
+```elixir
+iex(1)> Code.string_to_quoted!("1 + 2 * 3")
+{:+, [line: 1], [1, {:*, [line: 1], [2, 3]}]}
+```
+
+In contrast, Lisp code is its own syntax tree. This expression would be represented in Lisp as either `(+ 1 (* 2 3))` or `(* (+ 1 2) 3)` with no ambiguity as to the order of operations. If you squint, the Lisp code and the Elixir AST are almost identical — one might say that Elixir is a kind of Lisp which uses keyword lists instead of regular lists for its AST.
+
+The most common introduction to macros is an expression like `(backwards (2 inc))`. `backwards` is a macro that takes an s-expression and reverses it. `(2 inc)` is not a valid s-expression (`2` does not evaluate to an operator), but since macros are expanded before evaluation, this operation happens on the unevaluated source code. Only after the macro is expanded, the resulting `(inc 2)` is evaluated.
+
+## Environment
+
+The final thing that we need to discuss before having a complete picture of Lisp to implement in our evaluator is the concept of the environment. Environment is a function that takes a symbol and returns a value bound to that symbol or throws an error when there is no value bound to the given symbol.
+
+Environment is similar to a dictionary with symbols as keys and values as values, though with the notable caveat that environments are typically hierarchical in terms of scope (unlike dictionaries which typically have unique keys). This means that if there are multiple possible values bound to the same symbol, the value bound closest to the lookup will be used.
+
+```js
+const x = 5
+// x -> 5
+const fn = x => {
+  // x -> 10
+  console.log(x)
+}
+// x -> 5
+fn(10)
+```
+
+In the beginning, the environment is going to be empty. We can extend the environment by definining a function and then calling it. The extended environment will then be available in the body of the function, with the values of the arguments bound to the symbols of the formal parameters.
+
+```js
+// env: empty
+const x = 5
+// env: x -> 5
+const fn = y => {
+  // env: x -> 5, y -> 10
+  console.log(x + y)
+}
+// env: x -> 5
+fn(10)
+```
+
+# Implementing the evaluator
+
+With the background now established, we know enough about Lisp to implement an evaluator that is going to evaluate the most basic programs. I think a good goal for our evaluator would be to create some kind of language that would be capable of interpreting the `map` function in a form that is not particularly different to an implementation in any other functional language. However, there are two stepping stones to get there: implementing [K-combinator](https://en.wikipedia.org/wiki/SKI_combinator_calculus#Informal_description) and implementing a factorial function.
+
+Before we even get to building any kind of evaluation engine, we need to handle the problem of symbols. In most implementations of Lisp symbols do not need any kind of special treatment — any string of characters that is not anything else is treated as a symbol. In <abbr>JS</abbr> this is not the case: we will have to define our symbols ahead of time and add them to the global scope of our application. In regular <abbr>JS</abbr>, doing anything to the global scope is generally considered a bad idea, but I have not come up with a better way to do this.
+
+```js
+const symbols = [
+  'lambda',
+  'a', 'b', 'c', 'x', 'y', 'z',
+]
+
+const createSymbol = name => {
+  globalThis[name] = Symbol(name)
+}
+
+symbols.forEach(createSymbol)
+```
+
+Now we can get to our first stepping stone, which is the K-combinator. The K-combinator is a very simple binary function that returns its left operand. In <abbr>JS</abbr>, it would be defined like this:
+
+```js
+const k = (x, y) => x
+k(5, 7) // -> 5
+```
+
+We will not be implementing variable declaration statements, since our language will not have statements at all — we only allow programs that consist of a single expression. We will add variable declaration later, but it will be in the form of let-expressions. For now, we can write the K-combinator as an immediately invoked function expression:
+
+```js
+const program = [
+  [lambda, [x, y], x],
+  5,
+  7,
+]
+```
+
+This is analogous to the following in <abbr>JS</abbr>:
+
+```js
+const program = ((x, y) => x)(5, 7)
+```
+
+## K-combinator
+
+We can define the basic structure of our evaluator:
+
+```js
+const defaultEnv = a => {}
+const evaluate = (expr, env = defaultEnv) => {
+  // 1. primitives evaluate to themselves
+  // 2. symbols evaluate to their value in the environment
+  // 3. special forms have their own evaluation rules
+  // 4. otherwise it is a function application
+}
+const apply = (expr, env) => {}
+
+module.exports = evaluate
+```
+
+The default environment could actually stay like this (empty function body returns `undefined`). The default environment should be empty, but for better traceability of any errors, we will throw with information what kind of symbol was used that was unbound.
+
+We can also easily implement the first, second and fourth case of our evaluation.
+
+```js
+const defaultEnv = a => {
+  throw new Error(`unbound symbol: ${a.toString()}`)
+}
+
+const evaluate = (expr, env = defaultEnv) => {
+  // 1. primitives evaluate to themselves
+  if (['number', 'boolean', 'function', 'string'].includes(typeof expr)) return expr
+
+  // 2. symbols evaluate to their value in the environment
+  if (typeof expr === 'symbol') return env(expr)
+
+  // 3. special forms have their own evaluation rules
+  // TODO
+
+  // 4. otherwise it is a function application
+  return apply(expr, env)
+}
+```
+
+We only have one special form that we need to implement for now: `lambda`. In this case, `lambda` is going to return a function that is going to accept an argument and evaluate its body in an extended environment. The environment will be extended by binding the arguments to the formal parameters.
+
+```js
+const evaluate = (expr, env = defaultEnv) => {
+  // ...
+
+  // 3. special forms have their own evaluation rules
+  if (expr[0] === lambda) return evalLambda(expr, env)
+
+  // ...
+}
+
+const evalLambda = ([_lambda, params, body], env) => {
+  const fn = (...args) => {
+    const newEnv = b => {
+      // Check if symbol to look up is in this lambda's
+      // formal parameters.
+      const index = params.indexOf(b)
+
+      // If yes, return the value bound to it.
+      if (index !== -1) return args[index]
+
+      // Otherwise look it up in the outer environment.
+      return env(b)
+    }
+
+    // The function is the result of evaluating the body in the
+    // new environment.
+    return evaluate(body, newEnv)
+  }
+
+  return fn
+}
+```
+
+Finally, we need to implement function application. This is fairly straightforward:
+
+```js
+const apply = ([operator, ...operands], env) => {
+  // Evaluate the operator.
+  const fn = evalExpr(operator, env)
+
+  // If the operator is not a function, something is wrong
+  // and we throw an error.
+  if (typeof fn !== 'function') throw new Error(`not a function, ${operator.toString()}`)
+
+  // Evaluate the operands.
+  const args = operands.map(operand => evalExpr(operand, env))
+
+  // Return the applied result.
+  return fn(...args)
+}
+```
+
+Note that in this case we also have to evaluate the operator, because the operator does not have to be a symbol or a primitive function — it can be any expression that evaluates to a function. We need to evaluate the operator in order to enable currying and higher-order functions. In fact, we could implement the K-combinator in a curried fashion like this:
+
+```js
+const program = [
+  [lambda, [y], [
+    [lambda, [x], x],
+    5
+  ]],
+  7
+]
+```
+
+This is the current state of our evaluator and it is able to evaluate the K-combinator above.
+
+```js
+const defaultEnv = a => {
+  throw new Error(`unbound symbol: ${a.toString()}`)
+}
+
+const evaluate = (expr, env = defaultEnv) => {
+  if (['number', 'boolean', 'function', 'string'].includes(typeof expr)) return expr
+  if (typeof expr === 'symbol') return env(expr)
+  if (expr[0] === lambda) return evalLambda(expr, env)
+  return apply(expr, env)
+}
+
+const evalLambda = ([_lambda, params, body], env) => {
+  const fn = (...args) => {
+    const newEnv = b => {
+      const index = params.indexOf(b)
+      if (index !== -1) return args[index]
+      return env(b)
+    }
+    return evaluate(body, newEnv)
+  }
+
+  return fn
+}
+
+const apply = ([operator, ...operands], env) => {
+  const fn = evaluate(operator, env)
+  if (typeof fn !== 'function') throw new Error(`not a function, ${operator.toString()}`)
+  const args = operands.map(operand => evaluate(operand, env))
+  return fn(...args)
+}
+```
+
+## Factorials
+
+Now we can think what we would need to evaluate factorials. Recursion is not strictly necessary, because we could use Y-combinator or a variation, but for ergonomics we should add some kind of easier method for it. We should also implement a conditional special form. Finally, we need a few primitive functions — things like equality checks and arithmetic. Our evaluator does not have any kind of standard library, but we should consider adding it.
+
+When implementing a Lisp in a lower-level language, typically there would be some kind of library of "primitive" functions that are optimised towards specific hardware. For example, arithmetic operations, equality and some basic list operations could be part of this primitive library. We can implement these functions in <abbr>JS</abbr> and associate them with symbols in the `defaultEnv` function.
+
+After adding more symbol names we can change the `defaultEnv` function.
+
+```js
+const defaultEnv = a => {
+  if (a === inc) return x => x + 1
+  if (a === dec) return x => x - 1
+  if (a === add) return (x, y) => x + y
+  if (a === mul) return (x, y) => x * y
+  if (a === eq) return (x, y) => x === y
+
+  throw new Error(`unbound symbol: ${a.toString()}`)
+}
+```
+
+Implementing the conditional special form is also quite simple. Since `if` is already a reserved keyword in <abbr>JS</abbr>, we will call it `when`, though it is worth mentioning that an operator with that name in lisps is typically reserved for a binary conditional (when-then, as opposed to a ternary conditional, which is if-then-else).
+
+```js
+const evaluate = (expr, env = defaultEnv) => {
+  // ...
+  if (expr[0] === when) return evalWhen(expr, env)
+  // ...
+}
+
+const evalWhen = ([_when, cond, then, otherwise], env) => {
+  if (evaluate(cond, env)) {
+    return evaluate(then, env)
+  } else {
+    return evaluate(otherwise, env)
+  }
+}
+```
+
+With this, we can already implement a factorial function, but it will most likely look quite strange to those unfamiliar with the Y-combinator:
+
+```js
+const program = 
+  [[[lambda, [rec],
+    [lambda, [n],
+      [[rec, rec], n]]],
+    [lambda, [rec],
+      [lambda, [n],
+        [when, [eq, n, 0],
+          1,
+          [mul, n, [[rec, rec], [dec, n]]]]]]],
+    6]
+```
+
+Typically, the [Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator) is a higher-order function that turns a non-recursive function recursive by providing it itself in an argument. However, instead of implementing this from the "inside" we can cheat slightly by making every `lambda` invocation add itself to its extended environment. This is quite limiting, since it precludes mutual recursion or recursion to an outer function, but it is very simple to implement in our current code. We add `rec` to the list of symbols, and change `evalLambda` to evaluate the symbol `rec` to itself.
+
+```js
+const evalLambda = ([_lambda, params, body], env) => {
+  const fn = (...args) => {
+    const newEnv = b => {
+      const index = params.indexOf(b)
+      if (index !== -1) return args[index]
+      if (b === rec) return fn
+      return env(b)
+    }
+    return evaluate(body, newEnv)
+  }
+
+  return fn
+}
+```
+
+I should point out that this is not standard Lisp: normally this kind of recursion would be done a bit more explicitly with operators like `letfn` or `letrec`. However, since this is an educational project, we will allow ourselves some freedom. Now we can rewrite the factorial program to look much more familiar.
+
+```js
+const program = 
+  [[lambda, [n],
+    [when, [eq, n, 0],
+      1,
+      [mul, n, [rec, [dec, n]]]]],
+    6]
+```
+
+Now that we have the ability to write recursive functions, we can turn to defining an implementation of `map`.
+
+## Map
+
+To make `map` work, we only need to add a few functions to the standard library, however I should also like to create a way to define variables. Since we said that we would not introduce statements, we will instead use something called let-expressions. A [let-expression](https://en.wikipedia.org/wiki/Let_expression) is a kind of syntactic sugar on a lambda definiton and invocation. It consists of a list of bindings and a body which has these bindings in scope. However, since `let` is a reserved keyword in <abbr>JS</abbr>, we will instead call it `define`. An example let-expression using `define` would look like this:
+
+```js
+const program =
+  [define, [
+    [x, 2],
+    [y, 3]
+  ], [add, x, y]]
+```
+
+This is analogous to the following lambda definition and invocation, however the symbols and their values are next to one another, which improves readability.
+
+```js
+const program =
+  [
+    [lambda, [x, y], [add, x, y]],
+    2, 3,
+  ]
+```
+
+We will implement `define` as the final special form:
+
+```js
+const evaluate = (expr, env = defaultEnv) => {
+  // ...
+  if (expr[0] === define) return evalDefine(expr, env)
+  // ...
+}
+
+const evalDefine = ([_define, definitions, body], env) => {
+  const newEnv = definitions.reduce((env, [symbol, definition]) => {
+    return b => {
+      if (b === symbol) return evaluate(definition, env)
+      return env(b)
+    }
+  }, env)
+
+  return evaluate(body, newEnv)
+}
+```
+
+There are actually a couple ways let-expressions are typically implemented in Lisps. This is most similar to `let*` sequential bindings from Scheme, which means that earlier bindings are visible to later definitions. Unfortunately, this implementation does not allow for named recursion, since that would be quite a bit more complicated. We will not need that for our `map` definition, though.
+
+What remains is adding a few functions to the standard library.
+
+```js
+const defaultEnv = a => {
+  // ...
+  if (a === head) return ([x]) => x
+  if (a === tail) return ([_x, ...xs]) => xs
+  if (a === cons) return (x, xs) => ([x, ...xs])
+  if (a === list) return (...xs) => xs
+  if (a === isNil) return x => Array.isArray(x) && x.length === 0
+  // ...
+}
+```
+
+These are the basic primitives for working with lists in Lisp. The underlying structure here is a native <abbr>JS</abbr> array, though we could make this work as cons cells instead. We should be able to change the implementation (from cons cells to arrays and vice versa) without breaking existing programs.
+
+With everything in place, we can add a few more symbols to our global scope and write the final `map` program:
+
+```js
+const program = 
+  [define, [
+    [double, [lambda, [a], [mul, a, 2]]],
+    [xs, [list, 1, 2, 3, 4, 5]],
+    [map, [lambda, [fn, as],
+      [when, [isNil, as],
+        [list],
+        [cons, [fn, [head, as]], [rec, fn, [tail, as]]]
+      ]]]
+  ], 
+    [map, double, xs]]
+```
+
+# Conclusion
+
+Starting with the basic syntax and semantics of Lisp, we implemented an evaluator capable of handling primitives, looking up symbols in the environment, function definition and application, recursion, conditionals and variable binding. It can implement a lot of the basic algorithms without much issue.
+
+A handful of core concepts — s-expressions, scopes and special forms — can create a complete programming language. This implementation follows the classic eval-apply pattern at the heart of all Lisp interpreters, recursively breaking down expressions into their constituent parts. All of this in 66 lines of <abbr>JS</abbr>, though we could probably shrink it to under 50 without code golfing. 
+
+For now, this is the end for me, but it does not have to be for you. There is a lot more that can be implemented. You could add proper tail-call optimisation. You could add macros. You could add static typing. You could build a parser to not have to write all these pesky commas. You could add continuations. You could [implement Scheme](https://standards.scheme.org).
+
+The journey from understanding Lisp's fundamental concepts to implementing a working evaluator mirrors the journey that many programming language designers have taken. The insights gained from this exercise can deepen your understanding not just of Lisp, but of programming languages and computation in general.
+
+(The exact code from this article is available as a [Gist](https://gist.github.com/zanlib0/a12d6d5188d4ba832b8032a2565eac34) and a [slightly different implementation](https://github.com/zanlib0/evalexpr) is on my GitHub)
