@@ -15,8 +15,8 @@
 	--background: oklch(0.160 0.009 255.0);
 	--background-surface: oklch(0.230 0.014 255.0);
 
-	--body-font: "Fanwood Text", serif;
-	--heading-font: "Fanwood Text", serif;
+	--body-font: "EB Garamond", serif;
+	--heading-font: "EB Garamond", serif;
 	--sans-font: "League Spartan", sans-serif;
 	--mono-font: "League Mono", monospace;
 
@@ -29,16 +29,16 @@
 }
 
 @font-face {
-	font-family: "Fanwood Text";
-	src: url("/fonts/fanwood-text.woff") format("woff");
+	font-family: "EB Garamond";
+	src: url("/fonts/eb-garamond.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Fanwood Text";
-	src: url("/fonts/fanwood-text-italic.woff") format("woff");
+	font-family: "EB Garamond";
+	src: url("/fonts/eb-garamond-italic.woff") format("woff");
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
