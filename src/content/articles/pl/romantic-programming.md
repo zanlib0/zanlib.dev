@@ -37,7 +37,7 @@ Z drugiej strony, romantycznie zorientowana osoba jest naturalnie technofobem. J
 
 Skoro programowanie jest nierozerwalnie zestawione z technologią, można by się spodziewać, że romantyczne nastawienie jest zupełnie niekompatybilne z tym powołaniem. Jednakże, wydaje mi się że ze wzrostem popularności wysokoopziomowych języków programowania, ich maszyn wirtualnych które działają niezależnie od sprzętu na jakim są uruchomione, a nawet bardziej w erze dużych modeli językowych używanych do pisania kodu, programowanie stało się o wiele bardziej oddzielone od technologii. Nie stało się do końca sztuką, ale rozumiane wysokopoziomowy nie jest też w zupełności naukowe. Manifest "software craftsmanship" wydaje się to tylko potwierdzać.
 
-Niemniej, jest to trudna branża dla romantyków. Klasycznych programisitów jest tak wielu, że od romantyków oczekuje się zupełnego przyjęcia klasycznych wartości, podczas gdy nie zawsze działa to tak samo w drógą stronę. Tego się od nas oczekuje: klasyczne oprogramowanie ma być kuloodporne i _działać_ bez problemu, bez bugów i bez zająknięć.
+Niemniej, jest to trudna branża dla romantyków. Klasycznych programisitów jest tak wielu, że od romantyków oczekuje się zupełnego przyjęcia klasycznych wartości, podczas gdy nie zawsze działa to tak samo w drugą stronę. Tego się od nas oczekuje: klasyczne oprogramowanie ma być kuloodporne i _działać_ bez problemu, bez bugów i bez zająknięć.
 
 Ze smutkiem natomiast zauważam, że wśród moich kolegów wartość oprogramowania, które jest _odczuwalnie_ przyjemne w użyciu oraz rozwijaniu jest często zupełnie drugorzędna. Kładziemy znacznie mniejszy nacisk na software, którego dobrze się używa.
 
