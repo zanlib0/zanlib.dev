@@ -21,7 +21,7 @@ If for any reason the underlying cons-cell structure of the lists is important, 
 
 Traditionally, the first element of a cons cell is called _car_ and the second element is called _cdr_. At some point in history these names used to mean something, but now that meaning is completely lost on most users of Lisp, so alternative names _head_ and _tail_ are used often instead.
 
-Unfortunately <abbr>JS</abbr> does not give us singly-linked lists or cons cells as primitives — the main ordered sequence data structure in <abbr>JS</abbr> is an array. We will implement lists as arrays instead.
+Unfortunately <abbr>JS</abbr> does not give us singly-linked lists or cons cells as primitives—the main ordered sequence data structure in <abbr>JS</abbr> is an array. We will implement lists as arrays instead.
 
 ## Evaluation
 
@@ -42,7 +42,7 @@ This gives rise to the distinctive, nested bracket syntax of Lisp, and also show
 
 - A _special form_ is a built-in operator with its own evaluation rules that differ from regular function application.
 
-Special forms are required to implement certain behaviours that are impossible to express in strictly-evaluated function application. For example, one of the special forms in most dialects of Lisp is `(if cond then else)` . This special form evaluates `cond`, and if the result is `nil`, only `else` is evaluated — otherwise, only `then` is evaluated. If `if` was implemented as a regular procedure call, we would not be able to skip evaluating one of the branches, since by definition function calls evaluate each of their operands before application.
+Special forms are required to implement certain behaviours that are impossible to express in strictly-evaluated function application. For example, one of the special forms in most dialects of Lisp is `(if cond then else)` . This special form evaluates `cond`, and if the result is `nil`, only `else` is evaluated—otherwise, only `then` is evaluated. If `if` was implemented as a regular procedure call, we would not be able to skip evaluating one of the branches, since by definition function calls evaluate each of their operands before application.
 
 - A _macro_ is an operator that transforms code before it is evaluated.
 
@@ -59,7 +59,7 @@ iex(1)> Code.string_to_quoted!("1 + 2 * 3")
 {:+, [line: 1], [1, {:*, [line: 1], [2, 3]}]}
 ```
 
-In contrast, Lisp code is its own syntax tree. This expression would be represented in Lisp as either `(+ 1 (* 2 3))` or `(* (+ 1 2) 3)` with no ambiguity as to the order of operations. If you squint, the Lisp code and the Elixir AST are almost identical — one might say that Elixir is a kind of Lisp which uses keyword lists instead of regular lists for its AST.
+In contrast, Lisp code is its own syntax tree. This expression would be represented in Lisp as either `(+ 1 (* 2 3))` or `(* (+ 1 2) 3)` with no ambiguity as to the order of operations. If you squint, the Lisp code and the Elixir AST are almost identical—one might say that Elixir is a kind of Lisp which uses keyword lists instead of regular lists for its AST.
 
 The most common introduction to macros is an expression like `(backwards (2 inc))`. `backwards` is a macro that takes an s-expression and reverses it. `(2 inc)` is not a valid s-expression (`2` does not evaluate to an operator), but since macros are expanded before evaluation, this operation happens on the unevaluated source code. Only after the macro is expanded, the resulting `(inc 2)` is evaluated.
 
@@ -98,7 +98,7 @@ fn(10)
 
 With the background now established, we know enough about Lisp to implement an evaluator that is going to evaluate the most basic programs. I think a good goal for our evaluator would be to create some kind of language that would be capable of interpreting the `map` function in a form that is not particularly different to an implementation in any other functional language. However, there are two stepping stones to get there: implementing [K-combinator](https://en.wikipedia.org/wiki/SKI_combinator_calculus#Informal_description) and implementing a factorial function.
 
-Before we even get to building any kind of evaluation engine, we need to handle the problem of symbols. In most implementations of Lisp symbols do not need any kind of special treatment — any string of characters that is not anything else is treated as a symbol. In <abbr>JS</abbr> this is not the case: we will have to define our symbols ahead of time and add them to the global scope of our application. In regular <abbr>JS</abbr>, doing anything to the global scope is generally considered a bad idea, but I have not come up with a better way to do this.
+Before we even get to building any kind of evaluation engine, we need to handle the problem of symbols. In most implementations of Lisp symbols do not need any kind of special treatment—any string of characters that is not anything else is treated as a symbol. In <abbr>JS</abbr> this is not the case: we will have to define our symbols ahead of time and add them to the global scope of our application. In regular <abbr>JS</abbr>, doing anything to the global scope is generally considered a bad idea, but I have not come up with a better way to do this.
 
 ```js
 const symbols = [
@@ -120,7 +120,7 @@ const k = (x, y) => x
 k(5, 7) // -> 5
 ```
 
-We will not be implementing variable declaration statements, since our language will not have statements at all — we only allow programs that consist of a single expression. We will add variable declaration later, but it will be in the form of let-expressions. For now, we can write the K-combinator as an immediately invoked function expression:
+We will not be implementing variable declaration statements, since our language will not have statements at all—we only allow programs that consist of a single expression. We will add variable declaration later, but it will be in the form of let-expressions. For now, we can write the K-combinator as an immediately invoked function expression:
 
 ```js
 const program = [
@@ -231,7 +231,7 @@ const apply = ([operator, ...operands], env) => {
 }
 ```
 
-Note that in this case we also have to evaluate the operator, because the operator does not have to be a symbol or a primitive function — it can be any expression that evaluates to a function. We need to evaluate the operator in order to enable currying and higher-order functions. In fact, we could implement the K-combinator in a curried fashion like this:
+Note that in this case we also have to evaluate the operator, because the operator does not have to be a symbol or a primitive function—it can be any expression that evaluates to a function. We need to evaluate the operator in order to enable currying and higher-order functions. In fact, we could implement the K-combinator in a curried fashion like this:
 
 ```js
 const program = [
@@ -280,7 +280,7 @@ const apply = ([operator, ...operands], env) => {
 
 ## Factorials
 
-Now we can think what we would need to evaluate factorials. Recursion is not strictly necessary, because we could use Y-combinator or a variation, but for ergonomics we should add some kind of easier method for it. We should also implement a conditional special form. Finally, we need a few primitive functions — things like equality checks and arithmetic. Our evaluator does not have any kind of standard library, but we should consider adding it.
+Now we can think what we would need to evaluate factorials. Recursion is not strictly necessary, because we could use Y-combinator or a variation, but for ergonomics we should add some kind of easier method for it. We should also implement a conditional special form. Finally, we need a few primitive functions—things like equality checks and arithmetic. Our evaluator does not have any kind of standard library, but we should consider adding it.
 
 When implementing a Lisp in a lower-level language, typically there would be some kind of library of "primitive" functions that are optimised towards specific hardware. For example, arithmetic operations, equality and some basic list operations could be part of this primitive library. We can implement these functions in <abbr>JS</abbr> and associate them with symbols in the `defaultEnv` function.
 
@@ -443,7 +443,7 @@ const program =
 
 Starting with the basic syntax and semantics of Lisp, we implemented an evaluator capable of handling primitives, looking up symbols in the environment, function definition and application, recursion, conditionals and variable binding. It can implement a lot of the basic algorithms without much issue.
 
-A handful of core concepts — s-expressions, scopes and special forms — can create a complete programming language. This implementation follows the classic eval-apply pattern at the heart of all Lisp interpreters, recursively breaking down expressions into their constituent parts. All of this in 66 lines of <abbr>JS</abbr>, though we could probably shrink it to under 50 without code golfing. 
+A handful of core concepts—s-expressions, scopes and special forms—can create a complete programming language. This implementation follows the classic eval-apply pattern at the heart of all Lisp interpreters, recursively breaking down expressions into their constituent parts. All of this in 66 lines of <abbr>JS</abbr>, though we could probably shrink it to under 50 without code golfing. 
 
 For now, this is the end for me, but it does not have to be for you. There is a lot more that can be implemented. You could add proper tail-call optimisation. You could add macros. You could add static typing. You could build a parser to not have to write all these pesky commas. You could add continuations. You could [implement Scheme](https://standards.scheme.org).
 
