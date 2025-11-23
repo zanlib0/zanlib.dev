@@ -1,0 +1,81 @@
+---
+---
+
+<svg style={{ position: 'fixed', height: 0, width: 0, left: 0, top: 0 }}>
+	<defs>
+		<filter id="red" color-interpolation-filters="sRGB">
+			<feColorMatrix type="matrix" values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+		</filter>
+
+		<filter id="green" color-interpolation-filters="sRGB">
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+		</filter>
+
+		<filter id="blue" color-interpolation-filters="sRGB">
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+		</filter>
+
+		<filter id="gamma" color-interpolation-filters="sRGB">
+			<feComponentTransfer>
+				<feFuncR type="gamma" exponent="0.5" />
+				<feFuncG type="gamma" exponent="0.5" />
+				<feFuncB type="gamma" exponent="0.5" />
+			</feComponentTransfer>
+		</filter>
+
+		<filter id="low-contrast" color-interpolation-filters="sRGB">
+			<feComponentTransfer>
+				<feFuncR type="table" tableValues="0.2 0.8" />
+				<feFuncG type="table" tableValues="0.2 0.8" />
+				<feFuncB type="table" tableValues="0.2 0.8" />
+			</feComponentTransfer>
+		</filter>
+
+		<filter id="high-contrast" color-interpolation-filters="sRGB">
+			<feComponentTransfer>
+				<feFuncR type="table" tableValues="0 0 0.5 1 1" />
+				<feFuncG type="table" tableValues="0 0 0.5 1 1" />
+				<feFuncB type="table" tableValues="0 0 0.5 1 1" />
+			</feComponentTransfer>
+		</filter>
+	</defs>
+</svg>
+<slot />
+
+<style is:global>
+	.row {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: center;
+		position: relative;
+		isolation: isolate;
+	}
+
+	.hoverable {
+		height: 4rem;
+		width: 4rem;
+
+		&:hover .channel {
+			left: 0 !important;
+		}
+	}
+
+	img.parrot {
+		height: 4rem;
+		width: 4rem;
+		object-fit: cover;
+	}
+
+	.channel {
+		position: absolute;
+		mix-blend-mode: screen;
+		transition: 0.3s all ease-in-out;
+	}
+
+	.red { filter: url(#red); }
+	.green { filter: url(#green); }
+	.blue { filter: url(#blue); }
+	.gamma { filter: url(#gamma); }
+	.low-contrast { filter: url(#low-contrast) }
+	.high-contrast { filter: url(#high-contrast) }
+</style>
