@@ -27,7 +27,7 @@ And then I can ask my wife what she thinks the desk looks like, and she might te
 
 Seems like the desk can be named and organised quite differently depending on who looks at it. It can be sliced up in a number of ways, and it can be put together with other things, too, like the shelves and the office. What is obvious, though, is that this process happens all the time. Every nanosecond in someone's mind somewhere, the knife cuts something. Slicing and assuming that everyone else's knife slices the same way is asking for trouble.
 
-# Deep cuts
+## Deep cuts
 
 There's no particular reason to believe that the knife ever stops working. The ancients believed that it stopped at the atomic level. The [name](https://en.wiktionary.org/wiki/%E1%BC%84%CF%84%CE%BF%CE%BC%CE%BF%CF%82#Ancient_Greek) Democritus gave to the fundamental particle of the universe means "indivisible," or, more literally, "uncuttable." We might have entertained the thought of atom's immunity from the knife until the 1900s, but, with the discovery of the subatomic particles, the analytic knife proved to be sharp enough to cut even through the uncuttable.
 
