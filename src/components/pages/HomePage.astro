@@ -12,10 +12,6 @@ interface Props {
 		portraitDate: string;
 		subtitle: string;
 		paragraph1: string;
-		paragraph2: string;
-		paragraph3?: string;
-		servicesHeading: string;
-		services: string[];
 		contactHeading: string;
 		navLinks: {
 			articles: string;
@@ -50,17 +46,6 @@ const { t } = Astro.props;
 				<hr class="brand" />
 
 				<p>{t.paragraph1}</p>
-
-				<p>{t.paragraph2}</p>
-
-				{t.paragraph3 && <p>{t.paragraph3}</p>}
-
-				<div class="services">
-					<h5>{t.servicesHeading}</h5>
-					<ul>
-						{t.services.map((service) => <li>{service}</li>)}
-					</ul>
-				</div>
 
 				<hr class="subtle" />
 
