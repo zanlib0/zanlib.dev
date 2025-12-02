@@ -6,11 +6,11 @@ type Locale = 'en' | 'pl';
 export const SITE_META = {
 	en: {
 		title: 'zanlib',
-		description: 'Product Engineer & Digital Craftsman',
+		description: 'Product Engineer',
 	},
 	pl: {
 		title: 'zanlib',
-		description: 'Product Engineer i Digital Craftsman',
+		description: 'Product Engineer',
 	},
 } as const;
 
@@ -21,4 +21,4 @@ export function getSiteMetadata(locale: Locale | string | undefined) {
 
 // Deprecated: Use getSiteMetadata() instead
 export const SITE_TITLE = 'zanlib';
-export const SITE_DESCRIPTION = 'Product Engineer & Digital Craftsman';
+export const SITE_DESCRIPTION = 'Product Engineer';
