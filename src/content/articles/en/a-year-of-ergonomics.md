@@ -58,7 +58,7 @@ I ended up buying [a cheaper walking pad](https://ruckenflex.pl/pl/products/biez
 
 There is some maintenance to it to keep in mind, too, most importantly lubricating and tensioning the belt. It's a good idea to get a bottle of silicone oil for treadmills alongside the treadmill itself, because while it says that it's been done at the factory, the reality is there was still a lot of friction between the belt and the pad, so I had to put a lot more oil so that it ran smoothly (and the motor gave out eventually anyway). The tensioning also isn't very good out of the box as evidenced by the belt being shifted to the side—this needs adjusting from time to time as well.
 
-As for the use, since I didn't have a good desk for a long while I don't have much to report here, but I know a few of my friends and colleagues who use them regularly and swear by them. My only recommendation would be to avoid using it during meetings with people you don't know yet, such as sales calls—walking endlessly at the camera can seem a bit intimidating.
+As for the use, since I didn't have a good desk for a long while I don't have much to report here, but I know a few of my friends and colleagues use them regularly and swear by them. My only recommendation would be to avoid using it during meetings with people you don't know yet, such as sales calls—walking endlessly at the camera can seem a bit intimidating.
 
 ### Takeaways
 
