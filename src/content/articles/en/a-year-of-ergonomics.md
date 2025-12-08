@@ -68,7 +68,7 @@ It's almost impossible to buy a good treadmill, and it has to be maintained regu
 
 ## Monitor
 
-As I mentioned before, I had previously used a pair of 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) <abr>IPS</abr> displays, which were basically the cheapest 4K monitors that I could have bought at the time (mid-2019). I expected there to have been some improvements in monitor technology since then, so I looked around for a few alternatives.
+As I mentioned before, I had previously used a pair of 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) <abbr>IPS</abbr> displays, which were basically the cheapest 4K monitors that I could have bought at the time (mid-2019). I expected there to have been some improvements in monitor technology since then, so I looked around for a few alternatives.
 
 My first decision was ditching two monitors and opting for a single one, either a 21:9 or a larger 32" 16:9 4K. For most of my work I use a tiling window manager (i3 on Linux, Aerospace on Mac) and I found that a second monitor is rarely a productivity boost, but more often a source of distraction. When I'm working on multiple things at the same time, I find it much quicker to switch between workspaces with a button press rather than move my head around. After a few months of using a single monitor, I find that hypothesis completely validated and I don't really miss the second monitor.
 
