@@ -68,7 +68,7 @@ It's almost impossible to buy a good treadmill, and it has to be maintained regu
 
 ## Monitor
 
-As I mentioned before, I had previously used a pair of 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) <abr>IPS</abr> displays, which were basically the cheapest 4K monitors that I could have bought at the time (mid-2019). I expected there to have been some improvements in monitor technology since then, so I looked around for a few alternatives.
+As I mentioned before, I had previously used a pair of 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) <abbr>IPS</abbr> displays, which were basically the cheapest 4K monitors that I could have bought at the time (mid-2019). I expected there to have been some improvements in monitor technology since then, so I looked around for a few alternatives.
 
 My first decision was ditching two monitors and opting for a single one, either a 21:9 or a larger 32" 16:9. For most of my work I use a tiling window manager (i3 on Linux, Aerospace on Mac) and I found that a second monitor is rarely a productivity boost, but more often a source of distraction. When I'm working on multiple things at the same time, I find it much quicker to switch between workspaces with a button press rather than move my head around. After a few months of using a single monitor, I find that hypothesis completely validated and I don't really miss the second monitor.
 
@@ -101,7 +101,7 @@ The point is to illuminate the desk without creating glare on the display and wi
 
 My first foray here was a cheap model from [Baseus](https://www.x-kom.pl/p/1087414-lampka-na-usb-baseus-i-wok-2-na-monitor-z-panelem-dotykowym-czarna.html), however I quite quickly realised that while the idea has merit, that particular model doesn't work for my use case because my monitor was quite high up and so there was no way to set it up so that it both didn't glare and didn't blind me. I ended up returning it and exchanging it for a higher-end [BenQ Halo 2](https://www.x-kom.pl/p/1340297-lampka-na-usb-benq-screenbar-halo-2.html).
 
-That one has a wireless puck, fine-grained colour temperature and intensity controls, favourites, automatic intensity adjustment and presence detection. When I told my wife that I spent that much on a desk lamp she thought I was crazy, but I think it's really worth it if you don't have any specific needs that this lamp doesn't fulfill (for example you don't want to have another wireless thing on your desk, or you want to control your lamp remotely via some kind of smart home integration).
+That one has a wireless puck, fine-grained colour temperature and intensity controls, favourites, automatic intensity adjustment and presence detection. When I told my wife that I had spent that much on a desk lamp she thought I was crazy, but I think it's really worth it if you don't have any specific needs that this lamp doesn't fulfill (for example you don't want to have another wireless thing on your desk, or you want to control your lamp remotely via some kind of smart home integration).
 
 There are a couple of flaws: while the puck's dial is very satisfyingly analogue, all the controls are touch-based, and the surface attracts fingerprints like nothing else. It would be really nice if the buttons were physical instead. Also, the automatic intensity adjustment doesn't allow the user to choose preferred colour temperature, always defaulting to 4000K, which is not my favourite choice.
 
