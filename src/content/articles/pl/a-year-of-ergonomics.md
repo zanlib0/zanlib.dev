@@ -68,7 +68,7 @@ Kupno dobrej bieżni jest prawie niemożliwe, a ponadto wymaga ona regularnej ko
 
 ## Monitor
 
-Jak wspomniałem wcześniej, korzystałem wcześniej z dwóch monitorów 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) z matrycą <abr>IPS</abr>, które były w zasadzie najtańszymi monitorami 4K, jakie mogłem kupić w tamtym czasie (w połowie 2019 r.). Spodziewałem się, że od tego czasu nastąpił jakiś postęp w technologii monitorów, więc rozejrzałem się za kilkoma alternatywami.
+Jak wspomniałem wcześniej, korzystałem wcześniej z dwóch monitorów 4K 27" 60Hz [Philips](https://amazon.com/dp/B07JXCR263) z matrycą <abbr>IPS</abbr>, które były w zasadzie najtańszymi monitorami 4K, jakie mogłem kupić w tamtym czasie (w połowie 2019 r.). Spodziewałem się, że od tego czasu nastąpił jakiś postęp w technologii monitorów, więc rozejrzałem się za kilkoma alternatywami.
 
 Pierwszą decyzją było porzucenie dwóch monitorów i wybór jednego, albo o proporcjach 21:9, albo większego 32-calowego 16:9. W większości przypadków do pracy używam tiling window managera (i3 na Linuksie, Aerospace na Macu) i stwierdziłem, że drugi monitor rzadko poprawia wydajność, a częściej jest powodem rozpraszania uwagi. Kiedy pracuję nad wieloma rzeczami jednocześnie, znacznie szybciej jest mi przełączać się między obszarami roboczymi za pomocą skrótów klawiszowych niż poruszać głową. Po kilku miesiącach korzystania z jednego monitora stwierdzam, że hipoteza ta całkowicie się potwierdziła i nie brakuje mi drugiego monitora.
 
