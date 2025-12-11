@@ -1,0 +1,51 @@
+---
+pubDate: 11 Dec 2025
+title: On Hofstadter and Sander's "Surfaces and Essences"
+---
+
+Some archival notes taken while I was reading Hofstadter and Sander's cognitive science book [_Surfaces and Essences: Analogy as the Fuel and Fire of Thinking_](https://amazon.com/dp/0465018475). It seems to me like it rehashes a lot of the concepts from _Zen and the Art of Motorcycle Maintenance_, especially its first half, but it presents it in a way that's much more "non-fiction," in the sense that it provides much more different examples to supports its own theses, unlike Pirsig's work, where a lot relies on personal experience. Pirsig is much more compact than Hofstadter, presenting more in fewer pages, but for those unfamiliar with these ideas, Hofstadter might be a better entry point.
+
+- General point: "categorisation" is not the fundamental mode of thinking. "Analogy-making" is the fundamental mode of thinking, of which categorisation is most appealing subset.
+    - An obvious analogy between inheritance and composition in programming: "cat" is a subcategory of "animal," but actually "cat" is composed of many more traits than _just_ being a subcategory of "animal."
+- Plato seems to have been wrong about ideas. Concepts comprise of a "core" idea and a "halo" that is more fuzzy. Ideas are not entities.
+- Each word may define a category, even the smallest such as "and" and "but". There are "and" situations (linking of concepts) and "but" situations (swerve in the concept space).
+- Some languages have words that occupy different conceptual spaces, e.g. there is no direct translation of "pattern" to French or French "normalement" to English.
+- Superficially, categories described by complex phrases or proverbs can seem more robust or complex than categories described by simple, atomic words. Actually, most of these categories are of similar size and shape, regardless of the length or complexity of label. This analogy carries over to software units - sometimes units can be small, but other times small things may not be units, and other times still large things might be considered units.
+- Intelligence is the ability to get to the crux of a situation and apply it to one's own experience.
+- The authors say that the ability to recall an interesting array of concepts and having access to more concepts than our ancestor doesn't mean we are more intelligent ("an ego the size of a Macy's Thanksgiving Day Parade balloon"). But I think we are more witty, and while wit does not equal intelligence, they're very related.
+- When we hear a story, oftentimes the first step is to strip it of surface particulars. We do it instantly, automatically and unconsciously. That stripped story we then dress up into our own experiences and analogies and commit it to memory as "understanding."
+    - In programming when modeling a domain we need to be very conscious of this process so that along the way we don't lose information by telling ourselves the wrong stories.
+- Analogies to category theory:
+    - Sometimes when forming analogies, we completely obliviously "flip the arrows". ("I had a crush on you when I was a little girl. -- Me too!"). Covariant and contravariant functors operate in a similar way.
+    - Analogies in the form of `a : b :: c : d` where b and d are large worlds and a and c are smaller parts of the worlds are similar to monads or embeddings.
+- The same things can be perceived differently even by the same person across time.
+    - While dining you carefully track which glass is your own and which one is your neighbour, when washing up you don't.
+- "Marking" means naming a specific object that is precisely within a category. E.g. "man" is "unmarked" when we mean men and women (like "all men are created equal"), "marked" when we specifically exclude women ("men's baseball team").
+    - In the text this is denoted by subscripts, i.e. unmarked categories are e.g. snake<sub>2</sub> is someone deceitful while snake<sub>1</sub> is a literal snake.
+- When building metaphorical sentences, there are (broadly) three ways they can be understood.
+    - By reference to existing category directly ("his room is a dump") - dump is not considered as a literal garbage dump but a general understanding of a mess
+    - By reference to an existing category abstractly ("this word processor is a pig") - it's not necessarily messy or animate, we just use the most general, unmarked category
+    - By reference to a newly imagined category ("Steve is a bridge") - category doesn't need to exist a priori, might be imported from a foreign language
+- Unmarked and marked words are used for almost opposite purposes. We sometimes mean square as _a kind of_ rectangle, and sometimes _in contrast to_ a rectangle.
+- "As we have just seen, part and parcel of becoming an expert in a domain involves over and above possessing many categories, organizing them efficiently. Expertise is what anyone acquires who has deep knowledge of any domain; everyone is an expert in their everyday environment, as well as in their profession and in their various hobbies. To be sure, expertise does not always require high degrees of creativity or insight, although of course it doesn't exclude those."
+    - Experts understand that there is no single way of categorising concepts in their area of expertise.
+    - Experts have the ability to make ad hoc analogical links based on their knowledge and experience.
+    - By contrast, novices seem to operate at around two levels of abstraction (genus and species).
+- Pushing a cork into a bottle of wine rather than pulling it out with a corkscrew.
+    - Instance of "[the opposite of a good idea is also a good idea](/blog/on-alchemy/)" from _Alchemy_ and [value rigidity gumption trap](/blog/gumption-traps/) from _<abbr>Z&AMM</abbr>_ (the point is not to pull the cork, but to get to the wine).
+- Sometimes the abstractions have to be very highly removed to make sense of the problem.
+    - Archimedes principle had to connect "crown" and "human body" via the abstraction of "object with volume".
+    - Analogous to seeking [middle terms](/blog/naming-things/) in Aristotelian cause analysis, sometimes they are very far apart, but they are key to [persuasive storytelling](/blog/strongest-force/) and remembering things.
+- We make analogies all the time, often unconsciously. Just because some of the analogies are significant, this doesn't necessarily make them more correct or objective, the better ones might have more predictive power. Just like a lottery, there are winners and losers. Sometimes the winner is significant and offers a valuable insight into reality.
+- Blinders - these are situations when the abstract category is invoked before the concrete one. A philosopher going to a lecture titled _Aux sources de l'essence_ and finding himself at a petrochemical talk is a good example (_essence_ here meaning concrete _petrol_ rather than abstract _essence_ in French).
+- Filtering - when you don't see or notice something, until an analogous situation causes an object or a situation to float above your attentional filtering system.
+    - This can even "overflow" and turn into obsession, e.g. when you break up everything will remind you of your ex; if a loved one dies, everything might remind you of his or her passing.
+- When making analogies, jumping to a very contrasting domain makes a better rhetorical device (coffee stirrers are to spoons as javelins are to oars).
+- Analogy is a much more compelling way to make decisions, even in cases where a lot is at stake and "pure reasoning" would seem to be more appropriate. Often the facade of logic is used to justify a decision made by analogy (finding facts to fit the theory).
+- A measure of expertise in a domain is the ability to extract essential features from superficial ones. For a novice, there is no distinction between surface and essence. This is because the novice happens to group things based on the most salient features, while lacking the faculties to find the more abstract ones.
+    - If you were to give a group of English speakers a bunch of poems in Bengali and ask them to group then, you'd get categories based on length, typography, indent, etc., not content. These are the deepest possible categorisations one can make without necessarily knowing Bengali.
+    - In programming: you want to name and [group things](/blog/solid-anew/) after their essential, not accidental features.
+- Frame blending is when analogy between two worlds embeds a concept from one into the other. In other words, blended analogies are not as "pure".
+- To come up with a unified solution to solve cubic equations, Girolamo Cardano in his book _Ars magna_ had to write thirteen chapters on how to solve each "kind" of cubic equations. The formula could be unified by using the concept of negative numbers, but that hasn't been discovered yet and even though the idea occurred to Cardano, he rejected it as fictitious. 300 years later, Augustus De Morgan published a similar deconstruction in a mathematics textbook about quadratic equations.
+- Category jumps can be horizontal ("knee-elbow") or vertical ("knee-joint").
+- Any given entity belongs simultaneously to an infinite number of categories, but in daily life we often have an illusion that it belongs to only one.
