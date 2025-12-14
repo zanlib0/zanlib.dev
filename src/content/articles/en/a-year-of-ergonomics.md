@@ -12,6 +12,10 @@ The budget for this project was basically unlimited. Overall, I ended up buying 
 
 Note: none of this was sponsored and none of the links are affiliate links. No one had any influence on the content of this post. The prices listed are in zł (<abbr>PLN</abbr>), at the time of writing $1 is 3.63zł and €1 is 4.23zł.
 
+<figure class="border">
+    <img src="/assets/desk.jpg" alt="A photo of the desk setup" />
+</figure>
+
 ## Desk
 
 One of the first things I bought this year was a standing desk. I bought it from a [local furniture manufacturer in Poland](https://mobiusdesk.pl) who builds custom desks with add-ons based on Linak frames. I didn't think my needs were particularly elevated, since my study is not very large and can fit at most a 140cm-wide desk. I didn't think I would need a particularly expensive frame because of it, so I opted for the cheapest one which turned out to be Linak Desk Frame 2.

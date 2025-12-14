@@ -12,6 +12,10 @@ Budżet na ten projekt był w zasadzie nieograniczony. Ostatecznie kupiłem pię
 
 Disclaimer: żadna z tych rzeczy nie była sponsorowana, a żadne z linków nie są linkami partnerskimi. Nikt nie miał wpływu na treść tego posta.
 
+<figure class="border">
+    <img src="/assets/desk.jpg" alt="Fotografia biurka" />
+</figure>
+
 ## Biurko
 
 Jedną z pierwszych rzeczy, które kupiłem w tym roku, było biurko do pracy na stojąco. Kupiłem je od [lokalnego producenta mebli](https://mobiusdesk.pl), który buduje biurka na zamówienie z dodatkami opartymi na ramach firmy Linak. Nie sądziłem, że moje potrzeby są szczególnie wysokie, ponieważ mój gabinet nie jest zbyt duży i maks co do niego wejdzie to biurko o szerokości 140cm. Z tego powodu założyłem, że nie będę potrzebował szczególnie drogiej ramy, więc zdecydowałem się na najtańszą, którą okazał się być Linak Desk Frame 2.
@@ -42,7 +46,7 @@ Korzystam z funkcji stojącej prawie codziennie przez kilka godzin, zwłaszcza p
 
 Stabilność, a nie udźwig ani żadna inna cecha, jest najważniejszym czynnikiem przy wyborze biurka do pracy na stojąco. Unikałbym modeli dwunożnych i skupiłbym się wyłącznie na ramach czteronożnych, jeśli nie ma innego sposobu na zapobieżenie chwianiu się, takiego jak wciśnięcie biurka w kąt lub zamontowanie monitora na ścianie.
 
-*Cena*: 5195zł za pierwsze biurko i dodatki + 4200zł za drugie – 2350zł zwrotu + około 40 godzin spędzonych na montażu, demontażu, wnoszeniu, znoszeniu i wysyłaniu maili.
+*Cena*: 5195 zł za pierwsze biurko i dodatki + 4200 zł za drugie – 2350 zł zwrotu + około 40 godzin spędzonych na montażu, demontażu, wnoszeniu, znoszeniu i wysyłaniu maili.
 
 ## Bieżnia
 
@@ -58,13 +62,13 @@ Ostatecznie kupiłem [tańszą bieżnię](https://ruckenflex.pl/pl/products/biez
 
 Przy bieżni należy również pamiętać o pewnych czynnościach konserwacyjnych, przede wszystkim o smarowaniu i napinaniu paska. Warto zaopatrzyć się w butelkę oleju silikonowego do bieżni wraz z samą bieżnią, ponieważ chociaż producent twierdzi, że bieżnia została naoliwiona fabrycznie, w rzeczywistości nadal występowało duże tarcie między paskiem a podkładką, więc musiałem nałożyć znacznie więcej oleju, aby działała płynnie (a silnik i tak ostatecznie się zepsuł). Napięcie pasa również nie jest zbyt dobre po wyjęciu z pudełka, o czym świadczy przesunięcie paska w bok—wymaga to również okresowej regulacji.
 
-Jeśli chodzi o użytkowanie, to ponieważ przez długi czas nie miałem dobrego biurka, nie mam zbyt wiele do powiedzenia na ten temat, ale wiem, że kilku moich przyjaciół i współpracowników regularnie z nich korzysta i bardzo je sobie ceni. Moja jedyna rada to unikanie korzystania z nich podczas spotkań z osobami, których jeszcze nie znasz, np. podczas rozmów z klientami—nieustanne chodzenie przed kamerą może wydawać się nieco onieśmielające.
+Jeśli chodzi o użytkowanie, to ponieważ przez długi czas nie miałem dobrego biurka, nie mam zbyt wiele do powiedzenia na ten temat, ale wiem, że kilku moich przyjaciół i współpracowników regularnie z nich korzysta i bardzo je sobie ceni. Moja jedyna rada to aby unikać korzystania z nich podczas spotkań z osobami, których jeszcze nie znamy, np. podczas rozmów z klientami—nieustanne chodzenie przed kamerą może kogoś nieco przestraszyć.
 
 ### Wnioski
 
 Kupno dobrej bieżni jest prawie niemożliwe, a ponadto wymaga ona regularnej konserwacji. Należy zwrócić uwagę, aby kupić bieżnię o udźwigu co najmniej 20 kg powyżej swojej wagi, aby silnik nie uległ awarii.
 
-*Cena*: 999zł
+*Cena*: 999 zł
 
 ## Monitor
 
@@ -91,7 +95,7 @@ Ponieważ jest wyposażony we wbudowany przełącznik <abbr>KVM</abbr>, dostosow
 ### Wnioski
 <abbr>OLED</abbr> wymaga znacznie większej gęstości pikseli, aby nie pogorszyć jakości tekstu, ponieważ obecne rozwiązania renderowania subpikseli nie są zbyt dobre. <abbr>IPS</abbr> nadal bardzo dobrze sprawdza się podczas pracy z tekstem.
 
-*Cena*: 4449zł
+*Cena*: 4449 zł
 
 ## Screenbar
 
@@ -109,13 +113,13 @@ Jest kilka wad: chociaż pokrętło panelu sterowania jest bardzo satysfakcjonuj
 
 Lampa tworzy piękną atmosferę wokół mojego biurka. Praktycznie całkowicie wyeliminowałem wszystkie inne źródła światła z mojego gabinetu, z wyjątkiem oświetlenia sufitowego. Chociaż cena jest bardzo wysoka, jestem pewien, że istnieją tańsze modele, które zapewniają 90% tego samego efektu.
 
-*Cena*: 799zł
+*Cena*: 799 zł
 
 ## Klawiatura
 
 Przez ostatnie dziesięć lat używałem wielu klawiatur mechanicznych, ale wszystkie były dość konwencjonalne. Moją pierwszą "poważną" klawiaturą mechaniczną była pełnowymiarowa, pierwsza odsłona <abbr>GMMK</abbr> Pro z przełącznikami Kailh Box White i jakimiś klawiszami Cherry z kiepskim nadrukiem z Aliexpress. W zeszłym roku przeszedłem na niskoprofilową [Lofree Flow100](https://www.lofree.co/products/lofree-flow100), która pozostaje moją ulubioną konwencjonalną klawiaturą mechaniczną (chociaż gdybym miał wybierać ponownie, zrezygnowałbym z numpada na rzecz mniejszego rozmiaru modelu Flow84).
 
-Jednak od dłuższego czasu bardzo interesowały mnie ergonomiczne klawiatury split. W przypadku większości z nich istotnym czynnikiem zniechęcającym jest ich cena: klawiatury ergonomiczne bywają zakrzywione, co utrudnia lub unieomżliwia automatyczną produkcję, więc muszą być lutowane ręcznie, co znacznie podnosi koszty. Klasyczne modele, takie jak Kinesis Advantage lub Glove80, mogą kosztować nawet ponad 1500zł z dostawą do Polski, co zdecydowanie przekracza kwotę, jaką jestem gotów wydać na klawiaturę, zwłaszcza taką, co do której nie jestem pewien, czy mi się spodoba.
+Jednak od dłuższego czasu bardzo interesowały mnie ergonomiczne klawiatury split. W przypadku większości z nich istotnym czynnikiem zniechęcającym jest ich cena: klawiatury ergonomiczne bywają zakrzywione, co utrudnia lub uniemożliwia automatyczną produkcję, więc muszą być lutowane ręcznie, co znacznie podnosi koszty. Klasyczne modele, takie jak Kinesis Advantage lub Glove80, mogą kosztować nawet ponad 1500zł z dostawą do Polski, co zdecydowanie przekracza kwotę, jaką jestem gotów wydać na klawiaturę, zwłaszcza taką, co do której nie jestem pewien, czy mi się spodoba.
 Jakiś czas temu na Twitterze (obecnie X) zobaczyłem post sugerujący, że open-source'owa klawiatura [Cheapino](https://github.com/tompi/cheapino) to dobry pierwszy krok w świecie klawiatur dzielonych, więc spróbowałem i zamówiłem gotową klawiaturę na Aliexpress.
 
 Po kilku dniach użytkowania Cheapino doszedłem do wniosku, że pisanie na podzielonej klawiaturze jest niesamowite (pozwala mi się odchylić i utrzymać proste plecy), ale moje przeczucie dotyczące rozkładu przycisków okazało się słuszne—układ jest całkowicie nie do użytku.
