@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "zanlib.dev blog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -17,7 +17,6 @@
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.15.4",
     "katex": "^0.16.25",
-    "lucide-astro": "^0.553.0",
     "remark-marginnotes": "^0.1.5",
     "sharp": "^0.34.3",
     "typescript": "^5.9.3"
