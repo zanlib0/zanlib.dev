@@ -7,7 +7,7 @@ import { marginnoteHandlers, remarkMarginnotesPlugin } from 'remark-marginnotes'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://zanlib.dev',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		remarkPlugins: [

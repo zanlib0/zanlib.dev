@@ -1,9 +1,13 @@
 ---
+import Socials from "./Socials.astro";
+
 const today = new Date();
+const currentLocale = Astro.currentLocale || 'en';
 ---
 
 <footer>
 	<h6>zanlib.dev &copy; {today.getFullYear()} &bull; Est. 2017</h6>
+	<Socials lang={currentLocale} />
 </footer>
 <style>
 	footer {
