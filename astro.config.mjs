@@ -29,5 +29,9 @@ export default defineConfig({
 		'/en': '/',
 		'/en/blog': '/blog',
 		'/en/blog/*': '/blog/*',
+		'/github': 'https://github.com/zanlib0',
+		'/x': 'https://x.com/zanlib0',
+		'/twitter': 'https://x.com/zanlib0',
+		'/linkedin': 'https://www.linkedin.com/in/marek-chotoborski-1b5562153',
 	}
 });
