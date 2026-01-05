@@ -150,7 +150,7 @@ At this point in the book the central definition of static quality as a collecti
 
 >Phaedrus thought that a Metaphysics of Quality could be a replacement for the paralyzing intellectual system that is allowing all this destruction to go unchecked. The paralysis of America is a paralysis of moral patterns. Morals can't function normally because morals have been declared intellectually illegal by the subject-object metaphysics that dominates present social thought. These subject object patterns were never designed for the job of governing society. They're not doing it. When they're put in the position of controlling society, of setting moral standards and declaring values, and when they then declare that there are no values and no morals, the result isn't progress. The result is social catastrophe. (p. 305-306)
 
-### On Sartre
+### On Rousseau
 
 >The idea that, "man is born free but is everywhere in chains" was never true. There are no chains more vicious than the chains of biological necessity into which every child is born. Society exists primarily to free people from these biological chains. It has done that job so stunningly well intellectuals forget the fact and turn upon society with a shameful ingratitude for what society has done. (p. 307)
 
