@@ -45,7 +45,7 @@ This goes on from a critique of anthropology as a "science" trying to analyse da
 
 >It has two kinds of opponents. The first are the philosophers of science, most particularly the group known as _logical positivists_, who say that only the natural sciences can legitimately investigate the nature of reality, and that metaphysics is simply a collection of unprovable assertions that are unnecessary to the scientific observation of reality. For a true understanding of reality, metaphysics is too "mystical." This is clearly the group with which Franz Boas, and because of him modern American anthropology, belongs.
 >
->The second group of opponents are the mystics. The term mystic is sometimes confused with "occult" or "supernatural" and with magic and witchcraft but in philosophy it has a different meaning. Some of the most honored philosophers in history have been mystics: Plotinus, Swedenborg, Loyola, Shankaracharya and many others. They share a common belief that the fundamental nature of reality is outside language; that language splits things up into parts while the true nature of reahty is undivided. (p. 63)
+>The second group of opponents are the mystics. The term mystic is sometimes confused with "occult" or "supernatural" and with magic and witchcraft but in philosophy it has a different meaning. Some of the most honored philosophers in history have been mystics: Plotinus, Swedenborg, Loyola, Shankaracharya and many others. They share a common belief that the fundamental nature of reality is outside language; that language splits things up into parts while the true nature of reality is undivided. (p. 63)
 
 ### On the definition of zero
 
