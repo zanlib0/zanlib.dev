@@ -45,7 +45,7 @@ This goes on from a critique of anthropology as a "science" trying to analyse da
 
 >It has two kinds of opponents. The first are the philosophers of science, most particularly the group known as _logical positivists_, who say that only the natural sciences can legitimately investigate the nature of reality, and that metaphysics is simply a collection of unprovable assertions that are unnecessary to the scientific observation of reality. For a true understanding of reality, metaphysics is too "mystical." This is clearly the group with which Franz Boas, and because of him modern American anthropology, belongs.
 >
->The second group of opponents are the mystics. The term mystic is sometimes confused with "occult" or "supernatural" and with magic and witchcraft but in philosophy it has a different meaning. Some of the most honored philosophers in history have been mystics: Plotinus, Swedenborg, Loyola, Shankaracharya and many others. They share a common belief that the fundamental nature of reality is outside language; that language splits things up into parts while the true nature of reahty is undivided. (p. 63)
+>The second group of opponents are the mystics. The term mystic is sometimes confused with "occult" or "supernatural" and with magic and witchcraft but in philosophy it has a different meaning. Some of the most honored philosophers in history have been mystics: Plotinus, Swedenborg, Loyola, Shankaracharya and many others. They share a common belief that the fundamental nature of reality is outside language; that language splits things up into parts while the true nature of reality is undivided. (p. 63)
 
 ### On the definition of zero
 
@@ -82,7 +82,7 @@ This is also why I am increasingly avoiding the use of the words "objective" and
 
 ### On the origin of dualist thinking
 
-Rather interesting way of tying some things in. The last paragraph in the excerpt is also the core idea of _Surfaces and Essences_.
+Rather interesting way of tying some things in. The last paragraph in the excerpt is also the core idea of [_Surfaces and Essences_](/blog/on-surfaces-and-essences/).
 
 >But it is not until the baby is several months old that he will begin to really understand enough about that enormously complex correlation of sensations and boundaries and desires called an _object_ to be able to reach for one. This object will not be a primary experience. It will be a complex pattern of static values _derived_ from primary experience.
 >
@@ -150,7 +150,7 @@ At this point in the book the central definition of static quality as a collecti
 
 >Phaedrus thought that a Metaphysics of Quality could be a replacement for the paralyzing intellectual system that is allowing all this destruction to go unchecked. The paralysis of America is a paralysis of moral patterns. Morals can't function normally because morals have been declared intellectually illegal by the subject-object metaphysics that dominates present social thought. These subject object patterns were never designed for the job of governing society. They're not doing it. When they're put in the position of controlling society, of setting moral standards and declaring values, and when they then declare that there are no values and no morals, the result isn't progress. The result is social catastrophe. (p. 305-306)
 
-### On Sartre
+### On Rousseau
 
 >The idea that, "man is born free but is everywhere in chains" was never true. There are no chains more vicious than the chains of biological necessity into which every child is born. Society exists primarily to free people from these biological chains. It has done that job so stunningly well intellectuals forget the fact and turn upon society with a shameful ingratitude for what society has done. (p. 307)
 
@@ -158,7 +158,7 @@ At this point in the book the central definition of static quality as a collecti
 
 >The Victorians didn't really believe in those old Puritan biological restraints the way the Puritans did. They were in the process of breaking away from them. But they paid them lip-service and the old "spare the rod and spoil the child" school of biological repression was still in fashion. And what one notices, when one reads the works of the children of those traditions, is how much more decent and socially mature they seemed than people do today. The 1920s intellectuals strove to break down the old social codes, but they had these codes built into them from childhood and so were unaffected by the breakdown they produced. But their descendants, raised without the codes, have suffered. (p. 308-309)
 
-This is essentially the idea proposed by historian Tom Holland in _Dominion_—those who break down the old Christian social order in favour of ultraprotestant postmodern secularism fail to notice that those who grow up in this world don't have the social codes that they'd had. So, the options are that either the liberal social order reaches escape velocity and is universally adopted worldwide and everyone lives happily ever after, that it decays and recedes into barbarism, that we have a global return to Christianity, or that we lose to an external threat that has never had those social codes.
+This is essentially the idea proposed by historian Tom Holland in [_Dominion_](https://en.wikipedia.org/wiki/Dominion_(Holland_book))—those who break down the old Christian social order in favour of ultraprotestant postmodern secularism fail to notice that those who grow up in this world don't have the social codes that they'd had. So, the options are that either the liberal social order reaches escape velocity and is universally adopted worldwide and everyone [lives happily ever after](https://phys.org/news/2020-02-secularism-tolerance-minority-groups-future.html), that it [decays](https://www.nber.org/reporter/2025number1/global-decline-mental-health-young) and recedes into barbarism, that we have a [global return to Christianity](https://www.washingtonexaminer.com/news/3763344/why-gen-z-swung-back-toward-traditional-christianity/), or that we lose to [an external threat](https://www.pewresearch.org/religion/2017/11/29/europes-growing-muslim-population/) that has never had those social codes.
 
 ### On insanity
 
@@ -174,13 +174,13 @@ life. No one admits it, but that's really the reason the insane get locked up. T
 
 ### On the study of philosophy
 
-"Philosophologists" here is a derogatory term on students of the history of philosophy, or those who do derivative work from the work of "real" philosophers. The philosopher mostly spared the treatment is William James.
+"Philosophologists" here is a derogatory term on students of the history of philosophy, or those who do derivative work from the work of "real" philosophers. The philosopher mostly spared the treatment is [William James](https://en.wikipedia.org/wiki/William_James).
 
 >As an author, Phaedrus had been putting off the philosophology, partly because he didn't like it, and partly to avoid putting a philosophological cart before the philosophical horse. Philosophologists not only start by putting the cart first; they usually forget the horse entirely. They say first you should read what all the great philosophers of history have said and _then_ you should decide what _you_ want to say. The catch here is that by the time you've read what all the great philosophers of history have said you'll be at least two hundred years old. A second catch is that these great philosophers are very persuasive people and if you read them innocently you may be carried away by what they say and never see what they missed. (p. 323)
 
 ### On psychiatry
 
-The entire latter part of the book almost has a vibe of _The Consolation of Philosophy_—the author is trying to find philosophical solutions to mental problems.
+The entire latter part of the book almost has a vibe of [_The Consolation of Philosophy_](https://en.wikipedia.org/wiki/On_the_Consolation_of_Philosophy)—the author is trying to find philosophical solutions to mental problems.
 
 >Psychiatrists were not allowed to practice psychiatry if they were insane. It was required that they literally did not know what they were talking about.
 >
@@ -218,13 +218,13 @@ However, few consider the follow up in _Lila_:
 
 ### On quality of Japanese electronics
 
-An interesting consideration since this is also something that is echoed in the Benedictine tradition—doing good work and making good things is a moral order.
+An interesting consideration since this is also something that is echoed in the [Benedictine tradition](https://jmichaelrios.wordpress.com/2016/10/20/why-you-should-read-wil-derkses-the-rule-of-benedict-for-beginners/)—doing good work and making good things is a moral order.
 
 >In the past the mystics' traditional low regard for inorganic static patterns, "laws of nature" has kept the scientifically derived technology of these cultures poor, but since Orientals have learned to overcome that prejudice times have changed. If one comes from a cultural tradition where an electronic assembly is primarily a moral order rather than just a neutral pile of substance, it is easier to feel an ethical responsibility for doing good work on it. (p. 384)
 
 ### On rituals curing insanity
 
-This is something that one can also hear in early lectures from Jordan Peterson and in examples from his clinical practice.
+This is something that one can also hear in [early lectures](https://www.facebook.com/drjordanpeterson/videos/633385880418917) from Jordan Peterson and in examples from his clinical practice.
 
 >...And to Lila.
 >
