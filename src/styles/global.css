@@ -73,7 +73,8 @@ body {
 	font-size: 1.3rem;
 	line-height: 1.8rem;
 	font-variant-numeric: lining-nums;
-	font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+	font-variant-ligatures: discretionary-ligatures contextual;
+	font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
 }
 
 main {
