@@ -10,7 +10,7 @@ How would you do it?
 
 Would you implement a pop-up window advertising the new release and push it through the automated update channel? Would you write an email? Would you _prompt <abbr>AI</abbr>_ for an email?
 
-A story like this was related in Rory Sutherland's book _Alchemy_, and concerned the release of the then-new Windows NT 32-bit server operating system. Microsoft had to figure out how to convince its existing user-base of system administrators to make the switch. But they didn't ask developers for advice, they hired an advertising agency. And the advertising agency had a different idea.
+A story like this was related in Rory Sutherland's book _Alchemy_, and concerned the release of the then-new Windows <abbr>NT</abbr> 32-bit server operating system. Microsoft had to figure out how to convince its existing user-base of system administrators to make the switch. But they didn't ask developers for advice, they hired an advertising agency. And the advertising agency had a different idea.
 
 > We produced an elaborate box containing a variety of bits and pieces including a free mouse-mat and a pen, inside gratuitously expensive packaging.[+alchemy]
 
