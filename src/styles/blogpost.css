@@ -16,3 +16,9 @@ figure {
 		font-size: 1.2rem;
 	}
 }
+
+@media (max-width: 550px) {
+	ul {
+		padding-inline-start: 10px;
+	}
+}
