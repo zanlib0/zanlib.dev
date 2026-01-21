@@ -6,7 +6,7 @@ description: The dichotomy of people's approach to technology.
 ---
 If you've ever attended a history class where I'm from you will recognise this familiar diagram.
 
-<img src="/assets/sinusoid.svg" alt="Krzyżanowski sinusoid" class="invert" />
+<img src="/assets/sinusoid.svg" alt="Krzyżanowski sinusoid" class="invert-line-drawing" />
 
 This is known as the "Krzyżanowski sinusoid", named after [Julian Krzyżanowski](https://en.wikipedia.org/wiki/Julian_Krzy%C5%BCanowski). The idea behind it is that it shows a progression of historical periods, as seen through the lens of their approach to reason. The epochs above the line are closer to Earth, materialistic, rational and progressive. By contrast, the periods below are more ephemeral, associated with religion, emotions and decadence. It is meant to show how human thought on a civilisational scale is based on contrast, in arts, literature and philosophy.
 

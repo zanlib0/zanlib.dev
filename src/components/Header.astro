@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import Dot from './Dot.astro';
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 import { SITE_TITLE } from '../consts';
 
@@ -43,6 +44,7 @@ const plDisabled = currentLocale === 'pl' ? false : (slug ? !translationAvailabl
 			</a>
 		</h4>
 		<div class="languages">
+    		<ThemeToggle />
 			{enDisabled ? (
 				<span class="disabled">en</span>
 			) : (

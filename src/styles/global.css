@@ -1,19 +1,19 @@
 :root {
-	--brand-1: oklch(0.050 0.020 19.9);
-	--brand-2: oklch(0.140 0.056 19.9);
-	--brand-3: oklch(0.230 0.092 19.9);
-	--brand-4: oklch(0.320 0.129 19.9);
-	--brand-5: oklch(0.410 0.165 19.9);
+	--brand-1: oklch(0.950 0.020 19.9);
+	--brand-2: oklch(0.860 0.056 19.9);
+	--brand-3: oklch(0.770 0.092 19.9);
+	--brand-4: oklch(0.680 0.129 19.9);
+	--brand-5: oklch(0.590 0.165 19.9);
 	--brand-6: oklch(0.501 0.201 19.9);
-	--brand-7: oklch(0.591 0.237 19.9);
-	--brand-8: oklch(0.681 0.208 19.9);
-	--brand-9: oklch(0.771 0.135 19.9);
+	--brand-7: oklch(0.410 0.237 19.9);
+	--brand-8: oklch(0.320 0.208 19.9);
+	--brand-9: oklch(0.230 0.135 19.9);
 
-	--foreground-subtle: oklch(0.710 0.008 121.0);
-	--foreground: oklch(0.898 0.008 121.6);
-	--foreground-surface: oklch(0.950 0.006 121.6);
-	--background: oklch(0.160 0.009 255.0);
-	--background-surface: oklch(0.230 0.014 255.0);
+	--foreground-subtle: oklch(0.450 0.008 121.0);
+	--foreground: oklch(0.250 0.008 121.6);
+	--foreground-surface: oklch(0.150 0.006 121.6);
+	--background: oklch(0.985 0.009 255.0);
+	--background-surface: oklch(0.940 0.014 255.0);
 
 	--body-font: "EB Garamond", serif;
 	--heading-font: "EB Garamond", serif;
@@ -242,7 +242,7 @@ mark {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--foreground-subtle); 
+  background: var(--foreground-subtle);
   border: 1px solid var(--background-surface);
   border-radius: 10px;
 }
@@ -260,6 +260,32 @@ mark {
 	display: none;
 }
 
-.invert {
+.invert-line-drawing {
 	filter: invert(1);
+}
+
+html.dark {
+  --brand-1: oklch(0.050 0.020 19.9);
+  --brand-2: oklch(0.140 0.056 19.9);
+  --brand-3: oklch(0.230 0.092 19.9);
+  --brand-4: oklch(0.320 0.129 19.9);
+  --brand-5: oklch(0.410 0.165 19.9);
+  --brand-6: oklch(0.501 0.201 19.9);
+  --brand-7: oklch(0.591 0.237 19.9);
+  --brand-8: oklch(0.681 0.208 19.9);
+  --brand-9: oklch(0.771 0.135 19.9);
+
+  --foreground-subtle: oklch(0.710 0.008 121.0);
+  --foreground: oklch(0.898 0.008 121.6);
+  --foreground-surface: oklch(0.950 0.006 121.6);
+  --background: oklch(0.160 0.009 255.0);
+  --background-surface: oklch(0.230 0.014 255.0);
+
+  .line-drawing {
+    filter: invert(1);
+  }
+
+  .invert-line-drawing {
+    filter: initial;
+  }
 }
