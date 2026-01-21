@@ -110,7 +110,7 @@ The question is not whether <abbr>AI</abbr> will get more human. It isn't even a
 
 [+writing-aid]: Language models can be useful writing aids, but require very rigorous discipline to not descend into sycophantic regurgitation. First two or three prompts to Claude Opus can produce valuable feedback about a piece of writing, or can get you out of a writers block (they started off as text completion engines after all). Beyond that, the quality falls of a cliff.
 
-You cannot fake having been there. You might produce more content by prompting a language model, but ultimately the author who was at the desk, who cared to pour over every sentence and choose every word with deliberate purpose—he will be the one who gets read, because he understands that _the reader is worth the trouble_. There is a person on the other side, and that person is worth sending the elaborate box to.
+You cannot fake having been there. You might produce more content by prompting a language model, but ultimately the author who was at the desk, who cared to pore over every sentence and choose every word with deliberate purpose—he will be the one who gets read, because he understands that _the reader is worth the trouble_. There is a person on the other side, and that person is worth sending the elaborate box to.
 
 When someone shows up, you know. You know, because the text has friction. Because it has opinions that cost something to hold. Because it couldn't have been written by anyone else, for anyone else, about anything else. You _cannot_ fake putting in the time.
 
