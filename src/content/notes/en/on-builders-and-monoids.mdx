@@ -38,7 +38,7 @@ conn
 
 A monoid, as we learned [elsewhere](/blog/monoids-in-practice), is a set <Latex formula="S" inline /> equipped with an associative binary function <Latex formula="S \times S \rightarrow S" inline /> called <Latex formula="\bullet" inline /> and an identity element <Latex formula="\varepsilon \in S" inline /> such that for any element <Latex formula="a" inline /> in <Latex formula="S" inline /> the equations <Latex formula="\varepsilon \bullet a = a" inline /> and <Latex formula="a \bullet \varepsilon = a" inline /> hold. In other words, it's a generalisation of operations like concatenation (of lists or strings), addition and multiplication of numbers, and so on.
 
-The above definition is a set-theoretic definition, though — talking about sets and functions. Monoids are also defined in category theory, where we can say that a monoid is the set of all arrows of a single-object category. Since it's a category, by definition it has an identity morphism and the arrows are composable.
+The above definition is a set-theoretic definition, though—talking about sets and functions. Monoids are also defined in category theory, where we can say that a monoid is the set of all arrows of a single-object category. Since it's a category, by definition it has an identity morphism and the arrows are composable.
 
 <figure style="text-align: center;">
     <img src="/assets/monoid.svg" class="invert" style="width: 12rem;"/>
@@ -67,7 +67,7 @@ So we know that a monoid consists of a set, a function and an identity element. 
 
 This is obviously incoherent, not just since the method calls are not necessarily binary operations, but primarily because the `Builder` is a type and the identity element is a function.
 
-So this seems like a dead end — what can be done? Well, the clue was, as always, in the definition.
+So this seems like a dead end—what can be done? Well, the clue was, as always, in the definition.
 
 > A monoid is the <u>set</u> of all arrows of a single-object category.
 

@@ -12,7 +12,7 @@ What in my opinion is most instructive is to think about each array method in te
 
 ## Fixed-length methods
 
-The first category of array methods are those which do not change the length of the input array - `.map` and `.sort`.
+The first category of array methods are those which do not change the length of the input array—`.map` and `.sort`.
 
 ```javascript
 const numbers = [1, 2, 3]
@@ -29,7 +29,7 @@ const users = [
 ]
 ```
 
-Let's say you want to join the names of the users into a single string. Well - how would you join the names of one user?
+Let's say you want to join the names of the users into a single string. Well—how would you join the names of one user?
 
 ```javascript
 const joinName = user => `${user.name} ${user.surname}`
@@ -63,13 +63,13 @@ const hasEven = numbers.some(isEven) // true
 const allEven = numbers.every(isEven) // false
 ```
 
-Consider here that, especially with `.filter`, there also are certain guarantees - the output array will not have its individual values modified or their order changed, the only thing that can happen is that some will be missing.
+Consider here that, especially with `.filter`, there also are certain guarantees—the output array will not have its individual values modified or their order changed, the only thing that can happen is that some will be missing.
 
 ## Dynamic-length methods
 
 Finally, we have two most powerful methods which are not constrained by the size of the array. With `.flatMap` we might end up with more or less items, however we are guaranteed to end up with an array. This is not the case with `.reduce`, which collapses the entire collection to a single value (which, well, can also be an array that's even longer).
 
-`.flatMap` especially is quite daunting at first glance - why exactly would we need to have it? The way it's often explained doesn't make sense either - it maps and then flattens, but why is that so important that we need to have a separate function for it in the JS spec?
+`.flatMap` especially is quite daunting at first glance—why exactly would we need to have it? The way it's often explained doesn't make sense either—it maps and then flattens, but why is that so important that we need to have a separate function for it in the JS spec?
 
 The usefulness of `.flatMap` is that it gets around the limitation of `.map` being allowed to map one input element to exactly one output element. `.flatMap` can transform a single input element into zero, one, or more output elements. That way we can, for example, implement a filter in terms of `.flatMap`.
 
@@ -78,7 +78,7 @@ const numbers = [1, 2, 3, 4, 5, 6]
 const evenNumbers = numbers.flatMap(n => isEven(n) ? [n] : []) // [2, 4, 6]
 ```
 
-What might be even more useful is that using `.flatMap` we can filter and map at the same time. An example - a validator that transforms a list of values into a list of errors.
+What might be even more useful is that using `.flatMap` we can filter and map at the same time. An example—a validator that transforms a list of values into a list of errors.
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5, 6]
@@ -91,7 +91,7 @@ const errors = numbers.flatMap(n => !isEven(n)
 
 In general, `.flatMap` will commonly work for problems to which one's first intuition is to reach for a mutable array, `.push` some items and then return it at the end.
 
-The last array method, and the most powerful one, is also one whose use is often most discouraged. `.reduce` allows for collapsing an entire array to a single value. The value can be anything - a primitive value, or even something more robust like an array or an object. What's interesting is that we can reimplement pretty much every single other array method in terms of `.reduce`.
+The last array method, and the most powerful one, is also one whose use is often most discouraged. `.reduce` allows for collapsing an entire array to a single value. The value can be anything—a primitive value, or even something more robust like an array or an object. What's interesting is that we can reimplement pretty much every single other array method in terms of `.reduce`.
 
 The way reduce works is that you supply it with a "reducer" function `(accumulator, value) => newAccumulator` which is repeatedly applied to the elements of the array, much like `.map`, however it also carries with it an accumulator argument. In many other languages a similar function is called `fold` which also illustrates its purpose.
 
@@ -101,7 +101,7 @@ const add = (a, b) => a + b
 const sum = numbers.reduce(add, 0)
 ```
 
-I said [before](monoids-in-practice), though it is worthy of a repeat, that in my view there are two main ways one can use `.reduce`. The reducer can take two values of the same type - in which case it exploits the monoidal nature of arrays, as above - or two values of different types, in which case it might be better to rewrite it first with a `.map`. An example of this can be a function converting an array to a map.
+I said [before](monoids-in-practice), though it is worthy of a repeat, that in my view there are two main ways one can use `.reduce`. The reducer can take two values of the same type—in which case it exploits the monoidal nature of arrays, as above—or two values of different types, in which case it might be better to rewrite it first with a `.map`. An example of this can be a function converting an array to a map.
 
 ```javascript
 const users = [

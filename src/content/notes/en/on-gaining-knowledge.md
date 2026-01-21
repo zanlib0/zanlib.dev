@@ -33,11 +33,11 @@ I struggled to find a good name for this because it's observed widely among spir
 
 It is a bit disingenuous to call it random, though, because it seems to most commonly appear during periods of boredom or meditation. You rarely come across good ideas randomly when you're occupied by something else. Note though that you can still come across good ideas while working on something, but those will most likely be a product of reasoning (for instance, "if I worked a bit on improving this tool, that would help me finish my current task").
 
-Rational people tend to discard the value of boredom or meditation because they do not appear to yield immediate results. Meditation is only seen as a last resort — the thing to do when any attempt to reason out of a situation has failed and none of one's experiences can be applied to the problem, either directly or through analogy.
+Rational people tend to discard the value of boredom or meditation because they do not appear to yield immediate results. Meditation is only seen as a last resort—the thing to do when any attempt to reason out of a situation has failed and none of one's experiences can be applied to the problem, either directly or through analogy.
 
 From my (admittedly shallow) understanding of Zen and Eastern philosophies it does indeed seem that they have figured out that there is value in meditation and through the Western fascination with Orient we have started applying these practices as well, although I would imagine it is very rarely done properly. On the other hand though, I think we finally start to understand that addiction to smartphones and the permanent distraction they generate does nothing good for our general state of mind, because it robs us of boredom and the spontaneous opportunities for revelations.
 
-Revelation is Archimedes's "eureka!". The moment when unrelated facts "click" together and form a coherent outcome. Sometimes it's logical — based on what we already know. Other times it might not be so, requiring more thorough experimentation and reasoning to retroactively fit it within the structure of our understanding of the world. Other times it might be completely unreasonable and after a moment of consideration should be discarded as worthless.
+Revelation is Archimedes's "eureka!". The moment when unrelated facts "click" together and form a coherent outcome. Sometimes it's logical—based on what we already know. Other times it might not be so, requiring more thorough experimentation and reasoning to retroactively fit it within the structure of our understanding of the world. Other times it might be completely unreasonable and after a moment of consideration should be discarded as worthless.
 
 ## Conclusion
 

@@ -21,7 +21,7 @@ Gumption is essential in any kind of craft—be it woodworking, motorcycle maint
 
 What is a gumption trap then? It's a factor, either external or internal, that causes your gumption to "leak out". It's <mark>when the relationship between the craftsman and the material he is working on breaks</mark>. The result of falling into a gumption trap is the loss of enthusiasm of working on the material and the irresistible desire to put the entire thing away. Since we are talking here primarily about programming, we will be discussing these mostly within that context.
 
-There are, broadly, two groups of gumption traps. External, that is arising from the material (in our case, code) itself, from the system we are working on, from the external parts (libraries) that we use or from something else. Pirsig calls these "<mark>setbacks</mark>". The second type—internal—is caused by our own poor mindset or failures in performing our craft. These are called "<mark>hangups</mark>." Hangups are further divided into three groups — "value traps", "truth traps" and "muscle traps".
+There are, broadly, two groups of gumption traps. External, that is arising from the material (in our case, code) itself, from the system we are working on, from the external parts (libraries) that we use or from something else. Pirsig calls these "<mark>setbacks</mark>". The second type—internal—is caused by our own poor mindset or failures in performing our craft. These are called "<mark>hangups</mark>." Hangups are further divided into three groups—"value traps", "truth traps" and "muscle traps".
 
 ## Setbacks
 
@@ -107,7 +107,7 @@ The gumption trap of anxiety is kind of like the opposite of ego. You fall into 
 
 The good thing is, programmers rarely work alone and the agile mindset already has tools that deal with anxiety. Pair programming is one of the best ways to do it.
 
-It's good to prepare before you start coding though. Poke around the module that you will most likely have to modify, read its tests and docs if they exist. Start fixing something small, maybe just the UI at first — because then you'll start discovering the facts that will help you with the rest of the task.
+It's good to prepare before you start coding though. Poke around the module that you will most likely have to modify, read its tests and docs if they exist. Start fixing something small, maybe just the UI at first—because then you'll start discovering the facts that will help you with the rest of the task.
 
 And also, remember that everyone has these moments. Everyone messes up from time to time and everyone tends to find himself in a situation where he does not know what to do.
 
@@ -205,7 +205,7 @@ The emphasised sentence is key. There are many names for this feeling. The poeti
 
 You are in a funeral procession when you have lost the feeling of purpose in what you're doing. When you feel like the code you're working on is not going to solve anything, or, worse, it's going to do harm. When you long for some kind of improvement in the future but without hope of getting there. When the process of creation feels like going through the motions. Funeral procession poisons everything else you do.
 
-And the worst part is that we are rarely able to do anything about it. Funeral procession happens when the ratio of agency and accountability tilts heavily towards the latter and away from the former. It's a natural state of frustration for craftsman programmers — and something we've been able to avoid due to the organisational structure of "software companies." Because a "software company", really, is just a modern re-imagination of a medieval trade guild.
+And the worst part is that we are rarely able to do anything about it. Funeral procession happens when the ratio of agency and accountability tilts heavily towards the latter and away from the former. It's a natural state of frustration for craftsman programmers—and something we've been able to avoid due to the organisational structure of "software companies." Because a "software company", really, is just a modern re-imagination of a medieval trade guild.
 
 The structure of a guild— a loose association of craftsmen in a particular trade— stands in a very stark contrast to a modern corporation, which has different aims and different focuses. However, due to the very common business partnerships between software companies and corporations, the rigid hierarchy of the latter tends to bleed into the loose, quite informal, association of the former.
 

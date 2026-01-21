@@ -6,7 +6,7 @@ While looking to adopt a new technology, a development team typically gets toget
 
 What follows is a few notes taken from experience about the times where TS fell short in long-running projects. Some of these aspects are fundamental to the design decisions that drive TS development and are inherent to the language, some are fixable, some might just be user error that is not obvious how to fix even with poking around the documentation. Please keep in mind that I am writing this from the perspective of a developer favouring functional-style programming in JS. Please also note that this list is deliberately negative. I acknowledge that TS is useful for some teams, but there are other places on the internet where you can find favourable comparisons or even panegyrics dedicated to it. That's not what this is for.
 
-I hope that this list helps you to evaluate whether TS is a good fit for your project, or, if you are planning to create a new compile-to-JS language - since TS heavily suffers from a lack of serious competition - to give a few pointers where the current mainstream solution is lacking.
+I hope that this list helps you to evaluate whether TS is a good fit for your project, or, if you are planning to create a new compile-to-JS language—since TS heavily suffers from a lack of serious competition—to give a few pointers where the current mainstream solution is lacking.
 
 ## Composition of arbitrary types
 
@@ -64,9 +64,9 @@ const octupleSquareThenShow = composeMany(double, double, double, square, show)
 // Argument of type '(a: number) => string' is not assignable to parameter of type 'Fn<number, number>'.
 ```
 
-This obviously doesn't type-check, since the `show` function doesn't satisfy the `Fn<A, A>` type - the type is too restrictive. When composing functions, the argument and return type of the function don't have to be the same. The only requirement is that the return type of one function is a subtype of the argument type of the one next in the list.
+This obviously doesn't type-check, since the `show` function doesn't satisfy the `Fn<A, A>` type—the type is too restrictive. When composing functions, the argument and return type of the function don't have to be the same. The only requirement is that the return type of one function is a subtype of the argument type of the one next in the list.
 
-A function like that kind of `composeMany` is not possible to exhaustively type in TS - or most statically-typed languages, for that matter. The best you can do is to commit atrocities on the type system by listing each arity as its own overload or use a library that [has already done it for you](https://gcanti.github.io/fp-ts/modules/function.ts.html#flow).
+A function like that kind of `composeMany` is not possible to exhaustively type in TS—or most statically-typed languages, for that matter. The best you can do is to commit atrocities on the type system by listing each arity as its own overload or use a library that [has already done it for you](https://gcanti.github.io/fp-ts/modules/function.ts.html#flow).
 
 For a relatively common use case like function composition, using a library might be fine. But what if you'd like to compose functions a little differently, for example by taking into account that one of them [might return `null`](https://hackage.haskell.org/package/base-4.20.0.1/docs/Data-Maybe.html)?
 
@@ -91,7 +91,7 @@ If I wanted to type `maybeComposeMany`, I would have to write the entire litany 
 
 Is there a solution to this? In the statically-typed land, not really. If the function accepts an array, and that array can contain functions with different signatures, and can be dynamically generated (in other words, it is not constant), it's not possible to determine the types of those functions.
 
-It is, however, unlikely, that you'd ever need to use a dynamically generated array of functions to compose - typically these functions are hard-coded. If the types of the functions in the list are known ahead of time, the type checker would have to look at the value type of a function in the list and compare it to the parameter type of the next function.
+It is, however, unlikely, that you'd ever need to use a dynamically generated array of functions to compose—typically these functions are hard-coded. If the types of the functions in the list are known ahead of time, the type checker would have to look at the value type of a function in the list and compare it to the parameter type of the next function.
 
 This is what is already done when calling functions. When we do `compose(double, compose(double, double))`, that is what the compiler is doing. In order for TS to support this kind of usage without being excessively verbose, it'd have to introduce a different type of statically-defined collection or infix operators.
 
@@ -190,7 +190,7 @@ Here, the expected types are a bit harder to guess. I know that `l` can be defin
 
 In the JS standard there are two data types with a `.concat` method on their prototype: arrays and strings. Because of type coercion, basically any type can be concated on both of them. The worst thing that can happen is that you'll get something strange like `[object Object]` appended at the end of your array or string, but in general nothing you concat should result in an error. So it seems like the inferred type of `r` should be, practically speaking: `any`!
 
-This does not seem like desired behaviour, though. On one hand, when concatenating two strings or two arrays, I would expect both sides of the concatenation to be either strings or arrays, respectively. On the other, `'Main Street '.concat(123)` or `[1, 2, 3].concat(4)` does not seem all that outlandish. It seems like type coercion has led me deep into the woods here and inference doesn't make sense - we need user input.
+This does not seem like desired behaviour, though. On one hand, when concatenating two strings or two arrays, I would expect both sides of the concatenation to be either strings or arrays, respectively. On the other, `'Main Street '.concat(123)` or `[1, 2, 3].concat(4)` does not seem all that outlandish. It seems like type coercion has led me deep into the woods here and inference doesn't make sense—we need user input.
 
 Let's see if PureScript has a better idea. First, I define `concat`, this time without specifying its type signature:
 
@@ -234,9 +234,9 @@ On the other hand, wrangling extremely complicated types often provided by frame
 ## A hill of complication
 Types-as-documentation is a neat idea but it has its limits, especially when you reach over the "hill" of type complication after which it becomes a lot less useful.
 
-At the foot of the hill, there is untyped code. If you use a library without type definitions, you are left with only the documentation the author provided, either in JSDoc or in some kind of external location. You have to memorise the intent and idea behind a function while you use it, and then you have to recall it every time you see it - or check the docs again.
+At the foot of the hill, there is untyped code. If you use a library without type definitions, you are left with only the documentation the author provided, either in JSDoc or in some kind of external location. You have to memorise the intent and idea behind a function while you use it, and then you have to recall it every time you see it—or check the docs again.
 
-The more you go up the hill, the more useful the types become. You know that function takes a string and a number and returns a string. You know that object has those methods on it, and that class implements these interfaces. You no longer have to keep all of that in mind, the editor will tell you when you hover over the symbol. Eventually you start seeing some type aliases - you see that `UserRepository.findById` takes a string and returns a `User`. You aren't sure what `User` is, but you can use auto-completion or "go to type definition" to find out.
+The more you go up the hill, the more useful the types become. You know that function takes a string and a number and returns a string. You know that object has those methods on it, and that class implements these interfaces. You no longer have to keep all of that in mind, the editor will tell you when you hover over the symbol. Eventually you start seeing some type aliases—you see that `UserRepository.findById` takes a string and returns a `User`. You aren't sure what `User` is, but you can use auto-completion or "go to type definition" to find out.
 
 Typically from that point on, the types become less useful. You've reached the top, now you're going downhill. The `UserRepository.find` method takes a `QueryObject` and returns a `Promise<Optional<User>>`.  Now, you go and check what `QueryObject` is and it is a 200-line long litany of very different options. `Optional` is a custom, cryptic collection of `extends` and conditional types and `k in keyof T` and `never`s. The types no longer are much help with remembering what you need to pass to functions.
 
@@ -279,7 +279,7 @@ const getHeader = (request: Request, name: string): string | string[] | undefine
 
 A small change. In a JS code-base it would register as a breaking change only for the small minority of users who care about `Set-Cookie`. You bump the minor version.
 
-Unfortunately now type-checking breaks for each user of your library who decided to update, because `authMiddleware` no longer gets the type that it expects - it now has to consider the possibility of the `token` being a `string[]`, even if the underlying function path would be unchanged.
+Unfortunately now type-checking breaks for each user of your library who decided to update, because `authMiddleware` no longer gets the type that it expects—it now has to consider the possibility of the `token` being a `string[]`, even if the underlying function path would be unchanged.
 
 In this specific case, because Node by default expects all the header requests to be lower-case, the situation can be resolved with an overload.
 
@@ -392,7 +392,7 @@ const bigName = flow(
 )()
 ```
 
-Now, each of `user`, `fullName` and `bigName` are inferred correctly - but this is hard to catch without hovering on each value.
+Now, each of `user`, `fullName` and `bigName` are inferred correctly—but this is hard to catch without hovering on each value.
 
 There are some other similar utility libraries which are more suited for use with TypeScript, but in most code-bases you will still have to use Lodash.
 
@@ -418,6 +418,6 @@ This has a few distinct disadvantages for debugging. First, updating something i
 
 The above list is not exhaustive. I did my best to verify each point, but it is possible that I missed something obvious or overlooked a solution. If that is the case, feel free to get in touch and I'll make sure to make corrections wherever it is needed. If you would like to contribute to this list, feel free to get in touch as well.
 
-I specifically did not want to go for the low-hanging fruit of issues with tooling surrouding TS. There are a lot of it there - it's very easy to complain about slow compilation with `tsc` or crazy memory usage of `tsserver`. Every piece of tooling [comes with a cost](/blog/solid-anew#flow).
+I specifically did not want to go for the low-hanging fruit of issues with tooling surrouding TS. There are a lot of it there—it's very easy to complain about slow compilation with `tsc` or crazy memory usage of `tsserver`. Every piece of tooling [comes with a cost](/blog/solid-anew#flow).
 
 I hope that this list has been useful for you and you will be able to make a more informed decision about whether to learn and use TypeScript in the future.

@@ -11,10 +11,10 @@ To educate and pass on knowledge we need to explain things. An explanation, in A
 
 In Aristotelian terms, the way one acquires knowledge is by discovering and demonstrating a "middle term" between two different things, preferably starting from first principles (that is, propositions that are self-evident and do not need to be demonstrated). Aristotle, to this effect, identified four types of explanations why and/or how anything exists:
 
-- The **material**: what is it made of — wood.
-- The **formal**: the form or blueprint that defines it — desk.
-- The **efficient**: what created it — a carpenter.
-- The **final**: the purpose for which it was made — so that I can write comfortably.
+- The **material**: what is it made of—wood.
+- The **formal**: the form or blueprint that defines it—desk.
+- The **efficient**: what created it—a carpenter.
+- The **final**: the purpose for which it was made—so that I can write comfortably.
 
 According to Aristotle, any middle term falls into one or more of these four types. This allows us to create complex explanations and stories which make explanations rigorous and true, but also memorable. It might be a remnant of the oral tradition of our past that we remember things better if they form a coherent story.
 
@@ -28,7 +28,7 @@ Aristotle posits that everything in the universe has a final cause and this is o
 
 I suppose one might at this point smile indulgently and say that while this concept of everything having a final cause (we also call this *teleology* from Greek *telos* meaning "end") could have certainly made sense in Aristotle's day, surely Darwin's theory of evolution proves it wrong. After all, we know now that all creatures were not intelligently designed with a specific final cause in mind, but evolved over time in order to have certain traits.
 
-Theory of evolution by natural selection is used widely as a hammer on metaphysics (especially of Aristotelian and, later, Christian variety) and on intelligent design. One could argue, though, that it does do only one of these things well, namely, offering an answer as to why certain traits in humans or different species are as they are without involvement of God, demiurge or any other kind of intelligent designer. 
+Theory of evolution by natural selection is used widely as a hammer on metaphysics (especially of Aristotelian and, later, Christian variety) and on intelligent design. One could argue, though, that it does do only one of these things well, namely, offering an answer as to why certain traits in humans or different species are as they are without involvement of God, demiurge or any other kind of intelligent designer.
 
 Even if we argue within the context of materialism that rejects any sort of metaphysics, we still are stuck with a question why certain traits evolved as they did. Evolution optimises for *something*. "*This* evolved to do *that*."
 
@@ -46,7 +46,7 @@ However, this is later convincingly refuted by Boethius (in *[De consolatione ph
 
 First consider an example of a dice roll. We think this is a random act that has no definite end, that is the dice are not necessarily going to end up with snake eyes or two sixes or any other combination. However, if we had divine knowledge of the precise state of the universe at the time of the throw, the weight of the dice, their angle and position, we might be able to predict the way they will fall.
 
-Another type of event is what Boethius poetically describes as two strands of fate — two different causal chains — intersecting in an unexpected way. For example, if I dig in my garden and find a crate full of gold nuggets, I might consider this a random event. However, there is a different causal chain of why that crate was placed there. Perhaps someone was on the run and hid it there for ease of escape long ago.
+Another type of event is what Boethius poetically describes as two strands of fate—two different causal chains—intersecting in an unexpected way. For example, if I dig in my garden and find a crate full of gold nuggets, I might consider this a random event. However, there is a different causal chain of why that crate was placed there. Perhaps someone was on the run and hid it there for ease of escape long ago.
 
 (Boethius then goes deeper into this as an argument for reconciling teleology and divine omniscience with free will. The argument, abridged, goes like this: if one were able to look at time, space, and the entire universe from "outside the system," one would see that everything is deterministic, including the actions of humans. However, since we possess reason and live "in the system," we have the ability to make free decisions within it.)
 

@@ -6,7 +6,7 @@ By this point everyone invested in React should be familiar with hooks. Thanks t
 
 There are a few other built-in React hooks that are used far less and one of these is `useImperativeHandle`. Now, given that React prides itself in being very declarative, it might be quite surprising to see the i-word in there, but it is actually a really interesting case that might be the tool you need to get out of a situation where you need to modify a component from the outside or create a two-way binding and access its props from the top rather than from the bottom of the component hierarchy.
 
-Note, though, that this is not something that you should do often. `useImperativeHandle` uses refs, and to paraphrase React docs on the usage of refs: you don't want to use them to "make things happen". It is also somewhat counterintuitive, given that refs are usually presented to intermediate React developers as the React equivalent of `getElementById` - a way to access a DOM node and operate on it directly.
+Note, though, that this is not something that you should do often. `useImperativeHandle` uses refs, and to paraphrase React docs on the usage of refs: you don't want to use them to "make things happen". It is also somewhat counterintuitive, given that refs are usually presented to intermediate React developers as the React equivalent of `getElementById`—a way to access a DOM node and operate on it directly.
 
 With the `useImperativeHandle` hook we can use refs to access arbitrary properties using a mutable object.
 

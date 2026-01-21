@@ -6,7 +6,7 @@ description: Are the principles still relevant?
 
 The <abbr>SOLID</abbr> principles are a set of five rules that have been formulated over 20 years ago. Their purpose is to make the code that one writes "better." Their application has been spearheaded by the [_Clean Code_](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) book by Uncle Bob, and thanks to the overwhelming success of that book, many self-professed _clean coders_ began to apply them in their day to day work.
 
-However, is it true that they actually increase the quality of one's code? What does "quality" even mean in this sense? In many resources talking about the <abbr>SOLID</abbr> principles, it seems like the reasoning was circular - applying <abbr>SOLID</abbr> principles makes one's code better, and one's code is better because it conforms to the principles. And are these principles even relevant in web development, or if we employ a non-object-oriented style?
+However, is it true that they actually increase the quality of one's code? What does "quality" even mean in this sense? In many resources talking about the <abbr>SOLID</abbr> principles, it seems like the reasoning was circular—applying <abbr>SOLID</abbr> principles makes one's code better, and one's code is better because it conforms to the principles. And are these principles even relevant in web development, or if we employ a non-object-oriented style?
 
 The point of "clean code" is that our code should be more adaptable. One is unable to predict the complexity of a system before one starts working on it, so one should avoid practices which require buy-in that locks us out from certain decisions later down the line. To be agile, one needs to be able to develop new features quickly, without costly refactors. In other words: keep options open.
 
@@ -16,7 +16,7 @@ The rules aren't very well defined, and often require additional, sometimes arbi
 
 These principles are also quite hard to understand for new developers. "Dependency inversion" is a notoriously hairy subject and it's not easy to explain to novices (why "inversion," what are we inverting?), even though the concept, once grasped, is quite simple. It's somewhat similar to explaining what a monad is to novice functional programmers.
 
-Also, it isn't clear how well <abbr>SOLID</abbr> principles can be applied to current paradigms. Back then, an enormous market share in enterprise belonged to Java or C++ — _Clean Code_ uses Java for its code examples — and <abbr>OOP</abbr> was the paradigm that worked for many applications, from server-side systems, through [user interfaces](https://en.wikipedia.org/wiki/Swing_(Java)), to [games](https://en.wikipedia.org/wiki/Minecraft). Since then, technologies like React came along and the paradigm shifted dramatically. So, can React developers even benefit from <abbr>SOLID</abbr>?
+Also, it isn't clear how well <abbr>SOLID</abbr> principles can be applied to current paradigms. Back then, an enormous market share in enterprise belonged to Java or C++—_Clean Code_ uses Java for its code examples—and <abbr>OOP</abbr> was the paradigm that worked for many applications, from server-side systems, through [user interfaces](https://en.wikipedia.org/wiki/Swing_(Java)), to [games](https://en.wikipedia.org/wiki/Minecraft). Since then, technologies like React came along and the paradigm shifted dramatically. So, can React developers even benefit from <abbr>SOLID</abbr>?
 
 For the past couple of years I've had the fortune to work on a web application project with a very stable team of about ten developers. We've had very few staff changes overall and we went for about 2 years without any developers leaving or joining. Thanks to that, we managed to work on some habits, and we saw what kind of processes lead to code that was understandable and easy to extend, and what processes lead to something, that later had to be refactored or fixed at great cost.
 
@@ -26,13 +26,13 @@ That is what I want to share today, and I felt like <abbr>SOLID</abbr> principle
 
 There are a few common formulations of <abbr>SRP</abbr>, however I feel like most people when asked what it means would say that it means that "a class should be responsible for one thing." However, classes are not always there, or a class means something different in Haskell than in Java. So perhaps it should be said that a function or a module should be responsible for one thing.
 
-But then, what does it mean "to be responsible for something?" Well, the way that it's been explained is that another way to think about it is about reasons for change — a class (or a function, or a module) should have at most one reason to change. But then a question arises, what does "reason" mean?
+But then, what does it mean "to be responsible for something?" Well, the way that it's been explained is that another way to think about it is about reasons for change—a class (or a function, or a module) should have at most one reason to change. But then a question arises, what does "reason" mean?
 
 So the final, "canonical" formulation of <abbr>SRP</abbr> is this:
 
 > A module should be responsible to one, and only one, actor.
 
-Disregarding for a moment the unfortunate terminological collision resulting from the choice of the word "actor" (which becomes confusing when the language of your choice is Erlang or anything else which employs the actor model — that's not the kind of actor we are talking about there), it now becomes completely impossible to apply this kind of principle _before_ we code. After all, any module _starts_  by being responsible to only one actor, because that actor is the reason why the module exists in the first place. Only after a while, once one consciously examines an existing code-base, one can see where this has been violated. But oftentimes, by that time, it's already too late.
+Disregarding for a moment the unfortunate terminological collision resulting from the choice of the word "actor" (which becomes confusing when the language of your choice is Erlang or anything else which employs the actor model—that's not the kind of actor we are talking about there), it now becomes completely impossible to apply this kind of principle _before_ we code. After all, any module _starts_  by being responsible to only one actor, because that actor is the reason why the module exists in the first place. Only after a while, once one consciously examines an existing code-base, one can see where this has been violated. But oftentimes, by that time, it's already too late.
 
 What is the point of <abbr>SRP</abbr>? What does want to achieve by employing it?
 
@@ -52,7 +52,7 @@ What it means is that whenever I am faced with a problem that is to be solved by
 
 This is essentially the idea of functional domain modelling, that is modelling your problem in terms of pure functions and immutable types. The functions can become impure at the time of implementation (after all, <abbr>IO</abbr> has to be done somehow), but when I first think how to approach a problem, I do not even consider side effects, rather I am concerned with the flow of data through the application.
 
-Practically what this also means is that I try keep the number of types small — pretty much everything gets to be expressed as an object/record or an array of objects. The number of functions changing these objects then becomes comparatively large.
+Practically what this also means is that I try keep the number of types small—pretty much everything gets to be expressed as an object/record or an array of objects. The number of functions changing these objects then becomes comparatively large.
 
 This approach works great in web applications and software systems, which is what I'm most concerned with. These kinds of applications tend to change a lot and as such require a great deal of adaptability. There are domains where functional modelling is not that great. For example in game-dev, when there is a game world and game entities that interact with that world, I would imagine the object-oriented model works much better, hence we haven't seen many games written in Haskell.
 
@@ -82,7 +82,7 @@ The Open-Closed Principle (<abbr>OCP</abbr>) is canonically defined as:
 
 This means, in somewhat simplified terms, that if you have a module that you maintain, and it is used by other modules maintained by others, you should be able to add additional features to your module without requiring modifications to the depending modules. Of course that still applies even if you maintain all the modules.
 
-<abbr>OCP</abbr> is a great idea, but no code is ever perfectly compliant with it. You _always_ have to modify code because that's the nature of software development. Ideally, you should have a hierarchy of stability - the more dependents a module has, the less it should change (it's fine to extend it though). It's kind of like [Kelvin versioning](https://jtobin.io/kelvin-versioning) in a way, but slightly less strict.
+<abbr>OCP</abbr> is a great idea, but no code is ever perfectly compliant with it. You _always_ have to modify code because that's the nature of software development. Ideally, you should have a hierarchy of stability—the more dependents a module has, the less it should change (it's fine to extend it though). It's kind of like [Kelvin versioning](https://jtobin.io/kelvin-versioning) in a way, but slightly less strict.
 
 The problem is that, once again, you are able to judge whether a module abides by the <abbr>OCP</abbr> only in hindsight. If you have a module which has yet to be a dependency of anything, _every_ change is an extension and _no_ change is a modification. But when you write a module, you don't yet know which part of it will have to be the frozen "modification" part and which will be the flexible "extension" part. You don't yet know what "shape" your module will have to take to fit with the rest of the system jigsaw.
 
@@ -101,11 +101,11 @@ So a heuristic which works well for this example and which has worked well for m
 The problem with the global entity view <abbr>UI</abbr> which I described was that it had been shallow. Each of the components was spread very thin, with a lot of cases and `if`s and `switch`es, but it lost sight of the bigger picture and when it came to adding more features it was daunting -- if we wanted to add more entities to the system, we would have to add them to every `switch`, and if we wanted to add another component or operation, we would have to include another lengthy `switch` in that component.
 
 ### Architecture in domain terms
-This pattern is well known in <abbr>UI</abbr> design — the nested context menu ["flyouts"](https://i.sstatic.net/W6xga.png) are exactly that. The user starts off with something simple and goes on to do something more specific.
+This pattern is well known in <abbr>UI</abbr> design—the nested context menu ["flyouts"](https://i.sstatic.net/W6xga.png) are exactly that. The user starts off with something simple and goes on to do something more specific.
 
 What does a path of a <abbr>HTTP</abbr> request to a server typically look like? It is quite vertical: starting off at the edge, a router of some kind perhaps, then is validated, goes through a service, is used to generate a database query, and then that query is executed. Then it goes out: the data is mapped and formatted in some way, maybe logged, and presented to the <abbr>UI</abbr>.
 
-A common way to structure a backend project is by horizontal layer. There would be a `routes/` directory, `validators/`, `services/` and so on, each for a layer of a system. This is great if you want to perceive the system as a whole, to see each architecture layer. This is sometimes suggested by engineering managers who do not work directly with the code — from their point of view it makes sense. However, that is the only thing that kind of folder structure is good for, because you rarely think of the system layer-by-layer.
+A common way to structure a backend project is by horizontal layer. There would be a `routes/` directory, `validators/`, `services/` and so on, each for a layer of a system. This is great if you want to perceive the system as a whole, to see each architecture layer. This is sometimes suggested by engineering managers who do not work directly with the code—from their point of view it makes sense. However, that is the only thing that kind of folder structure is good for, because you rarely think of the system layer-by-layer.
 
 Instead, you will typically work on a specific case. There is an error when user tries to change his email. Trying to fetch all widgets is awfully slow. You want the users to be able to transmogrify their gizmos.
 
@@ -134,7 +134,7 @@ The standard formulation of <abbr>LSP</abbr> is somewhat difficult to follow, so
 
 > Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
 
-I have no qualms with this in object-oriented languages - now, 35 years since it's original formulation it's become almost universal to expect that an object of a class and an object of a super-class can share an interface.
+I have no qualms with this in object-oriented languages—now, 35 years since it's original formulation it's become almost universal to expect that an object of a class and an object of a super-class can share an interface.
 
 However, what if you don't have derived classes? If you consciously avoid inheritance, there should be very few derived classes. The language still must support them, but it becomes a liability.
 
@@ -331,9 +331,9 @@ One of these things is waiting.
 
 In video game design there is an idea of a _quit moment_. A quit moment is a point in the game where you lose immersion and you have the opportunity to re-evaluate whether you want to continue playing. A quit moment in a video game might happen when you finish a quest line and are unsure what to do next, or if you are stuck and have trouble solving a puzzle, or if you reach a failure state and aren't motivated to try again.
 
-An analogous example in programming is when it's necessary to wait for something — code compilation, running test suite, long network request, etc. It is far too easy to lose focus and do something else. First it's checking emails or Slack, but eventually you end up scrolling through social media or doing something else while the process is running. Before it is done, you cannot continue your work. But oftentimes, you don't get back to it right when it finishes. You still slack off for a little bit more, and even after you return, the focus is gone.
+An analogous example in programming is when it's necessary to wait for something—code compilation, running test suite, long network request, etc. It is far too easy to lose focus and do something else. First it's checking emails or Slack, but eventually you end up scrolling through social media or doing something else while the process is running. Before it is done, you cannot continue your work. But oftentimes, you don't get back to it right when it finishes. You still slack off for a little bit more, and even after you return, the focus is gone.
 
-There are various levels of this, but broadly speaking the acceptable length of waiting is inversely proportional to how often one needs to wait. If I have to run a five minute <abbr>CI/CD</abbr> pipeline once a day, that's fine - an hour would be too much. If I have to wait five minutes to see the small change I have just made in the code, that's no good, but maybe five seconds wouldn't be the end of the world. If I have to wait five seconds for a character that I type to appear in my code editor, that's just awful - anything above 200ms is unacceptable.
+There are various levels of this, but broadly speaking the acceptable length of waiting is inversely proportional to how often one needs to wait. If I have to run a five minute <abbr>CI/CD</abbr> pipeline once a day, that's fine—an hour would be too much. If I have to wait five minutes to see the small change I have just made in the code, that's no good, but maybe five seconds wouldn't be the end of the world. If I have to wait five seconds for a character that I type to appear in my code editor, that's just awful—anything above 200ms is unacceptable.
 
 Years ago I wrote about [dripping faucets](/blog/dripping-faucet), a story from _Zen and the Art of Motorcycle Maintenance_, which are invisible frustrations that are hard to identify individually but indirectly impact the quality of our work and our mood. Bad tools, and especially tools that force us to wait, are such dripping faucets. Not only do you waste time, but you also generate frustration and write worse code. Not to mention, that you often tell yourself that you need more tools to solve your waiting problems, when in reality the problem itself is the number of tools already in circulation.
 

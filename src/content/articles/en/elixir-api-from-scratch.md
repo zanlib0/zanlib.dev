@@ -83,7 +83,7 @@ We also add a Todo schema for our database entity.
 # /lib/todos/todolist/todo.ex
 defmodule Todos.Todolist.Todo do
   use Ecto.Schema
-  
+
   schema "todos" do
     # Fields go here.
   end
@@ -202,11 +202,11 @@ If we try to call the endpoint again, it's going to fail, this time because we t
 
 This should now work, however, this is not the way that Phoenix uses in its generated routes.
 
-Instead of the `json/2` function in the controller, Phoenix codegen creates a <abbr>JSON</abbr> view that gives more fine-grained control over the serialisation of the <abbr>JSON</abbr> and the controller uses `render/3` to render it. Another advantage of using the views is that Phoenix can decide which template to render based on the `Accept` header of the incoming request: if we had an <abbr>API</abbr> that served both <abbr>JSON</abbr> and <abbr>HTML</abbr>, we could use the same route to serve different formats. In my experience, this is quite uncommon.  
+Instead of the `json/2` function in the controller, Phoenix codegen creates a <abbr>JSON</abbr> view that gives more fine-grained control over the serialisation of the <abbr>JSON</abbr> and the controller uses `render/3` to render it. Another advantage of using the views is that Phoenix can decide which template to render based on the `Accept` header of the incoming request: if we had an <abbr>API</abbr> that served both <abbr>JSON</abbr> and <abbr>HTML</abbr>, we could use the same route to serve different formats. In my experience, this is quite uncommon.
 
 On the other hand, deriving the `Jason.Encoder` protocol directly inside the schema and calling `json/2` in the controller instead of using views colocates the serialisation logic in the schema file. I suppose that if the serialisation logic is quite involved, it might be better to use views. For simpler handlers, the simpler solution might be enough.
 
-In any case, this time we will try to follow the codegen way of returning <abbr>JSON</abbr> data. To do this, we remove the `@derive` and create the view. The codegen creates a function `data` which extracts the fields that are supposed to be included in the response, we will follow this convention. The view module for `SomethingController` should be called `SomethingJSON` (pay attention to the casing). 
+In any case, this time we will try to follow the codegen way of returning <abbr>JSON</abbr> data. To do this, we remove the `@derive` and create the view. The codegen creates a function `data` which extracts the fields that are supposed to be included in the response, we will follow this convention. The view module for `SomethingController` should be called `SomethingJSON` (pay attention to the casing).
 
 ```elixir
 # /lib/todos_web/controllers/todo_json.ex
@@ -222,7 +222,7 @@ defmodule TodosWeb.TodoJSON do
       id: todo.id,
       title: todo.title,
       done: todo.done,
-    } 
+    }
   end
 end
 ```
@@ -245,7 +245,7 @@ Now opening [`/api/todos`](http://localhost:4000/api/todos) yields:
 [{"id":1,"done":false,"title":"Walk the dog"}]
 ```
 
-While we are here, we can also add functions that retrieve a Todo by <abbr>ID</abbr>. We define the interface to our schema inside the Todolist context. 
+While we are here, we can also add functions that retrieve a Todo by <abbr>ID</abbr>. We define the interface to our schema inside the Todolist context.
 
 ```elixir
 # /lib/todos/todolist.ex
@@ -413,7 +413,7 @@ This doesn't work either, but now we get a different error:
 
 We haven't really talked about Phoenix controllers and route handlers. They are [plugs](https://hexdocs.pm/plug/readme.html) (similar to [middleware](https://expressjs.com/en/guide/using-middleware.html) in other frameworks) that should always return a conn. Conn is basically an object that describes the current request. Coming from <abbr>JS</abbr>, they're kind of like Express's `req` and `res` objects smooshed together. The `Plug.Conn` module (which we import from `todos_web.ex` via `use TodosWeb, :controller`) also has a number of useful functions that manipulate conns by adding statuses, redirecting them, and so on.
 
-We could change the `with` to a `case` and try to handle the error in a way that returns a valid conn. However, the error message is lying to us a little. The plugs don't always have to return conn - they can return something else, as long as we provide a [fallback controller](https://hexdocs.pm/phoenix/Phoenix.Controller.html#action_fallback/1) which will translate that something else back into a conn.
+We could change the `with` to a `case` and try to handle the error in a way that returns a valid conn. However, the error message is lying to us a little. The plugs don't always have to return conn—they can return something else, as long as we provide a [fallback controller](https://hexdocs.pm/phoenix/Phoenix.Controller.html#action_fallback/1) which will translate that something else back into a conn.
 
 We create a new file with the fallback controller:
 
@@ -435,9 +435,9 @@ We also need to add the `action_fallback/1` macro to the `TodoController`:
 # /lib/todos_web/controllers/todo_controller.ex
 defmodule TodosWeb.TodoController do
   # use TodosWeb...
-  
+
   action_fallback FallbackController
-  
+
   # def index...
 end
 ```
@@ -538,7 +538,7 @@ delete "/todos/:id", TodoController, :delete
 resources "/todos", TodoController, except: [:new, :edit]
 ```
 
-Note the `except: [:new, :edit]` - these actions would be used for a <abbr>HTML</abbr> Phoenix app, where `/todos/new` and `/todos/:id/edit` routes would direct the user to <abbr>HTML</abbr> views with forms for adding and editing a Todo respectively. The forms would call the corresponding `create` and `update` routes. Since we are working with a <abbr>JSON</abbr> <abbr>API</abbr>, they are not necessary.
+Note the `except: [:new, :edit]`—these actions would be used for a <abbr>HTML</abbr> Phoenix app, where `/todos/new` and `/todos/:id/edit` routes would direct the user to <abbr>HTML</abbr> views with forms for adding and editing a Todo respectively. The forms would call the corresponding `create` and `update` routes. Since we are working with a <abbr>JSON</abbr> <abbr>API</abbr>, they are not necessary.
 
 ## Testing
 The automatic codegen also generates some tests for us. I'm not going to go through every test case, but there are a few basic patterns that we can use to test our business logic and our route handlers.
@@ -621,7 +621,7 @@ defmodule TodosWeb.TodoControllerTest do
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
   end
-  
+
   describe "index" do
     test "lists all todos", %{conn: conn} do
       conn = get(conn, ~p"/api/todos")

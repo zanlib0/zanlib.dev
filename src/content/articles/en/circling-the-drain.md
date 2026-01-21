@@ -52,7 +52,7 @@ For one reason or another, there aren't many active and functioning lunatic asyl
 
 This is why a world in which reason is the highest and only absolute requires that every one be a *psychopath*. Because it is not normal and not sustainable to always be reasonable and to always be kicked into gear. It is normal to expect that there will be people who would want to do that (and they should be incentivised and not obstructed, of course!), but those are exceptions and not rules. Most people are not crazy, much like most people are not geniuses.
 
-That is precisely the reason why I find Rand's book so boring. The positive characters are one-dimensional psychopaths, the negative ones are negative because they grew tired of playing a losing game, and the case against altruism is aimed at a strawman. It might be inspirational to identify with these heroic go-getters and hustlers when you are eighteen and full of vigour. It is exhausting if you are forty — it's difficult to pursue your self interest if you have children.
+That is precisely the reason why I find Rand's book so boring. The positive characters are one-dimensional psychopaths, the negative ones are negative because they grew tired of playing a losing game, and the case against altruism is aimed at a strawman. It might be inspirational to identify with these heroic go-getters and hustlers when you are eighteen and full of vigour. It is exhausting if you are forty—it's difficult to pursue your self interest if you have children.
 
 ## Zen and the art of shrugging
 
