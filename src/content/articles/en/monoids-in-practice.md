@@ -11,9 +11,9 @@ First of all, what is important to understand is that monoid isn’t a type or a
 
 In order for a type to be a monoid, there needs to be an *internal binary operation* on that type that’s *associative*, and that the type includes an *identity element*.
 
-An “internal binary operation” is a function that takes two elements of a type (hence *binary*) and returns an element of the same type (hence *internal*). In the [previous post](https://www.intercaetera.com/posts/lenses) we implemented a function `composeTwo` that took two lenses and returned a new lens that was a composition of the two. A simpler example is the addition of integers. In the expression `1 + 2`, `+` is the binary operation taking the two arguments `1` and `2` which are elements of the set of integers. That expression evaluates to `3` which is also an integer.
+An “internal binary operation” is a function that takes two elements of a type (hence *binary*) and returns an element of the same type (hence *internal*). In the [previous post](/blog/lenses) we implemented a function `composeTwo` that took two lenses and returned a new lens that was a composition of the two. A simpler example is the addition of integers. In the expression `1 + 2`, `+` is the binary operation taking the two arguments `1` and `2` which are elements of the set of integers. That expression evaluates to `3` which is also an integer.
 
-From primary school arithmetic we know that one of the properties of addition is associativity, which means that no matter how we group the operations, the results will be the same. Both `(1 + 2) + 3` and `1 + (2 + 3)` evaluate to the same number. 
+From primary school arithmetic we know that one of the properties of addition is associativity, which means that no matter how we group the operations, the results will be the same. Both `(1 + 2) + 3` and `1 + (2 + 3)` evaluate to the same number.
 
 The final element to our definition of a monoid is the inclusion of an identity element. “Identity” in this case simply means “neutral.” Much like the identity function does nothing, the identity element makes the binary operation do nothing when it is given as one of the arguments. In the case of addition of integers, that neutral element is of course `0`.
 

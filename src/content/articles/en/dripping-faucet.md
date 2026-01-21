@@ -3,7 +3,7 @@ pubDate: 2020-11-11T11:54:08.035Z
 title: A Tale of a Dripping Faucet
 description: Why minor pain points can ruin your mood.
 ---
-There's a story quite early on in *Zen and the Art of Motorcycle Maintenance* about the Sutherland couple, who represent the "[romantic](https://intercaetera.com/2020-08-31-romantic-programming/)" and quite non-technical, perhaps even technophobe, approach to life. Pirsig starts off by considering their — or, particularly, John's, the husband's — approach to motorcycles until eventually extrapolating it to other kinds of technology, such as the kitchen sink faucet.
+There's a story quite early on in *Zen and the Art of Motorcycle Maintenance* about the Sutherland couple, who represent the "[romantic](/blog/romantic-programming)" and quite non-technical, perhaps even technophobe, approach to life. Pirsig starts off by considering their — or, particularly, John's, the husband's — approach to motorcycles until eventually extrapolating it to other kinds of technology, such as the kitchen sink faucet.
 
 > Waiting for them to get going one morning in their kitchen I noticed the sink faucet was dripping and remembered that it was dripping the last time I was there before and that in fact it had been dripping as long as I could remember. I commented on it and John said he had tried to fix it with a new faucet washer but it hadn’t worked. That was all he said. The presumption left was that that was the end of the matter. If you try to fix a faucet and your fixing doesn't work then it’s just your lot to live with a dripping faucet.
 

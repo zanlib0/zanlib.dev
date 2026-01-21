@@ -1,5 +1,6 @@
 ---
 pubDate: 2021-01-21T17:18:45.365Z
+updatedDate: 21 Jan 2026
 title: On Excel Add-ins in React
 ---
 In the beginning, programmers invented code. But businesspeople found code too complex, and they wanted something simpler. So programmers invented Microsoft Excel.
@@ -98,7 +99,9 @@ This presents us with two unique problems:
 * The data in the Excel file might not be complete. In this case, there is no direct information about the type of the business (let's say that the restaurant type has a specific ID in our database, like `RES`). We also don't have the information about the city in every row, because all of the restaurants are in "Fakeville".
 * The format of data inside the Excel files is not standardised. We cannot assume that the first row will always have headers (as is often the case with CSV files).
 
-To remedy this, we created a form to define a mapping for every model that would be imported through the Excel add-in. We used [Formuj](https://formuj.intercaetera.com/) to generate these forms — and the library is especially well suited for this since every form consisted just of multiple instances of the same field.
+To remedy this, we created a form to define a mapping for every model that would be imported through the Excel add-in. We used [Formuj](https://formuj.intercaetera.com/) to generate these forms—and the library is especially well suited for this since every form consisted just of multiple instances of the same field.[+formuj]
+
+[+formuj]: A note from the future: I strongly recommend _against_ using Formuj or any kind of mini-framework over forms that you think will make you write forms faster. This never ends well.
 
 The `<FormField />` component that represented each field of the model consists of three parts.
 

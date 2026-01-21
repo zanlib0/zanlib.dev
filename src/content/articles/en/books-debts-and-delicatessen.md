@@ -35,7 +35,7 @@ This fact can help us make value judgements on non-perishable things—technolog
 
 What is important to remember is that there is a very important obstacle to these calculations, and it is that there is not a factor that greatly reduces our qualifier. Actuarial life tables are only relevant for people with no terminal illnesses—a 35-year-old man with colon cancer does not have life expectancy of 81 years. A four-hundred-year-old horse riding manual is likely going out of print after the first Ford Model T rolls off the assembly line. Cigarettes face a steep decline in sales once they are linked to lung cancer.
 
-This leads me to a point I made already, a [universal rule of things](https://intercaetera.com/2020-02-24-functional-ship-of-theseus-from-divergence-to-generalisation-to-divergence/)—once you identified a rule that governs a system, the things that conform no longer matter, and exceptions should instead be examined. Time is a great tool when it comes to making value judgements—but those judgements ought to be considered with regards to change and changing circumstances as well.
+This leads me to a point I made already, a [universal rule of things](/blog/functional-ship-of-theseus)—once you identified a rule that governs a system, the things that conform no longer matter, and exceptions should instead be examined. Time is a great tool when it comes to making value judgements—but those judgements ought to be considered with regards to change and changing circumstances as well.
 
 ## Time for space
 

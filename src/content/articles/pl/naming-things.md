@@ -19,7 +19,7 @@ Być może jest to wystarczające do identyfikacji gatunku, ale możemy zadać s
 
 ## Lekcje w programowaniu
 
-Jako, że programowanie jest wgruncie rzeczy [filozofią stosowaną](https://www.intercaetera.com/posts/faith-before-reason), możemy wyciągnąć lekcje z tego ciągu rozumowania w naszym własnym kodzie. W przeciwieństwie do świata rzeczywistego, pracując nad aplikacją, możemy spojrzeć na kod źródłowy będący podstawą jakiejś abstrakcji—być może dlatego, że sami go napisaliśmy, lub dlatego, że jest częścią otwartoźródłowej biblioteki. Jako, że pojemność podręcznej pamięci krótkoterminowej każdego ludzkiego mózgu jest ograniczona, chcemy używać nazw aby indeksować skomplikowane rzeczy.
+Jako, że programowanie jest wgruncie rzeczy [filozofią stosowaną](/blog/faith-before-reason), możemy wyciągnąć lekcje z tego ciągu rozumowania w naszym własnym kodzie. W przeciwieństwie do świata rzeczywistego, pracując nad aplikacją, możemy spojrzeć na kod źródłowy będący podstawą jakiejś abstrakcji—być może dlatego, że sami go napisaliśmy, lub dlatego, że jest częścią otwartoźródłowej biblioteki. Jako, że pojemność podręcznej pamięci krótkoterminowej każdego ludzkiego mózgu jest ograniczona, chcemy używać nazw aby indeksować skomplikowane rzeczy.
 
 Jednakże, zapamiętywanie bez kontekstu jest trudne. Czasem jest to konieczne dla najbardziej podstawowych klocków budujących nasze zrozumienie, lub w trakcie pracy w abstrakcyjnych lub kompletnie nieznanych nam domenach. Ogólnie, jednak, prawie zawsze chcemy strukturyzować abstrakcje w sposób odzwierciedlający świat rzeczywisty, z tego powodu, że większość jest z nim zaznajomiona, zwiększając tym samym szanse na zrozumienie naszych abstrakcji.
 

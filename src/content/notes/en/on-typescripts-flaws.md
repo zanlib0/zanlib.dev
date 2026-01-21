@@ -206,7 +206,7 @@ forall (a3 :: Type). Semigroup a3 => a3 -> a3 -> a3
 
 Here once again we see an odd type variable `a3`. The type here, though is quite clear: this function accepts both arguments of any type `a3` and also returns `a3` as long as `a3` satisfies the `Semigroup` type class.
 
-A type class in PureScript is something like an interface: it requires that a type satisfies some kind of requirement. In this case, the [Semigroup](https://pursuit.purescript.org/packages/purescript-prelude/3.0.0/docs/Data.Semigroup) type class requires that a type implements a function `append` (aliased to an infix operator `(<>)`) with signature `a -> a -> a` that is associative. (If you know what a [monoid](https://intercaetera.com/posts/monoids-in-practice/) is, a semigroup is kind of like a monoid, except for the identity element. All monoids are also semigroups, but not all semigroups are monoids.)
+A type class in PureScript is something like an interface: it requires that a type satisfies some kind of requirement. In this case, the [Semigroup](https://pursuit.purescript.org/packages/purescript-prelude/3.0.0/docs/Data.Semigroup) type class requires that a type implements a function `append` (aliased to an infix operator `(<>)`) with signature `a -> a -> a` that is associative. (If you know what a [monoid](/blog/monoids-in-practice/) is, a semigroup is kind of like a monoid, except for the identity element. All monoids are also semigroups, but not all semigroups are monoids.)
 
 In other words, it is quite similar to the requirement in TypeScript code that the `l` argument is an object that implements the `.concat` method. However, the semigroup type class is a little more rigid with what it expects, yet still flexible enough not to fall back to a specific type. The PureScript type signature for `concat` says: give me two arguments of the same type that can be appended, and you'll get a value of that type back.
 
@@ -268,7 +268,7 @@ const authMiddleware = (req, res, next) => {
 	const token = getHeader(req, 'Authorization')
 	const isAuthorized = authorizeUser(token)
     // ...
-} 
+}
 ```
 
 Now, say you want to add another feature to your library. There is a header called [`Set-Cookie`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) which could [return an array of cookies](https://nodejs.org/api/http.html#http_message_headers). You naively change the signature to:
@@ -418,6 +418,6 @@ This has a few distinct disadvantages for debugging. First, updating something i
 
 The above list is not exhaustive. I did my best to verify each point, but it is possible that I missed something obvious or overlooked a solution. If that is the case, feel free to get in touch and I'll make sure to make corrections wherever it is needed. If you would like to contribute to this list, feel free to get in touch as well.
 
-I specifically did not want to go for the low-hanging fruit of issues with tooling surrouding TS. There are a lot of it there - it's very easy to complain about slow compilation with `tsc` or crazy memory usage of `tsserver`. Every piece of tooling [comes with a cost](https://intercaetera.com/posts/solid-anew).
+I specifically did not want to go for the low-hanging fruit of issues with tooling surrouding TS. There are a lot of it there - it's very easy to complain about slow compilation with `tsc` or crazy memory usage of `tsserver`. Every piece of tooling [comes with a cost](/blog/solid-anew#flow).
 
 I hope that this list has been useful for you and you will be able to make a more informed decision about whether to learn and use TypeScript in the future.

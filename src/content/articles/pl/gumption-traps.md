@@ -129,7 +129,7 @@ Wystarczy kilka minut na zregenerowanie sił. Spojrzenie przez okno. Piętnastom
 
 Kiedy mana się skończy, nie możemy wymusić skupienia. Kodowanie jest ćwiczeniem kreatywnym i chociaż nadal możemy to robić kiedy mana się skończy, najprawdopodobniej będziemy musieli wyrzucić do śmieci wszystko, co zrobiliśmy bez skupienia. Nudząc się, schodzimy ze ścieżki jakości, i wtedy właśnie zdarzają się naprawdę duże błędy.
 
-Warto również zauważyć, że kiedy się nudzimy, jesteśmy bardziej podatni na [*oświecenia*](https://intercaetera.com/posts/three-ways-of-gaining-knowledge/)—niepowiązane fakty spontanicznie łączące się razem w głowie—a kiedy stymulujemy to grzebiąc w kodzie bez konkretnego celu, możemy znaleźć rozwiązania, których wcześniej nie rozważaliśmy.
+Warto również zauważyć, że kiedy się nudzimy, jesteśmy bardziej podatni na [*oświecenia*](/blog/on-gaining-knowledge/)—niepowiązane fakty spontanicznie łączące się razem w głowie—a kiedy stymulujemy to grzebiąc w kodzie bez konkretnego celu, możemy znaleźć rozwiązania, których wcześniej nie rozważaliśmy.
 
 ### Zniecierpliwienie
 
@@ -155,7 +155,7 @@ Na koniec pozostają ostatnie dwa typy pułapek dzielności: pułapki prawdy i p
 
 Trudno jest wymyślić zorganizowane grupy przykładów pułapek prawdy, ponieważ wszystkie są dość indywidualne w sposobie, w jaki się pojawiają. Jednak ogólnie rzecz biorąc, pułapki prawdy pojawiają się, kiedy znajdziemy się w "nieprawidłowym stanie". Wpadamy w pułapkę prawdy, kiedy nasze warunki wstępne są takie, że znalezienie prawdy w bieżącej sytuacji jest niemożliwe.
 
-To brzmi dość zagadkowo, jednak gdzie indziej omawialiśmy [grę w pomidora](https://intercaetera.com/posts/tomato-game/). Opisuje ona jeden scenariusz pułapki prawdy: kiedy zostaje ci zadane pytanie binarne, na które ani "tak", ani "nie" nie są odpowiednimi odpowiedziami.
+To brzmi dość zagadkowo, jednak gdzie indziej omawialiśmy [grę w pomidora](/blog/tomato-game/). Opisuje ona jeden scenariusz pułapki prawdy: kiedy zostaje ci zadane pytanie binarne, na które ani "tak", ani "nie" nie są odpowiednimi odpowiedziami.
 
 _Zen i sztuka oporządzania motocykla_ podchodzi do tej koncepcji w inny, charakterystycznie orientalny sposób japońskiego "mu" (które w istocie jest tym samym, co środkowoeuropejski pomidor, z wyjątkiem tego, że w bardziej wyrafinowanym, wschodnim filozoficznym płaszczu. My Polacy mamy tendencję do bycia bardziej przyziemnymi). "Mu" oznacza "nic".
 

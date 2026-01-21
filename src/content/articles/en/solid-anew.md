@@ -10,7 +10,7 @@ However, is it true that they actually increase the quality of one's code? What 
 
 The point of "clean code" is that our code should be more adaptable. One is unable to predict the complexity of a system before one starts working on it, so one should avoid practices which require buy-in that locks us out from certain decisions later down the line. To be agile, one needs to be able to develop new features quickly, without costly refactors. In other words: keep options open.
 
-My problem with <abbr>SOLID</abbr> is that in my experience these principles aren't particularly useful as coding guidelines. The only time I've ever seen them mentioned is post-hoc, as a tool to analyse something that has already been developed, or as a tool to deploy during a code review to nitpick a particular solution. 
+My problem with <abbr>SOLID</abbr> is that in my experience these principles aren't particularly useful as coding guidelines. The only time I've ever seen them mentioned is post-hoc, as a tool to analyse something that has already been developed, or as a tool to deploy during a code review to nitpick a particular solution.
 
 The rules aren't very well defined, and often require additional, sometimes arbitrary metrics to judge how well a given rule was applied. For example, Single Responsibility Principle [originally](https://web.archive.org/web/20150202200348/http://www.objectmentor.com/resources/articles/srp.pdf) said that "classes should have one reason to change," but "reason" is not well-defined and the concept of "class" as understood in Java doesn't exist outside a certain kind of object-oriented languages.
 
@@ -98,10 +98,10 @@ So a heuristic which works well for this example and which has worked well for m
 
 > Vertical over horizontal.
 
-The problem with the global entity view <abbr>UI</abbr> which I described was that it had been shallow. Each of the components was spread very thin, with a lot of cases and `if`s and `switch`es, but it lost sight of the bigger picture and when it came to adding more features it was daunting -- if we wanted to add more entities to the system, we would have to add them to every `switch`, and if we wanted to add another component or operation, we would have to include another lengthy `switch` in that component. 
+The problem with the global entity view <abbr>UI</abbr> which I described was that it had been shallow. Each of the components was spread very thin, with a lot of cases and `if`s and `switch`es, but it lost sight of the bigger picture and when it came to adding more features it was daunting -- if we wanted to add more entities to the system, we would have to add them to every `switch`, and if we wanted to add another component or operation, we would have to include another lengthy `switch` in that component.
 
 ### Architecture in domain terms
-This pattern is well known in <abbr>UI</abbr> design — the nested context menu ["flyouts"](https://i.sstatic.net/W6xga.png) are exactly that. The user starts off with something simple and goes on to do something more specific. 
+This pattern is well known in <abbr>UI</abbr> design — the nested context menu ["flyouts"](https://i.sstatic.net/W6xga.png) are exactly that. The user starts off with something simple and goes on to do something more specific.
 
 What does a path of a <abbr>HTTP</abbr> request to a server typically look like? It is quite vertical: starting off at the edge, a router of some kind perhaps, then is validated, goes through a service, is used to generate a database query, and then that query is executed. Then it goes out: the data is mapped and formatted in some way, maybe logged, and presented to the <abbr>UI</abbr>.
 
@@ -213,11 +213,11 @@ type User = {
 
 The core module communicates with the schedule management module, which is only concerned with the schedules of the users. Let's say that it implements specific business logic requirements, such as adding new tasks, ensuring that the tasks don't overlap, that there aren't any spaces in the user's schedule, etc.
 
-It would be easiest to send off the entire user to the schedule module, but since it is only concerned with the user schedule, you could instead use a mapping that extracts the user schedule before it uses a function from the module, and then puts back the new schedule on that user. In this case you could use a [lens](/posts/lenses).
+It would be easiest to send off the entire user to the schedule module, but since it is only concerned with the user schedule, you could instead use a mapping that extracts the user schedule before it uses a function from the module, and then puts back the new schedule on that user. In this case you could use a [lens](/blog/lenses).
 
 ```typescript
 const scheduleLens = createLens('schedule')
-const addNewItemToUserSchedule = (user: User, item: ScheduleItem): User => 
+const addNewItemToUserSchedule = (user: User, item: ScheduleItem): User =>
 	over(scheduleLens, user, schedule => addItemToSchedule(schedule, item))
 ```
 
@@ -247,7 +247,7 @@ The broad point of the dependency inversion principle is that classes should not
 
 A long time ago, just as I was getting into programming professionally, I joined a few of my colleagues in writing a Node.js framework whose unique selling point would be that it provides an IoC container to all the request handlers so that each handler can get its dependencies from the container. The container can serve different instances of the dependency based on different parameters, for example whether the system is running in a real environment or in a test. That was supposed to be "clean" and "<abbr>SOLID</abbr>." I recall then that I thought in my mind "hey, that just sounds like global variables with extra steps," and it seems that I wasn't all that far off the mark.
 
-In effect, what this kind of IoC container causes, is a state where no one knows which modules are actually being used where. We didn't know which parts of our applications were vulnerable, and we were afraid of touching some bits of the code because it could blow up 80% of the application. It was tested, to be sure, but running the entire test suite was 20 minutes of waiting around, so a lot of the changes were made with trembling hands and great ceremony. 
+In effect, what this kind of IoC container causes, is a state where no one knows which modules are actually being used where. We didn't know which parts of our applications were vulnerable, and we were afraid of touching some bits of the code because it could blow up 80% of the application. It was tested, to be sure, but running the entire test suite was 20 minutes of waiting around, so a lot of the changes were made with trembling hands and great ceremony.
 
 Developing applications with that framework wasn't much more pleasant than in [Express](https://expressjs.com) or [Feathers](https://feathersjs.com), so we ended up scrapping the whole thing. The service locator is now widely considered an anti-pattern and it seems like this entire idea isn't all that great as it was once thought to be.
 
@@ -335,7 +335,7 @@ An analogous example in programming is when it's necessary to wait for something
 
 There are various levels of this, but broadly speaking the acceptable length of waiting is inversely proportional to how often one needs to wait. If I have to run a five minute <abbr>CI/CD</abbr> pipeline once a day, that's fine - an hour would be too much. If I have to wait five minutes to see the small change I have just made in the code, that's no good, but maybe five seconds wouldn't be the end of the world. If I have to wait five seconds for a character that I type to appear in my code editor, that's just awful - anything above 200ms is unacceptable.
 
-Years ago I wrote about [dripping faucets](/posts/dripping-faucet), a story from _Zen and the Art of Motorcycle Maintenance_, which are invisible frustrations that are hard to identify individually but indirectly impact the quality of our work and our mood. Bad tools, and especially tools that force us to wait, are such dripping faucets. Not only do you waste time, but you also generate frustration and write worse code. Not to mention, that you often tell yourself that you need more tools to solve your waiting problems, when in reality the problem itself is the number of tools already in circulation.
+Years ago I wrote about [dripping faucets](/blog/dripping-faucet), a story from _Zen and the Art of Motorcycle Maintenance_, which are invisible frustrations that are hard to identify individually but indirectly impact the quality of our work and our mood. Bad tools, and especially tools that force us to wait, are such dripping faucets. Not only do you waste time, but you also generate frustration and write worse code. Not to mention, that you often tell yourself that you need more tools to solve your waiting problems, when in reality the problem itself is the number of tools already in circulation.
 
 Hence, the fifth and final heuristic:
 

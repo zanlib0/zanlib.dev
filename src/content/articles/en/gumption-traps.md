@@ -41,7 +41,7 @@ And finally, when you do finally end up falling into this particular trap, remem
 
 ### Intermittent failure
 
-...or as they're called more commonly in our field: [heisenbugs](https://en.wikipedia.org/wiki/Heisenbug). These are issues that seemingly disappear when studied. They exist only in production, but when we take the magnifying glass of our debugging tools, they are nowhere to be found. 
+...or as they're called more commonly in our field: [heisenbugs](https://en.wikipedia.org/wiki/Heisenbug). These are issues that seemingly disappear when studied. They exist only in production, but when we take the magnifying glass of our debugging tools, they are nowhere to be found.
 
 Unfortunately, if the heisenbugs were not as pernicious as they are, they would not be so feared. The advice Pirsig gives to deal with them in the context of motorcycles—"just ride it out" for a couple hundred kilometres—is also difficult to action within the software context.
 
@@ -125,7 +125,7 @@ Take a few minutes to recharge. Look out the window. Go for a fifteen-minute wal
 
 Once the focus-mana is gone, you can't force the focus. Coding is a creative exercise, and while you can still do it when the mana is gone, most likely you will have to throw out everything you had done while not focused out of the window. When you're bored, you stray off the path of quality, and that's when the really big mistakes happen.
 
-It's also worth noting that when you are bored, you are more susceptible to [*revelations*](https://intercaetera.com/posts/three-ways-of-gaining-knowledge/)— unrelated facts spontaneously "clicking" together in your head—and when you stimulate that with poking around the code without any particular goal, you might find solutions that you hadn't considered previously.
+It's also worth noting that when you are bored, you are more susceptible to [*revelations*](/blog/on-gaining-knowledge/)—unrelated facts spontaneously "clicking" together in your head—and when you stimulate that with poking around the code without any particular goal, you might find solutions that you hadn't considered previously.
 
 ### Impatience
 
@@ -151,7 +151,7 @@ Last up are the last two types of gumption traps: truth traps and muscle traps. 
 
 It's difficult to come up with organised groups of examples of truth traps, because they all are fairly individualistic in how they come about. However, in general, truth traps pop up when you find yourself in an "invalid state". You fall into a truth trap when your preconditions are such, that finding truth in your current situation is impossible.
 
-This sounds quite cryptic, however elsewhere we discussed [The Tomato Game](https://intercaetera.com/posts/tomato-game/). It describes one scenario of a truth trap: when you are asked a binary question to which neither "yes" nor "no" are adequate answers.
+This sounds quite cryptic, however elsewhere we discussed [The Tomato Game](/blog/tomato-game/). It describes one scenario of a truth trap: when you are asked a binary question to which neither "yes" nor "no" are adequate answers.
 
 *Zen and the Art of Motorcycle Maintenance* approaches this concept in a different, orientally-flavoured way of the Japanese "mu" (which, in essence, is the same thing as the Central-European-flavoured tomato, except in a more sophisticated, Eastern philosophical veneer. We Poles tend to be more down-to-Earth.) "Mu" means "no thing".
 
