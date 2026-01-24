@@ -68,6 +68,8 @@ primary low valuation, the secondary oaths will not follow.
 
 [+oaths]: I am guessing that by _oaths_ Pirsig means something like _expletives_ or _curses_.
 
+When I walk into a train carriage and it smells poorly, the "bad" (value) is not a property of the smell or what smells because some animals or some people might find it fine, or unobjectionable. Neither is it inherent in me, because I could find the smell "good" in some circumstances, for example if I tried to investigate the source of it. The bad quality is independently from the subject (me) and the object (smell), it arises purely in the circumstance.
+
 ### On cheap moralists
 
 A rather common occurrence on the internet and in broader culture these days.

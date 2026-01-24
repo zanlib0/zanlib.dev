@@ -1,0 +1,31 @@
+---
+import AboutPage from '../../components/pages/AboutPage.astro';
+import { getNavLinks } from '../../i18n/ui';
+
+const t = {
+	lang: 'pl' as const,
+	navLinks: getNavLinks('pl'),
+};
+---
+
+<AboutPage {t}>
+  <blockquote>"Qui fidelis est in minimo, et in majori fidelis est."</blockquote>
+  <p>
+    Programista, mąż, ojciec, autor, mentor, generalista. Szukam sposobów na połączenie nauk humanistycznych ze światem programowania, pokazując jak niektóre założenia tej branży, pozornie innowacyjne, są w rzeczywistości znane od wieków.
+  </p>
+  <p>
+    Pracuję jako product engineer, głównie w technologiach Elixir, JavaScript i React, mając ponad dekadę doświadczenia w programowaniu. Dowożę funkcjonalne oprogramowanie rozwiązujące prawdziwe problemy w domenach, o których wcześniej nie miałem pojęcia.
+  </p>
+  <p>
+    W pracy i w życiu prywatnym staram się kierować <a href="https://www.cystersi.pl/pdf/regulaswbenedykta.pdf"><em>Regułą św. Benedykta</em></a>: podręcznikiem codziennego działania i uwagi, skutecznego od piętnastu stuleci. Moim drugim źródłem inspiracji jest powieść o jakości Roberta Pirsiga <a href="https://pl.wikipedia.org/wiki/Zen_i_sztuka_oporz%C4%85dzania_motocykla"><em>Zen i sztuka obsługi motocykla</em></a>.
+  </p>
+  <p>
+    Pochodzę i mieszkam w Polsce z żoną i córeczką. Znam kilka języków, kiedyś napisałem książkę, a tutaj publikuję kiedy mam coś ciekawego do powiedzenia. Wszystkie treści na tym blogu są moją osobistą opinią i nie reprezentują poglądów kontrahentów ani pracodawców.
+  </p>
+</AboutPage>
+
+<style>
+blockquote {
+  font-size: 1.8rem;
+}
+</style>

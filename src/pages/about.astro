@@ -1,0 +1,31 @@
+---
+import AboutPage from '../components/pages/AboutPage.astro';
+import { getNavLinks } from '../i18n/ui';
+
+const t = {
+	lang: 'en' as const,
+	navLinks: getNavLinks('en'),
+};
+---
+
+<AboutPage {t}>
+  <blockquote>"Qui fidelis est in minimo, et in majori fidelis est."</blockquote>
+  <p>
+    I'm a software engineer, husband, father, writer, teacher, and generalist. I am on a journey to reconcile the humanities with the world of software engineering, to show how certain principles of this field, seemingly innovative, have actually been known for centuries. I am interested in what it means to know something, and how we can make decisions that bring good results.
+  </p>
+  <p>
+    I work as a product engineer, primarily in Elixir, JavaScript and React, with over a decade of experience under my belt. I dive into domains I know nothing about and emerge with working software that addresses the real problem. I care more about <em>why</em> than <em>how</em>, which sometimes makes me difficult to work with, but usually means we build the right thing.
+  </p>
+  <p>
+    I do my best to follow the <a href="https://www.archive.osb.org/rb/text/toc.html"><em>Rule of Saint Benedict</em></a> in my private and professional life: a framework for work and attention that has quietly outlasted every productivity trend by about fifteen centuries. My other main influence is Robert Pirsig's seminal exposition on Quality: <a href="https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance"><em>Zen and the Art of Motorcycle Maintenance</em></a>.
+  </p>
+  <p>
+    I was born and live in Poland with my wife and a young daughter. I speak a few languages, completed one novel, and write here when I have something worth saying. Everything on this blog is my own personal opinion and doesn't necessarily reflect the views of my business partners or employers.
+  </p>
+</AboutPage>
+
+<style>
+blockquote {
+  font-size: 1.8rem;
+}
+</style>

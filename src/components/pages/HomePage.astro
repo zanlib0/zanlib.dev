@@ -6,6 +6,8 @@ import Footer from '../Footer.astro';
 import Header from '../Header.astro';
 import Socials from '../Socials.astro';
 
+import selfie from '../../assets/selfie.png';
+
 interface Props {
 	t: {
 		lang: 'en' | 'pl';
@@ -35,7 +37,7 @@ const { t } = Astro.props;
 		<main>
 			<div class="photo-column">
 				<figure>
-					<Image width={400} height={400} src="/selfie.png" alt={t.portraitAlt} id="portrait" />
+					<Image width={400} height={400} src={selfie} alt={t.portraitAlt} id="portrait" />
 					<figcaption><h6>{t.portraitDate}</h6></figcaption>
 				</figure>
 			</div>

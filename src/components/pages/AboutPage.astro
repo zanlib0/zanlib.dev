@@ -1,18 +1,20 @@
 ---
+import {Image} from 'astro:assets';
 import BaseHead from '../BaseHead.astro';
 import Footer from '../Footer.astro';
 import Header from '../Header.astro';
 
+import sea from '../../assets/sea.jpg';
+
 interface Props {
-	t: {
-		lang: 'en' | 'pl';
-		content: string;
-		navLinks: {
-			articles: string;
-			projects: string;
-			about: string;
-		};
-	};
+  t: {
+    lang: 'en' | 'pl';
+    navLinks: {
+      articles: string;
+      projects: string;
+      about: string;
+    };
+  };
 }
 
 const { t } = Astro.props;
@@ -20,14 +22,48 @@ const { t } = Astro.props;
 
 <!doctype html>
 <html lang={t.lang}>
-	<head>
-		<BaseHead />
-	</head>
-	<body>
-		<Header active="about" navLinks={t.navLinks} />
-		<main>
-			{t.content}
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <Header active="about" navLinks={t.navLinks} />
+    <main>
+      <figure>
+        <Image src={sea} id="banner" alt="Banner" height={500} />
+        <figcaption><h6>Sliema, Malta</h6></figcaption>
+      </figure>
+    		<article class="prose">
+      		<slot />
+    		</article>
+    </main>
+    <Footer />
+
+  </body>
 </html>
+
+<style>
+main {
+  width: calc(100% - 2em);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prose {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 1em;
+  color: rgb(var(--gray-dark));
+}
+
+#banner {
+  filter: grayscale(0.3);
+}
+
+figure {
+  margin-bottom: 3rem;
+}
+</style>
