@@ -1,6 +1,7 @@
 ---
 title: On TypeScript's Flaws
 pubDate: 17 Aug 2024
+updatedDate: 1 Feb 2026
 ---
 While looking to adopt a new technology, a development team typically gets together and tries to review its pros and cons. The trouble is the asymmetry of information: pros are easily available, if only for the landing page that each library or language proudly displays. Everyone knows that TS is a "superset of JS," or that Formik lets you build forms "without the tears". The cons are comparatively much more difficult to come by. Some issues with a technology will only manifest once the project has been going on for long enough time and the code-base has grown. Unless someone on the team has extensive prior experience with a technology, it is very difficult to evaluate it honestly.
 
@@ -67,6 +68,8 @@ const octupleSquareThenShow = composeMany(double, double, double, square, show)
 This obviously doesn't type-check, since the `show` function doesn't satisfy the `Fn<A, A>` type—the type is too restrictive. When composing functions, the argument and return type of the function don't have to be the same. The only requirement is that the return type of one function is a subtype of the argument type of the one next in the list.
 
 A function like that kind of `composeMany` is not possible to exhaustively type in TS—or most statically-typed languages, for that matter. The best you can do is to commit atrocities on the type system by listing each arity as its own overload or use a library that [has already done it for you](https://gcanti.github.io/fp-ts/modules/function.ts.html#flow).
+
+*(24-01-2026 addendum: I have been made aware by the author of [this blog post](https://komon.xyz/pipe/) that with some advanced TypeScript it is possible to exhaustively type the composition function, however given the relative complexity of the proposed solution one wonders if TypeScript can be considered the correct tool for the job.)*
 
 For a relatively common use case like function composition, using a library might be fine. But what if you'd like to compose functions a little differently, for example by taking into account that one of them [might return `null`](https://hackage.haskell.org/package/base-4.20.0.1/docs/Data-Maybe.html)?
 
@@ -295,7 +298,7 @@ However, if you had previously made the decision to allow mixed-case headers (fo
 
 ## Promises and bcrypt
 
-_(Note: As of [TypeScript 5.6](https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/#disallowed-nullish-and-truthy-checks1), this should correctly cause an error in the `if` statement, however I've been getting inconsistent results between `tsc` and the web playground, so it might need some more time to be ironed out.)_
+_(Addendum: As of [TypeScript 5.6](https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/#disallowed-nullish-and-truthy-checks1), this should correctly cause an error in the `if` statement, however I've been getting inconsistent results between `tsc` and the web playground, so it might need some more time to be ironed out.)_
 
 This one is _technically_ a user error, however it has once resulted in a dangerous security flaw that would not have happened if it weren't for TypeScript's quite odd priority of reporting issues with types. Given the claims that TypeScript saves you "hours of debugging issues that could have been caught early" (though, frankly, I have yet to come across a type bug that would take so long to debug), this is an example of a bug caused _by_ TypeScript.
 
@@ -336,7 +339,10 @@ Unfortunately, now he has introduced a serious bug, since the value of `isPasswo
 In the real-world scenario, we were saved by good tests, but in the absence of tests, this kind of behaviour is fail-deadly.
 
 ## Any is everywhere
-Many commonly-used functions return `any` without any kind of warning, even if both `strict` and `noImplicitAny` are enabled. Here are a few examples.
+
+Many commonly-used functions return `any` without any kind of warning, even if both `strict` and `noImplicitAny` are enabled.[+eslint] Here are a few examples.
+
+*(01-02-2026 addendum: It appears that [`typescript-eslint`](https://typescript-eslint.io/) addresses some of the issues outlined in this section.)*
 
 ### In standard library
 Consider the following code:
