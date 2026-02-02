@@ -32,10 +32,12 @@ const articleMeta = {
 	publishedTime: pubDate,
 	modifiedTime: updatedDate,
 };
+
+const ogImage = slug ? `/og/${currentLocale}/${slug}.png` : undefined;
 ---
 <html lang={currentLocale}>
 	<head>
-		<BaseHead title={title || SITE_TITLE} description={description} articleMeta={articleMeta} />
+		<BaseHead title={title || SITE_TITLE} description={description} ogImage={ogImage} articleMeta={articleMeta} />
 	</head>
 
 	<body>

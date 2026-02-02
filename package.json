@@ -19,6 +19,7 @@
     "astro-seo": "^1.1.0",
     "katex": "^0.16.25",
     "remark-marginnotes": "^0.1.5",
+    "satori": "^0.19.1",
     "sharp": "^0.34.3",
     "typescript": "^5.9.3"
   }

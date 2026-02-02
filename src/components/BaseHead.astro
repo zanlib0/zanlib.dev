@@ -8,6 +8,7 @@ import { getSiteMetadata } from '../consts';
 interface Props {
 	title?: string;
 	description?: string;
+	ogImage?: string;
 	articleMeta?: {
 		publishedTime: Date;
 		modifiedTime?: Date;
@@ -22,8 +23,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
 	title = siteMetadata.title,
 	description = siteMetadata.description,
+	ogImage,
 	articleMeta,
 } = Astro.props;
+
+const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).href : '';
 
 const siteTitle = siteMetadata.title;
 const fullTitle = title === siteTitle ? siteTitle : `${title} • ${siteTitle}`;
@@ -81,7 +85,7 @@ const openGraphArticle = articleMeta
 			title: fullTitle,
 			type: ogType,
 			url: Astro.url.href,
-			image: '',
+			image: ogImageUrl,
 		},
 		optional: {
 			description: description,
@@ -92,6 +96,7 @@ const openGraphArticle = articleMeta
 		card: 'summary_large_image',
 		title: fullTitle,
 		description: description,
+		image: ogImageUrl,
 	}}
 	languageAlternates={languageAlternates}
 />
