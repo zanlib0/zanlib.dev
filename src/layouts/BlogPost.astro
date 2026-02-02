@@ -27,10 +27,15 @@ type Props = {
 
 const { title = null, description, pubDate, updatedDate, collection, slug, translationAvailable, t } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
+
+const articleMeta = {
+	publishedTime: pubDate,
+	modifiedTime: updatedDate,
+};
 ---
 <html lang={currentLocale}>
 	<head>
-		<BaseHead title={title || SITE_TITLE} description={description} />
+		<BaseHead title={title || SITE_TITLE} description={description} articleMeta={articleMeta} />
 	</head>
 
 	<body>
