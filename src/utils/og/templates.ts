@@ -96,7 +96,6 @@ export function articleTemplate(props: TemplateProps) {
                         style: {
                           fontFamily: 'EB Garamond',
                           fontSize: '92px',
-                          fontWeight: 400,
                           color: ogColors.foreground,
                           lineHeight: 1.1,
                           letterSpacing: '-0.02em',
@@ -163,7 +162,6 @@ export function articleTemplate(props: TemplateProps) {
                         style: {
                           fontFamily: 'EB Garamond',
                           fontSize: '48px',
-                          fontWeight: 700,
                           color: ogColors.brand,
                           letterSpacing: '-0.02em',
                         },
@@ -249,7 +247,6 @@ export function noteTemplate(props: TemplateProps) {
                   style: {
                     fontFamily: 'League Mono',
                     fontSize: '34px',
-                    fontWeight: 400,
                     color: ogColors.brand,
                     letterSpacing: '0.3em',
                     textTransform: 'uppercase',
@@ -265,7 +262,6 @@ export function noteTemplate(props: TemplateProps) {
                   style: {
                     fontFamily: 'League Spartan',
                     fontSize: '84px',
-                    fontWeight: 600,
                     color: ogColors.foreground,
                     lineHeight: 1.15,
                     letterSpacing: '-0.03em',
@@ -294,8 +290,7 @@ export function noteTemplate(props: TemplateProps) {
                   style: {
                     fontFamily: 'EB Garamond',
                     fontSize: '48px',
-                    fontWeight: 700,
-                    color: ogColors.brand,
+                    color: ogColors.muted,
                     letterSpacing: '-0.02em',
                   },
                   children: 'zanlib.dev',
@@ -334,22 +329,6 @@ export function jotTemplate(props: TemplateProps) {
         overflow: 'hidden',
       },
       children: [
-        // Subtle dot pattern
-        {
-          type: 'div',
-          props: {
-            style: {
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage:
-                'radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)',
-              backgroundSize: '32px 32px',
-            },
-          },
-        },
         // Decorative circles
         {
           type: 'div',
@@ -398,13 +377,24 @@ export function jotTemplate(props: TemplateProps) {
                   style: {
                     fontFamily: 'EB Garamond',
                     fontSize: '68px',
-                    fontWeight: 700,
                     color: ogColors.brand,
                     letterSpacing: '-0.02em',
                   },
                   children: 'zanlib.dev',
                 },
               },
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    fontFamily: 'League Mono',
+                    fontSize: '24px',
+                    color: ogColors.brand,
+                    letterSpacing: '-0.02em',
+                  },
+                  children: props.date,
+                },
+              }
             ],
           },
         },
