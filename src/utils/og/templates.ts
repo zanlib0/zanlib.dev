@@ -61,10 +61,9 @@ export function articleTemplate(props: TemplateProps) {
               position: 'absolute',
               right: '-100px',
               top: '-200px',
-              width: '400px',
+              width: '500px',
               height: '1000px',
-              backgroundColor: ogColors.brand,
-              opacity: 0.08,
+              backgroundColor: ogColors.brandDark,
               transform: 'rotate(15deg)',
             },
           },
@@ -96,7 +95,7 @@ export function articleTemplate(props: TemplateProps) {
                       props: {
                         style: {
                           fontFamily: 'EB Garamond',
-                          fontSize: '72px',
+                          fontSize: '92px',
                           fontWeight: 400,
                           color: ogColors.foreground,
                           lineHeight: 1.1,
@@ -115,7 +114,7 @@ export function articleTemplate(props: TemplateProps) {
                               display: 'flex',
                               alignItems: 'center',
                               marginTop: '30px',
-                              gap: '16px',
+                              gap: '24px',
                             },
                             children: [
                               {
@@ -132,9 +131,8 @@ export function articleTemplate(props: TemplateProps) {
                                 type: 'div',
                                 props: {
                                   style: {
-                                    fontFamily: 'League Spartan',
-                                    fontSize: '24px',
-                                    fontWeight: 400,
+                                    fontFamily: 'EB Garamond',
+                                    fontSize: '32px',
                                     color: ogColors.muted,
                                     lineHeight: 1.4,
                                     maxWidth: '700px',
@@ -164,7 +162,7 @@ export function articleTemplate(props: TemplateProps) {
                       props: {
                         style: {
                           fontFamily: 'EB Garamond',
-                          fontSize: '28px',
+                          fontSize: '48px',
                           fontWeight: 700,
                           color: ogColors.brand,
                           letterSpacing: '-0.02em',
@@ -177,7 +175,7 @@ export function articleTemplate(props: TemplateProps) {
                       props: {
                         style: {
                           fontFamily: 'League Mono',
-                          fontSize: '18px',
+                          fontSize: '38px',
                           color: ogColors.muted,
                           letterSpacing: '0.05em',
                         },
@@ -250,7 +248,7 @@ export function noteTemplate(props: TemplateProps) {
                 props: {
                   style: {
                     fontFamily: 'League Mono',
-                    fontSize: '14px',
+                    fontSize: '34px',
                     fontWeight: 400,
                     color: ogColors.brand,
                     letterSpacing: '0.3em',
@@ -266,7 +264,7 @@ export function noteTemplate(props: TemplateProps) {
                 props: {
                   style: {
                     fontFamily: 'League Spartan',
-                    fontSize: '64px',
+                    fontSize: '84px',
                     fontWeight: 600,
                     color: ogColors.foreground,
                     lineHeight: 1.15,
@@ -295,7 +293,7 @@ export function noteTemplate(props: TemplateProps) {
                 props: {
                   style: {
                     fontFamily: 'EB Garamond',
-                    fontSize: '28px',
+                    fontSize: '48px',
                     fontWeight: 700,
                     color: ogColors.brand,
                     letterSpacing: '-0.02em',
@@ -308,7 +306,7 @@ export function noteTemplate(props: TemplateProps) {
                 props: {
                   style: {
                     fontFamily: 'League Mono',
-                    fontSize: '18px',
+                    fontSize: '38px',
                     color: ogColors.muted,
                     letterSpacing: '0.05em',
                   },
@@ -399,7 +397,7 @@ export function jotTemplate(props: TemplateProps) {
                 props: {
                   style: {
                     fontFamily: 'EB Garamond',
-                    fontSize: '48px',
+                    fontSize: '68px',
                     fontWeight: 700,
                     color: ogColors.brand,
                     letterSpacing: '-0.02em',
