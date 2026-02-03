@@ -5,7 +5,7 @@ updatedDate: 10 Nov 2025
 description: Gumption traps are the internal and external obstacles that drain your drive. Understanding them gives you tools to protect the quality of your work.
 ---
 
-"Gumption traps" are a term introduced by Robert M. Pirsig in Chapter 26 of *Zen and the Art of Motorcycle Maintenance* as a detail of his Metaphysics of Quality. They're probably one of the most approachable topics in that book, and also one that can be acted upon very quickly, even (or maybe especially) by beginners. A newcomer to software engineering, motorcycle maintenance or any other craft job will definitely find something there that they struggle with and that they can work on.
+"Gumption traps" are a term introduced by Robert M. Pirsig in Chapter 26 of *Zen and the Art of Motorcycle Maintenance* as a detail of his [Metaphysics of Quality](/blog/on-lila). They're probably one of the most approachable topics in that book, and also one that can be acted upon very quickly, even (or maybe especially) by beginners. A newcomer to software engineering, motorcycle maintenance or any other craft job will definitely find something there that they struggle with and that they can work on.
 
 "Gumption" is a Scots word similar to English "courage", but its meaning is a little broader. Cambridge Dictionary defines it as:
 

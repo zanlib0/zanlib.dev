@@ -101,7 +101,7 @@ const add = (a, b) => a + b
 const sum = numbers.reduce(add, 0)
 ```
 
-I said [before](monoids-in-practice), though it is worthy of a repeat, that in my view there are two main ways one can use `.reduce`. The reducer can take two values of the same type—in which case it exploits the monoidal nature of arrays, as above—or two values of different types, in which case it might be better to rewrite it first with a `.map`. An example of this can be a function converting an array to a map.
+I said [before](/blog/monoids-in-practice), though it is worthy of a repeat, that in my view there are two main ways one can use `.reduce`. The reducer can take two values of the same type—in which case it exploits the monoidal nature of arrays, as above—or two values of different types, in which case it might be better to rewrite it first with a `.map`. An example of this can be a function converting an array to a map.
 
 ```javascript
 const users = [

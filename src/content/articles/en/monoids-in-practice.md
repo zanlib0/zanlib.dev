@@ -5,7 +5,7 @@ description: One of the more useful algebraic structures.
 layout: '../../../layouts/monoids-in-practice.astro'
 ---
 
-Towards the end of the last post about lenses I mentioned that “lenses form a monoid under composition.” I realise in hindsight that that sentence is pretty vague for a tutorial post, however the concept of a monoid is very useful. It’s good to be able to spot them in the wild, because, much like isomorphisms, they give an intuition for what can be done with a construct that has certain properties.
+Towards the end of the last post about [lenses](/blog/lenses) I mentioned that "lenses form a monoid under composition." I realise in hindsight that that sentence is pretty vague for a tutorial post, however the concept of a monoid is very useful. It’s good to be able to spot them in the wild, because, much like isomorphisms, they give an intuition for what can be done with a construct that has certain properties.
 
 First of all, what is important to understand is that monoid isn’t a type or a function but an algebraic structure. An algebraic structure in the context of programming is a construct that has three things: a type, a set of operations on that type, and a set of rules that the former two must abide by. This is a pretty general definition, and it isn’t immediately obvious what would be the use of knowing about that in everyday work. However, there are a few well-defined structures for which if we can prove that a type satisfies them, we can get something from them for free, which trains the programmer’s intuition for spotting solutions to more general problems.
 
