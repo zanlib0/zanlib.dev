@@ -9,6 +9,7 @@ const articles = defineCollection({
 			description: z.string().optional(),
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
+			wip: z.boolean().optional().default(false),
 		}),
 });
 
@@ -18,6 +19,7 @@ const notes = defineCollection({
 		title: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		wip: z.boolean().optional().default(false),
 	})
 })
 
@@ -26,6 +28,7 @@ const jots = defineCollection({
 	schema: () => z.object({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		wip: z.boolean().optional().default(false),
 	})
 })
 

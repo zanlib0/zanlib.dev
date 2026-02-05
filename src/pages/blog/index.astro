@@ -3,7 +3,7 @@ import BlogListPage from '../../components/pages/BlogListPage.astro';
 import { collectPosts } from '../../utils/collectPosts';
 import { getNavLinks } from '../../i18n/ui';
 
-const posts = await collectPosts('en')
+const posts = await collectPosts('en');
 
 const t = {
 	lang: 'en' as const,

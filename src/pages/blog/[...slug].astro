@@ -6,7 +6,7 @@ import { getNavLinks } from '../../i18n/ui';
 import type { Post } from '../../utils/types';
 
 export async function getStaticPaths() {
-	const posts = await collectPosts('en');
+	const posts = await collectPosts('en', { includeWip: true });
 
 	return posts.map((post) => ({
 		params: { slug: post.id },

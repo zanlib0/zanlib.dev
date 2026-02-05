@@ -2,7 +2,11 @@ import { getCollection } from "astro:content";
 
 import type { Language, Post } from './types'
 
-export const collectPosts = async (language: Language = 'en'): Promise<Post[]> => {
+type Options = {
+	includeWip: boolean;
+};
+
+export const collectPosts = async (language: Language = 'en', opts: Options = { includeWip: false }): Promise<Post[]> => {
 	const articles = (await getCollection('articles'))
 	const notes = (await getCollection('notes'))
 	const jots = (await getCollection('jots'))
@@ -15,6 +19,7 @@ export const collectPosts = async (language: Language = 'en'): Promise<Post[]> =
 			return { ...post, lang: lang as Language, id: slug.join('/') };
 		})
 		.filter((post) => {
+      if (!opts.includeWip && post.data.wip) return false;
 			return post.lang === language
 		})
 
