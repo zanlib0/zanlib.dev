@@ -95,7 +95,7 @@ The gumption trap of ego is dangerous and quite often leads to value rigidity. T
 
 > If you have a high evaluation of yourself then your ability to recognize new facts is weakened. Your ego isolates you from the Quality reality. When the facts show that you’ve just goofed, you’re not as likely to admit it. When false information makes you look good, you're likely to believe it.[+q1]
 
-[+q1]: <abbr>*Z&AMM*</abbr>, p. 297
+[+q1]: Pirsig, R. _Zen and the Art of Motorcycle Maintenance_. Vintage 2004; p. 297
 
 The thing about code is that it has a way of revealing your actual nature. Most programmers I know are usually rather modest and quiet, especially when they're working. Sometimes they are annoyed and tend to mumble or shout expletives, but I find they are less aimed at the code or the machine and more at themselves. The machine is a reflection of your own nature.
 

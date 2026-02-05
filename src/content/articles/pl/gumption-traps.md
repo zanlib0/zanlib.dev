@@ -99,7 +99,7 @@ Pułapka dzielności ego jest niebezpieczna i dość często prowadzi do skostni
 
 > Wysokie wyobrażenie o sobie osłabia możliwości rozpoznania nowych faktów. Twoje ego izoluje cię od rzeczywistej jakości. Kiedy na podstawie faktów widać jasno, że popełniłeś zwykłe głupstwo, jest mało prawdopodobne, abyś to przyznał. Za to kiedy fałszywe informacje przemawiają na twoją korzyść, wierzysz im chętnie.[+q1]
 
-[+q1]: _Zen..._, s. 298
+[+q1]: "Zen..."; s. 298
 
 Programowanie ma to do siebie, że ma ono sposób na ujawnianie naszej prawdziwej natury. Większość programistów, których znam, jest zazwyczaj raczej skromna i cicha, szczególnie przy pracy. Czasami są zirytowani i mają tendencję do mamrotania czy wykrzykiwania przekleństw, ale uważam, że są one mniej skierowane na kod czy maszynę, a bardziej na nich samych. Maszyna jest odbiciem naszej własnej natury.
 
@@ -203,7 +203,7 @@ Ostatnia pułapka, o której chciałbym wspomnieć, to coś, co Pirsig nazywa "o
 
 > Przez chwilę przyglądam się przejeżdżającym samochodom. Jest w nich coś z osamotnienia. (...) Coś nie jest w porządku także z kierowcami tych samochodów. (...) Wszyscy wyglądają, jak na pogrzebie. (...) A i nasza jazda też wygląda jakoś inaczej. Samochodzy poruszają się ze stałą prędkością, równą górnej granicy szybkości obowiązującej w mieście i kierowcy nie widzą nic poza jezdnią. *Kierowcy zdają się myśleć bardziej o tym, gdzie chcą być, niż o tym gdzie są.* (...) Ludzie, prawie zapomniałem o pułapce największej ze wszystkich. To orszak pogrzebowy! Wszyscy biorą w nim udział, w tym naszym pomylonym, pieprzonym, ultranowoczesnym i egoistycznym stylu życia, który zdaje się, ogarnął cały nasz kraj.[+q2]
 
-[+q2]: _Zen..._, s. 309
+[+q2]: "Zen..."; s. 309
 
 Pochylone zdanie jest kluczowe. Istnieje wiele nazw dla tego uczucia. Poetyckie nazwy w pismach katolickich uczonych to "acedia" lub "tædium". Jednak w nowoczesnym środowisku korporacyjnym jest niewiele miejsca na poezję, więc analogia orszaku pogrzebowego wydaje się pasować znacznie lepiej.
 
