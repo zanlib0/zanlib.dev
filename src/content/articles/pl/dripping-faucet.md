@@ -3,7 +3,7 @@ pubDate: 11 Nov 2020
 title: Przypowieść o cieknącym kranie
 description: Dlaczego małe niedogodności psują nam humor.
 ---
-Na samym początku *Zen i sztuki obsługi motocykla* pojawia się historia o małżeństwie Sutherlandów, którzy reprezentują "[romantyczne](/blog/pl/romantic-programming)" i zupełnie nietechniczne, wręcz technofobiczne podejście do życia. Pirsig zaczyna od rozważań nad ich podejściem do motocykli, by ostatecznie przełożyć je na inne rodzaje technologii, takie jak kran w kuchni.
+Na samym początku *Zen i sztuki obsługi motocykla* pojawia się historia o małżeństwie Sutherlandów, którzy reprezentują "[romantyczne](/pl/blog/romantic-programming)" i zupełnie nietechniczne, wręcz technofobiczne podejście do życia. Pirsig zaczyna od rozważań nad ich podejściem do motocykli, by ostatecznie przełożyć je na inne rodzaje technologii, takie jak kran w kuchni.
 
 > Na przykład czekając kiedyś u nich rano na wyjazd, zauważyłem, że kran nad zlewem cieknie i wówczas przypomniałem sobie, że kapało z niego również wówczas, gdy byłem tam ostatnim razem, a właściwie odkąd tylko pamiętam, to zawsze kapało. Gdy powiedziałem coś na ten temat, John odrzekł, że próbował to naprawić przy pomocy nowej uszczelki do kranu, ale nic z tego nie wyszło. I to było wszystko, co powiedział, i należało po tym sądzić, że sprawa jest zakończona. Jeśli próbujesz naprawić kran, a nic z tego nie wychodzi, życie z kapiącym kranem staje się twoim udziałem.[+q1]
 
