@@ -7,7 +7,7 @@ description: Dwa różne podejścia do technologii.
 
 Jeśli zdarzyło ci się uczęszczać do polskiego liceum, prawdopodobnie rozpoznajesz poniższy schemat.
 
-<img src="/assets/sinusoid.svg" alt="Sinusoida Krzyżanowskiego" />
+<img src="/assets/sinusoid.svg" alt="Sinusoida Krzyżanowskiego" class="invert-line-drawing" />
 
 To rysunek znany pod nazwą "sinusoidy Krzyżanowskiego", od nazwiska [Juliana Krzyżanowskiego](https://pl.wikipedia.org/wiki/Julian_Krzy%C5%BCanowski). Założenie sinusoidy jest takie, że pokazuje progresję epok historycznych i literackich poprzez ich podejście do szeroko rozumianego rozumu. Epoki nad linią są "jasne", bliższe ziemi, materii, rozumowi i humanizmowi; podczas gdy epoki poniżej linii są "ciemne", bardziej efemeryczne, powiązne z religią, emocjami i dekadencją. Sinusoida ma za zadanie pokazać jak ludzka myśl w skali cywilizacyjnej opiera się na kontraście w sztuce, literaturze i filozofii.
 
