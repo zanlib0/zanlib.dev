@@ -12,6 +12,7 @@ type Props = {
 	description?: string,
 	pubDate: Date,
 	updatedDate?: Date,
+	wip?: boolean,
 	collection: 'articles' | 'notes' | 'jots',
 	slug?: string,
 	translationAvailable?: boolean,
@@ -25,7 +26,7 @@ type Props = {
 	};
 };
 
-const { title = null, description, pubDate, updatedDate, collection, slug, translationAvailable, t } = Astro.props;
+const { title = null, description, pubDate, updatedDate, collection, slug, wip = false, translationAvailable, t } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
 
 const articleMeta = {
@@ -61,6 +62,11 @@ const ogImage = slug ? `/og/${currentLocale}/${slug}.png` : undefined;
 						</div>
 						<hr />
 					</div>
+					{wip && (
+						<div class="wip">
+							This article is unlisted and still a work in progress.
+						</div>
+					)}
 					<slot />
 				</div>
 			</article>
@@ -109,6 +115,15 @@ article.jots {
 	margin: auto;
 	padding: 1em;
 	color: rgb(var(--gray-dark));
+}
+
+.wip {
+  font-size: 1rem;
+  width: 100%;
+  background: var(--brand-1);
+  border: 1px solid var(--brand-2);
+  padding: 0.5rem;
+  text-align: center;
 }
 
 /* Adjust prose width on large screens to accommodate margin notes */
