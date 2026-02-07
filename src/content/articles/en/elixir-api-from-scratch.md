@@ -68,7 +68,7 @@ iex -S mix phx.server
 
 The next step is to create the Phoenix context and Ecto schema.
 
-Phoenix uses [<abbr>DDR</abbr>-inspired](https://martinfowler.com/bliki/BoundedContext.html) context modules to organise code. The contexts expose and group related functionality. In this project, we will create a `Todolist` context that is going to be the main point of interaction with our schema. If we had other entities associated with Todo, we might also add them there, to have a boundary of consistency for our entities. In our case, we will later add the functions that create, read, update and delete our Todos. For now, the context will be empty.
+Phoenix uses [<abbr>DDD</abbr>-inspired](https://martinfowler.com/bliki/BoundedContext.html) context modules to organise code. The contexts expose and group related functionality. In this project, we will create a `Todolist` context that is going to be the main point of interaction with our schema. If we had other entities associated with Todo, we might also add them there, to have a boundary of consistency for our entities. In our case, we will later add the functions that create, read, update and delete our Todos. For now, the context will be empty.
 
 ```elixir
 # /lib/todos/todolist.ex
