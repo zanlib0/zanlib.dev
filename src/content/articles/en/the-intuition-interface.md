@@ -20,13 +20,13 @@ The more complicated software becomes, the more roles are created and the more r
 
 [+hattip]: This separation is quite obvious when you consider it from the outside, but it seems like many of us rarely consider what the software development field _looks like_ from the outside. I've been in this field for a while now, and I only realised this while listening to [a podcast about investing](https://www.youtube.com/watch?v=ePPWdUY0aLc).
 
-But in my view, that separation, like [many](/blog/romantic-programming) is entirely artificial. We can lay every role, from the users themselves down to the most heads-down technical engineers on a spectrum from man to machine and within each part of this spectrum, there will be those who set goals and those who execute them. The two can even be the same person.
+But in my view, that separation, like [many](/blog/romantic-programming), is entirely artificial. We can lay every role, from the users themselves down to the most heads-down technical engineers on a spectrum from man to machine and within each part of this spectrum, there will be those who set goals and those who execute them. The two can even be the same person.
 
 ## The filtering problem
 
 One of the more serious downsides of this divide is that goals are input upstream and evaluated by that team first, _before_ they are handed off downstream for implementation.
 
-The way this typically works is that first, the non-technical stakeholders, who have good knowledge and intuition of the needs of the users decide which ones should be prioritised. The goals with sub-par product value are discarded. Then, the technical team is asked to estimate the implementation of the remaining tasks, and finally the team as a whole agree on what to do and in what order.
+The way this typically works is that first, the non-technical stakeholders, who have good knowledge and intuition of the needs of the users, decide which ones should be prioritised. The goals with sub-par product value are discarded. Then, the technical team is asked to estimate the implementation of the remaining tasks, and finally the team as a whole agree on what to do and in what order.
 
 When goals are evaluated by product merit alone, good options may be discarded before considering the technical cost. When presented with four options, Product picks <abbr>A</abbr>, discarding <abbr>B</abbr>, <abbr>C</abbr>, and <abbr>D</abbr>. But what if goal <abbr>B</abbr> was 90% as good as <abbr>A</abbr> and took 10% of the effort? The option is not considered, because technical effort is evaluated _after_ the search space is already narrowed.
 
@@ -54,19 +54,19 @@ The resulting time might even take slightly _more_ than the original two hours, 
 
 But that option was never on the table, because the goal was framed as a speed problem before anyone with technical knowledge entered the room.
 
-This is not the same as saying "put engineers in meetings." The presence of a technical person is not enough. A back-end engineer sitting in on a user interview is still listening like a back-end engineer. Hearing "the report is slow" he starts thinking about query optimisation, caching layers, file formats and rewriting it in Rust. It's the same conclusion the product owner reached, just from a different angle. The insight required someone who could hear the product problem and see the technical shortcut at the same time.
+This is not the same as saying "put engineers in meetings." The presence of a technical person is not enough. A back-end engineer sitting in on a user interview is still listening like a back-end engineer. Hearing "the report is slow," he starts thinking about query optimisation, caching layers, file formats and rewriting it in Rust. It's the same conclusion the product owner reached, just from a different angle. The insight required someone who could hear the product problem and see the technical shortcut at the same time.
 
 ## Dual vision
 
 An experienced, purely technical software engineer has good intuition for technical solutions. He builds things that are technically beautiful and elegantly implemented. He knows which requests that sound simple are architectural nightmares, and which requests that sound complex are trivial given existing infrastructure. This sense is built over years of being surprised—features that seemed easy, but weren't, and shortcuts that seemed risky, but worked. It's an exceptionally valuable and rare skill.
 
-On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. This, too, is built from experience—cycles of observation, hypothesis, design and intervention. Intuition for what is valuable for users is difficult to transfer across domains: knowing what e-commerce shoppers need teaches you little about what surgeons need. Good product judgement is also a valuable and rare skill.[+product-judgement]
+On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. This, too, is built from experience—cycles of observation, hypothesis, design and intervention. Intuition for what is valuable for users is difficult to transfer across domains: knowing what thousands of e-commerce shoppers need teaches you little about what tens of surgeons need. Good product judgement is also a valuable and rare skill.[+product-judgement]
 
-[+product-judgement]: [Some claim](https://www.intercom.com/blog/product-judgment/) that product judgement is not transferable between domains. I am inclined to disagree. Building <abbr>B2B</abbr> software is much different than <abbr>B2C</abbr> software, it uses different metrics and methods of communicating with users. But two pieces of <abbr>B2B</abbr> software used by different kinds of professional users in different domains likely have a lot in common.
+[+product-judgement]: [Some claim](https://www.intercom.com/blog/product-judgment/) that product judgement is not transferable between domains. I am inclined to disagree: I think the real divide is scale. Building for thousands of consumers is fundamentally different from building for tens of professionals, and domain doesn't have much to do with it. Two pieces of <abbr>B2B</abbr> software serving different professions likely have more in common than one <abbr>B2B</abbr> and one <abbr>B2C</abbr> product in the same domain.
 
-The value proposition of a product engineer is that he ventures into both of these areas at once, becoming competent enough to serve as an interface between these two worlds, and as a result is able to gain novel insights and turn them into business value.
+The value proposition of a product engineer is that he ventures into both of these areas at once, becoming sufficiently fluent to serve as an interface between these two worlds, and as a result is able to gain novel insights and turn them into business value.
 
-This is not just additive. You might have one technical person and one product person in a room, and not get to these kinds of insights. There's a class of solutions that only become visible when both pattern recognition systems fire in the same head. The dual intuition is qualitatively different from two specialists collaborating.
+This is not just additive. You might have one technical person and one product person in a room, and not get to these kinds of insights. There's a class of solutions that only become visible when both pattern recognition fire in the same head. The dual intuition is qualitatively different from two specialists collaborating.
 
 This dual understanding also comes from intuition, not magic, innate talent, meetings, or metrics. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
 
