@@ -6,7 +6,9 @@ wip: true
 ---
 What does a product engineer even do?
 
-I've recently been asked about what product engineering means _to me_, and while I _knew_ the answer, I had considerable trouble articulating it. The term gets thrown around a lot but it is rarely examined, and if it is examined, it's usually reduced to a number of platitudes like "cares about the result, not the tools," as if software engineers didn't care about the result.
+I've recently been asked about what product engineering means _to me_, and while I _knew_ the answer, I had considerable trouble articulating it. The term gets thrown around a lot but it is rarely examined, and if it is examined, it's usually reduced to a number of platitudes like "cares about the result, not the tools," as if software engineers didn't care about the result.[+tools]
+
+[+tools]: This framing also has a second problem: it implies that tool choice doesn't matter. It does. In software, most results can be achieved with most tools, but we reach for the familiar in order to make our estimations reliable. When this phrase appears in job listings, it usually means "we want an orchestra, but can pay for a soloist."
 
 When we talk about the different _technical_ roles of a software project, we typically consider them on a spectrum from high-level to low-level, depending on how close to the user or how close to the machine someone works. At the high-level we might have front-end developers, web designers and <abbr>UX/UI</abbr> designers. A bit further down we might look at back-end developers, database administrators, infrastructure and site reliability engineers, embedded software developers, and so on.
 
@@ -40,7 +42,9 @@ Well, the product owner does his job: he identifies the user's pain and translat
 
 Except—is it really?
 
-Making the report faster is not a bad idea. It's better for things to be [fast and not slow](/blog/solid-anew/#developer-experience). But perceived speed has sharply diminishing returns: anything beyond a few seconds means that the user becomes distracted and wants to go do something else. Two hours and twelve minutes are very different numbers, but from the user's perspective they are the same experience.
+Making the report faster is not a bad idea. It's better for things to be [fast and not slow](/blog/solid-anew/#developer-experience). But perceived speed has sharply diminishing returns: anything beyond a few seconds means that the user becomes distracted and wants to go do something else.[+nielsen] Two hours and twelve minutes are very different numbers, but from the user's perspective they are the same experience.
+
+[+nielsen]: This relationship is very well documented, with Nielsen Norman Group research putting the upper threshold of how long individual interactions should take at [ten seconds](https://www.uxtigers.com/post/think-time-ux). If something takes more than ten seconds, the user treats it as a cue to switch to a different task. Forcing the user to repeatedly wait more than ten seconds on simple tasks is equivalent to Chinese water torture.
 
 The user didn't really complain about the report generating in two hours. She complained about being held hostage for two hours. The pain is the uncertainty, rather than the duration.
 
@@ -52,9 +56,22 @@ But that option was never on the table, because the goal was framed as a speed p
 
 ## Dual vision
 
+This is not the same as saying "put engineers in meetings." The presence of a technical person is not enough. A back-end engineer sitting in on a user interview is still listening like a back-end engineer. Hearing "the report is slow" he starts thinking about query optimisation, caching layers, file formats and rewriting it in Rust. It's the same conclusion the product owner reached, just from a different angle. The insight required someone who could hear the product problem and see the technical shortcut at the same time.
+
 An experienced, purely technical software engineer has good intuition for technical solutions. He builds things that are technically beautiful and elegantly implemented. It's an exceptionally valuable and rare skill. On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. It's also a valuable and rare skill.
 
-The value proposition of a product engineer is that he ventures into both of these areas at once, becoming competent enough to serve as an interface between these two worlds.
+The value proposition of a product engineer is that he ventures into both of these areas at once, becoming competent enough to serve as an interface between these two worlds, and as a result is able to gain novel insights and turn them into business value.
 
-The dual understanding in the case of product engineering also comes from intuition, not magic, innate talent, metrics or meetings. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
+The dual understanding in the case of product engineering also comes from intuition, not magic, innate talent, meetings, or metrics. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
 
+Intuition is a dirty word, though. Intuition doesn't get you funding, data does. Data is essential for validation, but it answers questions, it doesn't ask them. No dashboard would bring up "add a sanity check" as the solution to the report problem. The hypothesis came from someone who listened to the user, was able to listen past the suggested solution, identified the real problem, and knew the shape of the technical implementation well enough to see a fix.
+
+## Counsel, not command
+
+But the product engineer does not decide the ultimate goal and is not held responsible for the choice. That belongs to the stakeholder, the one who decides what the team pursues and accepts the consequences of that decision.[+rsb]
+
+[+rsb]: "...Let the Abbot call together the whole community and state the matter to be acted upon. Then, having heard the brethren's advice, let him turn the matter over in his own mind and do what he shall judge to be most expedient. At the same time, the Abbot himself should do all things in the fear of God..., knowing that beyond a doubt he will have to render an account of all his decisions..." Rule of St. Benedict, Chapter III.
+
+What the product engineer owns is the integrity of the options he puts on the table. If he says that a pre-flight check will solve the problem, he is accountable for that assessment. His responsibility is to ensure that whoever makes the final call sees the real trade-offs on both product and engineering sides of the equation.
+
+I suppose that might be what was so difficult to articulate originally. A product engineer is not a product owner who codes, or a developer who attends product meetings. He is an interface between two domains. The domains communicate in different ways, have their own definitions of value, their own languages and intuitions. A good product engineer has spent enough time in both worlds to develop the same intuitions to a degree and see connections that neither side sees alone. His job is to make those connections visible to people who need them.
