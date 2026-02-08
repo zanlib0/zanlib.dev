@@ -1,5 +1,5 @@
 ---
-pubDate: 05 Feb 2026
+pubDate: 09 Feb 2026
 title: The Intuition Interface
 description: What does a product engineer even do?
 wip: true
