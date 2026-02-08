@@ -20,7 +20,7 @@ The more complicated software becomes, the more roles are created and the more r
 
 [+hattip]: This separation is quite obvious when you consider it from the outside, but it seems like many of us rarely consider what the software development field _looks like_ from the outside. I've been in this field for a while now, and I only realised this while listening to [a podcast about investing](https://www.youtube.com/watch?v=ePPWdUY0aLc).
 
-But in my view, that separation, like [many](/blog/romantic-programming) is entirely artificial. We can lay every role, from the users themselves down to the most heads-down technical engineers on a spectrum from man to machine and within each part of this fractal, there will be those who set goals and those who execute them. The two can even be the same person.
+But in my view, that separation, like [many](/blog/romantic-programming) is entirely artificial. We can lay every role, from the users themselves down to the most heads-down technical engineers on a spectrum from man to machine and within each part of this spectrum, there will be those who set goals and those who execute them. The two can even be the same person.
 
 ## The filtering problem
 
@@ -44,7 +44,7 @@ Except—is it really?
 
 Making the report faster is not a bad idea. It's better for things to be [fast and not slow](/blog/solid-anew/#developer-experience). But perceived speed has sharply diminishing returns: anything beyond a few seconds means that the user becomes distracted and wants to go do something else.[+nielsen] Two hours and twelve minutes are very different numbers, but from the user's perspective they are the same experience.
 
-[+nielsen]: This relationship is very well documented, with Nielsen Norman Group research putting the upper threshold of how long individual interactions should take at [ten seconds](https://www.uxtigers.com/post/think-time-ux). If something takes more than ten seconds, the user treats it as a cue to switch to a different task. Forcing the user to repeatedly wait more than ten seconds on simple tasks is equivalent to Chinese water torture.
+[+nielsen]: This relationship is very well documented, with Nielsen Norman Group research putting the upper threshold of how long individual interactions should take at [ten seconds](https://www.uxtigers.com/post/think-time-ux). If something takes more than ten seconds, the user treats it as a cue to switch to a different task.
 
 The user didn't really complain about the report generating in two hours. She complained about being held hostage for two hours. The pain is the uncertainty, rather than the duration.
 
@@ -54,15 +54,19 @@ The resulting time might even take slightly _more_ than the original two hours, 
 
 But that option was never on the table, because the goal was framed as a speed problem before anyone with technical knowledge entered the room.
 
-## Dual vision
-
 This is not the same as saying "put engineers in meetings." The presence of a technical person is not enough. A back-end engineer sitting in on a user interview is still listening like a back-end engineer. Hearing "the report is slow" he starts thinking about query optimisation, caching layers, file formats and rewriting it in Rust. It's the same conclusion the product owner reached, just from a different angle. The insight required someone who could hear the product problem and see the technical shortcut at the same time.
 
-An experienced, purely technical software engineer has good intuition for technical solutions. He builds things that are technically beautiful and elegantly implemented. It's an exceptionally valuable and rare skill. On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. It's also a valuable and rare skill.
+## Dual vision
+
+An experienced, purely technical software engineer has good intuition for technical solutions. He builds things that are technically beautiful and elegantly implemented. He knows which requests that sound simple are architectural nightmares, and which requests that sound complex are trivial given existing infrastructure. This sense is built over years of being surprised—features that seemed easy, but weren't, and shortcuts that seemed risky, but worked. It's an exceptionally valuable and rare skill.
+
+On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. This, too, is built from experience—cycles of observation, hypothesis, design and intervention. Intuition for what is valuable for users is difficult to transfer across domains: knowing what e-commerce shoppers need teaches you little about what surgeons need. Good product judgement is also a valuable and rare skill.
 
 The value proposition of a product engineer is that he ventures into both of these areas at once, becoming competent enough to serve as an interface between these two worlds, and as a result is able to gain novel insights and turn them into business value.
 
-The dual understanding in the case of product engineering also comes from intuition, not magic, innate talent, meetings, or metrics. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
+This is not just additive. You might have one technical person and one product person in a room, and not get to these kinds of insights. There's a class of solutions that only become visible when both pattern recognition systems fire in the same head. The dual intuition is qualitatively different from two specialists collaborating.
+
+This dual understanding also comes from intuition, not magic, innate talent, meetings, or metrics. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
 
 Intuition is a dirty word, though. Intuition doesn't get you funding, data does. Data is essential for validation, but it answers questions, it doesn't ask them. No dashboard would bring up "add a sanity check" as the solution to the report problem. The hypothesis came from someone who listened to the user, was able to listen past the suggested solution, identified the real problem, and knew the shape of the technical implementation well enough to see a fix.
 
@@ -72,6 +76,6 @@ But the product engineer does not decide the ultimate goal and is not held respo
 
 [+rsb]: "...Let the Abbot call together the whole community and state the matter to be acted upon. Then, having heard the brethren's advice, let him turn the matter over in his own mind and do what he shall judge to be most expedient. At the same time, the Abbot himself should do all things in the fear of God..., knowing that beyond a doubt he will have to render an account of all his decisions..." Rule of St. Benedict, Chapter III.
 
-What the product engineer owns is the integrity of the options he puts on the table. If he says that a pre-flight check will solve the problem, he is accountable for that assessment. His responsibility is to ensure that whoever makes the final call sees the real trade-offs on both product and engineering sides of the equation.
+What the product engineer owns is the integrity of the options he puts on the table. If he says that a pre-flight check will solve the problem, he is accountable for that assessment. His responsibility is to ensure that whoever makes the final call sees the real trade-offs on both product and engineering sides of the equation. A product engineer can be honest about trade-offs because he doesn't carry the weight of that final call.
 
 I suppose that might be what was so difficult to articulate originally. A product engineer is not a product owner who codes, or a developer who attends product meetings. He is an interface between two domains. The domains communicate in different ways, have their own definitions of value, their own languages and intuitions. A good product engineer has spent enough time in both worlds to develop the same intuitions to a degree and see connections that neither side sees alone. His job is to make those connections visible to people who need them.
