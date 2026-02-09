@@ -6,8 +6,6 @@ type ContentType = 'articles' | 'notes' | 'jots';
 
 interface GenerateOGImageProps {
   title?: string;
-  description?: string;
-  body?: string;
   pubDate: Date;
   contentType: ContentType;
 }
@@ -89,8 +87,6 @@ export async function generateOGImage(
 
   const template = getTemplate({
     title: props.title,
-    description: props.description,
-    body: props.body,
     date: formatDate(props.pubDate),
     contentType: props.contentType,
   });

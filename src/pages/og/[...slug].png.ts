@@ -50,12 +50,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const GET: APIRoute = async ({ props }) => {
-  const { collection, data, body } = props as OGPageProps;
+  const { collection, data } = props as OGPageProps;
 
   const png = await generateOGImage({
     title: 'title' in data ? data.title : undefined,
-    description: 'description' in data ? (data as { description?: string }).description : undefined,
-    body: body,
     pubDate: data.pubDate,
     contentType: collection,
   });
