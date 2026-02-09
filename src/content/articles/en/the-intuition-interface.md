@@ -2,13 +2,13 @@
 pubDate: 09 Feb 2026
 title: The Intuition Interface
 description: What does a product engineer even do?
-wip: true
+wip: false
 ---
 What does a product engineer even do?
 
 I've recently been asked about what product engineering means _to me_, and while I _knew_ the answer, I had considerable trouble articulating it. The term gets thrown around a lot but it is rarely examined, and if it is examined, it's usually reduced to a number of platitudes like "cares about the result, not the tools," as if software engineers didn't care about the result.[+tools]
 
-[+tools]: This framing also has a second problem: it implies that tool choice doesn't matter. It does. In software, most results can be achieved with most tools, but we reach for the familiar in order to make our estimations reliable. When this phrase appears in job listings, it usually means "we want an orchestra, but can pay for a soloist."
+[+tools]: This framing also has a second problem: it implies that tool choice doesn't matter. It does. In software, most results can be achieved with most tools, but we reach for the familiar in order to make our estimations reliable. When this phrase appears in job listings, it usually means "we want an orchestra, but can at most pay for a soloist."
 
 When we talk about the different _technical_ roles of a software project, we typically consider them on a spectrum from high-level to low-level, depending on how close to the user or how close to the machine someone works. At the high-level we might have front-end developers, web designers and <abbr>UX/UI</abbr> designers. A bit further down we might look at back-end developers, database administrators, infrastructure and site reliability engineers, embedded software developers, and so on.
 
@@ -18,9 +18,9 @@ Likewise, when we consider _non-technical_ roles we also tend to place them on a
 
 The more complicated software becomes, the more roles are created and the more responsibilities are extracted. That said, we very rarely see the two worlds, technical and non-technical, merge, and they are rarely considered as a whole. There is a good reason for it: we tend to think of the non-technical world as the ones who set the goals, and of the technical world as the ones who execute these goals.[+hattip]
 
-[+hattip]: This separation is quite obvious when you consider it from the outside, but it seems like many of us rarely consider what the software development field _looks like_ from the outside. I've been in this field for a while now, and I only realised this while listening to [a podcast about investing](https://www.youtube.com/watch?v=ePPWdUY0aLc).
+[+hattip]: It's a quite natural choice when you consider it from the outside, but it seems like many of us rarely consider what the software development field _looks like_ from the outside. I've been in this field for a while now, and I only realised this while listening to [a podcast about investing](https://www.youtube.com/watch?v=ePPWdUY0aLc).
 
-But in my view, that separation, like [many](/blog/romantic-programming), is entirely artificial. We can lay every role, from the users themselves down to the most heads-down technical engineers on a spectrum from man to machine and within each part of this spectrum, there will be those who set goals and those who execute them. The two can even be the same person.
+But in my view, that separation, like [many](/blog/romantic-programming), does not need to be there. We can lay every role, from the users themselves down to the most heads-down technical engineers on a continuous spectrum from man to machine. We draw a line across it and assign different people to each side, and call one side "development team," and the other "domain experts." But that line is an organisational choice, not an essential property of the process.
 
 ## The filtering problem
 
@@ -28,7 +28,7 @@ One of the more serious downsides of this divide is that goals are input upstrea
 
 The way this typically works is that first, the non-technical stakeholders, who have good knowledge and intuition of the needs of the users, decide which ones should be prioritised. The goals with sub-par product value are discarded. Then, the technical team is asked to estimate the implementation of the remaining tasks, and finally the team as a whole agree on what to do and in what order.
 
-When goals are evaluated by product merit alone, good options may be discarded before considering the technical cost. When presented with four options, Product picks <abbr>A</abbr>, discarding <abbr>B</abbr>, <abbr>C</abbr>, and <abbr>D</abbr>. But what if goal <abbr>B</abbr> was 90% as good as <abbr>A</abbr> and took 10% of the effort? The option is not considered, because technical effort is evaluated _after_ the search space is already narrowed.
+When goals are evaluated by product merit alone, good options may be discarded before considering the technical cost. When presented with four options, a domain expert picks <abbr>A</abbr>, discarding <abbr>B</abbr>, <abbr>C</abbr>, and <abbr>D</abbr>. But what if goal <abbr>B</abbr> was 90% as good as <abbr>A</abbr> and took 10% of the effort? The option is not considered, because technical effort is evaluated _after_ the search space is already narrowed.
 
 ## Go get coffee
 
@@ -48,11 +48,11 @@ Making the report faster is not a bad idea. It's better for things to be [fast a
 
 The user didn't really complain about the report generating in two hours. She complained about being held hostage for two hours. The pain is the uncertainty, rather than the duration.
 
-If there were an engineer listening in to the conversation with the user, the entire situation might have turned out differently. Perhaps the engineer knows that "generating the report" is processing hundreds of thousands of rows one by one and outputting them to a spreadsheet, bailing out on the first error. It would be a trivial refactor to first sanity check the data, and then do the actual file conversion.
+If there were a product-minded engineer listening in carefully to the user's problems, the entire situation might have turned out differently. Perhaps the engineer knows that "generating the report" is processing hundreds of thousands of rows one by one and outputting them to a spreadsheet, bailing out on the first error. It would be a trivial refactor to first sanity check the data, and then do the actual file conversion.
 
 The resulting time might even take slightly _more_ than the original two hours, but a pre-flight check informing the user that the data is correct and she can go get coffee, reasonably assured that the process will be successful, might be the better solution. Indeed, two hours of justified [slacking off](https://xkcd.com/303/) might even make the user _more delighted_ than speeding up the generation to twelve minutes.
 
-But that option was never on the table, because the goal was framed as a speed problem before anyone with technical knowledge entered the room.
+But that option was never on the table, because the goal was framed as a speed problem before anyone with technical knowledge had a chance to say anything.
 
 This is not the same as saying "put engineers in meetings." The presence of a technical person is not enough. A back-end engineer sitting in on a user interview is still listening like a back-end engineer. Hearing "the report is slow," he starts thinking about query optimisation, caching layers, file formats and rewriting it in Rust. It's the same conclusion the product owner reached, just from a different angle. The insight required someone who could hear the product problem and see the technical shortcut at the same time.
 
@@ -60,13 +60,13 @@ This is not the same as saying "put engineers in meetings." The presence of a te
 
 An experienced, purely technical software engineer has good intuition for technical solutions. He builds things that are technically beautiful and elegantly implemented. He knows which requests that sound simple are architectural nightmares, and which requests that sound complex are trivial given existing infrastructure. This sense is built over years of being surprised—features that seemed easy, but weren't, and shortcuts that seemed risky, but worked. It's an exceptionally valuable and rare skill.
 
-On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. This, too, is built from experience—cycles of observation, hypothesis, design and intervention. Intuition for what is valuable for users is difficult to transfer across domains: knowing what thousands of e-commerce shoppers need teaches you little about what tens of surgeons need. Good product judgement is also a valuable and rare skill.[+product-judgement]
+On the other hand, an experienced product owner or manager has good intuition for product judgement in his preferred domain. He knows how to talk to users and understand what they actually need. This, too, is built from experience—cycles of observation, hypothesis, design and intervention. Intuition for what is valuable for users is difficult to transfer across scales: knowing what thousands of e-commerce shoppers need teaches you little about what tens of surgeons need. Good product judgement is also a valuable and rare skill.[+product-judgement]
 
-[+product-judgement]: [Some claim](https://www.intercom.com/blog/product-judgment/) that product judgement is not transferable between domains. I am inclined to disagree: I think the real divide is scale. Building for thousands of consumers is fundamentally different from building for tens of professionals, and domain doesn't have much to do with it. Two pieces of <abbr>B2B</abbr> software serving different professions likely have more in common than one <abbr>B2B</abbr> and one <abbr>B2C</abbr> product in the same domain.
+[+product-judgement]: [Some claim](https://www.intercom.com/blog/product-judgment/) that product judgement is not transferable between _domains_. I am inclined to disagree: I think scale is the real divide. Building for thousands of consumers is fundamentally different from building for tens of professionals, and domain doesn't have much to do with it. Two pieces of <abbr>B2B</abbr> software serving different professions likely have more in common than one <abbr>B2B</abbr> and one <abbr>B2C</abbr> product in the same domain.
 
 The value proposition of a product engineer is that he ventures into both of these areas at once, becoming sufficiently fluent to serve as an interface between these two worlds, and as a result is able to gain novel insights and turn them into business value.
 
-This is not just additive. You might have one technical person and one product person in a room, and not get to these kinds of insights. There's a class of solutions that only become visible when both pattern recognition fire in the same head. The dual intuition is qualitatively different from two specialists collaborating.
+This is not just additive. You might have one technical person and one product person in a room, and not get to these kinds of insights. There's a class of solutions that only become visible when both pattern recognitions fire in the same head. The dual intuition is qualitatively different from two specialists collaborating.
 
 This dual understanding also comes from intuition, not magic, innate talent, meetings, or metrics. Intuition is compressed experience, and that's why the role requires seniority. There are no junior product engineers. You need to have lived through making decisions and seeing their consequences down the line. You can't [fake having been there](/blog/reliable-signals-of-honest-intent).
 
