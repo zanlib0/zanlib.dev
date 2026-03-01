@@ -1,0 +1,14 @@
+---
+import ProjectsPage from "../components/pages/ProjectsPage.astro";
+import { getNavLinks } from "../i18n/ui";
+
+const t = {
+  lang: 'en' as const,
+  content: 'test',
+  navLinks: getNavLinks('en'),
+};
+---
+
+<ProjectsPage {t}>
+  test
+</ProjectsPage>
