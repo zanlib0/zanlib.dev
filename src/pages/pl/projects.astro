@@ -4,11 +4,8 @@ import { getNavLinks } from "../../i18n/ui";
 
 const t = {
   lang: 'pl' as const,
-  content: 'test pl',
   navLinks: getNavLinks('pl'),
 };
 ---
 
-<ProjectsPage {t}>
-  test
-</ProjectsPage>
+<ProjectsPage {t} />
