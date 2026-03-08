@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Inner canvas -->
+  <rect x="12" y="12" width="776" height="426" rx="4" fill="oklch(0.985 0.009 255.0)"/>
+
+  <!-- Crop marks -->
+  <g stroke="oklch(0.450 0.008 121.0)" stroke-width="0.75" fill="none" opacity="0.5">
+    <polyline points="0,16 0,0 16,0"/>
+    <polyline points="784,0 800,0 800,16"/>
+    <polyline points="800,434 800,450 784,450"/>
+    <polyline points="16,450 0,450 0,434"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="48" y="32" width="56" height="10" rx="2" fill="oklch(0.150 0.006 121.6)" opacity="0.85"/>
+  <circle cx="112" cy="37" r="4" fill="oklch(0.501 0.201 19.9)"/>
+  <!-- Top-right controls -->
+  <circle cx="700" cy="37" r="5" fill="oklch(0.250 0.008 121.6)" opacity="0.15"/>
+  <rect x="714" y="33" width="28" height="8" rx="2" fill="oklch(0.250 0.008 121.6)" opacity="0.2"/>
+
+  <!-- Navigation tabs -->
+  <g fill="none" stroke="oklch(0.450 0.008 121.0)" stroke-width="1.2" opacity="0.3">
+    <rect x="48" y="56" width="220" height="28" rx="14"/>
+    <rect x="280" y="56" width="220" height="28" rx="14"/>
+    <rect x="512" y="56" width="220" height="28" rx="14"/>
+  </g>
+  <rect x="128" y="67" width="50" height="6" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.4"/>
+  <rect x="358" y="67" width="60" height="6" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.4"/>
+  <rect x="596" y="67" width="44" height="6" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.4"/>
+  <!-- Active dot on About tab -->
+  <circle cx="646" cy="70" r="3" fill="oklch(0.501 0.201 19.9)" opacity="0.8"/>
+
+  <!-- Divider -->
+  <line x1="48" y1="98" x2="752" y2="98" stroke="oklch(0.940 0.014 255.0)" stroke-width="0.5"/>
+
+  <!-- Content card -->
+  <rect x="48" y="118" width="704" height="308" rx="6" fill="oklch(0.985 0.009 255.0)" stroke="oklch(0.940 0.014 255.0)" stroke-width="0.8"/>
+
+  <!-- Left column: portrait photo -->
+  <rect x="72" y="142" width="260" height="250" rx="4" fill="oklch(0.150 0.006 121.6)" opacity="0.85"/>
+  <!-- Subtle composition lines -->
+  <line x1="72" y1="392" x2="220" y2="200" stroke="oklch(0.985 0.009 255.0)" stroke-width="0.5" opacity="0.1"/>
+  <!-- Warm glow suggesting smoke -->
+  <circle cx="200" cy="320" r="30" fill="oklch(0.985 0.009 255.0)" opacity="0.08"/>
+  <circle cx="195" cy="280" r="15" fill="oklch(0.985 0.009 255.0)" opacity="0.06"/>
+
+  <!-- Photo caption -->
+  <rect x="72" y="400" width="80" height="5" rx="1.5" fill="oklch(0.450 0.008 121.0)" opacity="0.35"/>
+
+  <!-- Right column -->
+  <!-- Name heading -->
+  <rect x="370" y="150" width="280" height="18" rx="2" fill="oklch(0.150 0.006 121.6)" opacity="0.8"/>
+
+  <!-- Role subtitle in accent -->
+  <rect x="370" y="184" width="160" height="8" rx="1.5" fill="oklch(0.501 0.201 19.9)" opacity="0.65"/>
+
+  <!-- Accent divider -->
+  <line x1="370" y1="206" x2="740" y2="206" stroke="oklch(0.501 0.201 19.9)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Bio paragraph -->
+  <rect x="370" y="224" width="350" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.3"/>
+  <rect x="370" y="236" width="320" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.3"/>
+  <rect x="370" y="248" width="360" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.3"/>
+  <rect x="370" y="260" width="280" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.25"/>
+  <rect x="370" y="272" width="310" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.25"/>
+
+  <!-- Contact section -->
+  <rect x="370" y="306" width="100" height="6" rx="1.5" fill="oklch(0.450 0.008 121.0)" opacity="0.4"/>
+  <!-- Arrow + link -->
+  <polygon points="370,328 377,332 370,336" fill="oklch(0.501 0.201 19.9)" opacity="0.6"/>
+  <rect x="382" y="329" width="110" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.4"/>
+
+  <!-- Plate label -->
+  <text x="740" y="416" font-family="Georgia, serif" font-size="9" fill="oklch(0.450 0.008 121.0)" opacity="0.5" text-anchor="end" font-style="italic">Pl. 2</text>
+</svg>

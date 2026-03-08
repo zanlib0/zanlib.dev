@@ -25,9 +25,133 @@ const { t } = Astro.props;
 	</head>
 	<body>
 		<Header active="projects" navLinks={t.navLinks} />
-		<main>
-			{t.content}
-		</main>
+		<article>
+			<h6 id="exhibition-catalogue">Exhibition Catalogue</h6>
+			<h1 id="main-heading"><em>Selected<br />Projects</em></h1>
+
+			<p>
+				A small collection of recent and ongoing work, presented
+				with notes on intent, architecture, and the particular
+				problems each project chose to care about.
+			</p>
+
+			<div class="brochure">
+				<div class="brochure-heading">
+					<h2>zanlib.dev</h2>
+					<h6>Astro</h6>
+				</div>
+				<h4 class="brochure-date">2017&ndash;</h4>
+
+				<figure class="brochure-hero">
+					<img src="/assets/plates/plate-about.svg" />
+					<figcaption>
+						<h6>Plate 1 &mdash; Blog Index Page</h6>
+						<em>
+							Three states of the customer-facing interface: scan acknowledgment,
+							sentiment capture, and platform redirect. The entire interaction
+							completes in under eight seconds.
+						</em>
+					</figcaption>
+				</figure>
+
+				<div class="brochure-description">
+					<p>
+						zanlib.dev is built on Astro with TypeScript, featuring a full bilingual architecture with separate English and Polish content trees, locale-aware routing, and per-language RSS feeds. Three content types — articles, notes, and jots — each carry distinct typographic treatments using EB Garamond, League Spartan, and League Mono respectively.
+					</p>
+					<p>
+						The site employs an OKLCH-based color system for perceptually uniform theming with dark mode support, a custom remark plugin for scholarly margin notes, and dynamic per-post Open Graph image generation via Satori and Sharp. Code highlighting runs on Shiki, math rendering on KaTeX, and content authoring on MDX.
+					</p>
+
+					<p>
+						The projects showcase spans SaaS products, Lisp interpreters written in Elixir and Node.js, React form libraries, and workshop materials — reflecting full-stack range across React, Elixir/Phoenix, and functional programming paradigms.
+					</p>
+
+					<div class="brochure-colophon">
+						<h6>Technical details</h6>
+						<h6>Deployment</h6>
+						<span>Netlify</span>
+						<h6>Architecture</h6>
+						<span>Statically-generated Astro site</span>
+					</div>
+				</div>
+
+				<figure class="brochure-aside">
+					<img src="/assets/plates/plate-blog.svg" />
+					<figcaption>
+						<h6>Plate 2 &mdash; Posts archive</h6>
+						<em>
+							Three states of the customer-facing interface: scan acknowledgment,
+							sentiment capture, and platform redirect. The entire interaction
+							completes in under eight seconds.
+						</em>
+					</figcaption>
+				</figure>
+			</div>
+		</article>
 		<Footer />
 	</body>
 </html>
+
+<style>
+article {
+	max-width: 1000px;
+	margin: auto;
+	padding-top: 8rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+h6 {
+	line-height: 1.5rem;
+}
+
+#exhibition-catalogue {
+	grid-column: 1 / 3; 
+}
+
+#main-heading {
+	padding-bottom: 8rem;
+}
+
+.brochure {
+	display: contents;
+
+	.brochure-heading {
+		grid-column: 1;
+	}
+
+	.brochure-date {
+		grid-column: 2;
+		align-self: center;
+		justify-self: end;
+		font-style: italic;
+		opacity: 0.7;
+	}
+
+	.brochure-hero {
+		grid-column: 1/3;
+
+		img {
+			padding: 2rem;
+			margin-bottom: 1rem;
+			border: 1px solid var(--background-surface);
+		}
+	}
+
+	.brochure-colophon {
+		display: grid;
+		gap: 0.75rem;
+		grid-template-columns: 8rem 1fr;
+
+		h6:first-of-type {
+			grid-column: 1/3;
+		}
+
+		span {
+			font-size: 1.2rem;
+			opacity: 0.8;
+		}
+	}
+}
+</style>
