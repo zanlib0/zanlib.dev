@@ -98,5 +98,5 @@
   <rect x="120" y="514" width="180" height="5" rx="1.5" fill="oklch(0.250 0.008 121.6)" opacity="0.3"/>
 
   <!-- Plate label -->
-  <text x="368" y="572" font-family="Georgia, serif" font-size="9" fill="oklch(0.450 0.008 121.0)" opacity="0.5" text-anchor="end" font-style="italic">Pl. 1</text>
+  <text x="368" y="572" font-family="Georgia, serif" font-size="9" fill="oklch(0.450 0.008 121.0)" opacity="0.5" text-anchor="end" font-style="italic">Pl. 2</text>
 </svg>
