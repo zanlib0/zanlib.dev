@@ -309,7 +309,9 @@ h6 {
 	.brochure .brochure-heading,
 	.brochure .brochure-date,
 	.brochure .brochure-description,
-	.brochure .brochure-aside {
+	.brochure .brochure-aside,
+	.brochure.reversed .brochure-description,
+	.brochure.reversed .brochure-aside {
 		grid-column: 1 / -1;
 	}
 
