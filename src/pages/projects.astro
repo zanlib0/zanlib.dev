@@ -1,14 +1,244 @@
 ---
-import ProjectsPage from "../components/pages/ProjectsPage.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ArrowRight from "../components/icons/ArrowRight.astro";
 import { getNavLinks } from "../i18n/ui";
+
+import "../styles/projects.css";
 
 const t = {
   lang: 'en' as const,
-  content: 'test',
   navLinks: getNavLinks('en'),
 };
 ---
 
-<ProjectsPage {t}>
-  test
-</ProjectsPage>
+<html lang={t.lang}>
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header active="projects" navLinks={t.navLinks} />
+		<article>
+			<h6 id="exhibition-catalogue">Exhibition Catalogue</h6>
+			<h1 id="main-heading"><em>Selected<br />Projects</em></h1>
+
+			<p class="intro">
+				A small collection of recent and ongoing work, presented with notes on intent, architecture, and the particular
+				problems each one addresses.
+			</p>
+
+				<div class="brochure">
+				<div class="brochure-heading">
+					<h2>zanlib.dev</h2>
+					<h6>Astro &middot; MDX &middot; TypeScript</h6>
+				</div>
+				<h4 class="brochure-date">2017&ndash;</h4>
+
+				<figure class="brochure-hero">
+					<img src="/assets/plates/plate-zanlib-1.svg" />
+					<figcaption>
+						<h6>Plate 1 &mdash; Blog Index Page</h6>
+						<em>
+							Main landing page with article listing, bilingual routing, and typographic hierarchy across three content
+							types.
+						</em>
+					</figcaption>
+				</figure>
+
+				<div class="brochure-description">
+					<p>
+						This is my primary blog and personal brand.
+					</p>
+					<p>
+						The brand originated with my attempts to find a word that would be unique, techy, meaningless and memorable.
+						An additional constraint was finding something that could be pronounced naturally in both English and
+						Polish.
+					</p>
+					<p>
+						The site is built on Astro with TypeScript, featuring a full bilingual architecture with separate English
+						and Polish content trees, locale-aware routing, and per-language <abbr>RSS</abbr> feeds. The blog is designed as a
+						commonplace book: three content types—articles, notes, and jots—each carry distinct typographic treatments
+						to represent different stages of development of ideas.
+					</p>
+					<p>
+						The site employs an <abbr>OKLCH</abbr>-based color system for with dark mode support, a custom remark plugin
+						for scholarly margin notes, and dynamic per-post Open Graph image generation via Satori and Sharp. Some
+						posts utilise Katex to render mathematics, and more interactive content employs <abbr>MDX</abbr> with React
+						components.
+					</p>
+				</div>
+
+				<figure class="brochure-aside">
+					<img src="/assets/plates/plate-zanlib-2.svg" />
+					<figcaption>
+						<h6>Plate 2 &mdash; Posts Archive</h6>
+						<em>
+							Chronological archive view showcasing the different kinds of content.
+						</em>
+					</figcaption>
+				</figure>
+			</div>
+
+				<div class="brochure reversed">
+				<div class="brochure-heading">
+					<h2>Vlvbione</h2>
+					<h6>React Router 7 &middot; TypeScript &middot; SQLite</h6>
+				</div>
+				<h4 class="brochure-date">2024&ndash;</h4>
+
+				<figure class="brochure-hero">
+					<img src="/assets/plates/plate-vlvbione-1.svg" />
+					<figcaption>
+						<h6>Plate 3 &mdash; Three Stages of Customer Feedback Flow</h6>
+						<em>
+							The customer scans a <abbr>QR</abbr> code, fills in a feedback form, optionally leaves a review on Google
+							Maps, and receives a coupon code.
+						</em>
+					</figcaption>
+				</figure>
+
+				<figure class="brochure-aside">
+					<img src="/assets/plates/plate-vlvbione-2.svg" />
+					<figcaption>
+						<h6>Plate 4 &mdash; Business Feedback Review Dashboard</h6>
+						<em>
+							The business owner has access to a clear dashboard to see the recent reviews and validate coupons from
+							returning patrons.
+						</em>
+					</figcaption>
+				</figure>
+
+				<div class="brochure-description">
+					<p>
+						A review-collection SaaS that allows small businesses to reward customers for feedback. Businesses collect
+						reviews via <abbr>QR</abbr> codes displayed in their business and automatically generate coupons for reviewers.
+						A straightforward system with billing, authentication, and mailing integrations.
+					</p>
+					<p>
+						Behind the scenes, the entire stack (apart from third-party services for billing and authentication),
+						including a Gitea instance with <abbr>CI/CD</abbr> pipelines is self-hosted on a Lenovo ThinkStation in my
+						bookshelf.
+					</p>
+					<a class="visit-link" href="https://vlvbione.pl">
+						<ArrowRight size="0.9rem" />
+						Visit
+					</a>
+				</div>
+			</div>
+
+			<h6 class="section-heading">Lisps</h6>
+
+			<div class="card card--isolisp">
+				<div class="card-header">
+					<h4 class="card-title">isolisp</h4>
+					<span class="card-tech">JavaScript</span>
+				</div>
+				<p>
+					A Lisp interpreter that runs identically on frontend and backend—define validation rules or business logic on
+					the server, evaluate them on either side.
+					<a class="card-link" href="https://github.com/intercaetera/isolisp">GitHub</a>
+				</p>
+			</div>
+
+			<div class="catalogue">
+				<a class="catalogue-name" href="https://github.com/intercaetera/lispex">lispex</a>
+				<span class="catalogue-desc">Toy Lisp evaluator in Elixir</span>
+				<span class="catalogue-tech">Elixir</span>
+
+				<a class="catalogue-name" href="https://github.com/intercaetera/evalexpr">evalexpr</a>
+				<span class="catalogue-desc">Toy Lisp evaluator in Node.js — companion to the <a href="/blog/lisp-in-js">blog article</a> on building a Lisp in 66 lines</span>
+				<span class="catalogue-tech">Node.js</span>
+			</div>
+
+			<h6 class="section-heading">Teaching</h6>
+
+			<div class="card card--workshops">
+				<h4>Workshops</h4>
+
+				<div class="workshop-entry">
+					<h6 class="workshop-date">Upcoming</h6>
+					<div>
+						<h5>Product Communication for Developers</h5>
+					</div>
+				</div>
+
+				<div class="workshop-entry">
+					<h6 class="workshop-date">Dec 2024</h6>
+					<div>
+						<h5>Frontend Track at Brainhub Junior Workshops</h5>
+						<p>
+							Two-week intensive recruiting workshop aimed at junior developers, covering modern software engineering
+							fundamentals and practical exercises. The participants learned real modern development skills, spanning
+							the basics of Agile, product analysis, front-end and back-end development, and cloud deployment.
+						</p>
+					</div>
+				</div>
+
+				<div class="workshop-entry">
+					<h6 class="workshop-date">2023</h6>
+					<div>
+						<h5>Elixir Saturday</h5>
+						<p>
+							Eight-hour Saturday workshop introducing functional programming with Elixir and Phoenix to JavaScript
+							developers.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<h6 class="section-heading">Community</h6>
+
+			<div class="card card--discord">
+				<h4>Catholic Programmers Discord</h4>
+				<p>
+					<em>English-speaking Discord community for Catholic software developers. <a
+						href="https://discord.gg/NfVgpm3gvE">Join</a></em>
+				</p>
+			</div>
+
+			<div class="catalogue">
+				<a class="catalogue-name" href="https://github.com/intercaetera/rolex">Rolex</a>
+				<span class="catalogue-desc">Elixir Discord bot that lets the users of a server self-assign programming language roles</span>
+				<span class="catalogue-tech">Elixir</span>
+
+				<a class="catalogue-name" href="https://rosarycafe.intercaetera.com">Rosary Caf&eacute;</a>
+				<span class="catalogue-desc">Frontend-only rosary assistant, built in an ancient version of Svelte</span>
+				<span class="catalogue-tech">Svelte</span>
+			</div>
+
+			<h6 class="section-heading">Open Source</h6>
+
+			<div class="catalogue">
+				<a class="catalogue-name" href="https://github.com/intercaetera/formuj">Formuj</a>
+				<span class="catalogue-desc">React form library built on Formik — mini-framework showcase with production usage. Understanding why building and using it was a mistake is left as a challenge to the reader</span>
+				<span class="catalogue-tech">React, Formik</span>
+
+				<a class="catalogue-name" href="https://github.com/intercaetera/wouldnt-you-rather">wouldn&rsquo;t you rather</a>
+				<span class="catalogue-desc">Chrome extension that asks whether you really want to waste time on a time-wasting website</span>
+					<span class="catalogue-tech">Web, Chrome</span>
+			</div>
+
+			<h6 class="section-heading">Advent of Code</h6>
+
+			<div class="card card--aoc">
+				<span>The beloved December ritual.</span>
+				<div class="aoc-pills">
+					<a class="aoc-pill ocaml" href="https://github.com/intercaetera/aoc2025">
+						<span class="aoc-year">2025</span> <em>(OCaml)</em>
+					</a>
+					<a class="aoc-pill clojure" href="https://github.com/intercaetera/aoc2024">
+						<span class="aoc-year">2024</span> <em>(Clojure)</em>
+					</a>
+					<a class="aoc-pill elixir" href="https://github.com/intercaetera/aoc2022">
+						<span class="aoc-year">2022</span> <em>(Elixir)</em>
+					</a>
+					<a class="aoc-pill elixir" href="https://github.com/intercaetera/aoc2020">
+						<span class="aoc-year">2020</span> <em>(Elixir)</em>
+					</a>
+				</div>
+			</div>
+		</article>
+		<Footer />
+	</body>
+</html>
