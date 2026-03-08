@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Inner canvas -->
+  <rect x="12" y="12" width="776" height="426" rx="4" fill="oklch(0.978 0.010 340)"/>
+
+  <!-- Crop marks -->
+  <g stroke="oklch(0.500 0.020 340)" stroke-width="0.75" fill="none" opacity="0.4">
+    <polyline points="0,16 0,0 16,0"/>
+    <polyline points="784,0 800,0 800,16"/>
+    <polyline points="800,434 800,450 784,450"/>
+    <polyline points="16,450 0,450 0,434"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Screen 1 — Feedback form                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <g transform="translate(106, 42)">
+    <!-- Screen shell -->
+    <rect width="180" height="366" rx="10" fill="oklch(0.960 0.014 340)"/>
+    <!-- Card -->
+    <rect x="10" y="24" width="160" height="318" rx="8" fill="oklch(0.995 0.004 340)" stroke="oklch(0.910 0.016 340)" stroke-width="0.6"/>
+
+    <!-- Heading (business name) -->
+    <rect x="40" y="44" width="100" height="9" rx="3" fill="oklch(0.200 0.015 330)" opacity="0.72"/>
+
+    <!-- Subtitle lines -->
+    <rect x="26" y="66" width="128" height="4" rx="2" fill="oklch(0.350 0.010 330)" opacity="0.28"/>
+    <rect x="32" y="76" width="116" height="4" rx="2" fill="oklch(0.350 0.010 330)" opacity="0.28"/>
+
+    <!-- Label (how was your experience) -->
+    <rect x="32" y="98" width="116" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.55"/>
+
+    <!-- 5 stars -->
+    <g fill="oklch(0.550 0.210 350)" opacity="0.75">
+      <circle cx="54" cy="120" r="5.5"/>
+      <circle cx="70" cy="120" r="5.5"/>
+      <circle cx="86" cy="120" r="5.5"/>
+      <circle cx="102" cy="120" r="5.5"/>
+      <circle cx="118" cy="120" r="5.5"/>
+    </g>
+
+    <!-- Label (tell us more) -->
+    <rect x="22" y="142" width="52" height="4" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.50"/>
+
+    <!-- Text area -->
+    <rect x="22" y="154" width="136" height="76" rx="5" fill="oklch(0.995 0.003 330)" stroke="oklch(0.890 0.012 340)" stroke-width="0.7"/>
+    <rect x="30" y="166" width="116" height="3" rx="1.5" fill="oklch(0.300 0.010 330)" opacity="0.25"/>
+    <rect x="30" y="175" width="108" height="3" rx="1.5" fill="oklch(0.300 0.010 330)" opacity="0.25"/>
+    <rect x="30" y="184" width="118" height="3" rx="1.5" fill="oklch(0.300 0.010 330)" opacity="0.25"/>
+    <rect x="30" y="193" width="72" height="3" rx="1.5" fill="oklch(0.300 0.010 330)" opacity="0.25"/>
+
+    <!-- CTA button -->
+    <rect x="22" y="248" width="136" height="28" rx="14" fill="oklch(0.550 0.210 350)" opacity="0.85"/>
+    <rect x="50" y="259" width="80" height="5" rx="2" fill="oklch(0.990 0.005 330)" opacity="0.9"/>
+
+    <!-- Feedback code line -->
+    <rect x="42" y="292" width="96" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.22"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Screen 2 — Review redirect                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <g transform="translate(310, 42)">
+    <!-- Screen shell -->
+    <rect width="180" height="366" rx="10" fill="oklch(0.960 0.014 340)"/>
+    <!-- Card -->
+    <rect x="10" y="40" width="160" height="280" rx="8" fill="oklch(0.995 0.004 340)" stroke="oklch(0.910 0.016 340)" stroke-width="0.6"/>
+
+    <!-- Quote box -->
+    <rect x="22" y="62" width="136" height="68" rx="5" fill="oklch(0.995 0.003 330)" stroke="oklch(0.890 0.012 340)" stroke-width="0.7"/>
+    <rect x="32" y="74" width="112" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.22"/>
+    <rect x="32" y="83" width="100" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.22"/>
+    <rect x="32" y="92" width="108" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.22"/>
+    <rect x="32" y="101" width="60" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.22"/>
+
+    <!-- Prompt text (centered, 4 lines) -->
+    <rect x="22" y="150" width="136" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.50"/>
+    <rect x="26" y="162" width="128" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.50"/>
+    <rect x="24" y="174" width="132" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.50"/>
+    <rect x="38" y="186" width="104" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.50"/>
+
+    <!-- CTA button -->
+    <rect x="22" y="210" width="136" height="28" rx="14" fill="oklch(0.550 0.210 350)" opacity="0.85"/>
+    <rect x="42" y="221" width="96" height="5" rx="2" fill="oklch(0.990 0.005 330)" opacity="0.9"/>
+
+    <!-- Decline link -->
+    <rect x="22" y="252" width="136" height="3" rx="1.5" fill="oklch(0.550 0.210 350)" opacity="0.38"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Screen 3 — Thank you / coupon              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <g transform="translate(514, 42)">
+    <!-- Screen shell -->
+    <rect width="180" height="366" rx="10" fill="oklch(0.960 0.014 340)"/>
+    <!-- Card -->
+    <rect x="10" y="24" width="160" height="318" rx="8" fill="oklch(0.995 0.004 340)" stroke="oklch(0.910 0.016 340)" stroke-width="0.6"/>
+
+    <!-- Green checkmark circle -->
+    <circle cx="90" cy="72" r="20" fill="none" stroke="oklch(0.550 0.150 165)" stroke-width="2.2"/>
+    <polyline points="78,72 87,81 102,64" fill="none" stroke="oklch(0.550 0.150 165)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Heading -->
+    <rect x="22" y="104" width="136" height="8" rx="3" fill="oklch(0.200 0.015 330)" opacity="0.68"/>
+
+    <!-- Subtitle lines -->
+    <rect x="26" y="126" width="128" height="4" rx="2" fill="oklch(0.350 0.010 330)" opacity="0.28"/>
+    <rect x="34" y="136" width="112" height="4" rx="2" fill="oklch(0.350 0.010 330)" opacity="0.28"/>
+
+    <!-- Label (your discount coupon) -->
+    <rect x="38" y="160" width="104" height="5" rx="2" fill="oklch(0.200 0.015 330)" opacity="0.55"/>
+
+    <!-- Coupon box -->
+    <rect x="22" y="178" width="136" height="36" rx="6" fill="oklch(0.930 0.040 350)"/>
+    <rect x="38" y="192" width="104" height="7" rx="3" fill="oklch(0.550 0.210 350)" opacity="0.65"/>
+
+    <!-- Instruction lines -->
+    <rect x="24" y="228" width="132" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.25"/>
+    <rect x="38" y="238" width="104" height="3" rx="1.5" fill="oklch(0.350 0.010 330)" opacity="0.25"/>
+
+    <!-- Footer text -->
+    <rect x="36" y="262" width="108" height="3" rx="1.5" fill="oklch(0.400 0.010 330)" opacity="0.18"/>
+  </g>
+
+  <!-- Plate label -->
+  <text x="768" y="432" font-family="Georgia, serif" font-size="9" fill="oklch(0.500 0.020 340)" opacity="0.45" text-anchor="end" font-style="italic">Pl. 3</text>
+</svg>

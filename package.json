@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "jot:en": "node scripts/create-jot.js en",
-    "jot:pl": "node scripts/create-jot.js pl"
+    "jot:pl": "node scripts/create-jot.js pl",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",
@@ -22,5 +24,10 @@
     "satori": "^0.19.1",
     "sharp": "^0.34.3",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.3",
+    "eslint-plugin-astro": "^1.6.0",
+    "typescript-eslint": "^8.56.1"
   }
 }
