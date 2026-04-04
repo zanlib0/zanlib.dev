@@ -15,6 +15,7 @@ interface Props {
 		subtitle: string;
 		paragraph1: string;
 		contactHeading: string;
+		bookAMeeting: string;
 		navLinks: {
 			articles: string;
 			projects: string;
@@ -55,7 +56,13 @@ const { t } = Astro.props;
 					<h6>{t.contactHeading}</h6>
 					<div class="email">
 						<ArrowRight size="0.9rem" />
-						<span>hello@zanlib.dev</span>
+						<span class="email-address">
+							hello@<span>zan</span>lib.<span>gmail.</span>dev
+						</span>
+					</div>
+					<div class="meeting">
+						<ArrowRight size="0.9rem" />
+						<a href="https://cal.zanlib.dev/zanlib">{t.bookAMeeting}</a>
 					</div>
 				</div>
 			</div>
@@ -154,7 +161,7 @@ p {
 	margin: 2rem 0;
 }
 
-.email {
+.email, .meeting {
 	display: inline-block;
 
 	svg {
@@ -162,5 +169,9 @@ p {
 		color: var(--brand-7);
 		margin-left: 0.25rem;
 	}
+}
+
+.email-address > span:nth-child(2) {
+	display: none;
 }
 </style>
