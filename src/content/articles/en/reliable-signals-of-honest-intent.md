@@ -76,7 +76,7 @@ Are they _real_?
 
 ## Thought laundering
 
-So there are the slop purveyors and the farm-to-table humanists. But there are some in between, and their story is perhaps the most tragic: the person who writes a heartfelt, honest, though slightly clumsy cover letter and then "improves" it with AI has taken the thing that would have got him noticed and replaced it with the thing that will get him filtered out.
+So there are the slop purveyors and the farm-to-table humanists. But there are some in between, and their story is perhaps the most tragic: the person who writes a heartfelt, honest, though slightly clumsy cover letter and then "improves" it with <abbr>AI</abbr> has taken the thing that would have got him noticed and replaced it with the thing that will get him filtered out.
 
 The elaborate box works, because it's expensive to send. Your own words work for a different reason: they're unmistakably yours.
 
