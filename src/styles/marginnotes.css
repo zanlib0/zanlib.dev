@@ -44,7 +44,7 @@ html {
     display: none;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1444px) {
   .marginnote-def {
     display: none;
     scroll-margin-top: 3rem;
