@@ -1,7 +1,7 @@
 ---
 title: Number Inputs in React
 pubDate: 9 May 2026
-description: Perils of restricted input
+description: The perils of restricted input
 wip: true
 ---
 
