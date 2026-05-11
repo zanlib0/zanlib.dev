@@ -2,7 +2,6 @@
 title: Number Inputs in React
 pubDate: 11 May 2026
 description: The perils of restricted input
-wip: true
 ---
 
 Inputs in React are conceptually very simple creatures. The user types something, that value lives in the form state until ready to be submitted, optionally there is some validation, and the form is submitted with some data. As long as you follow this pattern, there are very few things that are likely to break.
