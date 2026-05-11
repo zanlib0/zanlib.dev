@@ -77,7 +77,7 @@ When working in a form-validated input, this event handler can be skipped in mos
 
 An overlooked, though uncommon, pitfall here is <abbr>IME</abbr> composition, which is the input method used chiefly in East Asian languages like Chinese, Japanese or Korean, to compose characters. <abbr>IME</abbr> composition can also be used to input numbers, though it's up to you and your intended audience whether you choose to allow inputs like "１２３" instead of "123."[+normalisation] You can look at the `inputType` value `insertCompositionText` to check this. To test <abbr>IME</abbr> composition on your own machine, typically just installing a Japanese keyboard is enough. On Linux, [Fcitx5](https://wiki.archlinux.org/title/Fcitx5) is a common piece of software used for this. やった！
 
-[+normalisation]: If you're likely to support this kind of usage, consider [normalising](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) the strings as they hit your state.
+[+normalisation]: If you're likely to support this kind of usage, consider [normalising](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) the strings as they hit your state. Alternatively, for a truly world-wide audience, you can take the [base-ui approach](https://github.com/mui/base-ui/blob/master/packages/react/src/number-field/utils/parse.ts) of normalising absolutely everything.
 
 When dealing with an input with known length, such as a credit card number, <abbr>PIN</abbr> or a one-time password, this handler a good place to prevent the user from typing too many digits.
 
