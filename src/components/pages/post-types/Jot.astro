@@ -27,6 +27,7 @@ const truncatedTitle = body.substring(0, 100)
 @property --gradient-bg {
 	syntax: '<color>';
 	inherits: false;
+	initial-value: transparent;
 }
 
 .article-link {
@@ -50,7 +51,7 @@ const truncatedTitle = body.substring(0, 100)
 		background-color: var(--brand-2);
 		border-color: var(--brand-4);
 
-		h5.title:after {
+		h5.title::after {
 			--gradient-bg: var(--brand-2);
 		}
 	}
@@ -76,7 +77,7 @@ h5.title {
 	margin: 0;
 	position: relative;
 
-	&:after {
+	&::after {
 		content: '';
 		display: block;
 		position: absolute;
