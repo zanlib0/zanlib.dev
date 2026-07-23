@@ -42,7 +42,7 @@ The knowing happens faster than conscious thought. And the "paranoia" is not par
 
 > Consider the hiker who comes across a bird while walking in the alps. In trying to identify the bird, the hiker takes out their bird book and uses a number of features of the bird (cues) to correctly identify it. Second, (...) consider the rabbit, who has a far more limited aim when it sees a bird: identify it as predator or non-predator, as quickly as possible.[+horsey]
 
-[+horsey]: Horsey, R. _The art of chicken sexing_. Cogprints.org 2003, p. 111
+[+horsey]: Horsey, R. _The art of chicken sexing_. Cogprints.org 2003; p. 111
 
 Of course, when reading content online, we aren't necessarily thinking about our survival. The stakes are much lower, but the same system is employed to make sure we do not give the time of day to someone who does not know what he is talking about, or furthermore, that we do not believe a fraud. When we see enough <abbr>LLM</abbr>-generated writing, and we recognise its often poor quality, we subconsciously associate poor quality with the form of the writing.
 
