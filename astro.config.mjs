@@ -1,5 +1,6 @@
 // @ts-check
 
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
@@ -8,12 +9,17 @@ import { marginnoteHandlers, remarkMarginnotesPlugin } from 'remark-marginnotes'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://zanlib.dev',
+	// Astro v7 changed the default to 'jsx', which strips (rather than collapses)
+	// the newline between adjacent inline elements — e.g. `zanlib` + <Dot />.
+	compressHTML: true,
 	integrations: [mdx(), sitemap()],
 	markdown: {
-		remarkPlugins: [
-			[remarkMarginnotesPlugin, {}]
-		],
-		remarkRehype: { handlers: marginnoteHandlers({ label: 'numbers' })},
+		processor: unified({
+			remarkPlugins: [
+				[remarkMarginnotesPlugin, {}]
+			],
+			remarkRehype: { handlers: marginnoteHandlers({ label: 'numbers' })},
+		}),
 		shikiConfig: {
 			theme: 'github-dark-default',
 		}
