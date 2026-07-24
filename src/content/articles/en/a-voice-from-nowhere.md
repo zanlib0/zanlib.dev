@@ -1,14 +1,13 @@
 ---
-pubDate: 23 Jul 2026
+pubDate: 24 Jul 2026
 title: A Voice From Nowhere
 description: The remnants of human understanding in generated content.
-wip: true
 ---
-The Holy See has had a website since 1995, but the day Pope Leo XIV's [first encyclical](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) went up was the first time I saw it being linked to from outside the niche Catholic circles. The link to the encyclical made rounds on X, LinkedIn, and Reddit, and it was the first ever `.va` link published to [lobste.rs](https://lobste.rs/s/eedsds/encyclical_letter_his_holiness_leo_xiv#c_kpc3hw). I was surprised to see it was upvoted. People seemed to have _actually_ read it. And they seemed to argue about it in good faith.
+The Holy See has had a website since 1995, but the day Pope Leo XIV's [first encyclical](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) went up was the first time I saw it being linked to from outside the niche Catholic circles. The link to the encyclical made rounds on X, LinkedIn, Hacker News, and Reddit, and it was the first ever ".va" link published to [lobste.rs](https://lobste.rs/s/eedsds/encyclical_letter_his_holiness_leo_xiv#c_kpc3hw). I was surprised to see it was upvoted. People seemed to have _actually_ read it. And they seemed to argue about it in good faith.
 
-I suspect that if you had told a room of engineers fifteen years ago, the time when Dawkins was still a frequent sight on airport shelves, that one day they'd be reading a Catholic encyclical and mostly nodding along, you'd have been at best met with polite disbelief.
+I suspect that if you had told a room of engineers fifteen years ago, a time when Dawkins was still a frequent sight on airport shelves, that one day they'd be reading a Catholic encyclical and mostly nodding along, you'd have been at best met with polite disbelief.
 
-Papal encyclicals, over time, have become documents that garner interest not just internally, from Catholic theologians and clergy. They've become serious works of moral philosophy read and discussed outside the Catholic or even Christian circles. As such, besides being a source of magisterial teaching for Catholics, they have to stand on their own merits as addressed to "all people of good will."[+mh2] The first time I saw this with my own eyes was with the publication of Pope Francis's _Laudato Si'_[+ls]. While the subject of that one was not of particular interest to me, it sparked widespread action and over time diffused into many initiatives. Outside of the many strictly Catholic institutions it permeated, It was quoted during <abbr>UN</abbr> panels on ecology and cited in serious climate change papers published in multidisciplinary journals.
+Papal encyclicals, over the centuries, became documents that garner interest not just internally, from Catholic theologians and clergy. They became serious works of moral philosophy read and discussed outside the Catholic or even Christian circles. As such, besides being a source of magisterial teaching for Catholics, they have to stand on their own merits as addressed to "all people of good will."[+mh2] The first time I saw this with my own eyes was with the publication of Pope Francis's _Laudato Si'_. While the subject of that one was not of particular interest to me, it sparked widespread action and over time diffused into many initiatives. Outside of the many strictly Catholic institutions it permeated, it was quoted during <abbr>UN</abbr> panels on ecology and cited in serious climate change papers[+ls] published in multidisciplinary journals.
 
 [+mh2]: Pope Leo XIV. _Magnifica humanitas_. Libreria Editrice Vaticana 2026; § 2
 
@@ -22,13 +21,15 @@ I thought about writing a complete commentary on the encyclical, but about midwa
 
 ## A voice that belongs to no one
 
-The encyclical hands us one of its many thesis early:
+The encyclical hands us one of its many theses early:
 
 > "In practice, however, technology is never neutral, because it takes on the characteristics of those who devise, finance, regulate and use it."[+mh9]
 
 [+mh9]: _Magnifica humanitas_, § 9
 
-That a tool takes on the character of its makers is nothing new, but the people who build these machines have a very particular one. They are the heirs and priests of the Western dualism, of the subject-object split, of classical rationality, which is so ingrained that it no longer registers as a position at all. It is the conviction that if a man works hard enough to divorce himself from his prejudices, his moods, his circumstances, his biases, what's left when the subtraction is finished is the world seen plain, true, factual, and _objective_.
+That a tool takes on the character of its makers is nothing new, but the people who build these machines have a very particular one. They are the heirs and priests of Western rationalism, of the [subject-object split](/blog/on-lila/#on-the-subject-object-split), of classical dualism, which is so ingrained that it no longer registers as a position at all. It is the conviction that if a man works hard enough to divorce himself from his prejudices, his moods, his circumstances, his biases, what's left when the subtraction is finished is the world seen plain, true, factual, and _objective_.
+
+A mindset so ubiquitous that there is no getting away from it.
 
 > "\[This] kind of rationality has been used since antiquity to remove oneself from the tedium and depression of one's immediate surroundings. What makes it hard to see is that where once it was used to get away from it all, the escape has been so successful that now it is the 'it all' that the romantics are trying to escape."[+zmm]
 
@@ -38,7 +39,7 @@ That a tool takes on the character of its makers is nothing new, but the people 
 
 [+mh100]: _Magnifica humanitas_, § 100
 
-However, the confident voice of the language model is not the sound of having arrived there. It is hollower still, because when a human sets out on a road towards objectivity, we can see the attempt under the surface of what is written. In the case of machine-generated prose and code, there is no such thing, there is just the surface. 
+However, the confident voice of the language model is not the sound of having arrived there. It is hollower still, because when a human sets out on a road towards objectivity, we can see the attempt under the surface of what is written. In the case of machine-generated prose and code, there is no such striving underneath. 
 
 ## The path underneath
 
@@ -46,11 +47,11 @@ However, the confident voice of the language model is not the sound of having ar
 
 [+mh99]: _Magnifica humanitas_, § 99
 
-Pirsig spends a good part of _Zen and the Art of Motorcycle Maintenance_ taking a motorcycle apart in a few different ways[+zmm2]. The divisions he draws are not welded into the machine. There is no single correct way to carve a motorcycle into parts; a person chooses where to cut, and he chooses according to what he already understands, what he has seen fail before, what he happens to care about. A rider might be concerned with the split according to the function, a mechanic might be concerned with the split according to its constituent assembly, a parts vendor might studiously follow the factory-prescribed parts numbering scheme to make a split of his own. The manual that ships with the machine hides all of this, written as it is in the impersonal spectator's voice, as though no one stood behind it—though of course someone did. Motorcycles were not found lying in a field. People made them run, and the making left a trail.
+Pirsig spends a good part of Chapter 6 of _Zen and the Art of Motorcycle Maintenance_ taking a motorcycle apart in a few different ways.[+zmm2] The divisions he draws are not welded into the machine. There is no single correct way to carve a motorcycle into parts; a person chooses where to cut, and he chooses according to what he already understands, what he has seen fail before, what he happens to care about. A rider might be concerned with the split according to the function, a mechanic might be concerned with the split according to its constituent assembly, a parts vendor might studiously follow the factory-prescribed parts numbering scheme to make a split of his own. The manual that ships with the machine hides all of this, written as it is in the impersonal spectator's voice, as though no one stood behind it—though of course someone did. Motorcycles were not found lying in a field. People made them run, and the making left a trail.
 
 [+zmm2]: <abbr>*Z&AMM*</abbr>, pp. 66–68
 
-That trail is what I mean when I say that human work has a path underneath it. When you write by hand, something prompted you to write it a certain way; part of that path is inherent to you, your perspective on the problem, your prior experience, your particular circumstances. You sort the grains of sand[+zmm3] a certain way.
+That trail is what I mean when I say that human work has a path underneath it, there is a structure of thought that underpins everything we make. When you write by hand, something prompted you to write it a certain way; that path is inherent to you, your perspective on the problem, your prior experience, your particular circumstances. You sort the grains of sand[+zmm3] a certain way.
 
 [+zmm3]: <abbr>*Z&AMM*</abbr>, p. 72
 
@@ -64,7 +65,7 @@ When you read, you're looking, by reflex, for the structure underneath—why her
 
 If the tool erases the path in the work, it also, more slowly, erases the path in the worker.
 
-> "The speed and ease with which answers or summaries can be obtained risk extinguishing the desire to ask questions … As Plato wrote, the deepest and most important things are learned only after much time and effort … 'striking upon' ideas … like flint until the spark of understanding is kindled."[+mh140]
+> "The speed and ease with which answers or summaries can be obtained risk extinguishing the desire to ask questions (…) As Plato wrote, the deepest and most important things are learned only after much time and effort (…) 'striking upon' ideas (…) like flint until the spark of understanding is kindled."[+mh140]
 
 [+mh140]: _Magnifica humanitas_, § 140
 
@@ -86,9 +87,9 @@ When I worked on a project for a large professional-services client, we had conv
 
 We have them these days: "oh, Claude wrote it like that. You have it too, just prompt it for a fix."
 
-There is, I have noticed, a great deal of effort now spent divorcing oneself from the machine's output. Some of the people I work with do not want to acknowledge that a particular commit was written by <abbr>AI</abbr>, because to acknowledge it is to invite the question of whether they understood the problem at all. So they sign the commit with their own name, omit the `Co-Authored By`, and leave it to the reader to decide whether he is looking at the work of a competent programmer or a stochastic parrot. And it is impolite to suggest that a colleague's work is <abbr>AI</abbr>-generated, since the suggestion implies he did not think. So the question is never asked. The whole thing dissolves, and we lose track of the level at which understanding last existed, before the work was handed off to the machine—or whether it was ever there in the first place.
+There is, I have noticed, a great deal of effort now spent divorcing oneself from the machine's output. Some of the people I work with do not want to acknowledge that a particular commit was written by <abbr>AI</abbr>, because to acknowledge it is to invite the question of whether they understood the problem at all. So they sign the commit with their own name, omit the `Co-Authored-By`, and leave it to the reader to decide whether he is looking at the work of a competent programmer or a language model. And it is impolite to suggest that a colleague's work is <abbr>AI</abbr>-generated, since the suggestion implies he did not think. So the question is never asked. The whole thing dissolves, and we lose track of the level at which understanding last existed, before the work was handed off to the machine—or whether it was ever there in the first place.
 
-This is precisely the possibility that the encyclical asks us to keep alive, "the possibility of identifying who must account for decisions," and precisely what the signature, wielded this way, is used to destroy. The encyclical, discussing war, insists that "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems."[+mh198] The principle is not confined to the battlefield. All systems should have a chain of accountability that ultimately terminates in a person, and the trouble with the voice from nowhere is that it lets the chain terminate in nothing while looking, for all the world, as though it terminates in you.
+This is precisely the possibility that the encyclical asks us to keep alive, "the possibility of identifying who must account for decisions," and precisely what the signature, wielded this way, is used to destroy. The encyclical, discussing war, insists that "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems."[+mh198] The principle is not confined to the battlefield. All systems should have a chain of accountability that ultimately terminates in a person, even if just for reasons of respect and common courtesy, and the trouble with the voice from nowhere is that it lets the chain terminate in nothing while looking, for all the world, as though it terminates in you.
 
 [+mh198]: _Magnifica humanitas_, § 198
 
