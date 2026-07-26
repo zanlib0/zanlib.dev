@@ -1,0 +1,75 @@
+---
+import PrivacyPage from '../components/pages/PrivacyPage.astro';
+import { getNavLinks } from '../i18n/ui';
+
+const t = {
+	lang: 'en' as const,
+	title: 'Privacy Policy',
+	description: 'What this site collects, and what it does not.',
+	navLinks: getNavLinks('en'),
+};
+---
+
+<PrivacyPage {t}>
+  <h1>Privacy Policy</h1>
+  <p><em>Last updated: 27 July 2026</em></p>
+
+  <p>
+    zanlib.dev is a personal blog. No accounts, no comments, no newsletter, no
+    advertising, no cookies. Contact: <a href="mailto:hello@zanlib.dev">hello@zanlib.dev</a>
+  </p>
+
+  <h2>Analytics</h2>
+  <p>
+    I use <a href="https://umami.is">Umami</a>, which I run myself on a server
+    in Poland at stats.zanlib.dev. No analytics company is involved.
+  </p>
+  <p>
+    It records per page view: the page, the referring page, your browser,
+    operating system, device type, screen size, language, and country. No
+    cookies. Your <abbr>IP</abbr> address is not stored—it is hashed together
+    with your browser details and a secret that changes frequently, so repeat
+    visits within a short time can be accurately counted without identifying
+    you.
+  </p>
+  <p>
+    Legal basis: legitimate interest (<abbr>GDPR</abbr> Art. 6(1)(f)) in knowing which posts
+    people read, using a method chosen to avoid identifying anyone.
+  </p>
+
+  <h2>Where it runs</h2>
+  <p>
+    The site is hosted by Netlify, and requests to the analytics server pass
+    through Cloudflare as a reverse proxy. Both keep short-lived access logs
+    (<abbr>IP</abbr>, timestamp, page, user agent) for delivery, security, and abuse
+    prevention. Both act as my processors and may not use the data for their
+    own purposes. Both are <abbr>US</abbr> companies, so this transfers data outside the
+    <abbr>EEA</abbr> under their data processing agreements, which incorporate the European
+    Commission's standard contractual clauses.
+  </p>
+
+  <h2>Your browser</h2>
+  <p>
+    Every asset—fonts, images, stylesheets, scripts—is served from
+    zanlib.dev. Nothing loads from a <abbr>CDN</abbr>, font service, ad network, or social
+    widget. The only other host your browser contacts is my analytics server
+    above.
+  </p>
+  <p>
+    Your light/dark mode choice is saved in local storage under
+    <code>theme</code>. It stays on your device.
+  </p>
+  <p>
+    Links to other sites, including the /github, /x and /linkedin shortcuts,
+    lead to services with their own policies.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    Write to <a href="mailto:hello@zanlib.dev">hello@zanlib.dev</a> to request
+    access, correction, erasure, portability, or to object to processing. The
+    analytics data holds nothing traceable to you, so usually there is nothing
+    to retrieve or delete; email correspondence I can act on directly. You may
+    also complain to the Polish <abbr>DPA</abbr> (<a href="https://uodo.gov.pl">uodo.gov.pl</a>).
+  </p>
+</PrivacyPage>

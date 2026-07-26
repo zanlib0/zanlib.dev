@@ -1,0 +1,81 @@
+---
+import PrivacyPage from '../../components/pages/PrivacyPage.astro';
+import { getNavLinks } from '../../i18n/ui';
+
+const t = {
+	lang: 'pl' as const,
+	title: 'Polityka prywatności',
+	description: 'Jakie dane zbiera ta strona, a jakich nie.',
+	navLinks: getNavLinks('pl'),
+};
+---
+
+<PrivacyPage {t}>
+  <h1>Polityka prywatności</h1>
+  <p><em>Ostatnia aktualizacja: 27 lipca 2026</em></p>
+
+  <p>
+    zanlib.dev to prywatny blog. Bez kont, bez komentarzy, bez newslettera,
+    bez reklam, bez cookies. Kontakt:
+    <a href="mailto:hello@zanlib.dev">hello@zanlib.dev</a>
+  </p>
+
+  <h2>Analityka</h2>
+  <p>
+    Serwis wykorzystuje <a href="https://umami.is">Umami</a>, hostowane na
+    serwerze w Polsce, pod adresem stats.zanlib.dev. Nie bierze w tym udziału
+    żadna firma analityczna.
+  </p>
+  <p>
+    Dla każdej odsłony zapisywane są: adres strony, strona odsyłająca,
+    przeglądarka, system operacyjny, typ urządzenia, rozmiar ekranu, język i
+    kraj. Pliki cookies nie są zapisywane. Twój adres <abbr>IP</abbr> nie jest
+    przechowywany—zostaje zahaszowany razem z danymi przeglądarki i często
+    zmienianym kluczem, dzięki czemu ponowne wizyty w krótkim czasie można
+    policzyć bez identyfikowania poszczególnych użytkownikow.
+  </p>
+  <p>
+    Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f
+    <abbr>RODO</abbr>) polegający na sprawdzaniu, które wpisy są czytane, przy
+    użyciu metody dobranej tak, aby nikogo nie identyfikować.
+  </p>
+
+  <h2>Gdzie to działa</h2>
+  <p>
+    Strona jest hostowana przez Netlify, a zapytania do serwera analityki
+    przekazywane są przez Cloudflare działający jako reverse proxy. Obie firmy
+    prowadzą krótkotrwałe logi dostępu (<abbr>IP</abbr>, czas, adres strony,
+    user agent) na potrzeby dostarczania treści, bezpieczeństwa i
+    przeciwdziałania nadużyciom. Obie są moimi podmiotami przetwarzającymi i
+    nie mogą wykorzystywać tych danych do własnych celów. Obie mają siedzibę w
+    <abbr>USA</abbr>, więc wiąże się to z przekazaniem danych poza
+    <abbr>EOG</abbr>—na podstawie zawartych z nimi umów powierzenia, które
+    obejmują standardowe klauzule umowne Komisji Europejskiej.
+  </p>
+
+  <h2>Twoja przeglądarka</h2>
+  <p>
+    Wszystkie zasoby—czcionki, obrazy, arkusze stylów, skrypty—serwowane są z
+    zanlib.dev. Nic nie jest ładowane z <abbr>CDN</abbr>, serwisu z fontami, sieci
+    reklamowej ani widgetu społecznościowego. Jedyny inny host, z którym łączy
+    się Twoja przeglądarka, to opisany wyżej serwer analityki.
+  </p>
+  <p>
+    Wybór trybu jasnego lub ciemnego zapisywany jest w pamięci lokalnej
+    przeglądarki pod kluczem <code>theme</code>. Pozostaje na Twoim urządzeniu.
+  </p>
+  <p>
+    Odnośniki do innych stron, w tym skróty /github, /x i /linkedin, prowadzą
+    do serwisów z własnymi politykami.
+  </p>
+
+  <h2>Twoje prawa</h2>
+  <p>
+    Napisz na <a href="mailto:hello@zanlib.dev">hello@zanlib.dev</a>, aby
+    zażądać dostępu do danych, ich sprostowania, usunięcia, przeniesienia lub
+    wnieść sprzeciw wobec przetwarzania. Dane analityczne nie zawierają niczego,
+    co dałoby się powiązać z Tobą, więc zwykle nie ma czego wydawać ani usuwać;
+    korespondencję e-mail mogę obsłużyć bezpośrednio. Możesz też złożyć skargę
+    do Prezesa <abbr>UODO</abbr> (<a href="https://uodo.gov.pl">uodo.gov.pl</a>).
+  </p>
+</PrivacyPage>

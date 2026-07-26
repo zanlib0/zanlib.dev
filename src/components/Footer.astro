@@ -1,12 +1,20 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import Socials from "./Socials.astro";
+import { getFooterLinks, type Locale } from "../i18n/ui";
 
 const today = new Date();
 const currentLocale = Astro.currentLocale || 'en';
+const locale: Locale = currentLocale === 'pl' ? 'pl' : 'en';
+const t = getFooterLinks(locale);
+const privacyUrl = getRelativeLocaleUrl(currentLocale, '/privacy');
 ---
 
 <footer>
-	<h6>zanlib.dev &copy; {today.getFullYear()} &bull; Est. 2017</h6>
+	<h6>
+		zanlib.dev &copy; {today.getFullYear()} &bull; Est. 2017 &bull;
+		<a href={privacyUrl}>{t.privacy}</a>
+	</h6>
 	<Socials lang={currentLocale} />
 </footer>
 <style>
@@ -15,6 +23,14 @@ const currentLocale = Astro.currentLocale || 'en';
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+	}
+	h6 a {
+		color: inherit;
+		text-decoration: none;
+	}
+	h6 a:hover {
+		color: rgb(var(--gray-dark));
+		text-decoration: underline;
 	}
 	.social-links {
 		display: flex;

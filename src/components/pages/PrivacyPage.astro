@@ -1,0 +1,55 @@
+---
+import BaseHead from '../BaseHead.astro';
+import Footer from '../Footer.astro';
+import Header from '../Header.astro';
+
+interface Props {
+  t: {
+    lang: 'en' | 'pl';
+    title: string;
+    description: string;
+    navLinks: {
+      articles: string;
+      projects: string;
+      about: string;
+    };
+  };
+}
+
+const { t } = Astro.props;
+---
+
+<!doctype html>
+<html lang={t.lang}>
+  <head>
+    <BaseHead title={t.title} description={t.description} />
+  </head>
+  <body>
+    <Header active="privacy" navLinks={t.navLinks} />
+    <main>
+      <article class="prose">
+        <slot />
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+main {
+  width: calc(100% - 2em);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prose {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 3em 1em;
+  color: rgb(var(--gray-dark));
+}
+</style>
