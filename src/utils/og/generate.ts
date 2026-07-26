@@ -1,3 +1,5 @@
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import satori from 'satori';
 import sharp from 'sharp';
 import { getTemplate, formatDate, WIDTH, HEIGHT } from './templates';
@@ -10,53 +12,21 @@ interface GenerateOGImageProps {
   contentType: ContentType;
 }
 
-// Font cache to avoid redundant fetches during build
-const fontCache = new Map<string, ArrayBuffer>();
+// Anchored to the project root, not import.meta.url: this module is bundled into
+// dist/.prerender/chunks/ before it runs.
+const FONT_FILES = [
+  'public/fonts/eb-garamond.woff',
+  'src/utils/og/fonts/Ysabeau-SemiBold.ttf',
+  'src/utils/og/fonts/LeagueMono-Regular.ttf',
+] as const;
 
-async function fetchFont(url: string): Promise<ArrayBuffer> {
-  if (fontCache.has(url)) {
-    return fontCache.get(url)!;
-  }
+// Read once per build rather than per image.
+let fontsPromise: ReturnType<typeof readFonts> | undefined;
 
-  const response = await fetch(url);
-  const arrayBuffer = await response.arrayBuffer();
-  fontCache.set(url, arrayBuffer);
-  return arrayBuffer;
-}
-
-async function getFontFromGoogleAPI(
-  family: string,
-  weight: number = 400
-): Promise<ArrayBuffer> {
-  // Google Fonts CSS2 API URL
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:wght@${weight}&display=swap`;
-
-  // Fetch with older user-agent that returns TTF instead of WOFF2
-  const cssResponse = await fetch(cssUrl, {
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-    },
-  });
-
-  const css = await cssResponse.text();
-
-  // Extract font URL from CSS
-  const fontUrlMatch = css.match(/src:\s*url\(([^)]+)\)/);
-  if (!fontUrlMatch) {
-    throw new Error(`Could not find font URL for ${family}`);
-  }
-
-  const fontUrl = fontUrlMatch[1];
-  return fetchFont(fontUrl);
-}
-
-async function loadFonts() {
-  const [ebGaramond, leagueSpartan, jetbrainsMono] = await Promise.all([
-    getFontFromGoogleAPI('EB Garamond', 400),
-    getFontFromGoogleAPI('League Spartan', 600),
-    getFontFromGoogleAPI('JetBrains Mono', 400),
-  ]);
+async function readFonts() {
+  const [ebGaramond, ysabeau, leagueMono] = await Promise.all(
+    FONT_FILES.map((file) => readFile(resolve(process.cwd(), file)))
+  );
 
   return [
     {
@@ -66,18 +36,23 @@ async function loadFonts() {
       style: 'normal' as const,
     },
     {
-      name: 'League Spartan',
-      data: leagueSpartan,
+      name: 'Ysabeau',
+      data: ysabeau,
       weight: 600 as const,
       style: 'normal' as const,
     },
     {
       name: 'League Mono',
-      data: jetbrainsMono,
+      data: leagueMono,
       weight: 400 as const,
       style: 'normal' as const,
     },
   ];
+}
+
+function loadFonts() {
+  fontsPromise ??= readFonts();
+  return fontsPromise;
 }
 
 export async function generateOGImage(

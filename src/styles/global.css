@@ -17,7 +17,7 @@
 
 	--body-font: "EB Garamond", serif;
 	--heading-font: "EB Garamond", serif;
-	--sans-font: "League Spartan", sans-serif;
+	--sans-font: "Ysabeau", sans-serif;
 	--mono-font: "League Mono", monospace;
 
 	font-size: 16px;
@@ -45,17 +45,25 @@
 }
 
 @font-face {
-	font-family: "League Spartan";
-	src: url("/fonts/league-spartan-vf.woff") format("woff");
-	font-weight: 400;
+	font-family: "Ysabeau";
+	src: url("/fonts/ysabeau-vf.woff2") format("woff2");
+	font-weight: 1 1000;
 	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Ysabeau";
+	src: url("/fonts/ysabeau-italic-vf.woff2") format("woff2");
+	font-weight: 1 1000;
+	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "League Mono";
 	src: url("/fonts/league-mono-vf.woff") format("woff");
-	font-weight: 400;
+	font-weight: 100 800;
 	font-style: normal;
 	font-display: swap;
 }
@@ -129,7 +137,7 @@ h6 {
 	color: var(--foreground-subtle);
 	font-family: var(--sans-font);
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 strong, b {

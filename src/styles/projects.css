@@ -226,6 +226,8 @@ h6 {
 		h5 {
 			font-family: var(--sans-font);
 			margin-bottom: 0.25rem;
+			font-variant-ligatures: no-discretionary-ligatures contextual;
+			font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
 		}
 
 		p {

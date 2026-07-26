@@ -169,7 +169,7 @@ const articleTemplate = template({
 });
 
 const noteTemplate = template({
-  coreFontFamily: 'League Spartan',
+  coreFontFamily: 'Ysabeau',
   includeDate: true,
   type: 'note',
   fontSize: '74px',
