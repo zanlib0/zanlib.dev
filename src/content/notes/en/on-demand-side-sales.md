@@ -8,7 +8,7 @@ _Demand-Side Sales 101_ is Bob Moesta's book about selling by understanding how 
 
 The book is uneven. The first chapter is spent making a single point: that you should put yourself in the situation of the customer and work out what problem he has and what progress he is trying to make on it. The chapters then alternate between the perfunctory and the genuinely useful, and the useful ones are mostly the ones about interviewing. The material on the <abbr>JTBD</abbr> timeline, the case studies and the interviewing tips are worth the price of the whole thing; the rest can be skimmed without much loss.
 
-The best insight in my opinion is that most real growth comes from a struggling moment, not from the specifications of the product. This is as true of software as it is of anything else that gets sold, and it is the part that developers tend to find hardest to accept.
+The best insight in my opinion is that most real growth comes from a struggling moment, not from the specifications of the product. This is as true of software as it is of anything else that gets sold.
 
 The biggest problem is that there is absolutely no insight into how to acquire the first customer, which is the biggest problem for greenfield software. This book focuses a lot on how to conduct customer interviews to gain new insights into getting further sales and understanding your existing customers to nail down market fit, but has no comment on how to even convince them to sit down with you in the first place, or what to do before you even have any customers to speak of.
 
