@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import { getBio, type Locale } from "../i18n/ui";
+import selfie from '../assets/transparent.png';
+
+const currentLocale = Astro.currentLocale || 'en';
+const locale: Locale = currentLocale === 'pl' ? 'pl' : 'en';
+const t = getBio(locale);
+---
+
+<aside class="bio">
+	<hr />
+	<div class="card">
+		<Image width={100} height={100} src={selfie} alt={t.portraitAlt} class="portrait" />
+		<div class="details">
+			<h6 class="eyebrow">{t.writtenBy}</h6>
+			<h4 class="name">Marek Chotoborski</h4>
+			<p set:html={t.text} />
+		</div>
+	</div>
+</aside>
+
+<style>
+.bio {
+	margin-top: 5rem;
+
+	hr {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.card {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+
+	@media screen and (max-width: 550px) {
+		gap: 1rem;
+	}
+}
+
+.portrait {
+	flex: none;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+
+	@media screen and (max-width: 550px) {
+		width: 72px;
+		height: 72px;
+	}
+}
+
+.details {
+	min-width: 0;
+
+	p {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.4;
+		color: var(--foreground-subtle);
+		text-wrap: balance;
+	}
+}
+
+.eyebrow {
+	margin: 0;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: 0.1rem;
+	color: var(--foreground-subtle);
+}
+
+.name {
+	margin: 0.25rem 0 0 0;
+	letter-spacing: -0.03rem;
+}
+</style>

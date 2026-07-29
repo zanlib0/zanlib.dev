@@ -8,6 +8,11 @@ export const ui = {
 		footer: {
 			privacy: 'Privacy',
 		},
+		bio: {
+			writtenBy: 'Written by',
+			portraitAlt: 'Portrait',
+			text: 'Product engineer. I work with domain experts to turn their knowledge into software. If you have a problem you cannot yet put into words, my <a href="https://cal.zanlib.dev/zanlib">office hours</a> are open, or you can <a href="mailto:hello@zanlib.dev">write to me</a> directly.',
+		},
 	},
 	pl: {
 		nav: {
@@ -17,6 +22,11 @@ export const ui = {
 		},
 		footer: {
 			privacy: 'Prywatność',
+		},
+		bio: {
+			writtenBy: 'Autor',
+			portraitAlt: 'Portret',
+			text: 'Product engineer. Współpracuję z ekspertami domenowymi i przekuwam ich wiedzę w oprogramowanie. Jeśli masz problem, którego nie potrafisz jeszcze ubrać w słowa, <a href="https://cal.zanlib.dev/zanlib">umów spotkanie</a>—albo po prostu <a href="mailto:hello@zanlib.dev">napisz do mnie</a>.',
 		},
 	},
 } as const;
@@ -29,4 +39,8 @@ export function getNavLinks(locale: Locale) {
 
 export function getFooterLinks(locale: Locale) {
 	return ui[locale].footer;
+}
+
+export function getBio(locale: Locale) {
+	return ui[locale].bio;
 }
