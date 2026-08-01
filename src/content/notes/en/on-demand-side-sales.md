@@ -1,7 +1,6 @@
 ---
 pubDate: 31 Jul 2026
 title: On "Demand-Side Sales 101"
-wip: true
 ---
 
 _Demand-Side Sales 101_ is Bob Moesta's book about selling by understanding how people buy, which in practice means it is a book about [Jobs to be Done](https://jobstobedone.org) applied to the sales conversation rather than to product design. Moesta was one of the people around Clayton Christensen when the <abbr>JTBD</abbr> framing was being worked out, and the book reads like a practitioner's manual: fewer theories, more transcripts of people explaining why they bought a laptop, changed their banks or tried out a remote doctor's consultation.
