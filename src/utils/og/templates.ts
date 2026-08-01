@@ -1,6 +1,6 @@
 import { ogColors } from './colors';
 
-type ContentType = 'articles' | 'notes' | 'jots';
+type ContentType = 'articles' | 'notes' | 'jots' | 'site';
 
 interface TemplateProps {
   title?: string;
@@ -31,11 +31,13 @@ export const template = ({
   includeDate,
   type,
   fontSize,
+  byline,
 }: {
   coreFontFamily: string;
   type: string;
   includeDate: boolean;
     fontSize: string;
+  byline?: string;
 }) => (props: TemplateProps) => {
   return {
     type: 'div',
@@ -138,7 +140,7 @@ export const template = ({
                     color: ogColors.muted,
                     letterSpacing: '-0.02em',
                   },
-                  children: 'zanlib.dev',
+                  children: byline || 'zanlib.dev',
                 },
               },
               {
@@ -146,11 +148,11 @@ export const template = ({
                 props: {
                   style: {
                     fontFamily: 'EB Garamond',
-                    fontSize: '24px',
+                    fontSize: byline ? '40px' : '24px',
                     color: ogColors.brand,
-                    letterSpacing: '0.05em',
+                    letterSpacing: byline ? '-0.02em' : '0.05em',
                   },
-                  children: includeDate ? props.date : '',
+                  children: byline ? 'zanlib.dev' : includeDate ? props.date : '',
                 },
               },
             ],
@@ -182,8 +184,18 @@ const jotTemplate = template({
   fontSize: '48px',
 })
 
+const siteTemplate = template({
+  coreFontFamily: 'EB Garamond',
+  includeDate: false,
+  type: 'essays & notes',
+  fontSize: '84px',
+  byline: 'Marek Chotoborski',
+});
+
 export function getTemplate(props: TemplateProps) {
   switch (props.contentType) {
+    case 'site':
+      return siteTemplate(props);
     case 'articles':
       return articleTemplate(props);
     case 'notes':

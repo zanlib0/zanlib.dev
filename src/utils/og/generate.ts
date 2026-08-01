@@ -4,11 +4,11 @@ import satori from 'satori';
 import sharp from 'sharp';
 import { getTemplate, formatDate, WIDTH, HEIGHT } from './templates';
 
-type ContentType = 'articles' | 'notes' | 'jots';
+type ContentType = 'articles' | 'notes' | 'jots' | 'site';
 
 interface GenerateOGImageProps {
   title?: string;
-  pubDate: Date;
+  pubDate?: Date;
   contentType: ContentType;
 }
 
@@ -62,7 +62,7 @@ export async function generateOGImage(
 
   const template = getTemplate({
     title: props.title,
-    date: formatDate(props.pubDate),
+    date: props.pubDate ? formatDate(props.pubDate) : '',
     contentType: props.contentType,
   });
 
