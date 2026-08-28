@@ -1,7 +1,7 @@
 ---
 title: Naming Things
-pubDate: 11 May 2022
-updatedDate: 10 Nov 2025
+pubDate: 2022-05-11
+updatedDate: 2025-11-10
 description: One of the two hardest things in computer science, supposedly.
 ---
 

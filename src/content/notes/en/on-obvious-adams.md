@@ -1,6 +1,6 @@
 ---
 title: On "Obvious Adams"
-pubDate: 16 Nov 2025
+pubDate: 2025-11-16
 ---
 
 On the recommendation of Rory Sutherland in one of his TikTok reels I have recently read *Obvious Adams* by Robert Updegraff. _Obvious Adams_ is a book mostly about advertising and for advertisers, but actually I think much of the advice found there can apply to any profession whose job it is to understand a product domain and then act upon it. This is similar between programmers and advertisers—we have to understand a domain to build a functioning software solution, advertisers have to understand a domain to make a successful marketing campaign for it.

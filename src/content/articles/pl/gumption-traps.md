@@ -1,7 +1,7 @@
 ---
-pubDate: 4 Apr 2020
+pubDate: 2020-04-04
 title: Pułapki dzielności
-updatedDate: 10 Nov 2025
+updatedDate: 2025-11-10
 description: Pułapki dzielności to wewnętrzne i zewnętrzne przeszkody gaszące twój zapał. Zrozumienie ich daje narzędzia do zabezpieczenia jakości twojej pracy.
 ---
 

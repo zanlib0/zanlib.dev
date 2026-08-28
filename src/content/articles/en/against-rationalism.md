@@ -1,6 +1,6 @@
 ---
-pubDate: 11 Feb 2020
-updatedDate: 21 Jan 2026
+pubDate: 2020-02-11
+updatedDate: 2026-01-21
 title: Against Rationalism
 description: Reason alone cannot be the base of optimal decision-making.
 ---

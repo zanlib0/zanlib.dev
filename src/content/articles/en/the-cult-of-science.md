@@ -1,6 +1,6 @@
 ---
-pubDate: 19 May 2021
-updatedDate: 21 Jan 2026
+pubDate: 2021-05-19
+updatedDate: 2026-01-21
 title: The Cult of Science
 description: Scientism is a grim way with a dead end.
 ---

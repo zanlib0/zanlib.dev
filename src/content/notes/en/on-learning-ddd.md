@@ -1,5 +1,5 @@
 ---
-pubDate: 20 Jan 2026
+pubDate: 2026-01-20
 title: On "Learning DDD"
 ---
 

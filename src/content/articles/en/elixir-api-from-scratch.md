@@ -1,5 +1,5 @@
 ---
-pubDate: 23 Oct 2024
+pubDate: 2024-10-23
 title: Elixir API from Scratch
 description: Building a basic API without codegens.
 ---

@@ -1,5 +1,5 @@
 ---
-pubDate: 8 Dec 2025
+pubDate: 2025-12-08
 title: A Year of Ergonomics
 description: What I bought in 2025 to improve my workspace.
 ---

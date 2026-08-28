@@ -1,6 +1,6 @@
 ---
 pubDate: 2021-02-08T18:22:25.154Z
-updatedDate: 23 Nov 2025
+updatedDate: 2025-11-23
 title: Agile, Avant la Lettre
 description: The ideas in the agile mainfesto are older than one might think.
 ---

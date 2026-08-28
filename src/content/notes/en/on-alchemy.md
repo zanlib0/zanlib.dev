@@ -1,5 +1,5 @@
 ---
-pubDate: 7 Dec 2025
+pubDate: 2025-12-07
 title: On Rory Sutherland's "Alchemy"
 ---
 

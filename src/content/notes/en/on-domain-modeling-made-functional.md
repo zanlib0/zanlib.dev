@@ -1,5 +1,5 @@
 ---
-pubDate: 19 Mar 2026
+pubDate: 2026-03-19
 title: On "Domain Modeling Made Functional"
 ---
 Below are my rough notes on the Scott Wlaschin's book _Domain Modeling Made Functional_. I read it almost immediately following Khononov's _Learning Domain Driven Design_, so a contrasting analysis might be in order here.

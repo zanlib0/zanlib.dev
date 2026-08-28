@@ -1,7 +1,7 @@
 ---
 title: Nadawanie nazw
-pubDate: 11 May 2022
-updatedDate: 10 Nov 2025
+pubDate: 2022-05-11
+updatedDate: 2025-11-10
 description: Podobno jedna z dwóch najtrudniejszych rzeczy w informatyce.
 ---
 

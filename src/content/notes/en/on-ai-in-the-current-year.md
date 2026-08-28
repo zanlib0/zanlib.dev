@@ -1,5 +1,5 @@
 ---
-pubDate: 18 Aug 2026
+pubDate: 2026-08-18
 title: On AI in the Current Year
 ---
 

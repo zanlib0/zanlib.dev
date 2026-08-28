@@ -1,7 +1,7 @@
 ---
-pubDate: 4 Apr 2020
+pubDate: 2020-04-04
 title: Gumption Traps
-updatedDate: 10 Nov 2025
+updatedDate: 2025-11-10
 description: Gumption traps are the internal and external obstacles that drain your drive. Understanding them gives you tools to protect the quality of your work.
 ---
 

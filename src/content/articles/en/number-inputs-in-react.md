@@ -1,6 +1,6 @@
 ---
 title: Number Inputs in React
-pubDate: 11 May 2026
+pubDate: 2026-05-11
 description: The perils of restricted input
 ---
 

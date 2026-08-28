@@ -1,5 +1,5 @@
 ---
-pubDate: 8 Dec 2025
+pubDate: 2025-12-08
 title: Rok ergonomii
 description: Co kupiłem w 2025, aby poprawić swoje miejsce pracy.
 ---

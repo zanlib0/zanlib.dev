@@ -1,5 +1,5 @@
 ---
-pubDate: 27 Dec 2025
+pubDate: 2025-12-27
 title: On Pirsig's "Lila"
 ---
 

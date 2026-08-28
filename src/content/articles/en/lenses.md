@@ -1,5 +1,5 @@
 ---
-pubDate: 20 Jan 2023
+pubDate: 2023-01-20
 title: Lenses for Immutable Data
 description: A short discussion on the most basic of optics.
 ---

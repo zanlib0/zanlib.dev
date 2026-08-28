@@ -1,6 +1,6 @@
 ---
-pubDate: 19 Feb 2025
-updatedDate: 1 Mar 2026
+pubDate: 2025-02-19
+updatedDate: 2026-03-01
 title: Zustand Architecture Patterns
 description: A short guide on how to make Zustand work in a team.
 ---

@@ -1,5 +1,5 @@
 ---
-pubDate: 2 Jun 2021
+pubDate: 2021-06-02
 title: Circling the Drain
 description: A comparison of Ayn Rand to Chesterton.
 ---

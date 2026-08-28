@@ -1,6 +1,6 @@
 ---
-pubDate: 17 Jul 2025
-updatedDate: 20 Nov 2025
+pubDate: 2025-07-17
+updatedDate: 2025-11-20
 title: Quality in the Copycat World
 description: Sometimes technically correct is not the best kind of correct. It might not even be correct at all.
 ---

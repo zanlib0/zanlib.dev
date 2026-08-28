@@ -1,6 +1,6 @@
 ---
 title: Mistrzostwo i doskonałość
-pubDate: 20 Aug 2022
+pubDate: 2022-08-20
 description: Celem nie jest stworzenie doskonałości, ale osiągnięcie mistrzostwa.
 ---
 Często powtarzaną mantrą w zwinnym wytwarzaniu oprogramowania jest stwierdzenie "done is better than perfect" ("skończone jest lepsze niż doskonałe"). W kontekście biznesowym oprogramowania powierzchowna interpretacja tego aforyzmu jest oczywista i zrozumiała, ponieważ funkcjonalność, która jest skończona, ale słabo działająca, może wciąż przynosić wartość biznesową, w przeciwieństwie do funkcjonalności, która jest nadal w fazie rozwoju i nie znajduje się na produkcji. Jednak chociaż takie jest jego zamierzone znaczenie, nie daje ono żadnej użytecznej wskazówki dotyczącej tego, jak należy podchodzić do developmentu. Jako takie ma tendencję do sugerowania, że dozwolone jest pisanie brzydkiego kodu, który działa, i w gruncie rzeczy nie trzeba zgłębiać, dlaczego kod brzydki lub jak można go poprawić.

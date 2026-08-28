@@ -1,6 +1,6 @@
 ---
-pubDate: 31 Aug 2020
-updatedDate: 10 Nov 2025
+pubDate: 2020-08-31
+updatedDate: 2025-11-10
 title: Romantic Programming
 description: The dichotomy of people's approach to technology.
 ---

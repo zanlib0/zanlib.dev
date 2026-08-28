@@ -1,5 +1,5 @@
 ---
-pubDate: 18 Jan 2026
+pubDate: 2026-01-18
 title: Reliable Signals of Honest Intent
 description: It's better if the message comes in an expensive box.
 ---

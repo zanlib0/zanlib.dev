@@ -1,7 +1,7 @@
 ---
 title: On TypeScript's Flaws
-pubDate: 17 Aug 2024
-updatedDate: 1 Feb 2026
+pubDate: 2024-08-17
+updatedDate: 2026-02-01
 ---
 While looking to adopt a new technology, a development team typically gets together and tries to review its pros and cons. The trouble is the asymmetry of information: pros are easily available, if only for the landing page that each library or language proudly displays. Everyone knows that TS is a "superset of JS," or that Formik lets you build forms "without the tears". The cons are comparatively much more difficult to come by. Some issues with a technology will only manifest once the project has been going on for long enough time and the code-base has grown. Unless someone on the team has extensive prior experience with a technology, it is very difficult to evaluate it honestly.
 

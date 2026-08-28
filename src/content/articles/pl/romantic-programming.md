@@ -1,6 +1,6 @@
 ---
-pubDate: 31 Aug 2020
-updateDate: 10 Nov 2025
+pubDate: 2020-08-31
+updateDate: 2025-11-10
 title: Romantyzm programowania
 description: Dwa różne podejścia do technologii.
 ---

@@ -1,5 +1,5 @@
 ---
-pubDate: 11 Nov 2020
+pubDate: 2020-11-11
 title: Przypowieść o cieknącym kranie
 description: Dlaczego małe niedogodności psują nam humor.
 ---

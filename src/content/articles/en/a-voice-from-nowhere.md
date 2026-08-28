@@ -1,5 +1,5 @@
 ---
-pubDate: 24 Jul 2026
+pubDate: 2026-07-24
 title: A Voice From Nowhere
 description: The remnants of human understanding in generated content.
 ---

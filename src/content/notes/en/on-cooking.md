@@ -1,6 +1,6 @@
 ---
 title: On Cooking for Developers
-pubDate: 4 Jul 2026
+pubDate: 2026-07-04
 ---
 
 The inspiration for this post is the fact that I had the same conversation recently repeat with three different friends of mine in the tech industry, all in all very well-earning people, complaining that they have trouble making ends meet because takeout, delivery, and box diets have become so expensive. Upon my comment on why aren't they cooking at home, they just replied with "I can't cook," and thought that settled the matter.

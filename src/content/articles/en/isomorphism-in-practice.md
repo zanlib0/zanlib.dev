@@ -1,5 +1,5 @@
 ---
-pubDate: 14 Oct 2022
+pubDate: 2022-10-14
 title: Isomorphism in Practice
 description: There are many kinds of equality.
 ---

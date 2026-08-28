@@ -1,5 +1,5 @@
 ---
-pubDate: 11 Dec 2025
+pubDate: 2025-12-11
 title: On Hofstadter and Sander's "Surfaces and Essences"
 ---
 

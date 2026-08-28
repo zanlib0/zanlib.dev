@@ -1,7 +1,7 @@
 ---
 title: On Prettier
-pubDate: 14 Jun 2021
-updatedDate: 11 Feb 2026
+pubDate: 2021-06-14
+updatedDate: 2026-02-11
 ---
 Reasons against enforcing Prettier globally on a code-base. Also applies to other "deterministic"/AST-based reprinting formatters such as Biome or dprint.
 - The way code is formatted also conveys information and programmer's intent. Unless a specific formatting convention breaks explicit rules, there might be multiple ways of structuring white space in code to convey different kinds of intent.

@@ -1,5 +1,5 @@
 ---
-pubDate: 21 Jul 2021
+pubDate: 2021-07-21
 title: High Trust Society
 description: The rise of trust brokers eroded our trust in one another.
 ---

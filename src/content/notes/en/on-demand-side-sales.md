@@ -1,5 +1,5 @@
 ---
-pubDate: 31 Jul 2026
+pubDate: 2026-07-31
 title: On "Demand-Side Sales 101"
 ---
 

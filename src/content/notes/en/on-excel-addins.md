@@ -1,6 +1,6 @@
 ---
 pubDate: 2021-01-21T17:18:45.365Z
-updatedDate: 21 Jan 2026
+updatedDate: 2026-01-21
 title: On Excel Add-ins in React
 ---
 In the beginning, programmers invented code. But businesspeople found code too complex, and they wanted something simpler. So programmers invented Microsoft Excel.

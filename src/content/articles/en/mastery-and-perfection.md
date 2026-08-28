@@ -1,6 +1,6 @@
 ---
 title: Mastery and Perfection
-pubDate: 20 Aug 2022
+pubDate: 2022-08-20
 description: One should not aim to create the perfect, but to become a master.
 ---
 An oft-repeated mantra in agile software development is that "done is better than perfect." Within the business context of software the surface reading of this aphorism is obvious and self-evident, as a feature that done but poorly functioning might still bringing business value, in contrast to a feature that is still in development and not in production. However, while that is its intended meaning, it does not give any useful advice to how development should be approached and as such tends to suggest that it is permissible to write ugly code that works and never learn anything about why it is ugly or how it can be improved.
@@ -20,4 +20,3 @@ Instead of perfection of the code, one should strive for the mastery as the prog
 Careful and deliberate consideration of the solutions already developed and eagerness to look for improvements is another proclivity which distinguishes novices from masters. A novice might finish developing a feature, commit it to the repository, consider his work complete and find something else to do. A master understands that most likely some shortcuts were taken in order to deliver the feature on time and documents possible future improvements or directions for developing planned extensions. Aspiring to mastery means looking for this as well, while understanding that those improvements might not be necessary within the current business context.
 
 There is a difference between mastery and seniority, too. Seniority is a much broader concept, referring more to team-building enterprises, where one is responsible for ensuring that the entire team’s skills are utilised as best as possible. In contrast, mastery is a purely individual pursuit that exists only between the programmer and his tools.
-
