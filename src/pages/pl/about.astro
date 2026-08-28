@@ -1,9 +1,11 @@
 ---
 import AboutPage from '../../components/pages/AboutPage.astro';
+import { PAGE_METADATA } from '../../consts';
 import { getNavLinks } from '../../i18n/ui';
 
 const t = {
 	lang: 'pl' as const,
+	...PAGE_METADATA.pl.about,
 	navLinks: getNavLinks('pl'),
 };
 ---

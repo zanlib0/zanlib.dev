@@ -3,27 +3,41 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import { SEO } from 'astro-seo';
-import { getSiteMetadata } from '../consts';
+import {
+	AUTHOR,
+	AUTHOR_INTRO,
+	OG_LOCALES,
+	SITE_TITLE,
+	SITE_URL,
+	WEBSITE_ID,
+	getSiteMetadata,
+	type Locale,
+} from '../consts';
 
 interface Props {
 	title?: string;
 	description?: string;
 	ogImage?: string;
+	translationAvailable?: boolean;
+	structuredData?: 'website' | 'profilePage';
 	articleMeta?: {
 		publishedTime: Date;
 		modifiedTime?: Date;
+		headline?: string;
 	};
 }
 
-const currentLocale = Astro.currentLocale || 'en';
+const currentLocale: Locale = Astro.currentLocale === 'pl' ? 'pl' : 'en';
 const siteMetadata = getSiteMetadata(currentLocale);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {
 	title = siteMetadata.title,
-	description = siteMetadata.description,
+	description,
 	ogImage = '/og/zanlib.png',
+	translationAvailable = true,
+	structuredData,
 	articleMeta,
 } = Astro.props;
 
@@ -33,27 +47,96 @@ const siteTitle = siteMetadata.title;
 const fullTitle = title === siteTitle ? siteTitle : `${title} • ${siteTitle}`;
 
 const pathname = Astro.url.pathname;
-const isPolish = pathname.startsWith('/pl/');
+const isPolish = currentLocale === 'pl';
 
 const [enPath, plPath] = isPolish
   // Polish page: remove /pl prefix for English version
   ? [pathname.replace(/^\/pl/, '') || '/', pathname]
   // English page: add /pl prefix for Polish version
-  : [pathname, `/pl${pathname === '/' ? '' : pathname}`]
+  : [pathname, pathname === '/' ? '/pl/' : `/pl${pathname}`]
 
-const languageAlternates = [
-	{ hrefLang: 'en', href: new URL(enPath, Astro.site).href },
-	{ hrefLang: 'pl', href: new URL(plPath, Astro.site).href },
-	{ hrefLang: 'x-default', href: new URL(enPath, Astro.site).href },
-];
+const languageAlternates = translationAvailable
+	? [
+			{ hrefLang: 'en', href: new URL(enPath, Astro.site).href },
+			{ hrefLang: 'pl', href: new URL(plPath, Astro.site).href },
+			{ hrefLang: 'x-default', href: new URL(enPath, Astro.site).href },
+		]
+	: undefined;
+
+const aboutURL = new URL(currentLocale === 'pl' ? '/pl/about/' : '/about/', Astro.site).href;
+const alternateLocale = currentLocale === 'pl' ? OG_LOCALES.en : OG_LOCALES.pl;
 
 const ogType = articleMeta ? 'article' : 'website';
 const openGraphArticle = articleMeta
 	? {
 			publishedTime: articleMeta.publishedTime.toISOString(),
 			modifiedTime: articleMeta.modifiedTime?.toISOString(),
+			authors: [aboutURL],
 		}
 	: undefined;
+
+const person = {
+	'@type': 'Person',
+	'@id': AUTHOR.id,
+	name: AUTHOR.name,
+	url: aboutURL,
+	description: AUTHOR_INTRO[currentLocale],
+	jobTitle: AUTHOR.jobTitle,
+	sameAs: AUTHOR.sameAs,
+};
+
+let jsonLd: Record<string, unknown> | undefined;
+
+if (articleMeta) {
+	jsonLd = {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'BlogPosting',
+				'@id': `${canonicalURL.href}#blogposting`,
+				url: canonicalURL.href,
+				mainEntityOfPage: {
+					'@type': 'WebPage',
+					'@id': canonicalURL.href,
+				},
+				headline: articleMeta.headline ?? title,
+				...(description ? { description } : {}),
+				image: ogImageUrl,
+				datePublished: articleMeta.publishedTime.toISOString(),
+				...(articleMeta.modifiedTime
+					? { dateModified: articleMeta.modifiedTime.toISOString() }
+					: {}),
+				inLanguage: currentLocale,
+				author: { '@id': AUTHOR.id },
+				isPartOf: { '@id': WEBSITE_ID },
+			},
+			person,
+		],
+	};
+} else if (structuredData === 'profilePage') {
+	jsonLd = {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'ProfilePage',
+				'@id': `${canonicalURL.href}#profilepage`,
+				url: canonicalURL.href,
+				name: title,
+				inLanguage: currentLocale,
+				mainEntity: { '@id': AUTHOR.id },
+			},
+			person,
+		],
+	};
+} else if (structuredData === 'website') {
+	jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		'@id': WEBSITE_ID,
+		url: SITE_URL,
+		name: SITE_TITLE,
+	};
+}
 ---
 
 <!-- Global Metadata -->
@@ -84,22 +167,31 @@ const openGraphArticle = articleMeta
 		basic: {
 			title: fullTitle,
 			type: ogType,
-			url: Astro.url.href,
+			url: canonicalURL.href,
 			image: ogImageUrl,
 		},
 		optional: {
-			description: description,
+			description,
+			locale: OG_LOCALES[currentLocale],
+			localeAlternate: translationAvailable ? [alternateLocale] : undefined,
+			siteName: SITE_TITLE,
 		},
 		article: openGraphArticle,
 	}}
 	twitter={{
 		card: 'summary_large_image',
 		title: fullTitle,
-		description: description,
+		description,
 		image: ogImageUrl,
+		creator: AUTHOR.twitterHandle,
 	}}
 	languageAlternates={languageAlternates}
+	extend={{
+		meta: [{ name: 'author', content: AUTHOR.name }],
+	}}
 />
+
+{jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
 <script
 	is:inline

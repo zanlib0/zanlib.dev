@@ -11,6 +11,8 @@ import selfieLight from '../../assets/selfie-light.jpg'
 interface Props {
 	t: {
 		lang: 'en' | 'pl';
+		title: string;
+		description: string;
 		portraitAlt: string;
 		subtitle: string;
 		paragraph1: string;
@@ -30,7 +32,7 @@ const { t } = Astro.props;
 <!doctype html>
 <html lang={t.lang}>
 	<head>
-		<BaseHead />
+		<BaseHead title={t.title} description={t.description} structuredData="website" />
 	</head>
 	<body>
 		<Header active="index" navLinks={t.navLinks} />
@@ -43,7 +45,7 @@ const { t } = Astro.props;
 			</div>
 
 			<div class="column">
-				<h2>Marek Chotoborski</h2>
+				<h2>{t.title}</h2>
 				<h5 class="subtitle">{t.subtitle}</h5>
 
 				<hr class="brand" />

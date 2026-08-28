@@ -8,8 +8,8 @@ const articles = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string().optional(),
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
+			pubDate: z.date(),
+			updatedDate: z.date().optional(),
 			wip: z.boolean().optional().default(false),
 		}),
 });
@@ -18,8 +18,8 @@ const notes = defineCollection({
 	loader: glob({ base: './src/content/notes', pattern: '**/*.{md,mdx}' }),
 	schema: () => z.object({
 		title: z.string(),
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+		pubDate: z.date(),
+		updatedDate: z.date().optional(),
 		wip: z.boolean().optional().default(false),
 	})
 })
@@ -27,8 +27,8 @@ const notes = defineCollection({
 const jots = defineCollection({
 	loader: glob({ base: './src/content/jots', pattern: '**/*.md' }),
 	schema: () => z.object({
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+		pubDate: z.date(),
+		updatedDate: z.date().optional(),
 		wip: z.boolean().optional().default(false),
 	})
 })

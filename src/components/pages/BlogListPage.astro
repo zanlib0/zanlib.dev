@@ -13,6 +13,8 @@ interface Props {
 	posts: Post[];
 	t: {
 		lang: 'en' | 'pl';
+		title: string;
+		description: string;
 		readText: string;
 		articles: string,
 		notes: string,
@@ -31,7 +33,7 @@ const { posts, t } = Astro.props;
 <!doctype html>
 <html lang={t.lang}>
 	<head>
-		<BaseHead />
+		<BaseHead title={t.title} description={t.description} />
 	</head>
 	<body>
 		<Header active="blog" navLinks={t.navLinks} />

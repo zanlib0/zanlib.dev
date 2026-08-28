@@ -1,19 +1,14 @@
 ---
+import { formatDate } from '../utils/formatDate';
+
 interface Props {
 	date: Date;
 }
 
 const { date } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
-const localeForDateFormat = currentLocale === 'pl' ? 'pl' : 'en-uk';
 ---
 
 <time datetime={date.toISOString()} class="date">
-	{
-		date.toLocaleDateString(localeForDateFormat, {
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric',
-		})
-	}
+	{formatDate(date, currentLocale)}
 </time>

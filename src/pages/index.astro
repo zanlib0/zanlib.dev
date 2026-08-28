@@ -1,12 +1,14 @@
 ---
 import HomePage from '../components/pages/HomePage.astro';
+import { AUTHOR, AUTHOR_INTRO, PAGE_METADATA } from '../consts';
 import { getNavLinks } from '../i18n/ui';
 
 const t = {
 	lang: 'en' as const,
+	...PAGE_METADATA.en.home,
 	portraitAlt: 'Portrait',
-	subtitle: 'Product Engineer',
-	paragraph1: 'I work with domain experts to turn their knowledge into software. Whether that\'s clinical trials for cancer research or enterprise accounting systems, I learn enough about the field to understand the problem and help decide what to build.',
+	subtitle: AUTHOR.jobTitle,
+	paragraph1: AUTHOR_INTRO.en,
 	contactHeading: 'Get in touch',
 	bookAMeeting: 'Book a meeting',
 	navLinks: getNavLinks('en'),

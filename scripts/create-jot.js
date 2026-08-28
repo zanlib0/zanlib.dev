@@ -24,9 +24,7 @@ const seconds = String(now.getSeconds()).padStart(2, '0');
 const filename = `${day}${month}${year}${hours}${minutes}${seconds}.md`;
 const filepath = join(__dirname, '..', 'src', 'content', 'jots', lang, filename);
 
-// Format pubDate: "18 Nov 2025"
-const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const pubDate = `${now.getDate()} ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+const pubDate = `${year}-${month}-${day}`;
 
 const content = `---
 pubDate: ${pubDate}

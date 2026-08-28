@@ -9,6 +9,8 @@ import sea from '../../assets/sea.jpg';
 interface Props {
   t: {
     lang: 'en' | 'pl';
+    title: string;
+    description: string;
     navLinks: {
       articles: string;
       projects: string;
@@ -23,7 +25,7 @@ const { t } = Astro.props;
 <!doctype html>
 <html lang={t.lang}>
   <head>
-    <BaseHead />
+    <BaseHead title={t.title} description={t.description} structuredData="profilePage" />
   </head>
   <body>
     <Header active="about" navLinks={t.navLinks} />

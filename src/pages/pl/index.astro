@@ -1,12 +1,14 @@
 ---
 import HomePage from '../../components/pages/HomePage.astro';
+import { AUTHOR, AUTHOR_INTRO, PAGE_METADATA } from '../../consts';
 import { getNavLinks } from '../../i18n/ui';
 
 const t = {
 	lang: 'pl' as const,
+	...PAGE_METADATA.pl.home,
 	portraitAlt: 'Portret',
-	subtitle: 'Product Engineer',
-	paragraph1: 'Buduję oprogramowanie razem z ekspertami domenowymi, którzy znają problem od środka. Uczę się od nich tak, by dobrze zrozumieć ich pracę i wspólnie podejmować decyzje o tym, co warto budować. Tak pracowałem między innymi nad narzędziami do planowania badań klinicznych i systemami księgowymi dla dużych firm.',
+	subtitle: AUTHOR.jobTitle,
+	paragraph1: AUTHOR_INTRO.pl,
 	contactHeading: 'Kontakt',
 	bookAMeeting: 'Umów spotkanie',
 	navLinks: getNavLinks('pl'),

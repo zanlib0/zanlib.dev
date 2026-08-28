@@ -1,5 +1,6 @@
 ---
 import BlogListPage from '../../../components/pages/BlogListPage.astro';
+import { PAGE_METADATA } from '../../../consts';
 import { collectPosts } from '../../../utils/collectPosts';
 import { getNavLinks } from '../../../i18n/ui';
 
@@ -7,6 +8,7 @@ const posts = await collectPosts('pl')
 
 const t = {
 	lang: 'pl' as const,
+	...PAGE_METADATA.pl.blog,
 	readText: 'Czytaj',
 	articles: 'Artykuły',
 	notes: 'Notatki',

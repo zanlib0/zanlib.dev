@@ -4,7 +4,7 @@ import Bio from '../components/Bio.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_TITLE } from '../consts';
+import { formatDate } from '../utils/formatDate';
 import '../styles/marginnotes.css';
 import '../styles/blogpost.css';
 
@@ -27,19 +27,52 @@ type Props = {
 	};
 };
 
-const { title = null, description, pubDate, updatedDate, collection, slug, wip = false, translationAvailable, t } = Astro.props;
+const { title, description, pubDate, updatedDate, collection, slug, wip = false, translationAvailable, t } = Astro.props;
 const currentLocale = Astro.currentLocale || 'en';
+const isJot = collection === 'jots';
+const jotPrefix = currentLocale === 'pl' ? 'Szkic' : 'Jot';
+const formattedPubDate = formatDate(pubDate, currentLocale);
+const postTitle = isJot ? `${jotPrefix}, ${formattedPubDate}` : title!;
 
 const articleMeta = {
 	publishedTime: pubDate,
 	modifiedTime: updatedDate,
+	headline: postTitle,
 };
 
 const ogImage = slug ? `/og/${currentLocale}/${slug}.png` : undefined;
+
+type DateLineItem = {
+	date: Date;
+	prefix?: string;
+	className?: string;
+};
+
+const dateLineItems: DateLineItem[] = [];
+
+if (!isJot) {
+	dateLineItems.push({ date: pubDate });
+}
+
+if (updatedDate) {
+	const separator = dateLineItems.length > 0 ? '• ' : '';
+
+	dateLineItems.push({
+		date: updatedDate,
+		prefix: `${separator}${t.lastUpdatedText} `,
+		className: 'last-updated-on',
+	});
+}
 ---
 <html lang={currentLocale}>
 	<head>
-		<BaseHead title={title || SITE_TITLE} description={description} ogImage={ogImage} articleMeta={articleMeta} />
+		<BaseHead
+			title={postTitle}
+			description={description}
+			ogImage={ogImage}
+			articleMeta={articleMeta}
+			{translationAvailable}
+		/>
 	</head>
 
 	<body>
@@ -48,19 +81,26 @@ const ogImage = slug ? `/og/${currentLocale}/${slug}.png` : undefined;
 			<article class={collection}>
 				<div class="prose">
 					<div class="title">
-						<h1>{title}</h1>
-						<div class="date">
-							<h6>
-								<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<span class="last-updated-on">
-								&bull; {t.lastUpdatedText} <FormattedDate date={updatedDate} />
-									</span>
-								)
-							}
-							</h6>
-						</div>
+						{
+							isJot ? (
+								<h1 class="jot-title"><span class="sr-only">{jotPrefix}, </span>{formattedPubDate}</h1>
+							) : (
+								<h1>{postTitle}</h1>
+							)
+						}
+						{
+							dateLineItems.length > 0 && (
+								<div class="date">
+									<h6>
+										{dateLineItems.map(({ date, prefix, className }) => (
+											<span class={className}>
+												{prefix}<FormattedDate {date} />
+											</span>
+										))}
+									</h6>
+								</div>
+							)
+						}
 						<hr />
 					</div>
 					{wip && (
@@ -145,6 +185,15 @@ article.jots {
 }
 .title h1 {
 	margin: 0 0 1rem 0;
+}
+.title h1.jot-title {
+	margin: 0 0 0.5rem 0;
+	color: var(--foreground-subtle);
+	font-family: var(--sans-font);
+	font-size: inherit;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 }
 .date {
 	margin-bottom: 0.5em;
