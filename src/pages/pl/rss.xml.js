@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { getSiteMetadata } from '../../consts';
+import { RSS_LOCALES, getSiteMetadata } from '../../consts';
 import { collectPosts } from '../../utils/collectPosts';
 
 export async function GET(context) {
@@ -10,6 +10,7 @@ export async function GET(context) {
 		title: siteMetadata.title,
 		description: siteMetadata.description,
 		site: context.site,
+		customData: `<language>${RSS_LOCALES.pl}</language>`,
 		items: posts.map((post) => ({
 			title: post.data.title || '',
 			description: post.data.description || '',

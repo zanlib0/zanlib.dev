@@ -63,6 +63,17 @@ const languageAlternates = translationAvailable
 		]
 	: undefined;
 
+const rssFeeds = {
+	en: { hreflang: 'en', href: new URL('rss.xml', Astro.site).href },
+	pl: { hreflang: 'pl', href: new URL('pl/rss.xml', Astro.site).href },
+} as const satisfies Record<Locale, { hreflang: Locale; href: string }>;
+
+const feedOrder: Locale[] = isPolish ? ['pl', 'en'] : ['en', 'pl'];
+const feeds = feedOrder.map((locale) => ({
+	...rssFeeds[locale],
+	title: `${SITE_TITLE} (${locale.toUpperCase()})`,
+}));
+
 const aboutURL = new URL(currentLocale === 'pl' ? '/pl/about/' : '/about/', Astro.site).href;
 const alternateLocale = currentLocale === 'pl' ? OG_LOCALES.en : OG_LOCALES.pl;
 
@@ -144,12 +155,17 @@ if (articleMeta) {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link
-	rel="alternate"
-	type="application/rss+xml"
-	title={siteMetadata.title}
-	href={new URL('rss.xml', Astro.site)}
-/>
+{
+	feeds.map((feed) => (
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			hreflang={feed.hreflang}
+			title={feed.title}
+			href={feed.href}
+		/>
+	))
+}
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->

@@ -26,6 +26,11 @@ export const OG_LOCALES = {
 	pl: 'pl_PL',
 } as const satisfies Record<Locale, string>;
 
+export const RSS_LOCALES = {
+	en: 'en-gb',
+	pl: 'pl-pl',
+} as const satisfies Record<Locale, string>;
+
 export const PAGE_METADATA = {
 	en: {
 		home: {
