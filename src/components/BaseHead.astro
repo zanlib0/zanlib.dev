@@ -18,6 +18,7 @@ interface Props {
 	title?: string;
 	description?: string;
 	ogImage?: string;
+	noindex?: boolean;
 	translationAvailable?: boolean;
 	structuredData?: 'website' | 'profilePage';
 	articleMeta?: {
@@ -36,6 +37,7 @@ const {
 	title = siteMetadata.title,
 	description,
 	ogImage = '/og/zanlib.png',
+	noindex = false,
 	translationAvailable = true,
 	structuredData,
 	articleMeta,
@@ -179,6 +181,7 @@ if (articleMeta) {
 	title={fullTitle}
 	description={description}
 	canonical={canonicalURL.href}
+	noindex={noindex}
 	openGraph={{
 		basic: {
 			title: fullTitle,
