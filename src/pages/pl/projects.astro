@@ -1,34 +1,13 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import Header from "../../components/Header.astro";
-import { getNavLinks } from "../../i18n/ui";
-
-import "../../styles/projects.css";
+import ProjectsPage from '../../components/pages/ProjectsPage.astro';
+import { PAGE_METADATA } from '../../consts';
+import { getNavLinks } from '../../i18n/ui';
 
 const t = {
-  lang: 'pl' as const,
-  navLinks: getNavLinks('pl'),
+	lang: 'pl' as const,
+	...PAGE_METADATA.pl.projects,
+	navLinks: getNavLinks('pl'),
 };
 ---
 
-<html lang={t.lang}>
-	<head>
-		<BaseHead />
-	</head>
-	<body>
-		<Header active="projects" navLinks={t.navLinks} />
-		<article>
-			<h6 id="exhibition-catalogue">Katalog Wystawy</h6>
-			<h1 id="main-heading"><em>Wybrane<br />projekty</em></h1>
-
-			<p class="intro">
-				Niewielka kolekcja ostatnich i bieżących prac, opatrzona komentarzami
-				dotyczącymi intencji, architektury i konkretnych problemów, którym
-				poświęcono uwagę w każdym z projektów.
-			</p>
-
-		</article>
-		<Footer />
-	</body>
-</html>
+<ProjectsPage {t} />

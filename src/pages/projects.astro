@@ -1,76 +1,13 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import { getNavLinks } from "../i18n/ui";
-
-import "../styles/projects.css";
+import ProjectsPage from '../components/pages/ProjectsPage.astro';
+import { PAGE_METADATA } from '../consts';
+import { getNavLinks } from '../i18n/ui';
 
 const t = {
-  lang: 'en' as const,
-  navLinks: getNavLinks('en'),
+	lang: 'en' as const,
+	...PAGE_METADATA.en.projects,
+	navLinks: getNavLinks('en'),
 };
 ---
 
-<html lang={t.lang}>
-	<head>
-		<BaseHead />
-	</head>
-	<body>
-		<Header active="projects" navLinks={t.navLinks} />
-		<article>
-			<h6 id="exhibition-catalogue">Catalogue Raisonné</h6>
-			<h1 id="main-heading">
-				<em>Works, attempts</em><br />
-				& other projects
-			</h1>
-
-			<p class="intro">
-				A selective register of all the various things I've done over the years.
-			</p>
-
-		</article>
-
-		<table class="projects-table">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Object</th>
-					<th>Beg.</th>
-					<th>End</th>
-					<th>Medium</th>
-					<th>State</th>
-					<th>Mag.</th>
-					<th>Publ.</th>
-					<th>Used</th>
-					<th>Again?</th>
-					<th>Moving?</th>
-					<th>Tags</th>
-					<th>Ref.</th>
-					<th>Etymology</th>
-					<th>Observation</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>zanlib.dev</td>
-					<td>2017</td>
-					<td>&mdash;</td>
-					<td>website</td>
-					<td>act.</td>
-					<td>1.0</td>
-					<td>yes</td>
-					<td>yes</td>
-					<td>yes</td>
-					<td>yes</td>
-					<td>Astro, MDX, TypeScript</td>
-					<td><a href="https://zanlib.dev/">web</a></td>
-					<td>A meaningless word, pronouncable both in Polish and English phonetic registers.</td>
-					<td>A bilingual commonplace book for essays, notes, and jots.</td>
-				</tr>
-			</tbody>
-		</table>
-		<Footer />
-	</body>
-</html>
+<ProjectsPage {t} />

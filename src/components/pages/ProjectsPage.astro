@@ -1,0 +1,165 @@
+---
+import BaseHead from '../BaseHead.astro';
+import Footer from '../Footer.astro';
+import Header from '../Header.astro';
+
+import {
+	MAGNITUDES,
+	MAGNITUDE_LABELS,
+	MEDIUM_LABELS,
+	STATES,
+	STATE_LABELS,
+	getCatalogueUi,
+	projects,
+	type Mark,
+} from '../../data/projects';
+
+import '../../styles/projects.css';
+
+interface Props {
+	t: {
+		lang: 'en' | 'pl';
+		title: string;
+		description: string;
+		navLinks: {
+			articles: string;
+			projects: string;
+			about: string;
+		};
+	};
+}
+
+const { t } = Astro.props;
+const lang = t.lang;
+const c = getCatalogueUi(lang);
+
+const states = STATE_LABELS[lang];
+const magnitudes = MAGNITUDE_LABELS[lang];
+const media = MEDIUM_LABELS[lang];
+
+const markGlyph = (mark: Mark) => (mark === true ? '●' : mark === false ? '○' : '');
+const markLabel = (mark: Mark) =>
+	mark === true ? c.markYes : mark === false ? c.markNo : c.markUnknown;
+
+const columns = [
+	'number',
+	'object',
+	'begin',
+	'end',
+	'medium',
+	'state',
+	'magnitude',
+	'published',
+	'used',
+	'again',
+	'moving',
+	'tags',
+	'refs',
+	'observation',
+	'etymology',
+] as const;
+
+type KeyEntry = { short: string; gloss: string; blank?: boolean };
+
+const glossaries: { heading: string; entries: KeyEntry[]; note?: string }[] = [
+	{ heading: c.keyState, entries: STATES.map((s) => states[s]) },
+	{
+		heading: c.keyMagnitude,
+		entries: MAGNITUDES.map((m) => magnitudes[m]),
+	},
+	{
+		heading: c.keyMarks,
+		entries: [
+			{ short: '●', gloss: c.markYes },
+			{ short: '○', gloss: c.markNo },
+			{ short: '', gloss: c.markUnknown, blank: true },
+		],
+	},
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={t.title} description={t.description} />
+	</head>
+	<body>
+		<Header active="projects" navLinks={t.navLinks} />
+
+		<article>
+			<h1 id="main-heading">
+				<em>{c.heading.line1}</em><br />
+				{c.heading.line2}
+			</h1>
+
+			<p class="intro">{c.intro}</p>
+		</article>
+
+		<section class="catalogue" aria-labelledby="main-heading">
+			<div class="catalogue-scroll">
+				<table class="projects-table">
+					<thead>
+						<tr>
+							{columns.map((key) => (
+								<th scope="col" class={`col-${key}`}>
+									{c.columns[key]}
+								</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{
+							projects.map((p, i) => (
+								<tr>
+									<td class="col-number">{String(i + 1).padStart(2, '0')}</td>
+									<th scope="row" class="col-object">{p.object}</th>
+									<td class="col-begin">{p.begin}</td>
+									<td class="col-end">{p.end ?? '—'}</td>
+									<td class="col-medium">{media[p.medium]}</td>
+									<td class="col-state">{states[p.state].short}</td>
+									<td class="col-magnitude">{magnitudes[p.magnitude].short}</td>
+									{(['published', 'used', 'again', 'moving'] as const).map((field) => (
+										<td class={`col-${field} mark`}>
+											<span aria-hidden="true">{markGlyph(p[field])}</span>
+											<span class="sr-only">{markLabel(p[field])}</span>
+										</td>
+									))}
+									<td class="col-tags">{p.tags.join(', ')}</td>
+									<td class="col-refs">
+										{p.refs.map((ref, i) => (
+											<>
+												{i > 0 && <span aria-hidden="true"> &middot; </span>}
+												<a href={ref.href}>{ref.label}</a>
+											</>
+										))}
+									</td>
+									<td class="col-observation" set:html={p.observation?.[lang] ?? ''} />
+									<td class="col-etymology" set:html={p.etymology?.[lang] ?? ''} />
+								</tr>
+							))
+						}
+					</tbody>
+				</table>
+			</div>
+
+			<div class="catalogue-key">
+				{glossaries.map(({ heading, entries, note }) => (
+					<section>
+						<h6>{heading}</h6>
+						<dl>
+							{entries.map((entry) => (
+								<>
+									<dt>{entry.blank ? <span class="blank-mark" /> : entry.short}</dt>
+									<dd>{entry.gloss}</dd>
+								</>
+							))}
+						</dl>
+						{note && <p class="gloss">{note}</p>}
+					</section>
+				))}
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

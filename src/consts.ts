@@ -45,6 +45,10 @@ export const PAGE_METADATA = {
 			title: 'About',
 			description: AUTHOR_INTRO.en,
 		},
+		projects: {
+			title: 'Projects',
+			description: 'A catalogue raisonné of works, attempts, and other projects: software, workshops, and communities, with dates, condition, and observations.',
+		},
 	},
 	pl: {
 		home: {
@@ -58,6 +62,10 @@ export const PAGE_METADATA = {
 		about: {
 			title: 'O mnie',
 			description: AUTHOR_INTRO.pl,
+		},
+		projects: {
+			title: 'Projekty',
+			description: 'Katalog dzieł: prace, próby i inne projekty—oprogramowanie, warsztaty i społeczności, wraz z datami, stanem i obserwacjami.',
 		},
 	},
 } as const satisfies Record<Locale, Record<string, { title: string; description: string }>>;
