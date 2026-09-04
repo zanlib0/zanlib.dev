@@ -25,8 +25,6 @@ article {
 	--object-width: 12rem;
 
 	padding-block: 0 4rem;
-	font-variant-ligatures: none;
-	font-feature-settings: normal;
 }
 
 .catalogue-scroll {
@@ -74,8 +72,7 @@ article {
 	}
 
 	:is(.col-begin, .col-end) { min-width: 4rem; }
-	:is(.col-medium, .col-state, .col-magnitude) { min-width: 6rem; }
-	.mark { min-width: 3.5rem; text-align: center; font-size: 0.8em; }
+	.mark { text-align: center; font-size: 0.8em; }
 	.col-tags { min-width: 9rem; }
 	.col-refs { min-width: 5rem; }
 	.col-etymology { min-width: 20rem; max-width: 24rem; font-style: italic; }
@@ -87,7 +84,6 @@ article {
 
 	:is(.col-observation, .col-etymology) {
 		white-space: normal;
-		font-variant-ligatures: common-ligatures;
 	}
 
 	a { color: inherit; text-decoration: underline; }
