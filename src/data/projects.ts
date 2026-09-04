@@ -232,7 +232,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'isolisp',
+		object: 'Isolisp',
 		begin: 2026,
 		end: null,
 		medium: 'interpreter',
@@ -254,7 +254,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'masthead',
+		object: 'Masthead',
 		begin: 2026,
 		end: null,
 		medium: 'library',
@@ -304,14 +304,14 @@ export const projects: Project[] = [
 		again: undefined,
 		moving: true,
 		tags: [],
-		refs: [{ label: 'web', href: 'https://www.youtube.com/@zanlib0' }],
+		refs: [{ label: 'yt', href: 'https://www.youtube.com/@zanlib0' }],
 		observation: {
 			en: 'Video essays in Polish, mostly reworked out of what is written here. The English trial run did not survive contact with the format.',
 			pl: 'Eseje wideo po polsku, przeważnie przerobione z tego, co napisane tutaj. Angielska próba nie przetrwała zderzenia z formatem.',
 		},
 	},
 	{
-		object: '@comet-sighted',
+		object: 'Comet Sighted',
 		begin: 2026,
 		end: null,
 		medium: 'youtube',
@@ -322,7 +322,7 @@ export const projects: Project[] = [
 		again: undefined,
 		moving: true,
 		tags: [],
-		refs: [{ label: 'web', href: 'https://www.youtube.com/@comet-sighted' }],
+		refs: [{ label: 'yt', href: 'https://www.youtube.com/@comet-sighted' }],
 		observation: {
 			en: 'Edited Anbennar campaigns, cut down from hours of recording to something worth sitting through.',
 			pl: 'Montowane kampanie z Anbennaru, skrócone z godzin nagrań do czegoś, co da się obejrzeć.',
@@ -343,7 +343,7 @@ export const projects: Project[] = [
 		refs: [],
 	},
 	{
-		object: 'pearview',
+		object: 'Pearview',
 		begin: 2026,
 		end: 2026,
 		medium: 'app',
@@ -365,7 +365,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'feiten',
+		object: 'Feiten',
 		begin: 2026,
 		end: 2026,
 		medium: 'app',
@@ -449,7 +449,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'daily-classics',
+		object: 'Daily Classics',
 		begin: 2025,
 		end: 2025,
 		medium: 'youtube',
@@ -722,7 +722,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'elbereth',
+		object: 'Elbereth',
 		begin: 2021,
 		end: 2021,
 		medium: 'app',
@@ -762,7 +762,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'oxenfurt',
+		object: 'Oxenfurt',
 		begin: 2019,
 		end: 2019,
 		medium: 'app',
@@ -784,20 +784,6 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'ozjasz',
-		begin: 2019,
-		end: 2019,
-		medium: 'app',
-		state: 'fin',
-		magnitude: 'hours',
-		published: false,
-		used: false,
-		again: undefined,
-		moving: false,
-		tags: ['ReasonML'],
-		refs: [],
-	},
-	{
 		object: 'Embrace',
 		begin: 2019,
 		end: 2019,
@@ -816,7 +802,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'manhattan',
+		object: 'Manhattan',
 		begin: 2018,
 		end: 2018,
 		medium: 'app',
@@ -838,7 +824,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'kallisti',
+		object: 'Kallisti',
 		begin: 2018,
 		end: 2018,
 		medium: 'app',
@@ -860,7 +846,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'golden',
+		object: 'Golden',
 		begin: 2017,
 		end: 2017,
 		medium: 'app',
@@ -882,7 +868,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'monolith',
+		object: 'Monolith',
 		begin: 2017,
 		end: 2017,
 		medium: 'app',
@@ -904,7 +890,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'hokusai',
+		object: 'Hokusai',
 		begin: 2017,
 		end: 2017,
 		medium: 'app',
@@ -926,7 +912,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'tsurugi',
+		object: 'Tsurugi',
 		begin: 2016,
 		end: 2017,
 		medium: 'app',
@@ -948,7 +934,7 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		object: 'architect',
+		object: 'Architect',
 		begin: 2017,
 		end: 2017,
 		medium: 'bot',
@@ -960,9 +946,5 @@ export const projects: Project[] = [
 		moving: false,
 		tags: ['JavaScript', 'Discord'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/architect' }],
-		observation: {
-			en: 'A Discord bot for the Discovery Freelancer community, from early enough that writing one was still a novelty.',
-			pl: 'Bot Discorda dla społeczności Discovery Freelancer, z czasów gdy napisanie takiego bota było jeszcze nowością.',
-		},
 	},
 ];
