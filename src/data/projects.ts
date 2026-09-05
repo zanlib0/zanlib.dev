@@ -205,12 +205,12 @@ export const projects: Project[] = [
 		tags: ['Astro', 'MDX', 'TypeScript'],
 		refs: [{ label: 'web', href: 'https://zanlib.dev/' }],
 		etymology: {
-			en: 'A meaningless word, pronounceable in both Polish and English phonetic registers.',
-			pl: 'Słowo bez znaczenia, wymawialne zarówno po polsku, jak i po angielsku.',
+			en: 'A meaningless word that can be pronounced in Polish and English.',
+			pl: 'Słowo bez znaczenia, które da się wymówić po polsku i po angielsku.',
 		},
 		observation: {
-			en: 'A bilingual commonplace book for articles, notes, and jots, each with its own typographic treatment.',
-			pl: 'Dwujęzyczny blog: artykuły, notatki i szkice.',
+			en: 'My blog for articles, notes and jots.',
+			pl: 'Mój blog na artykuły, notatki i szkice.',
 		},
 	},
 	{
@@ -227,8 +227,8 @@ export const projects: Project[] = [
 		tags: ['React Router 7', 'TypeScript', 'SQLite'],
 		refs: [{ label: 'web', href: 'https://vlvbione.pl' }],
 		observation: {
-			en: 'Review collection for small businesses: a customer scans a <abbr>QR</abbr> code, leaves feedback, and receives a coupon. Self-hosted end to end, Gitea and <abbr>CI</abbr> included, on a ThinkStation in my bookshelf. It still runs; the market answered with a clean no.',
-			pl: 'Zbieranie opinii dla małych firm: klient skanuje kod <abbr>QR</abbr>, zostawia opinię i dostaje kupon. Całość, razem z Gitem i <abbr>CI</abbr>, hostowana na ThinkStation na półce. Wciąż działa; rynek odpowiedział czystym nie.',
+			en: 'A review service for small businesses: scan a <abbr>QR</abbr> code, leave feedback, get a coupon. Self-hosted on a ThinkStation on my shelf. It works; failed to find users.',
+			pl: 'Serwis do zbierania opinii dla małych firm: skanujesz kod <abbr>QR</abbr>, zostawiasz opinię, dostajesz kupon. Hostowany na ThinkStation na mojej półce. Działa; nie znalazł użytkowników.',
 		},
 	},
 	{
@@ -245,12 +245,12 @@ export const projects: Project[] = [
 		tags: ['JavaScript'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/isolisp' }],
 		etymology: {
-			en: 'Greek <em>ísos</em>, equal—the same Lisp on both sides of the wire.',
-			pl: 'Greckie <em>ísos</em>, równy—ten sam Lisp po obu stronach łącza.',
+			en: 'Isomorphic Lisp.',
+			pl: 'Izomorficzny Lisp.',
 		},
 		observation: {
-			en: 'A Lisp that runs identically on the client and the server: define a validation rule once, evaluate it wherever it is needed.',
-			pl: 'Lisp działający identycznie po stronie klienta i serwera: regułę walidacji definiuje się raz, a oblicza tam, gdzie akurat trzeba.',
+			en: 'A Lisp for sharing business rules between the client and the server.',
+			pl: 'Lisp do współdzielenia reguł biznesowych między klientem a serwerem.',
 		},
 	},
 	{
@@ -270,12 +270,12 @@ export const projects: Project[] = [
 			{ label: 'docs', href: 'https://zanlib0.github.io/masthead/' },
 		],
 		observation: {
-			en: 'A letterpress design system drawn out of this blog’s own typography—rag paper, blue-black ink, hairline rules, twelve accents named after gemstones. It does not run the blog; it runs Feiten and Pearview.',
-			pl: 'System projektowy w duchu typografii drukarskiej, wyprowadzony z typografii samego bloga—czerpany papier, granatowo-czarny tusz, włosowe linie, dwanaście akcentów nazwanych od kamieni szlachetnych. Nie obsługuje bloga; obsługuje Feiten i Pearview.',
+			en: 'A <abbr>CSS</abbr> design system based on this blog’s typography.',
+			pl: 'System projektowy <abbr>CSS</abbr> oparty na typografii tego bloga.',
 		},
 	},
 	{
-		object: 'Catholic Programmers Discord',
+		object: 'Catholic Programmers',
 		begin: 2021,
 		end: null,
 		medium: 'community',
@@ -286,10 +286,10 @@ export const projects: Project[] = [
 		again: true,
 		moving: true,
 		tags: ['Discord'],
-		refs: [{ label: 'inv', href: 'https://discord.gg/NfVgpm3gvE' }],
+		refs: [{ label: 'discord', href: 'https://discord.gg/NfVgpm3gvE' }],
 		observation: {
-			en: 'An English-speaking community for Catholic software developers, which has outlived every other server I have joined.',
-			pl: 'Anglojęzyczna społeczność katolickich programistów, która przetrwała każdy inny serwer, na jaki kiedykolwiek wszedłem.',
+			en: 'An English-speaking Discord server for Catholic programmers.',
+			pl: 'Anglojęzyczny serwer na Discordzie dla katolickich programistów.',
 		},
 	},
 	{
@@ -298,7 +298,7 @@ export const projects: Project[] = [
 		end: null,
 		medium: 'youtube',
 		state: 'act',
-		magnitude: 'months',
+		magnitude: 'weeks',
 		published: true,
 		used: undefined,
 		again: undefined,
@@ -306,8 +306,8 @@ export const projects: Project[] = [
 		tags: [],
 		refs: [{ label: 'yt', href: 'https://www.youtube.com/@zanlib0' }],
 		observation: {
-			en: 'Video essays in Polish, mostly reworked out of what is written here. The English trial run did not survive contact with the format.',
-			pl: 'Eseje wideo po polsku, przeważnie przerobione z tego, co napisane tutaj. Angielska próba nie przetrwała zderzenia z formatem.',
+			en: 'Video essays in Polish, mostly based on articles from this blog.',
+			pl: 'Eseje wideo po polsku, przeważnie oparte na artykułach z tego bloga.',
 		},
 	},
 	{
@@ -324,8 +324,8 @@ export const projects: Project[] = [
 		tags: [],
 		refs: [{ label: 'yt', href: 'https://www.youtube.com/@comet-sighted' }],
 		observation: {
-			en: 'Edited Anbennar campaigns, cut down from hours of recording to something worth sitting through.',
-			pl: 'Montowane kampanie z Anbennaru, skrócone z godzin nagrań do czegoś, co da się obejrzeć.',
+			en: 'Edited <em>Europa Universalis IV</em> campaigns, second-monitor content for the map painters.',
+			pl: 'Kampanie z <em>Europy Universalis IV</em>.',
 		},
 	},
 	{
@@ -353,15 +353,15 @@ export const projects: Project[] = [
 		used: true,
 		again: undefined,
 		moving: false,
-		tags: ['Elixir', 'HTMX', 'SQLite'],
+		tags: ['Elixir', 'HTMX', 'SQLite', 'AI'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/pearview' }],
 		etymology: {
-			en: 'A nation from the <em>Europa Universalis IV</em> mod Anbennar.',
-			pl: 'Nacja z moda Anbennar do <em>Europa Universalis IV</em>.',
+			en: 'A nation tag in the <a href="https://anbennar.fandom.com/wiki/Duchy_of_Pearview" target="_blank">Anbennar mod</a>.',
+			pl: 'Państwo z moda <a href="https://anbennar.fandom.com/wiki/Duchy_of_Pearview" target="_blank">Anbennar</a>.',
 		},
 		observation: {
-			en: 'A shopping list for two, ordered by the route through the shop and sorted by a model that learns the aisles once and then keeps out of the way.',
-			pl: 'Lista zakupów dla dwojga, ułożona według trasy przez sklep i posortowana przez model, który raz uczy się alejek, a potem nie wchodzi w drogę.',
+			en: 'A shared shopping list that sorts by aisle order.',
+			pl: 'Wspólna lista zakupów, która sortuje według trasy.',
 		},
 	},
 	{
@@ -378,12 +378,12 @@ export const projects: Project[] = [
 		tags: ['Elixir', 'TimescaleDB', 'MQTT'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/feiten' }],
 		etymology: {
-			en: 'A nation from the <em>Europa Universalis IV</em> mod Anbennar.',
-			pl: 'Nacja z moda Anbennar do <em>Europa Universalis IV</em>.',
+			en: 'A nation tag in the <a href="https://anbennar.fandom.com/wiki/League_of_Feiten" target="_blank">Anbennar mod</a>.',
+			pl: 'Państwo z moda <a href="https://anbennar.fandom.com/wiki/League_of_Feiten" target="_blank">Anbennar</a>.',
 		},
 		observation: {
-			en: 'Air quality from a sensor on the shelf: readings over <abbr>MQTT</abbr>, kept as time series and drawn as charts. Conceived as a business, kept as proof that one sensor works.',
-			pl: 'Jakość powietrza z czujnika na półce: odczyty przez <abbr>MQTT</abbr>, trzymane jako szeregi czasowe i rysowane na wykresach. Pomyślane jako biznes, zachowane jako dowód, że jeden czujnik działa.',
+			en: 'Charts from an air-quality sensor on my windowsill.',
+			pl: 'Wykresy z czujnika jakości powietrza na moim parapecie.',
 		},
 	},
 	{
@@ -400,12 +400,12 @@ export const projects: Project[] = [
 		tags: ['Elixir'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/lispex' }],
 		etymology: {
-			en: 'Lisp, in <em>ex</em>—the customary suffix for an Elixir package.',
-			pl: 'Lisp z końcówką <em>ex</em>—zwyczajowym sufiksem pakietów Elixira.',
+			en: 'Lisp and <em>ex</em>, the usual suffix for Elixir packages.',
+			pl: 'Lisp i <em>ex</em>, zwyczajowy sufiks bibliotek Elixira.',
 		},
 		observation: {
-			en: 'A toy Lisp evaluator written to find out what pattern matching does to an interpreter loop.',
-			pl: 'Zabawkowy ewaluator Lispa, napisany żeby sprawdzić, co dopasowanie wzorców robi z pętlą interpretera.',
+			en: 'A toy Lisp evaluator rewritten in Elixir.',
+			pl: 'Zabawkowy Lisp przepisany w Elixirze.',
 		},
 	},
 	{
@@ -421,13 +421,9 @@ export const projects: Project[] = [
 		moving: false,
 		tags: ['Node.js'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/evalexpr' }],
-		etymology: {
-			en: 'Evaluate expression. The whole program is the name.',
-			pl: 'Evaluate expression—oblicz wyrażenie. Cały program mieści się w nazwie.',
-		},
 		observation: {
-			en: 'A Lisp in sixty-six lines, written as the companion to <a href="/blog/lisp-in-js">an article</a> and no longer than the article deserved.',
-			pl: 'Lisp w sześćdziesięciu sześciu liniach, napisany jako towarzysz <a href="/pl/blog/lisp-in-js">artykułu</a> i nie dłuższy, niż artykuł na to zasługiwał.',
+			en: 'A Lisp in sixty-six lines, written for <a href="/blog/lisp-in-js">an article</a>.',
+			pl: 'Lisp w sześćdziesięciu sześciu liniach, napisany do <a href="/pl/blog/lisp-in-js">artykułu</a>.',
 		},
 	},
 	{
@@ -454,7 +450,7 @@ export const projects: Project[] = [
 		end: 2025,
 		medium: 'youtube',
 		state: 'frag',
-		magnitude: 'weeks',
+		magnitude: 'days',
 		published: false,
 		used: false,
 		again: undefined,
@@ -462,8 +458,8 @@ export const projects: Project[] = [
 		tags: [],
 		refs: [],
 		observation: {
-			en: 'An English reimagining of <em>Breviarium Kanonu Kultury</em>: a few minutes a day through the canon, Homer onwards. Twenty episodes recorded and none released—they were not good enough.',
-			pl: 'Angielska reinterpretacja <em>Breviarium Kanonu Kultury</em>: kilka minut dziennie przez kanon, od Homera wzwyż. Nagranych dwadzieścia odcinków, wydany żaden—nie były dość dobre.',
+			en: 'A planned English podcast with readings of excerpts from classic literature for every day of the year. About twenty episodes recorded, but not released.',
+			pl: 'Planowany angielski podcast z fragmentami klasycznej literatury. 20 odcinków nagrane, ale nigdy nie wypuszczone.',
 		},
 	},
 	{
@@ -480,8 +476,8 @@ export const projects: Project[] = [
 		tags: ['React', 'Zustand'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/zustand-lens-form' }],
 		observation: {
-			en: 'The lens idea once more, this time over Zustand, so that a large form could update without redrawing all of itself. Built to be published and never published.',
-			pl: 'Znów pomysł z soczewkami, tym razem na Zustandzie, żeby duży formularz mógł się aktualizować bez przerysowywania się w całości. Zbudowane do publikacji i nigdy nieopublikowane.',
+			en: 'Experimental form library based on lenses and Zustand.',
+			pl: 'Eksperymentalna biblioteka do formularzy na soczewkach i Zustandzie.',
 		},
 	},
 	{
@@ -498,8 +494,8 @@ export const projects: Project[] = [
 		tags: ['JavaScript', 'React'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/slop' }],
 		observation: {
-			en: 'The frontend track of a two-week recruiting intensive for junior developers, covering the whole delivery path from product analysis to cloud deployment.',
-			pl: 'Ścieżka frontendowa dwutygodniowego intensywnego kursu rekrutacyjnego dla juniorów, obejmująca całą drogę wytwarzania—od analizy produktu po wdrożenie w chmurze.',
+			en: 'A two-week frontend recruitment course for junior developers, from product analysis to deployment.',
+			pl: 'Dwutygodniowy frontendowy kurs rekrutacyjny dla juniorów, od analizy produktu po deployment.',
 		},
 	},
 	{
@@ -534,8 +530,8 @@ export const projects: Project[] = [
 		tags: ['Elixir', 'Phoenix'],
 		refs: [],
 		observation: {
-			en: 'Eight hours on a Saturday, introducing functional programming to JavaScript developers who had not asked for it.',
-			pl: 'Osiem sobotnich godzin wprowadzania programistów JavaScriptu w programowanie funkcyjne, o które nie prosili.',
+			en: 'An eight-hour introduction to the <abbr>BEAM</abbr> for JavaScript developers.',
+			pl: 'Ośmiogodzinne wprowadzenie do <abbr>BEAM</abbr> dla programistów <abbr>JS</abbr>.',
 		},
 	},
 	{
@@ -555,8 +551,8 @@ export const projects: Project[] = [
 			{ label: 'npm', href: 'https://www.npmjs.com/package/fractal-form' },
 		],
 		observation: {
-			en: 'Forms built out of lenses rather than schemas, so that any nested piece of state composes on its own terms. The answer to Formuj, written three years later.',
-			pl: 'Formularze zbudowane z soczewek zamiast schematów, żeby każdy zagnieżdżony kawałek stanu składał się na własnych zasadach. Odpowiedź na Formuj, napisana trzy lata później.',
+			en: 'A lens-based form library.',
+			pl: 'Biblioteka formularzy oparta na soczewkach',
 		},
 	},
 	{
@@ -576,12 +572,12 @@ export const projects: Project[] = [
 			{ label: 'docs', href: 'https://github.com/zanlib0/formuj-docs' },
 		],
 		etymology: {
-			en: 'Polish imperative of <em>formować</em>, to form—and a pun on the forms it built.',
-			pl: 'Tryb rozkazujący od <em>formować</em>—i kalambur na formularzach, które budowała.',
+			en: 'A typo of "Formik," with the last two letters one spot to the left on the keyyboard.',
+			pl: 'Literówka od "formik", ostatnie dwie litery przesunięte w lewo na klawiaturze.',
 		},
 		observation: {
-			en: 'A form library on top of Formik, used in production. A mini-framework built to avoid writing forms, which is a good description of why it was a mistake.',
-			pl: 'Biblioteka formularzy zbudowana na Formiku, używana produkcyjnie. Mini-framework napisany po to, żeby nie pisać formularzy—co dobrze tłumaczy, dlaczego był pomyłką.',
+			en: 'A mini-framework over Formik that tried to simplify building forms.',
+			pl: 'Mini-framework na Formiku, który miał uprościć pisanie formularzy.',
 		},
 	},
 	{
@@ -598,12 +594,12 @@ export const projects: Project[] = [
 		tags: ['Elixir', 'Nostrum'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/rolex' }],
 		etymology: {
-			en: 'Roles, in <em>ex</em>. The watch is a coincidence and the joke is deliberate.',
-			pl: 'Role z końcówką <em>ex</em>. Zegarek to zbieg okoliczności, żart—zamierzony.',
+			en: 'Roles and <em>ex</em>, the usual Elixir suffix. Association with a watch brand is coincidental.',
+			pl: 'Role i <em>ex</em>, zwyczajowy sufiks Elixira. Powiązanie ze znaną marką zegarków jest przypadkowe.',
 		},
 		observation: {
-			en: 'A Discord bot that lets members of a server assign themselves programming-language roles without troubling anyone.',
-			pl: 'Bot Discorda pozwalający członkom serwera samodzielnie przypisywać sobie role językowe, bez zawracania głowy administracji.',
+			en: 'A Discord bot for self-assigning programming-language roles.',
+			pl: 'Bot Discorda do samodzielnego przypisywania ról językowych.',
 		},
 	},
 	{
@@ -638,8 +634,8 @@ export const projects: Project[] = [
 		tags: ['Elixir', 'Elm'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/aglog-robot' }],
 		observation: {
-			en: 'Generates plausible log noise by remixing public-domain literature, built to supply test data for a recruitment task. Dickens and Carroll, put to work as fixtures.',
-			pl: 'Generuje wiarygodny szum logów, przerabiając literaturę z domeny publicznej—powstał, by dostarczyć dane testowe do zadania rekrutacyjnego. Dickens i Carroll zaprzęgnięci do roli danych testowych.',
+			en: 'A test-data generator that remixes gibberish into plausible logs.',
+			pl: 'Generator danych testowych, który przygotowuje wiarygodnie wyglądające logi.',
 		},
 	},
 	{
@@ -656,8 +652,8 @@ export const projects: Project[] = [
 		tags: ['Node.js'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/eventcourier' }],
 		observation: {
-			en: 'System prevalence in miniature: no database at all, an append-only log of actions on disk, replayed into memory at boot.',
-			pl: 'System prevalence w miniaturze: żadnej bazy danych, tylko dopisywany log akcji na dysku, odtwarzany do pamięci przy starcie.',
+			en: 'A toy implementation of the underrated prevalent system pattern.',
+			pl: 'Zabawkowa implementacja niedocenianego wzorca prevalent system.',
 		},
 	},
 	{
@@ -673,13 +669,9 @@ export const projects: Project[] = [
 		moving: false,
 		tags: ['Chrome', 'JavaScript'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/wouldnt-you-rather' }],
-		etymology: {
-			en: 'The question the extension asks, verbatim.',
-			pl: 'Pytanie, które zadaje rozszerzenie, dosłownie.',
-		},
 		observation: {
-			en: 'Interposes a question between you and a time-wasting website: would you not rather be doing something else?',
-			pl: 'Wstawia pytanie między użytkownika a stronę pożerającą czas: czy nie wolałbyś robić czegoś innego?',
+			en: 'A Chrome extension that asks before opening a time-wasting website.',
+			pl: 'Rozszerzenie Chrome, które pyta przed otwarciem strony pożerającej czas.',
 		},
 	},
 	{
@@ -696,8 +688,8 @@ export const projects: Project[] = [
 		tags: ['Svelte'],
 		refs: [{ label: 'web', href: 'https://rosarycafe.intercaetera.com' }],
 		observation: {
-			en: 'A frontend-only rosary assistant, built in a version of Svelte now ancient enough to be of archaeological interest.',
-			pl: 'Asystent różańcowy działający wyłącznie po stronie przeglądarki, napisany w wersji Svelte na tyle wiekowej, że budzi już zainteresowanie archeologiczne.',
+			en: 'A browser-only rosary assistant, written in Svelte.',
+			pl: 'Asystent różańcowy działający w przeglądarce, napisany w Svelte.',
 		},
 	},
 	{
@@ -717,8 +709,8 @@ export const projects: Project[] = [
 			{ label: 'npm', href: 'https://www.npmjs.com/package/react-use-message-bar' },
 		],
 		observation: {
-			en: 'A React hook for Fluent <abbr>UI</abbr>’s message bar, written at work and published because it was small enough to give away. Still on npm, still collecting a handful of downloads a month.',
-			pl: 'Hook Reacta do paska komunikatów Fluent <abbr>UI</abbr>, napisany w pracy i opublikowany, bo był dość mały, żeby go oddać. Wciąż na npm, wciąż zbiera garść pobrań miesięcznie.',
+			en: 'A React hook for Fluent <abbr>UI</abbr>’s message bar, extracted from a work project. It still gets a few npm downloads each month.',
+			pl: 'Hook Reacta do paska komunikatów Fluent <abbr>UI</abbr>, wyciągnięty z projektu w pracy. Nadal ma kilka pobrań z npm miesięcznie.',
 		},
 	},
 	{
@@ -735,12 +727,12 @@ export const projects: Project[] = [
 		tags: ['Feathers', 'React', 'TypeScript'],
 		refs: [],
 		etymology: {
-			en: 'Elbereth, Varda’s name in Tolkien.',
-			pl: 'Elbereth, imię Vardy u Tolkiena.',
+			en: 'One of Varda’s names in Tolkien\'s literaturue.',
+			pl: 'Jedno z imion Vardy u Tolkiena.',
 		},
 		observation: {
-			en: 'A platform for collaborative fiction, written with my wife: characters, stories and entries, with authentication, monitoring and a staging deploy. The idea was better than its survival rate.',
-			pl: 'Platforma do wspólnego pisania fikcji, tworzona z żoną: postacie, opowiadania i wpisy, z uwierzytelnianiem, monitoringiem i wdrożeniem testowym. Pomysł był lepszy niż jego przeżywalność.',
+			en: 'A platform for collaborative fiction, built with my wife.',
+			pl: 'Platforma do wspólnego pisania fantastyki.',
 		},
 	},
 	{
@@ -775,12 +767,12 @@ export const projects: Project[] = [
 		tags: ['React', 'Knex', 'Auth0'],
 		refs: [],
 		etymology: {
-			en: 'The university town in <em>The Witcher</em>.',
+			en: 'The university town in the world of <em>The Witcher</em>.',
 			pl: 'Miasto uniwersyteckie z <em>Wiedźmina</em>.',
 		},
 		observation: {
-			en: 'A tool to help teachers mark open-question tests, built with a friend and abandoned before it could mark anything.',
-			pl: 'Narzędzie do pomocy nauczycielom w ocenianiu testów z pytaniami otwartymi, budowane z kolegą i porzucone, zanim zdążyło cokolwiek ocenić.',
+			en: 'A tool for marking open-question tests, built with a friend and never finished.',
+			pl: 'Narzędzie do oceniania testów z pytaniami otwartymi, budowane z kolegą i nigdy nieukończone.',
 		},
 	},
 	{
@@ -797,8 +789,8 @@ export const projects: Project[] = [
 		tags: [],
 		refs: [],
 		observation: {
-			en: 'A novel drafted in a month for NaNoWriMo and left where it stopped, an unfinished first draft.',
-			pl: 'Powieść napisana w miesiąc na NaNoWriMo i zostawiona tam, gdzie się zatrzymała—nieukończony pierwszy szkic.',
+			en: 'An unfinished first draft, written in a month for NaNoWriMo.',
+			pl: 'Nieukończony pierwszy szkic, napisany w miesiąc na NaNoWriMo.',
 		},
 	},
 	{
@@ -815,12 +807,12 @@ export const projects: Project[] = [
 		tags: ['Vue'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/manhattan' }],
 		etymology: {
-			en: 'Planet Manhattan, in <em>Freelancer</em>.',
-			pl: 'Planeta Manhattan z gry <em>Freelancer</em>.',
+			en: 'Planet Manhattan, the starting location in <em>Freelancer</em>.',
+			pl: 'Planet Manhattan, startowa lokacja w grze <em>Freelancer</em>.',
 		},
 		observation: {
-			en: 'A star-system editor for sketching out <em>Freelancer</em> systems—planets, stations, jump points and trade lanes—on a canvas. Its host no longer resolves.',
-			pl: 'Edytor układów gwiezdnych do szkicowania systemów <em>Freelancera</em>—planet, stacji, punktów skoku i szlaków handlowych—na płótnie. Jego host już się nie odnajduje.',
+			en: 'A map designer for 2003 video game <em>Freelancer</em>\'s star systems. The hosted version is gone.',
+			pl: 'Edytor map do gry z 2003 r. <em>Freelancer</em>. Wersja online już nie istnieje.',
 		},
 	},
 	{
@@ -837,12 +829,12 @@ export const projects: Project[] = [
 		tags: ['react-blessed', 'Redux'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/kallisti' }],
 		etymology: {
-			en: 'The inscription on the apple of discord: <em>kallistēi</em>, to the fairest.',
-			pl: 'Napis na jabłku niezgody: <em>kallistēi</em>, dla najpiękniejszej.',
+			en: 'Greek for <em>to the fairest</em>, after the inscription on Eris\'s apple of discord.',
+			pl: 'Po grecku <em>dla najpiękniejszej</em>, jak na jabłku niezgody.',
 		},
 		observation: {
-			en: 'A Discord client for the terminal, rendering React through react-blessed. Never finished, and it wanted your auth token pulled out of the browser by hand.',
-			pl: 'Klient Discorda do terminala, renderujący Reacta przez react-blessed. Nigdy nieukończony, a do działania żądał tokenu wyciągniętego ręcznie z przeglądarki.',
+			en: 'An unfinished terminal client for Discord, built with React and react-blessed.',
+			pl: 'Nieukończony terminalowy klient Discorda, zbudowany w Reakcie i react-blessed.',
 		},
 	},
 	{
@@ -859,12 +851,12 @@ export const projects: Project[] = [
 		tags: ['Electron', 'JavaScript', 'Photon'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/golden' }],
 		etymology: {
-			en: 'A card from <em>Android: Netrunner</em>.',
-			pl: 'Karta z gry <em>Android: Netrunner</em>.',
+			en: 'A card in <em>Android: Netrunner</em>.',
+			pl: 'Karta z <em>Android: Netrunner</em>.',
 		},
 		observation: {
-			en: 'Tournament software for <em>Android: Netrunner</em>—Swiss pairing, round timers, progression cuts—shipped as installers for three operating systems and dressed in the Photon kit to pass for a native Mac application. Strangers filed twenty-five bug reports against it. None of it runs today.',
-			pl: 'Oprogramowanie do prowadzenia turniejów <em>Android: Netrunner</em>—kojarzenie systemem szwajcarskim, zegary rund, cięcia progresywne—wydane jako instalatory na trzy systemy i ubrane w zestaw Photon, żeby udawać natywną aplikację Maca. Obcy ludzie zgłosili do niego dwadzieścia pięć błędów. Dziś nie działa nic z tego.',
+			en: 'Tournament software for <em>Android: Netrunner</em>, with Swiss pairings, timers and cuts.',
+			pl: 'Program do turniejów <em>Android: Netrunner</em>.',
 		},
 	},
 	{
@@ -881,12 +873,12 @@ export const projects: Project[] = [
 		tags: ['RethinkDB'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/monolith' }],
 		etymology: {
-			en: 'A card from <em>Android: Netrunner</em>.',
-			pl: 'Karta z gry <em>Android: Netrunner</em>.',
+			en: 'A card in <em>Android: Netrunner</em>.',
+			pl: 'Karta z <em>Android: Netrunner</em>.',
 		},
 		observation: {
-			en: 'The web services behind golden, so that tournaments could sync online. The domain lapsed and took the backend down with it.',
-			pl: 'Zaplecze sieciowe dla golden, żeby turnieje mogły synchronizować się online. Domena wygasła i pociągnęła backend za sobą.',
+			en: 'The backend for <em>Golden</em>, used to sync tournaments online. The domain has expired.',
+			pl: 'Backend Golden, używany do synchronizacji turniejów. Domena wygasła.',
 		},
 	},
 	{
@@ -903,12 +895,12 @@ export const projects: Project[] = [
 		tags: ['JavaScript'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/hokusai' }],
 		etymology: {
-			en: 'A card from <em>Android: Netrunner</em>.',
-			pl: 'Karta z gry <em>Android: Netrunner</em>.',
+			en: 'A card in <em>Android: Netrunner</em>.',
+			pl: 'Karta z <em>Android: Netrunner</em>.',
 		},
 		observation: {
-			en: 'Deck diffing: two Netrunner decklists in, the difference between them out. Deployed, then taken down.',
-			pl: 'Porównywanie talii: na wejściu dwie listy Netrunnera, na wyjściu różnica między nimi. Wdrożone, potem wyłączone.',
+			en: 'A diff tool for Netrunner deck lists. Deployed, then taken down.',
+			pl: 'Narzędzie do porównywania list talii Netrunnera. Wdrożone, potem wyłączone.',
 		},
 	},
 	{
@@ -925,12 +917,12 @@ export const projects: Project[] = [
 		tags: ['JavaScript'],
 		refs: [{ label: 'git', href: 'https://github.com/zanlib0/tsurugi' }],
 		etymology: {
-			en: 'A card from <em>Android: Netrunner</em>.',
-			pl: 'Karta z gry <em>Android: Netrunner</em>.',
+			en: 'A card in <em>Android: Netrunner</em>.',
+			pl: 'Karta z <em>Android: Netrunner</em>.',
 		},
 		observation: {
-			en: 'Turned ideas for custom Netrunner cards into formatted markdown for the design threads on /r/Netrunner. The dyno it lived on is gone.',
-			pl: 'Zamieniał pomysły na własne karty Netrunnera w sformatowany markdown na wątki projektowe /r/Netrunner. Dyno, na którym stał, już nie istnieje.',
+			en: 'A formatter for custom Netrunner cards on /r/Netrunner. No longer online.',
+			pl: 'Narzędzie do formatowania własnych kart Netrunnera na /r/Netrunner.',
 		},
 	},
 	{
