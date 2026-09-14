@@ -1,14 +1,12 @@
 ---
-title: Still Reading
-pubDate: 2026-09-15
+title: '"Do You Still Read the Code?"'
+pubDate: 2026-09-14
 description: Avoiding interaction with the code is not progress.
-wip: true
 ---
-"Do you still read the code?"
 
 There is considerable difference between that question and a more innocuous "do you read the code?" The addition of _still_ smuggles with it a theory of progress: reading code is something on its way out, like memorising phone numbers or unfolding paper maps, and the asker seems to want to know if you by chance aren't one of the obscurantists still clinging to the old ways.
 
-I use <abbr>AI</abbr> extensively, and I read what it produces. This is a deliberate choice about how I want to develop software, at least at my job, where I'm expected to be reasonably responsible for the code that I write and deploy. Other people make a different choice, sometimes with considerable care. But we have begun sharing codebases without necessarily agreeing on what either path asks of our colleagues.
+I use <abbr>AI</abbr> extensively, and I read what it produces. This is a deliberate choice about how I want to develop software, at least at my job, where I'm expected to be reasonably responsible for the code that I commit and deploy. Other people make a different choice, sometimes with considerable care. But we have begun sharing codebases without necessarily agreeing on what either path asks of our colleagues.
 
 It is very hard to tell which choice will prevail. The _still_ presumes that the matter has been settled, and indeed producing a working application these days has become quite a bit easier. But finding out what it costs to maintain it through changes of requirements, developers, and tooling takes considerably longer. We are making commitments with respect to how teams work now, and their consequences will only later be felt and understood. The confidence with which either mindset announces its victory seems somewhat premature.
 
@@ -34,11 +32,11 @@ The distinction concerns the developer's relationship to the output, rather than
 
 [+willison]: Willison, S. [_Not all <abbr>AI</abbr>-assisted programming is vibe coding (but vibe coding rocks)_](https://simonwillison.net/2025/Mar/19/vibe-coding/). 2025
 
-[+abstain]: There is also a third group that rejects <abbr>AI</abbr> for programming at all. The objections I've come across have mostly been legal (copyright-related) or ethical, and while they deserve a serious discussion, it's something outside of the scope of this analysis. What I haven't come across is a team building commercial software that avoids <abbr>AI</abbr> on pragmatic engineering grounds: because they believe the generated code makes their software worse, and in the end costs them more than it saves. If you work in one, feel free to get in touch. I'd very much like to hear about it.
+[+abstain]: There is also a third group that rejects <abbr>AI</abbr> for programming at all. The objections I've come across have mostly been legal (usually copyright-related) or ethical, and while they deserve a serious discussion, it's something outside of the scope of this analysis. What I haven't come across is an organisation building commercial software that avoids <abbr>AI</abbr> on pragmatic engineering grounds: because they believe the generated code makes their software worse, and in the end costs them more than it saves. If you work in one, feel free to get in touch. I'd very much like to hear about it.
 
 ## Naur is still undefeated
 
-My own preference comes from what I think programming is for. I wrote [before](/blog/books-debts-and-delicatessen/) about how programming is essentially pure applied philosophy. I hadn't read, at that time, Peter Naur's essay,[+naur] since brought to renewed prominence by the advent of <abbr>LLM</abbr>s, making the same point thirty-five years earlier.
+My own preference comes from what I think programming is for. I wrote [before](/blog/books-debts-and-delicatessen/) about how programming is essentially pure applied philosophy. I hadn't read, at that time, Peter Naur's essay,[+naur] since brought to renewed prominence by the advent of <abbr>LLM</abbr>s, making a similar point thirty-five years earlier.
 
 [+naur]: Naur, P. _Programming as Theory Building_. Microprocessing and Microprogramming 1985
 
@@ -90,7 +88,7 @@ Skills deteriorate when they are not used, and it remains to be seen if merely r
 
 [+bainbridge]: Bainbridge, L. [_Ironies of Automation_](https://www.complexcognition.co.uk/2021/06/ironies-of-automation.html). Automatica 1983 (!!)
 
-Declaring that a human remains responsible is easy. Arranging the work so that the human remains capable of exercising that responsibility is considerably more difficult and requires very multidimensional decision-making. It might turn out that the accelerator approach is just a fast track to burnout.[+bainbridge2]
+Declaring that a human remains responsible is easy. Arranging the work so that the human remains capable of exercising that responsibility is considerably more difficult and requires very multidimensional decision-making. It might turn out that the accelerator approach is just a fast track to burnout.
 
 Reviewing everything involves constraints on how much unfamiliar work you can do at once. When coding with <abbr>AI</abbr>, you still need to make sure to model your requirements and ensure that the implementation doesn't drift; otherwise the job of self-reviewing the output is the worst kind of work—"very boring but very responsible, yet there is no opportunity to acquire or maintain the qualities required to handle the responsibilities."[+bainbridge2]
 
@@ -102,17 +100,17 @@ It's a conscious choice of a demanding practice whose success requires more than
 
 ## Intent to code
 
-What the <abbr>AI</abbr> revolution seems to have revealed about code review is that we never cared about the quality of the code in itself, but about the understanding of the product _expressed by_ the quality of the implementation. Code quality was a useful proxy for that understanding in the time before Claude Code, but a language model can now feign that understanding. The presence of generated code in the codebase makes it more important to examine the understanding and the implementation separately.
+What the <abbr>AI</abbr> revolution seems to have revealed about code review is that we never cared about the quality of the code in itself, but about the understanding of the product _expressed by_ the quality of the implementation. Code quality was a useful proxy for that understanding in the time before Claude Code, but a language model can now feign that understanding convincingly. The presence of generated code in the codebase makes it more important to examine the understanding and the implementation separately.
 
 A reviewer needs to distinguish requirements, deliberate implementation decisions, inherited conventions, and choices for which no rationale was recorded. Those distinctions should remain connected to the code as it changes.
 
-The point is not whether a specific piece of code was generated or typed on a keyboard. Humans make incidental choices that are hard to explain, too, but it's considerably more difficult to make a great many of them and still end up with working software. Agents do that all the time, but the fact that they do is not a reason to dismiss them outright: it's still entirely possible for them to implement explicit decisions faithfully.
+The point is not whether a specific piece of code was generated or typed on a keyboard. Humans make incidental choices that are hard to explain, too, but it's considerably more difficult to make a great many of them and still end up with working software. Agents do that all the time, but the fact that they do so is not a reason to dismiss them outright: it's still entirely possible for them to implement explicit decisions faithfully.
 
-Consider the following user story: the business requirement is that a user may request password reset links and that they expire. A developer chooses a particular expiry period. An agent chooses how to represent and check it. The resulting code implements those decisions in several places, but the intent is lost—when a reader comes later and sees a value of `expiryTime = 6h`, he can see what the software does, but the six hours could have come from several places: an explicit business requirement, an existing convention, a considered trade-off, or a guess that no one challenged. To decide whether the value should change, the reader needs to know what justified it and whether those circumstances still hold. The decision's result is in the code, but on its own it doesn't preserve enough of its history to reconsider it fully. This is intent debt, and reading every line of the code doesn't pay it off.
+Consider the following story: the business requirement is that a user may request password reset links and that they expire. A developer chooses a particular expiry period. An agent chooses how to represent and check it. The resulting code implements those decisions in several places, but the intent is lost—when a reader comes later and sees a value of `expiryTime = 6h`, he can see what the software does, but the six hours could have come from several places: an explicit business requirement, an existing convention, a considered trade-off, or a guess that no one challenged. To decide whether the value should change, the reader needs to know what justified it and whether those circumstances still hold. The decision's result is in the code, but on its own it doesn't preserve enough of its history to reconsider it fully. This is intent debt, and reading every line of the code doesn't pay it off.
 
 One promising way agents can help here is by leveraging their ability to summarise, letting a reviewer trace those relationships and see where a choice lacks an explanation. If you review the code yourself, you can use a tool like [Crit](https://crit.md) to make sure the implementation didn't stray from what you intended. Or you can use CodeRabbit's [Change Stack](https://docs.coderabbit.ai/change-stack), or my own [`intent-stack`](https://github.com/zanlib0/skills/blob/master/intent-stack/SKILL.md) skill, to gather context and generate an aid for the reviewer.
 
-As for automation, greater delegation makes durable goals, constraints, validation criteria, and relevant context increasingly difficult to preserve as the generated codebase grows. Simultaneously, that preservation becomes increasingly important with the growth of the number of lines of code, because the agents doing the implementation might make contradictory decisions simply because they didn't chance upon the relevant piece of context. Those records must remain usable when sessions end, agents change, and the implementation is regenerated.
+As for automation, greater delegation makes durable goals, constraints, validation criteria, and relevant context increasingly difficult to preserve as the generated codebase grows. Simultaneously, that preservation becomes increasingly important with the growth of the number of lines of code, because the agents doing the implementation might make contradictory decisions simply because they didn't chance upon the relevant piece of context, or they ascribed authority to information that was meant to be disposable. Those records must remain usable when sessions end, agents change, and the implementation is regenerated.
 
 The various experiments in building "software factories" and "graph engineering" seem to me to be attempts at making that delegation deliberate by cataloguing intent in ever more fractal structures of summary, so that trees or graphs or swarms of agents can communicate at different levels of generality without polluting each other's context windows with things that aren't relevant to them. I'm not very in tune with this approach, but a reasonable starting point might be reviewing Strong<abbr>DM</abbr>'s account of their [software factory](https://factory.strongdm.ai), which runs on two rules: no writing code by humans, and no reviewing code by humans. Instead, they validate agents' work against scenarios kept outside the codebase.[+wsff]
 
@@ -120,6 +118,6 @@ The various experiments in building "software factories" and "graph engineering"
 
 ## Two paths
 
-There are, then, at least two kinds of progress in <abbr>AI</abbr>-assisted programming: one helps developers understand and interact with the implementation, and one aims to remove the need for that interaction altogether. These are different paths, they require different tools and different approaches. Both may improve, but it does not follow that the goal of the accelerator is to become a vibecoder. Ceasing to read code is not, in itself, progress.
+There are, then, at least two kinds of progress in <abbr>AI</abbr>-assisted programming: one helps developers understand and interact with the implementation, and one aims to remove the need for that interaction altogether. While the latter seems to be getting more of the limelight, these are different paths, they require different tools and different approaches. Both may improve, but it does not follow that the goal of the accelerator is to become a vibecoder. Ceasing to read code is not, in itself, progress.
 
 But before asking whether your colleague _still_ reads code, perhaps consider whether you're _still_ expecting him to maintain yours.
