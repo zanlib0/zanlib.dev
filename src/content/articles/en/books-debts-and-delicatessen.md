@@ -47,7 +47,7 @@ We think of computing and programming like it's something new, something that we
 
 A software developer is not much different from a philosopher, both professions deal with making sense and applying structure to a set of abstractions. Only Aristotle and Aquinas did so theoretically, without direct influence on the world, and we do it practically.
 
-> "Computers, for the first time in history, facilitate the field of pure applied philosophy."
+Computers, for the first time in history, facilitate the field of pure applied philosophy.
 
 For every project that is a number of days behind its deadline, it will be behind even more. For every book that has readers will be given more, and it will have an abundance, and whichever does not have, it will be burned down and forgotten. For every app that has users, it will have more, and those which do not have any will be forever buried in the depths of Google Play store.
 
