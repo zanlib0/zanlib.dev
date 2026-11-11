@@ -3,8 +3,6 @@ pubDate: 2021-09-06T21:00:00.000Z
 title: The Strongest Force in the Universe
 description: A few words on the importance of storytelling and the ability to explain.
 ---
-Spoiler alert: it's not love.
-
 To educate and pass on knowledge we need to explain things. An explanation, in Aristotelian terms, is a sequence of premises and conclusions that lead us from one point to another. Aristotle, having many firsts under his belt, described these basics of logical and analytical discourse in *Posterior Analytics*, which is probably the first treatise on philosophy of science and tackles the subject of "what does it actually mean to know something".
 
 ## The four causes
