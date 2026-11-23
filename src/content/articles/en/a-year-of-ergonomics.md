@@ -18,7 +18,7 @@ Note: none of this was sponsored and none of the links are affiliate links. No o
 
 ## Desk
 
-One of the first things I bought this year was a standing desk. I bought it from a [local furniture manufacturer in Poland](https://mobiusdesk.pl) who builds custom desks with add-ons based on Linak frames. I didn't think my needs were particularly elevated, since my study is not very large and can fit at most a 140cm-wide desk. I didn't think I would need a particularly expensive frame because of it, so I opted for the cheapest one which turned out to be Linak Desk Frame 2.
+One of the first things I bought this year was a standing desk. I bought it from a local furniture manufacturer in Poland who builds custom desks with add-ons based on Linak frames. I didn't think my needs were particularly elevated, since my study is not very large and can fit at most a 140cm-wide desk. I didn't think I would need a particularly expensive frame because of it, so I opted for the cheapest one which turned out to be Linak Desk Frame 2.
 
 As for the customisation options I ended up with a drawer, pop-up socket, subwoofer shelf, computer shelf, headphones hook, power strip, and a few hooks for cable management. The desk top is a 140x60cm oak wood block.
 

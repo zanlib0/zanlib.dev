@@ -18,7 +18,7 @@ Disclaimer: żadna z tych rzeczy nie była sponsorowana, a żadne z linków nie 
 
 ## Biurko
 
-Jedną z pierwszych rzeczy, które kupiłem w tym roku, było biurko do pracy na stojąco. Kupiłem je od [lokalnego producenta mebli](https://mobiusdesk.pl), który buduje biurka na zamówienie z dodatkami opartymi na ramach firmy Linak. Nie sądziłem, że moje potrzeby są szczególnie wysokie, ponieważ mój gabinet nie jest zbyt duży i maks co do niego wejdzie to biurko o szerokości 140cm. Z tego powodu założyłem, że nie będę potrzebował szczególnie drogiej ramy, więc zdecydowałem się na najtańszą, którą okazał się być Linak Desk Frame 2.
+Jedną z pierwszych rzeczy, które kupiłem w tym roku, było biurko do pracy na stojąco. Kupiłem je od lokalnego producenta mebli, który buduje biurka na zamówienie z dodatkami opartymi na ramach firmy Linak. Nie sądziłem, że moje potrzeby są szczególnie wysokie, ponieważ mój gabinet nie jest zbyt duży i maks co do niego wejdzie to biurko o szerokości 140cm. Z tego powodu założyłem, że nie będę potrzebował szczególnie drogiej ramy, więc zdecydowałem się na najtańszą, którą okazał się być Linak Desk Frame 2.
 
 Jeśli chodzi o opcje personalizacji, ostatecznie zdecydowałem się na szufladę, wysuwane gniazdko (mediaport), półkę na subwoofer, półkę na komputer, haczyk na słuchawki, listwę zasilającą i kilka haczyków do zarządzania kablami. Blat biurka to blok z drewna dębowego o wymiarach 140x60cm.
 
